@@ -1,0 +1,19 @@
+{
+  "name": "yeony99.github.io",
+  "version": "1.0.0",
+  "description": "blog of Nayeon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yeony99/Yeony99.github.io.git"
+  },
+  "author": "Nayeon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yeony99/Yeony99.github.io/issues"
+  },
+  "homepage": "https://github.com/Yeony99/Yeony99.github.io#readme"
+}
