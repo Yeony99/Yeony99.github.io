@@ -32,7 +32,7 @@ const Header = () => (
     <ListLink to="/contact" data="Contact">
       <img src={Contact} alt="연락" style={{ width: `2.5rem` }} />
     </ListLink>
-    <ListLink to="/" data="Works">
+    <ListLink to="/works" data="Works">
       <img src={Works} alt="작업물" style={{ width: `2.5rem` }} /> 
     </ListLink>
   </header>

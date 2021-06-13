@@ -6,7 +6,7 @@ export default () => (
 <Fragment>
   <Header></Header>
     <Layout>
-      <h1>TIL</h1>
+      <h1>Works</h1>
       <p>
         Any Question. Ask me please
       </p>

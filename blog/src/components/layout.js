@@ -10,7 +10,7 @@ const ListLink = props => (
 
 export default ({children}) => (
   <div style={{margin: `1rem auto`,
-    padding: `0px 1rem`,
+    padding: `0px 3rem`,
     display: `flex`,
     flexDirection: `column`}}>
     {children}

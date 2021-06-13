@@ -5,6 +5,12 @@ module.exports = {
     author: `Nayeon Kim`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      // options: {
+      //   // Add any options here
+      // },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

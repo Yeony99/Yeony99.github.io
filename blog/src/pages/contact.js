@@ -1,10 +1,15 @@
-import React from "react"
+import React, {Fragment} from "react"
+import Header from "../components/header"
+import Layout from "../components/layout"
 
 export default () => (
-  <div>
-    <h1>Contact</h1>
-    <p>
-      Any Question. Ask me please
-    </p>
-  </div>
+<Fragment>
+  <Header></Header>
+    <Layout>
+      <h1>Contact</h1>
+      <p>
+        Any Question. Ask me please
+      </p>
+    </Layout>
+</Fragment>
 )
