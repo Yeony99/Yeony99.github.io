@@ -10,7 +10,7 @@ import Works from '../images/works.svg'
 const ListLink = props => (
   <>
     <Seo title="Yeony" />
-    <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+    <li style={{ display: `inline-block`, marginRight: `1.5rem` }}>
       <Link className="list" style={{textDecoration:`none`}} data={props.data} to={props.to}>{props.children}</Link>
     </li>
   </>
@@ -35,6 +35,7 @@ const Header = () => (
     <ListLink to="/works" data="Works">
       <img src={Works} alt="작업물" style={{ width: `2.5rem` }} /> 
     </ListLink>
+    <img src="https://ghchart.rshah.org/Yeony99" style={{width:`10rem`, margin:`auto`}}/> 
   </header>
 )
 
