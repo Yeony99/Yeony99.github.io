@@ -1,11 +1,12 @@
 body::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.7rem;
   }
 
   html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: #FFA001;
+    scrollbar-color: #77DD77;
+    
   }
 
   body::-webkit-scrollbar-track {
@@ -13,9 +14,11 @@ body::-webkit-scrollbar {
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: #FFA001 ;
+    background-color: #77DD77 ;
     border-radius: .5rem;
-    background: #FFA001;
-    background: linear-gradient(180deg, #fdb840 0%, #ffc663 100%);
-    border: 1px solid #ffa200a7;
+    background: #77DD77;
+    background: linear-gradient(180deg, #9df59d 0%, #57ae57 100%);
+    border: 1px solid rgba(36, 135, 36, 0.596)
   }
+
+  
