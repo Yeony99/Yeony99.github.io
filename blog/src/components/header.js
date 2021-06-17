@@ -39,7 +39,7 @@ const Header = () => (
     <ListLink to="/works" data="What I did !">
       <img src={Works} alt="작업물" style={{ width: `2.5rem` }} /> 
     </ListLink>
-    <ListLink to="/TIL" data="Today Yeony Learned">
+    <ListLink to="/" data="Today Yeony Learned">
       <img src={Til} alt="TIL" style={{ width: `2.5rem` }} />
     </ListLink>
     <ListLink to="/contact" data="e-Mail ?">
