@@ -29,9 +29,11 @@ html {
 }
 
 #logo:hover {
-    color: blueviolet;
+    color: #636363e8;
     position: relative;
 }
+
+
 
 #logo:hover:after{
     content: attr(data);

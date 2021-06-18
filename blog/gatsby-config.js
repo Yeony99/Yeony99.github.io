@@ -5,6 +5,7 @@ module.exports = {
     author: `Nayeon Kim`,
   },
   plugins: [
+      `gatsby-plugin-portal`,
     {
       resolve: `gatsby-plugin-styled-components`,
       // options: {

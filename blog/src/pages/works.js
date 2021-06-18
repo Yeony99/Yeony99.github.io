@@ -1,8 +1,9 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useRef } from "react"
 import styled from "styled-components"
 import Header from "../components/header"
 import Layout from "../components/layout"
 import Title from "../components/title"
+import Modal from "../components/Modal"
 
 const WorkSq = styled.div`
 
@@ -62,16 +63,23 @@ const WrapDescribe = styled.div`
 `;
 
 
-export default () => (
+export default function Works() {
+  const modalRef1 = useRef();
+
+ return (
   <Fragment>
     <Header></Header>
     <Layout>
       <Title>Projects</Title>
+      <Modal ref={modalRef1}>
+        <h3>Modal title 1</h3>
+      </Modal>
       <div style={{ display: `flex`, justifyContent: `space-around`, flexWrap: `wrap`, position: `relative` }}>
         <WorkSq
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122172249-87f33000-cebb-11eb-9e33-236bbdc8d7e5.png" + ")" }}
         >
           <HoverSq>
+              <button className="btn" onClick={()=> modalRef1.current.openModal()} style={{background:`none`, border:`none`}}> 
             <WrapDescribe>
               <Tags src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white" alt="" /> 
@@ -81,6 +89,7 @@ export default () => (
               <Tags src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white" alt="" />
               <div style={{fontSize:`0.8rem`, marginTop:`1rem`}}> <b style={{fontSize:`1.2rem`}}>CRUD</b> 기능을 적용한 Web Application</div>
             </WrapDescribe>
+              </button>
           </HoverSq>
         </WorkSq>
         <WorkSq 
@@ -155,3 +164,5 @@ export default () => (
     </Layout>
   </Fragment>
 )
+
+}
