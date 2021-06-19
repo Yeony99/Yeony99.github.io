@@ -26,11 +26,12 @@ const Modal = forwardRef((props, ref) => {
   if (display) {
     return (
       <Portal>
-          <div className="modal-backdrop"></div>
+
           <div className="modal-container">
+            <button onClick={handleClose}>❌</button>
             {props.children}
-            <button onClick={handleClose}>close</button>
           </div>
+          <div className="modal-backdrop"></div>
       </Portal>
     )
   }

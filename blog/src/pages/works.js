@@ -65,21 +65,33 @@ const WrapDescribe = styled.div`
 
 export default function Works() {
   const modalRef1 = useRef();
+  const modalRef2 = useRef();
+  const modalRef3 = useRef();
+  const modalRef4 = useRef();
+  const modalRef5 = useRef();
+  const modalRef6 = useRef();
+
 
  return (
   <Fragment>
     <Header></Header>
     <Layout>
       <Title>Projects</Title>
-      <Modal ref={modalRef1}>
-        <h3>Modal title 1</h3>
-      </Modal>
+
       <div style={{ display: `flex`, justifyContent: `space-around`, flexWrap: `wrap`, position: `relative` }}>
+
+        {/* Notedly */}
+      <Modal ref={modalRef1}>
+        <div style={{fontWeight:`800`, marginTop:`1rem`}}><a>GitHub</a> | <a>WebPage</a></div>
+        <div>
+          <img src="https://user-images.githubusercontent.com/76241233/122641899-04e40b00-d143-11eb-8fbd-6bf00a89ab2a.gif" style={{padding:`1rem`}} alt="" />
+        </div>
+      </Modal>
         <WorkSq
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122172249-87f33000-cebb-11eb-9e33-236bbdc8d7e5.png" + ")" }}
         >
           <HoverSq>
-              <button className="btn" onClick={()=> modalRef1.current.openModal()} style={{background:`none`, border:`none`}}> 
+              <button className="btn" onClick={()=> modalRef1.current.openModal()}> 
             <WrapDescribe>
               <Tags src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white" alt="" /> 
@@ -92,10 +104,41 @@ export default function Works() {
               </button>
           </HoverSq>
         </WorkSq>
+
+        {/* Vanilla JS Diary */}
+        <Modal ref={modalRef2}>
+        <div><a>GitHub</a> | <a>WebPage</a></div>
+        <div>
+          <img src="https://user-images.githubusercontent.com/76241233/122643208-7e7ef780-d149-11eb-9bd2-708fb1b36e10.gif" style={{padding:`1rem`}} alt="" />
+        </div>
+      </Modal>
+      <WorkSq 
+          style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122216564-817aad80-cee7-11eb-9294-4b0f66841744.png" + ")" }}
+        >
+          <HoverSq>
+           <button className="btn" onClick={()=> modalRef2.current.openModal()}> 
+           <WrapDescribe>
+              <Tags src="https://img.shields.io/badge/html5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="" />
+              <Tags src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="" /> 
+              <Tags src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white" alt="" /> 
+              <div style={{fontSize:`0.8rem`, marginTop:`1rem`}}> Vanilla-JS Web Application</div>
+            </WrapDescribe>
+            </button>
+          </HoverSq>
+        </WorkSq>
+
+        {/* spring about trip */}
+        <Modal ref={modalRef3}>
+        <div><a>GitHub</a> | <a>WebPage</a></div>
+        <div>
+          <img src="blabla" style={{padding:`1rem`}} alt="" />
+        </div>
+      </Modal>
         <WorkSq 
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122215847-b0dcea80-cee6-11eb-9a09-ce0ac96f75d8.png" + ")" }} 
         >
            <HoverSq>
+           <button className="btn" onClick={()=> modalRef3.current.openModal()} > 
             <WrapDescribe>
               <Tags src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=java&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="" />
@@ -105,20 +148,10 @@ export default function Works() {
               <Tags src="https://img.shields.io/badge/git-F05032?style=flat-square&logo=git&logoColor=white" alt="" /> 
               <div style={{fontSize:`0.8rem`, marginTop:`1rem`}}> Spring 기반 국내 여행 가이드 회원제 플랫폼 </div>
             </WrapDescribe>
+            </button>
           </HoverSq>
         </WorkSq>
-        <WorkSq 
-          style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122216564-817aad80-cee7-11eb-9294-4b0f66841744.png" + ")" }}
-        >
-          <HoverSq>
-           <WrapDescribe>
-              <Tags src="https://img.shields.io/badge/html5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="" />
-              <Tags src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="" /> 
-              <Tags src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white" alt="" /> 
-              <div style={{fontSize:`0.8rem`, marginTop:`1rem`}}> Vanilla-JS Web Application</div>
-            </WrapDescribe>
-          </HoverSq>
-        </WorkSq>
+
         <WorkSq 
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122219213-2bf3d000-ceea-11eb-8d03-beca3ed8f49c.png" + ")" }}
         >
