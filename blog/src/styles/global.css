@@ -1,6 +1,9 @@
 html {
     background-color: white;
 }
+h2 {
+    font-family: 'NanumSquareRound';
+}
 * {
     font-family: 'NanumSquareRound';
 }
@@ -33,8 +36,6 @@ html {
     position: relative;
 }
 
-
-
 #logo:hover:after{
     content: attr(data);
     padding: 4px 8px;
@@ -61,7 +62,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(246, 253, 238);
+    background: black;
     border: 2px solid rgb(0, 0, 0);
 }
 .btn {
@@ -84,10 +85,28 @@ html {
     width: 100%;
     height: 100%;
 }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-list {
+    font-size: inherit;
+}
+.list-images {
+    padding: 0.5rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 @media screen and (max-width:400px) {
     .modal-container {
         top : 8rem;
         left:1.5rem;
+    }
+    .contact-list {
+        font-size: 0.7rem;
     }
 }
 
