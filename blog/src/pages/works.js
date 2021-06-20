@@ -76,22 +76,22 @@ export default function Works() {
   <Fragment>
     <Header></Header>
     <Layout>
-      <Title>Projects</Title>
+      <Title>Projects <span style={{fontSize:`14px`, fontWeight:`normal`}}>PC 환경에서 프로젝트의 설명을 <span style={{fontWeight:`700`, fontSize:`16px`}}>'더블클릭'</span>하시면 간략한  <span style={{fontWeight:`700`, fontSize:`16px`}}>'미리보기'</span>를 보실 수 있습니다.</span></Title> 
 
       <div style={{ display: `flex`, justifyContent: `space-around`, flexWrap: `wrap`, position: `relative` }}>
 
         {/* Notedly */}
       <Modal ref={modalRef1}>
-        <div style={{fontWeight:`800`, marginTop:`1rem`}}><a>GitHub</a> | <a>WebPage</a></div>
+        <div style={{fontWeight:`800`, marginTop:`0.5rem`, marginLeft:`7rem`, color:`white`}}> Link : <a>GitHub</a> | <a>WebPage</a> <span style={{fontSize:`12.5px`, color:`#ff4d4d`, fontWeight:`normal`}}> * 링크 클릭 시 해당 <b>깃허브(혹은 웹페이지)</b>로 연결됩니다.</span></div>
         <div>
-          <img src="https://user-images.githubusercontent.com/76241233/122641899-04e40b00-d143-11eb-8fbd-6bf00a89ab2a.gif" style={{padding:`1rem`}} alt="" />
+          <img className="list-images" src="https://user-images.githubusercontent.com/76241233/122641899-04e40b00-d143-11eb-8fbd-6bf00a89ab2a.gif"  alt="" />
         </div>
       </Modal>
         <WorkSq
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122172249-87f33000-cebb-11eb-9e33-236bbdc8d7e5.png" + ")" }}
         >
           <HoverSq>
-              <button className="btn" onClick={()=> modalRef1.current.openModal()}> 
+              <button className="btn" onDoubleClick={()=> modalRef1.current.openModal()}> 
             <WrapDescribe>
               <Tags src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white" alt="" /> 
@@ -109,14 +109,14 @@ export default function Works() {
         <Modal ref={modalRef2}>
         <div><a>GitHub</a> | <a>WebPage</a></div>
         <div>
-          <img src="https://user-images.githubusercontent.com/76241233/122643208-7e7ef780-d149-11eb-9bd2-708fb1b36e10.gif" style={{padding:`1rem`}} alt="" />
+          <img className="list-images" src="https://user-images.githubusercontent.com/76241233/122643208-7e7ef780-d149-11eb-9bd2-708fb1b36e10.gif" alt="" />
         </div>
       </Modal>
       <WorkSq 
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122216564-817aad80-cee7-11eb-9294-4b0f66841744.png" + ")" }}
         >
           <HoverSq>
-           <button className="btn" onClick={()=> modalRef2.current.openModal()}> 
+           <button className="btn" onDoubleClick={()=> modalRef2.current.openModal()}> 
            <WrapDescribe>
               <Tags src="https://img.shields.io/badge/html5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="" />
               <Tags src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="" /> 
@@ -131,14 +131,14 @@ export default function Works() {
         <Modal ref={modalRef3}>
         <div><a>GitHub</a> | <a>WebPage</a></div>
         <div>
-          <img src="blabla" style={{padding:`1rem`}} alt="" />
+          <img className="list-images" src="blabla" style={{padding:`1rem`}} alt="" />
         </div>
       </Modal>
         <WorkSq 
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122215847-b0dcea80-cee6-11eb-9a09-ce0ac96f75d8.png" + ")" }} 
         >
            <HoverSq>
-           <button className="btn" onClick={()=> modalRef3.current.openModal()} > 
+           <button className="btn" onDoubleClick={()=> modalRef3.current.openModal()} > 
             <WrapDescribe>
               <Tags src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=java&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="" />
