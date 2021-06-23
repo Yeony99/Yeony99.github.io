@@ -1,6 +1,11 @@
 html {
     background-color: white;
 }
+
+h1 {
+    font-family: 'NanumSquareRound';
+}
+
 h2 {
     font-family: 'NanumSquareRound';
 }
