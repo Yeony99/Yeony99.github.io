@@ -113,6 +113,9 @@ h2 {
     .contact-list {
         font-size: 0.7rem;
     }
+    .notice {
+        display: none;
+    }
 }
 
 @font-face {

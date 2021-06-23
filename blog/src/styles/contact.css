@@ -1,0 +1,64 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border : 0.5px solid #77DD77;
+    border-radius:  1rem;
+    width: 80%;
+}
+.formWrap {
+    background:#aef3ae;
+    width: 60%;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 1rem 0 0 1rem ;
+}
+#flexDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+form {
+    width: 100%;
+}
+.contact-form {
+    margin: 0;
+    justify-content : space-around;
+}
+.contactForm {
+    margin: 5rem auto auto auto;
+}
+#contacts {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+textarea {
+    resize: none;
+    height: 7rem;
+}
+
+.inputs {
+    border:none;
+    border-bottom: 1px solid brown;
+    background: none;
+}
+
+@media screen and (max-width:600px) {
+    .formWrap {
+        width: 100%;
+        border-radius: 3rem 0 3rem 3rem ;
+    }
+    .wrap {
+        border : none;
+        width: 100%;
+    }
+
+}
