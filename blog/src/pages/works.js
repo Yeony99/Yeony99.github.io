@@ -8,7 +8,7 @@ import Modal from "../components/Modal"
 const WorkSq = styled.div`
 
   display: flex;
-  height:11rem;
+  height:12rem;
   min-width:19.416rem;
   max-width:19.416rem;
   background-color:navy;
@@ -95,7 +95,7 @@ export default function Works() {
   <Fragment>
     <Header></Header>
     <Layout>
-      <Title>Projects <span style={{fontSize:`14px`, fontWeight:`normal`}}>PC 환경에서 프로젝트의 설명을 <span style={{fontWeight:`700`, fontSize:`16px`}}>'더블클릭'</span>하시면 간략한  <span style={{fontWeight:`700`, fontSize:`16px`}}>'미리보기'</span>를 보실 수 있습니다.</span></Title> 
+      <Title>Projects <span className="notice" style={{fontSize:`14px`, fontWeight:`normal`}}>PC 환경에서 프로젝트의 설명을 <span style={{fontWeight:`700`, fontSize:`16px`}}>'더블클릭'</span>하시면 간략한  <span style={{fontWeight:`700`, fontSize:`16px`}}>'미리보기'</span>를 보실 수 있습니다.</span></Title> 
 
       <div style={{ display: `flex`, justifyContent: `space-around`, flexWrap: `wrap`, position: `relative` }}>
 
