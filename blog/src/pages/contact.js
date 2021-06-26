@@ -65,13 +65,12 @@ export default function ContactUs() {
               <div className="nameBox">
                 <textarea name="message" placeholder="메시지를 적어주세요." className="inputs" id="msgBox" />
               </div>
-              <input type="submit" value="Send" />
+              <input type="submit" value="Send" style={{background:`lightgreen`,border:`none`, borderRadius:`1rem`, width:`4rem` }} />
             </form>
         </Wrap>
         <Wrap id="contacts">
-          📧  <a href="mailto:ny.yeony.kim@gmail.com">ny.yeony.kim@gmail.com</a><br />
+          📧  <a style={{textDecoration:`none`}} href="mailto:ny.yeony.kim@gmail.com">ny.yeony.kim@gmail.com</a><br />
           📍 <span> Seoul, Republic of Korea </span>
-
         </Wrap>
         </div>
       </Layout>
