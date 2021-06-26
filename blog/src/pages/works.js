@@ -4,6 +4,7 @@ import Header from "../components/header"
 import Layout from "../components/layout"
 import Title from "../components/title"
 import Modal from "../components/Modal"
+import Doimg from "../images/dominho.gif"
 
 const WorkSq = styled.div`
 
@@ -65,7 +66,9 @@ const WrapDescribe = styled.div`
 const HoverDescribeDiv = styled.div`
     font-size: 0.8rem;
     margin-top:1rem;
-    color: white;
+    button {
+      color: white;
+    }
 `;
 
 const ModalDescribeDiv = styled.div`
@@ -74,6 +77,11 @@ const ModalDescribeDiv = styled.div`
     color: white;
 `;
 
+const NoticeLink = styled.span`
+    font-size: 0.3em;
+    color: #ff4d4d;
+    font-weight: normal;
+`;
 
 const Links = props => (
   <>
@@ -101,7 +109,7 @@ export default function Works() {
 
         {/* Notedly */}
       <Modal ref={modalRef1}>
-        <ModalDescribeDiv> Link : <Links data="https://github.com/Yeony99/Notedly">GitHub</Links> | <Links data="https://youthful-borg-c1eaa4.netlify.app/">WebPage</Links> <span style={{fontSize:`12.5px`, color:`#ff4d4d`, fontWeight:`normal`}}> * 링크 클릭 시 해당 <b>깃허브(혹은 웹페이지)</b>로 연결됩니다.</span></ModalDescribeDiv>
+        <ModalDescribeDiv> Link : <Links data="https://github.com/Yeony99/Notedly">GitHub</Links> | <Links data="https://youthful-borg-c1eaa4.netlify.app/">WebPage</Links> <NoticeLink> * 링크 클릭 시 해당 <b>깃허브(혹은 웹페이지)</b>로 연결됩니다.</NoticeLink></ModalDescribeDiv>
         <div>
           <img className="list-images" src="https://user-images.githubusercontent.com/76241233/122641899-04e40b00-d143-11eb-8fbd-6bf00a89ab2a.gif"  alt="" />
         </div>
@@ -110,7 +118,6 @@ export default function Works() {
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122172249-87f33000-cebb-11eb-9e33-236bbdc8d7e5.png" + ")" }}
         >
           <HoverSq>
-              <button className="btn" onDoubleClick={()=> modalRef1.current.openModal()}> 
             <WrapDescribe>
               <Tags src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white" alt="" /> 
@@ -119,46 +126,23 @@ export default function Works() {
               <Tags src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white" alt="" />
               <Tags src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=Express&logoColor=white" alt="" />
-              <HoverDescribeDiv> <b style={{fontSize:`1.2rem`}}>CRUD</b> 기능을 적용한 Web Application</HoverDescribeDiv>
+              <HoverDescribeDiv><button className="btn" onDoubleClick={()=> modalRef1.current.openModal()}>  <b style={{fontSize:`1.2rem`}}>CRUD</b> 기능을 적용한 Web Application</button></HoverDescribeDiv>
             </WrapDescribe>
-              </button>
-          </HoverSq>
-        </WorkSq>
-
-        {/* Vanilla JS Diary */}
-        <Modal ref={modalRef2}>
-        <ModalDescribeDiv><a>GitHub</a> | <a>WebPage</a></ModalDescribeDiv>
-        <div>
-          <img className="list-images" src="https://user-images.githubusercontent.com/76241233/122643208-7e7ef780-d149-11eb-9bd2-708fb1b36e10.gif" alt="" />
-        </div>
-      </Modal>
-      <WorkSq 
-          style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122216564-817aad80-cee7-11eb-9294-4b0f66841744.png" + ")" }}
-        >
-          <HoverSq>
-           <button className="btn" onDoubleClick={()=> modalRef2.current.openModal()}> 
-           <WrapDescribe>
-              <Tags src="https://img.shields.io/badge/html5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="" />
-              <Tags src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="" /> 
-              <Tags src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white" alt="" /> 
-              <HoverDescribeDiv> Vanilla-JS Web Application</HoverDescribeDiv>
-            </WrapDescribe>
-            </button>
           </HoverSq>
         </WorkSq>
 
         {/* spring about trip */}
         <Modal ref={modalRef3}>
-        <ModalDescribeDiv><a>GitHub</a> | <a>WebPage</a></ModalDescribeDiv>
+        <ModalDescribeDiv> Link : <Links data="https://github.com/Yeony99/abouttrip">GitHub</Links><NoticeLink> * 링크 클릭 시 해당 <b>깃허브(혹은 웹페이지)</b>로 연결됩니다.</NoticeLink></ModalDescribeDiv>
         <div>
-          <img className="list-images" src="blabla" style={{padding:`1rem`}} alt="" />
+          <img className="list-images" src="" style={{padding:`1rem`}} alt="" />
         </div>
       </Modal>
         <WorkSq 
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122215847-b0dcea80-cee6-11eb-9a09-ce0ac96f75d8.png" + ")" }} 
         >
            <HoverSq>
-           <button className="btn" onDoubleClick={()=> modalRef3.current.openModal()} > 
+          
             <WrapDescribe>
               <Tags src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=java&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="" />
@@ -166,12 +150,18 @@ export default function Works() {
               <Tags src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/oracle-F80000?style=flat-square&logo=oracle&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/git-F05032?style=flat-square&logo=git&logoColor=white" alt="" /> 
-              <HoverDescribeDiv> Spring 기반 국내 여행 가이드 회원제 플랫폼 </HoverDescribeDiv>
+              <HoverDescribeDiv> <button className="btn" onDoubleClick={()=> modalRef3.current.openModal()} > Spring 기반 회원제 국내 여행 커뮤니티 플랫폼 </button></HoverDescribeDiv>
             </WrapDescribe>
-            </button>
           </HoverSq>
         </WorkSq>
 
+             {/* dominho */}
+             <Modal ref={modalRef4}>
+        <ModalDescribeDiv> Link : <Links data="https://github.com/Yeony99/dominho">GitHub</Links><NoticeLink> * 링크 클릭 시 해당 <b>깃허브(혹은 웹페이지)</b>로 연결됩니다.</NoticeLink></ModalDescribeDiv>
+        <div>
+          <img className="list-images" src={Doimg} style={{padding:`1rem`, minWidth:`100%`}} alt="" />
+        </div>
+      </Modal>
         <WorkSq 
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122219213-2bf3d000-ceea-11eb-8d03-beca3ed8f49c.png" + ")" }}
         >
@@ -182,15 +172,41 @@ export default function Works() {
               <Tags src="https://img.shields.io/badge/jquery-0769AD?style=flat-square&logo=jquery&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/oracle-F80000?style=flat-square&logo=oracle&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/git-F05032?style=flat-square&logo=git&logoColor=white" alt="" /> 
-              <HoverDescribeDiv> Servlet/JSP 기반 온라인 피자 주문 사이트 </HoverDescribeDiv>
+              <HoverDescribeDiv> <button className="btn" onDoubleClick={()=> modalRef4.current.openModal()} > Servlet/JSP 기반 온라인 피자 주문 사이트 </button> </HoverDescribeDiv>
             </WrapDescribe>
           </HoverSq>
         </WorkSq>
+
+        {/* Vanilla JS Diary */}
+        <Modal ref={modalRef2}>
+        <ModalDescribeDiv> Link : <Links data="https://github.com/Yeony99/plainJS-diary">GitHub</Links><NoticeLink> * 링크 클릭 시 해당 <b>깃허브(혹은 웹페이지)</b>로 연결됩니다.</NoticeLink></ModalDescribeDiv>
+        <div>
+          <img className="list-images" src="https://user-images.githubusercontent.com/76241233/122643208-7e7ef780-d149-11eb-9bd2-708fb1b36e10.gif" alt="" />
+        </div>
+      </Modal>
+      <WorkSq 
+          style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122216564-817aad80-cee7-11eb-9294-4b0f66841744.png" + ")" }}
+        >
+          <HoverSq>
+           
+           <WrapDescribe>
+              <Tags src="https://img.shields.io/badge/html5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="" />
+              <Tags src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="" /> 
+              <Tags src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white" alt="" /> 
+              <HoverDescribeDiv><button className="btn" onDoubleClick={()=> modalRef2.current.openModal()}>  Vanilla-JS Web Application</button></HoverDescribeDiv>
+            </WrapDescribe>
+          </HoverSq>
+        </WorkSq>
+
+
+   
+
+        {/* portfolio */}
         <WorkSq 
           style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/76241233/122420416-a2fe9680-cfc6-11eb-86e0-eb4865adf965.png" + ")" }}
         >
           <HoverSq>
-            <WrapDescribe>
+            <WrapDescribe style={{cursor:`default`}}>
               <Tags src="https://img.shields.io/badge/Gatsby-663399?style=flat-square&logo=gatsby&logoColor=white" alt="" /> 
               <Tags src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white" alt="" />    
               <Tags src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white" alt="" /> 
@@ -200,6 +216,8 @@ export default function Works() {
             </WrapDescribe>
           </HoverSq>
         </WorkSq>
+
+
         <WorkSq 
           style={{ backgroundImage: "url(" + "" + ")", opacity:0}}
         >
