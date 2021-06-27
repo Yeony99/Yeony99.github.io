@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `It's Yeony here`,
-    description: `This is my web site.`,
+    description: `This is Yeony's portfolio`,
     author: `Nayeon Kim`,
+    logo: "./images/logo.svg"
+
   },
   plugins: [
       `gatsby-plugin-portal`,

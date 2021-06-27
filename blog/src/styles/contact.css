@@ -46,8 +46,11 @@ textarea {
 }
 
 .inputs {
-    border:none;
-    border-bottom: 1px solid brown;
+    width: 14rem;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     background: none;
 }
 
