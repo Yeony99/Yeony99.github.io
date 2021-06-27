@@ -10,7 +10,7 @@ import Works from '../images/works.svg'
 import styled from "styled-components"
 const ListLink = props => (
   <>
-    <Seo title="Yeony" />
+    <Seo title="Yeony" logo="../images/logo.svg" />
     <li style={{ display: `inline-block`, marginRight: `1.5rem` }}>
       <Link className="list" id={props.id} style={{textDecoration:`none`}} data={props.data} to={props.to}>{props.children}</Link>
     </li>
