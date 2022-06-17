@@ -7,7 +7,8 @@ module.exports = {
 
   },
   plugins: [
-      `gatsby-plugin-portal`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-portal`,
     {
       resolve: `gatsby-plugin-styled-components`,
       // options: {
