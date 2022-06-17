@@ -1,0 +1,8 @@
+.transition {
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform!important;
+    transition-timing-function: cubic-bezier(.4,0,.2,1)!important;
+}
+
+.duration-500 {
+    transition-duration: .5s!important;
+}
