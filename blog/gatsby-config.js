@@ -7,13 +7,21 @@ module.exports = {
 
   },
   plugins: [
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-portal`,
     {
-      resolve: `gatsby-plugin-styled-components`,
-      // options: {
-      //   // Add any options here
-      // },
+      resolve: `gatsby-plugin-styled-components`
+    },
+    {
+      resolve: `gatsby-plugin-mdx-frontmatter`
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/md-pages`,
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
