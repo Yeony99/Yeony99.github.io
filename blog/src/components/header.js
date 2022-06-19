@@ -12,7 +12,7 @@ const ListLink = props => (
   <>
     <Seo title="Yeony" logo="../images/logo.svg" />
     <li style={{ display: `inline-block`, marginRight: `1.5rem` }}>
-      <Link className="list" id={props.id} style={{textDecoration:`none`}} data={props.data} to={props.to}>{props.children}</Link>
+      <Link className="list" id={props.id} style={{ textDecoration: `none` }} data={props.data} to={props.to}>{props.children}</Link>
     </li>
   </>
 )
@@ -25,32 +25,28 @@ const GHGrass = styled.img`
 `;
 
 const Header = () => (
-  <header
-    style={{
-      borderBottom: `0.1rem solid #249232`, 
-      display: `flex`, 
-      alignItems: `flex-end`, 
-      margin: `1rem 1rem`
-    }}
-  >
-    <ListLink to="/" id="logo"  data="Who am I ? ">
-      <img src={Logo} style={{ width: `10rem`, marginRight:`1rem`}} />
-    </ListLink>
-    <ListLink to="/works" data="What I did !">
-      <img src={Works} alt="작업물" style={{ width: `2.5rem` }} /> 
-    </ListLink>
-    <ListLink to="https://github.com/Yeony99/TIL" data="Today Yeony Learned">
-      <img src={Til} alt="TIL" style={{ width: `2.5rem` }} />
-    </ListLink>
-    <ListLink to="/contact" data="e-Mail ?">
-      <img src={Contact} alt="연락" style={{ width: `2.5rem` }} />
-    </ListLink>
-    <ListLink to="https://github.com/Yeony99" data="@Yeony99">
-      <img src={Github} alt="Github" style={{ width: `2.3rem` }} />
-    </ListLink>
-    <GHGrass src="https://ghchart.rshah.org/Yeony99" href="https://github.com/Yeony99"/>
-    
+  <header>
+
+    <div className="wrap row justify-content-between align-center">
+      <div className="col-6">
+        <a aria-current="page" className="" href="/">
+          <img src={Logo} style={{ width: 33 + '%', margin: 0 }} />
+        </a>
+      </div>
+      <nav className="col-6" style={{ paddingTop: 1 + 'rem', marginBottom: 0 }}>
+        <ul className="flex justify-content-around text-sm" style={{ marginBottom: 0 }}>
+          <a href="/log">
+            <li className="transition duration-500 ">Log</li>
+          </a>
+          <a href="/retrospective">
+            <li className="text-sm transition duration-500 ">Retrospective</li>
+          </a>
+        </ul>
+      </nav>
+    </div>
+
   </header>
+
 )
 
 Header.propTypes = {
