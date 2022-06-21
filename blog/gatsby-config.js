@@ -20,7 +20,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/src/md-pages`,
+        path: `${__dirname}/src/pages/log/md-pages`,
       },
     },
     `gatsby-plugin-react-helmet`,
