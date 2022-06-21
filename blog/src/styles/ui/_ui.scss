@@ -1,0 +1,15 @@
+div.tag {
+    background-color: $tag-bg;
+    color: $tag-color;
+}
+
+li.current-path {
+    border-color: $current-page;
+}
+
+a {
+    border-color: transparent;
+    :hover {
+        border-color: $route-hover;
+    }
+}
