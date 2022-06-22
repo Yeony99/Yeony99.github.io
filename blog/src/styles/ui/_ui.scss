@@ -2,6 +2,11 @@ div.tag {
     background-color: $tag-bg;
     color: $tag-color;
 }
+div.tag-sm {
+    font-size: 0.7rem !important;
+    padding: 0.1rem 0.3rem !important;
+}
+
 
 li.current-path {
     border-color: $current-page;
@@ -12,4 +17,8 @@ a {
     :hover {
         border-color: $route-hover;
     }
+}
+
+.circle {
+    border-radius: 50%;
 }

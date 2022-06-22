@@ -6,7 +6,7 @@ const Tag = styled.div`
     margin: 0.5rem;
     margin-left: 0;
     font-size: 0.85rem;
-    border-radius: 25%;
+    border-radius: 0.25rem;
 `
 
 export default Tag;
