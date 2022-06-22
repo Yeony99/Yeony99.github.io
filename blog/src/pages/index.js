@@ -5,11 +5,11 @@ import Contents from "../components/content"
 
 export default () => (
   <Fragment>
-    <Header/>
-    <Layout>
+    <Header path="/"/>
+    {/* <Layout> */}
       {/* <Contents title="hi" subtitle="sub">
 
       </Contents> */}
-    </Layout>
+    {/* </Layout> */}
   </Fragment>
 )
