@@ -1,8 +1,8 @@
 ---
-title: "Test"
+title: "Sweet Pandas Eating Sweets"
 date: "2017-08-10"
-category: "log"
-slug: "/log/test"
+category: "retrospective"
+slug: "/retrospective/test"
 tags: 
  - "a"
  - "b"

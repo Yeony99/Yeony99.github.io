@@ -23,6 +23,13 @@ module.exports = {
         path: `${__dirname}/src/pages/log/md-pages`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/pages/retrospective/md-pages`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

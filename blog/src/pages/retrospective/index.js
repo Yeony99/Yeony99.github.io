@@ -5,12 +5,11 @@ import PageHeader from "../../components/page-header";
 import Tag from "../../components/tag";
 
 export default ({ data }) => {
-  console.log({ data })
     return (
         <>
-            <Header path="/log" title="로그" />
+            <Header path="/retrospective" title="회고" />
             <div className="wrap">
-                <PageHeader title="Log ☘" subtitle="개발, 읽을거리, 일 관련된 사소한 기록을 남깁니다." />
+                <PageHeader title="Retrospective ☘" subtitle="조금 긴 이야기, 혹은 마무리하며 작성하는 회고록" />
                 {/* <div>
                         {data.allMarkdownRemark.totalCount}
                     </div> */}
@@ -34,8 +33,8 @@ export default ({ data }) => {
 
 
 export const query = graphql`
-query MyQuery {
-  allMarkdownRemark(filter: {frontmatter: {category: {eq: "log"}}}) {
+query MyQuery1 {
+  allMarkdownRemark(filter: {frontmatter: {category: {eq: "retrospective"}}}) {
     edges {
       node {
         frontmatter {
@@ -50,6 +49,4 @@ query MyQuery {
     }
   }
 }
-
-
 `
