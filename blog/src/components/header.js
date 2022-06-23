@@ -31,7 +31,6 @@ const LogoImg = styled.img`
 
 const Header = (props) => {
   const current = props.path;
-  console.log(props)
   return (
     <header>
       <Seo title={props.title? props.title : null}/>

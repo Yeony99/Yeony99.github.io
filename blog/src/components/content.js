@@ -12,7 +12,6 @@ const ContentImg = styled.img`
 `
 
 const Contents = props => {
-  console.log(props)
   return (
     <>
       <div>

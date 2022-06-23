@@ -13,7 +13,6 @@ height: 25vh;
 
 export default ({data}) => {
     const meta = data.allMarkdownRemark.edges[0].node
-    console.log(data.allMarkdownRemark.edges[0].node.frontmatter)
     return (
         <>
             <Header path={meta.frontmatter.slug} title={meta.frontmatter.title}/>

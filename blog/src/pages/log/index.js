@@ -5,7 +5,6 @@ import PageHeader from "../../components/page-header";
 import Tag from "../../components/tag";
 
 export default ({ data }) => {
-  console.log({ data })
     return (
         <>
             <Header path="/log" title="로그" />
