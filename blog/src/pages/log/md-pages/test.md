@@ -1,6 +1,6 @@
 ---
 title: "Test"
-date: "2017년 8월 10일 00:00"
+date: "2017년 8월 10일"
 category: "log"
 slug: "/log/test"
 tags: 

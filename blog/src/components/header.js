@@ -4,14 +4,6 @@ import { Link } from "gatsby"
 import Logo from '../images/logo.svg'
 import styled from "styled-components"
 import Seo from "./seo"
-// const ListLink = props => (
-//   <>
-//     <Seo title="Yeony" logo="../images/logo.svg" />
-//     <li style={{ display: `inline-block`, marginRight: `1.5rem` }}>
-//       <Link className="list" id={props.id} style={{ textDecoration: `none` }} data={props.data} to={props.to}>{props.children}</Link>
-//     </li>
-//   </>
-// )
 
 const ListLink = styled.li`
   border-bottom: 2px solid transparent;
@@ -36,7 +28,7 @@ const Header = (props) => {
       <Seo title={props.title? props.title : null}/>
 
       <div className="wrap flex justify-content-between align-center">
-        <div className="">
+        <div className="padding-top-1">
           <Link aria-current="page" className="" to="/">
             <LogoImg src={Logo} />
             <h1 style={{ display: 'none' }}>Yeony</h1>
