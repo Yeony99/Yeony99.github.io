@@ -35,7 +35,7 @@ export default ({ data }) => {
                         <div className="padding-1 h-100" name="key" onClick={() => changeHandler(node.id, open)}>
                               <h3>{node.frontmatter.title}</h3>
                               <div className={`transition duration-500 ${obj.key == node.id? ' log-selected-bg' : ''}`}>
-                                 <p>{obj.key == node.id? node.internal.content : node.excerpt}</p>
+                                 <div dangerouslySetInnerHTML={ {__html: obj.key == node.id? node.html : node.excerpt} }></div>
                               </div>
                               
                               <div className="flex">{node.frontmatter.tags.map(tag => <Tag key={tag} className="tag">{tag}</Tag>)}</div>
@@ -63,6 +63,7 @@ query MyQuery {
           slug
         }
         excerpt
+        html
         internal {
           content
         }
