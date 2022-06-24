@@ -7,7 +7,29 @@ module.exports = {
 
   },
   plugins: [
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-embed-markdown",
+            options: {
+              // Example code links are relative to this dir.
+              // eg examples/path/to/file.js
+              directory: `${__dirname}/src/pages/log/md-pages/`,
+            }
+          },
+          {
+            resolve: "gatsby-remark-embed-markdown",
+            options: {
+              // Example code links are relative to this dir.
+              // eg examples/path/to/file.js
+              directory: `${__dirname}/src/pages/retrospective/md-pages/`,
+            }
+          }
+        ]
+      }
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-portal`,
     {

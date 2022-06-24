@@ -20,7 +20,7 @@ export default ({ data }) => {
                 <ImgHeader><img className="pg-header-img" src={meta.frontmatter.img}/></ImgHeader>
                 : <></>
             }
-            <div className="wrap margin-top-1">
+            <div className="wrap margin-top-1 margin-bottom-1">
                 <div className="wrap">
                     <h1 className="margin-top-1666">{meta.frontmatter.title}</h1>
                     <div className="flex align-center">

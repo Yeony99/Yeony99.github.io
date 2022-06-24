@@ -31,6 +31,14 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 
               return slug
             }
+          },
+          img: {
+            type: "String",
+            resolve(source) {
+              const img = source
+
+              return img
+            }
           }
         },
       },

@@ -27,3 +27,23 @@ a {
     border-radius: 50%;
 }
 
+p > a {
+    text-decoration: underline;
+    color: $route-hover;
+}
+
+p > code, pre, pre > code {
+    background-color: #eeeeee;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    border-radius: 0.25rem;
+    padding: 0.2rem 0.5rem 0.3rem;
+}
+
+p > strong {
+    background-color: antiquewhite;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 10px 0 30px 0;
+}
+
+
