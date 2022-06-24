@@ -24,7 +24,7 @@ export default ({ data }) => {
         <>
             <Header path="/log" title="로그" />
             <div className="wrap">
-                <PageHeader title="Log ☘" subtitle="개발, 읽을거리, 일 관련된 사소한 기록을 남깁니다." />
+                <PageHeader title="Log ☘" subtitle="개발, 읽을거리, 일 관련된 사소한 기록들" />
                 {/* <div>
                         {data.allMarkdownRemark.totalCount}
                     </div> */}

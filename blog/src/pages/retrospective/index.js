@@ -9,7 +9,7 @@ export default ({ data }) => {
         <>
             <Header path="/retrospective" title="회고" />
             <div className="wrap">
-                <PageHeader title="Retrospective ☘" subtitle="조금 긴 이야기, 혹은 마무리하며 작성하는 회고록" />
+                <PageHeader title="Retrospective ☘" subtitle="시간들을 되돌아보며 적는 회고록" />
                 {/* <div>
                         {data.allMarkdownRemark.totalCount}
                     </div> */}
