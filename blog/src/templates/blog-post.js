@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Header from "../components/header"
 import styled from "styled-components";
 import Tag from "../components/tag";
+import Utterances from "../components/utterances";
 
 const ImgHeader = styled.div`
     height: 25vh;
@@ -36,8 +37,14 @@ export default ({ data }) => {
                     <div className="flex">{meta.frontmatter.tags.map(tag => <Tag key={tag} className="tag tag-sm">{tag}</Tag>)}</div>
 
                 </div>
+                <div className="padding-1 margin-top-2">
+                    <div className="b-shadow-10-gray">
+                        <Utterances />
+                    </div>
 
+                </div>
             </div>
+            
             {/* <Contents title="hi" subtitle="sub">
 
             </Contents> */}
