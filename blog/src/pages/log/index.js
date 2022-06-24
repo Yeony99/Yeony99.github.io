@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/header"
 import { graphql, Link } from "gatsby"
 import PageHeader from "../../components/page-header";
 import Tag from "../../components/tag";
 
 export default ({ data }) => {
+  const [obj, setState] = useState({
+    key: '',
+    isOpen: false,
+  });
+
+  const [open, setOpen] = useState(false)
+
+  const changeHandler = (key, isOpen) => {
+    setOpen(isOpen? false: true)
+    console.log(isOpen, open)
+    setState({...obj, key: key, isOpen: open})
+    console.log(key, obj)
+  }
+
+  
     return (
         <>
             <Header path="/log" title="로그" />
@@ -14,15 +29,19 @@ export default ({ data }) => {
                         {data.allMarkdownRemark.totalCount}
                     </div> */}
                 {data.allMarkdownRemark.edges.map(({ node }) => (
+                  
                     <div key={node.id} className="row flex-column">
-                      <Link to={node.frontmatter.slug}>
-                        <div className="padding-1 h-100">
+                      {/* <Link to={node.frontmatter.slug}> */}
+                        <div className="padding-1 h-100" name="key" onClick={() => changeHandler(node.id, open)}>
                               <h3>{node.frontmatter.title}</h3>
-                              <p>{node.excerpt}</p>
+                              <div className={`transition duration-500 ${obj.key == node.id? ' log-selected-bg' : ''}`}>
+                                 <p>{obj.key == node.id? node.internal.content : node.excerpt}</p>
+                              </div>
+                              
                               <div className="flex">{node.frontmatter.tags.map(tag => <Tag key={tag} className="tag">{tag}</Tag>)}</div>
                               <hr/>
                           </div>
-                      </Link>
+                      {/* </Link> */}
                     </div>
                 ))}
 
@@ -44,6 +63,9 @@ query MyQuery {
           slug
         }
         excerpt
+        internal {
+          content
+        }
         id
       }
     }

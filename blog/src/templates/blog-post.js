@@ -7,17 +7,19 @@ import Tag from "../components/tag";
 const ImgHeader = styled.div`
     height: 25vh;
     width: 100%;
-    background-color: aliceblue;
+    background-color: #f5fff0;
 `
 
 export default ({ data }) => {
     const meta = data.allMarkdownRemark.edges[0].node
     return (
         <>
-            <Header path={meta.frontmatter.slug} title={meta.frontmatter.title} />
-            <ImgHeader>
-                <img className="pg-header-img" src="https://img.freepik.com/free-vector/night-ocean-landscape-full-moon-and-stars-shine_107791-7397.jpg?w=2000"/>
-            </ImgHeader>
+            <Header path={meta.frontmatter.slug} title={meta.frontmatter.title} />        
+            {
+                meta.frontmatter.img? 
+                <ImgHeader><img className="pg-header-img" src={meta.frontmatter.img}/></ImgHeader>
+                : <></>
+            }
             <div className="wrap margin-top-1">
                 <div className="wrap">
                     <h1 className="margin-top-1666">{meta.frontmatter.title}</h1>
@@ -27,8 +29,8 @@ export default ({ data }) => {
                         </a>
                         <h6>Yeony (Nayeon Kim) · {meta.frontmatter.date}</h6>
                     </div>
-
-                    <p>{meta.internal.content}</p>
+                
+                    <div dangerouslySetInnerHTML={ {__html: meta.html} }></div>
 
                     <hr className="margin-0" />
                     <div className="flex">{meta.frontmatter.tags.map(tag => <Tag key={tag} className="tag tag-sm">{tag}</Tag>)}</div>
@@ -53,8 +55,10 @@ query($slug: String!) {
               slug
               tags
               date
+              img
               title
             }
+            html
             internal {
               content
             }
