@@ -1,20 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../../components/header"
 import { graphql, Link } from "gatsby"
 import PageHeader from "../../components/page-header";
 import Tag from "../../components/tag";
 
 export default ({ data }) => {
+  const [all, setAll] = useState('')
+
+
+  const test = (tag) => {
+    console.log('test!!!!', tag)
+    setAll(tag)
+  }
     return (
         <>
             <Header path="/retrospective" title="회고" />
             <div className="wrap">
                 <PageHeader title="Retrospective ☘" subtitle="시간들을 되돌아보며 적는 회고록" />
-                {/* <div>
-                        {data.allMarkdownRemark.totalCount}
-                    </div> */}
+                <div className="padding-bottom-1 wrap flex overflow-x-scroll">
+                  <Tag className="tag pointer bg-orange" onClick={() => test('')}>All</Tag>
+                  {
+                    data.allMarkdownRemark.distinct.map(tag => <Tag key={tag} className="tag pointer bg-orange" onClick={() => test(tag)}>{tag}</Tag>)
+                  }
+                </div>
                 {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <div key={node.id} className="row flex-column">
+                    <div key={node.id} className="row flex-column" style={{display: !all ? 'block' : node.frontmatter.tags.map(tag => tag).includes(all)? 'block' : 'none'}}>
                       <Link to={node.frontmatter.slug}>
                         <div className="padding-1 h-100">
                               <h3>{node.frontmatter.title}</h3>
@@ -47,6 +57,7 @@ query MyQuery1 {
         id
       }
     }
+    distinct(field: frontmatter___tags)
   }
 }
 `

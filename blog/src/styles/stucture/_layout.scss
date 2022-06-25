@@ -188,3 +188,23 @@
     height: 100%;
     width: 100%;
 }
+
+.overflow-x-scroll {
+    overflow: auto;
+    
+    &::-webkit-scrollbar{
+        height: 5px;
+    }
+    
+    /* 스크롤바 막대 설정*/
+    &::-webkit-scrollbar-thumb{
+        height: 17%;
+        background-color: #ffc079;
+        border-radius: 10px;  
+    }
+    
+    /* 스크롤바 뒷 배경 설정*/
+    &::-webkit-scrollbar-track{
+        background-color: #ffc17956;
+    }
+}
