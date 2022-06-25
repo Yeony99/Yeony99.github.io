@@ -1,8 +1,9 @@
 ---
 title: "Test"
 date: "2017년 8월 10일"
-category: "log"
-slug: "/log/test"
+category: "blog"
+slug: "/blog/test"
+img: "https://img.freepik.com/free-vector/night-ocean-landscape-full-moon-and-stars-shine_107791-7397.jpg?w=2000"
 tags: 
  - "aaaaaaa"
  - "b"
@@ -26,4 +27,3 @@ Pandas are really sweet.
 Here's a video of a panda eating sweets.
 Pandas are really sweet.
 Here's a video of a panda eating sweets.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>

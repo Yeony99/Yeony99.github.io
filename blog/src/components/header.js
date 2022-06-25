@@ -14,10 +14,10 @@ const ListLink = styled.li`
 `
 
 const LogoImg = styled.img`
-  width: 33%;
+  width: 4em;
   margin: 0;
-  @media screen and (max-width: 300px) {
-    width: 62%;
+  @media screen and (max-width: 400px) {
+    width: 3em;
   }
 `
 
@@ -36,8 +36,11 @@ const Header = (props) => {
         </div>
         <nav className="padding-top-1 margin-0">
           <ul className="flex justify-content-around text-sm margin-0">
-            <Link to="/log">
-              <ListLink className={"transition duration-500 text-sm margin-1" + (current.includes("/log") ? " current-path" : " route-path")}>Log</ListLink>
+             <Link to="/blog">
+              <ListLink className={"transition duration-500 text-sm margin-1" + (current.includes("/blog") ? " current-path" : " route-path")}>Blog</ListLink>
+            </Link>
+            <Link to="/tweet">
+              <ListLink className={"transition duration-500 text-sm margin-1" + (current.includes("/tweet") ? " current-path" : " route-path")}>Tweet</ListLink>
             </Link>
             <Link to="/retrospective">
               <ListLink className={"transition duration-500 text-sm margin-1" + (current.includes("/retrospective") ? " current-path" : " route-path")}>Retrospective</ListLink>
