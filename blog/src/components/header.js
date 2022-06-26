@@ -22,7 +22,7 @@ const LogoImg = styled.img`
 `
 
 const Header = (props) => {
-  const current = props.path;
+  const {path, title} = props;
   return (
     <header>
       <Seo title={props.title? props.title : null}/>
@@ -37,17 +37,16 @@ const Header = (props) => {
         <nav className="padding-top-1 margin-0">
           <ul className="flex justify-content-around text-sm margin-0">
              <Link to="/blog">
-              <ListLink className={"transition duration-500 text-sm margin-1" + (current.includes("/blog") ? " current-path" : " route-path")}>Blog</ListLink>
+              <ListLink className={"transition duration-500 text-sm margin-1" + (path.includes("/blog") ? " current-path" : " route-path")}>Blog</ListLink>
             </Link>
             <Link to="/tweet">
-              <ListLink className={"transition duration-500 text-sm margin-1" + (current.includes("/tweet") ? " current-path" : " route-path")}>Tweet</ListLink>
+              <ListLink className={"transition duration-500 text-sm margin-1" + (path.includes("/tweet") ? " current-path" : " route-path")}>Tweet</ListLink>
             </Link>
             <Link to="/retrospective">
-              <ListLink className={"transition duration-500 text-sm margin-1" + (current.includes("/retrospective") ? " current-path" : " route-path")}>Retrospective</ListLink>
+              <ListLink className={"transition duration-500 text-sm margin-1" + (path.includes("/retrospective") ? " current-path" : " route-path")}>Retrospective</ListLink>
             </Link>
           </ul>
         </nav>
-        {({ path }) => (path)}
       </div>
 
     </header>
