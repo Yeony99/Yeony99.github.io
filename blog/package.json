@@ -23,6 +23,7 @@
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-remark": "^4.11.0",
     "gatsby-transformer-sharp": "^3.4.0",
+    "moment": "^2.29.3",
     "node-scss": "^7.0.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
