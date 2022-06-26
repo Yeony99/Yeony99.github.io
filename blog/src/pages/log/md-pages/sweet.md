@@ -1,8 +1,8 @@
 ---
 title: "Sweet Pandas Eating Sweets"
 date: "2017-08-10"
-category: "blog"
-slug: "/blog/sweet"
+category: "log"
+slug: "/log/sweet"
 tags: 
  - "a"
  - "b"

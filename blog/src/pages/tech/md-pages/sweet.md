@@ -1,8 +1,8 @@
 ---
 title: "Sweet Pandas Eating Sweets"
 date: "2017-08-10"
-category: "tweet"
-slug: "/tweet/sweet"
+category: "tech"
+slug: "/tech/sweet"
 tags: 
  - "a"
  - "b"

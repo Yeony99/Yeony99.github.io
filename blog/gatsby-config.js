@@ -16,7 +16,7 @@ module.exports = {
             options: {
               // Example code links are relative to this dir.
               // eg examples/path/to/file.js
-              directory: `${__dirname}/src/pages/tweet/md-pages/`,
+              directory: `${__dirname}/src/pages/log/md-pages/`,
             }
           },
           {
@@ -32,7 +32,7 @@ module.exports = {
             options: {
               // Example code links are relative to this dir.
               // eg examples/path/to/file.js
-              directory: `${__dirname}/src/pages/blog/md-pages/`,
+              directory: `${__dirname}/src/pages/tech/md-pages/`,
             }
           }
         ]
@@ -50,7 +50,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/src/pages/tweet/md-pages`,
+        path: `${__dirname}/src/pages/log/md-pages`,
       },
     },
     {
@@ -64,7 +64,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/src/pages/blog/md-pages`,
+        path: `${__dirname}/src/pages/tech/md-pages`,
       },
     },
     `gatsby-plugin-react-helmet`,

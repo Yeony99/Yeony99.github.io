@@ -36,11 +36,11 @@ const Header = (props) => {
         </div>
         <nav className="padding-top-1 margin-0">
           <ul className="flex justify-content-around text-sm margin-0">
-             <Link to="/blog">
-              <ListLink className={"transition duration-500 text-sm margin-1" + (path.includes("/blog") ? " current-path" : " route-path")}>Blog</ListLink>
+             <Link to="/tech">
+              <ListLink className={"transition duration-500 text-sm margin-1" + (path.includes("/tech") ? " current-path" : " route-path")}>Tech</ListLink>
             </Link>
-            <Link to="/tweet">
-              <ListLink className={"transition duration-500 text-sm margin-1" + (path.includes("/tweet") ? " current-path" : " route-path")}>Tweet</ListLink>
+            <Link to="/log">
+              <ListLink className={"transition duration-500 text-sm margin-1" + (path.includes("/log") ? " current-path" : " route-path")}>Log</ListLink>
             </Link>
             <Link to="/retrospective">
               <ListLink className={"transition duration-500 text-sm margin-1" + (path.includes("/retrospective") ? " current-path" : " route-path")}>Retrospective</ListLink>

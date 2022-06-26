@@ -30,9 +30,9 @@ export default ({ data }) => {
   
     return (
         <>
-            <Header path="/tweet" title="로그" />
+            <Header path="/log" title="로그" />
             <div className="wrap">
-                <PageHeader title="Tweet ☘" subtitle="개발, 읽을거리, 일 관련된 사소한 기록들" />
+                <PageHeader title="Log ☘" subtitle="개발, 읽을거리, 일 관련된 사소한 기록들" />
                 <div className="padding-bottom-1 wrap flex overflow-x-scroll">
                   <Tag className="tag pointer bg-orange" onClick={() => test('')}>All</Tag>
                   {
@@ -65,7 +65,7 @@ export default ({ data }) => {
 
 export const query = graphql`
 query MyQuery {
-  allMarkdownRemark(filter: {frontmatter: {category: {eq: "tweet"}}}) {
+  allMarkdownRemark(filter: {frontmatter: {category: {eq: "log"}}}) {
     edges {
       node {
         frontmatter {

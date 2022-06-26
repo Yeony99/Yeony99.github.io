@@ -14,9 +14,9 @@ export default ({ data }) => {
   }
     return (
         <>
-            <Header path="/blog" title="블로그" />
+            <Header path="/tech" title="테크" />
             <div className="wrap">
-                <PageHeader title="Blog ☘" subtitle="시간들을 되돌아보며 적는 회고록" />
+                <PageHeader title="Tech ☘" subtitle="시간들을 되돌아보며 적는 회고록" />
                 <div className="padding-bottom-1 wrap flex overflow-x-scroll">
                   <Tag className="tag pointer bg-orange" onClick={() => test('')}>All</Tag>
                   {
@@ -44,7 +44,7 @@ export default ({ data }) => {
 
 export const query = graphql`
 query MyQuery3 {
-  allMarkdownRemark(filter: {frontmatter: {category: {eq: "blog"}}}) {
+  allMarkdownRemark(filter: {frontmatter: {category: {eq: "tech"}}}) {
     edges {
       node {
         frontmatter {

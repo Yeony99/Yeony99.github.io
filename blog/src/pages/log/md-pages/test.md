@@ -1,8 +1,8 @@
 ---
 title: "Test"
 date: "2017년 8월 10일"
-category: "blog"
-slug: "/blog/test"
+category: "log"
+slug: "/log/test"
 img: "https://img.freepik.com/free-vector/night-ocean-landscape-full-moon-and-stars-shine_107791-7397.jpg?w=2000"
 tags: 
  - "aaaaaaa"
