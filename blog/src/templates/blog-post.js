@@ -4,6 +4,7 @@ import Header from "../components/header"
 import styled from "styled-components";
 import Tag from "../components/tag";
 import Utterances from "../components/utterances";
+import Footer from "../components/footer";
 
 const ImgHeader = styled.div`
     height: 25vh;
@@ -44,6 +45,7 @@ export default ({ data }) => {
 
                 </div>
             </div>
+            <Footer />
             
             {/* <Contents title="hi" subtitle="sub">
 

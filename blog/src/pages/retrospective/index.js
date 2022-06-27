@@ -3,6 +3,7 @@ import Header from "../../components/header"
 import { graphql, Link } from "gatsby"
 import PageHeader from "../../components/page-header";
 import Tag from "../../components/tag";
+import Footer from "../../components/footer";
 
 export default ({ data }) => {
   const [all, setAll] = useState('')
@@ -37,6 +38,7 @@ export default ({ data }) => {
                 ))}
 
             </div>
+            <Footer />
         </>
     )
 }

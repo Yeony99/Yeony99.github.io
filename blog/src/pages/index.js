@@ -1,4 +1,5 @@
 import React, { Fragment } from "react"
+import Footer from "../components/footer"
 // import Timeline from "../components/timeline";
 import Header from "../components/header"
 // import {css3} from "../images/skills"
@@ -42,8 +43,8 @@ export default () => (
     <div className="wrap margin-top-1 margin-bottom-1">
       <div className="wrap">
         <h1 className="margin-top-1666 margin-bottom-05">Hi there, I'm Yeony.</h1>
-        <div className="margin-bottom-1" style={{ fontSize: 0.9 + 'rem', color: '#9c9c9c' }}>
-          Do you need Front-End Developer? Here I am! <br />
+        <div className="margin-bottom-1" style={{ fontSize: 0.8 + 'rem', color: '#9c9c9c' }}>
+          Do you need Front-End Developer? Me Here! <br />
           I'm a developing developer 👩‍💻
         </div>
         <div className="flex align-center">
@@ -76,7 +77,7 @@ export default () => (
                       <img className="list-skill-logo" src={require(`./skills/${sk}.svg`).default} />
                     </td>
                     <td className="td-title">{sk}</td>
-                    <td className="wordbreak-breakall">
+                    <td className="wordbreak-keepall">
                       <p className="margin-0" dangerouslySetInnerHTML={{ __html: FEDescript[i] }}></p>
                     </td>
                   </tr>)
@@ -92,7 +93,7 @@ export default () => (
                       <img className="list-skill-logo" src={require(`./skills/${sk}.svg`).default} />
                     </td>
                     <td className="td-title">{sk}</td>
-                    <td className="wordbreak-breakall">
+                    <td className="wordbreak-keepall">
                       <p className="margin-0" dangerouslySetInnerHTML={{ __html: BEDescript[i] }}></p>
                     </td>
                   </tr>)
@@ -109,7 +110,7 @@ export default () => (
                       <img className="list-skill-logo" src={require(`./skills/${sk}.svg`).default} />
                     </td>
                     <td className="td-title">{sk}</td>
-                    <td className="wordbreak-breakall">
+                    <td className="wordbreak-keepall">
                       {/* <p className="margin-0" dangerouslySetInnerHTML={{ __html: BEDescript[i] }}></p> */}
                     </td>
                   </tr>)
@@ -127,7 +128,7 @@ export default () => (
                       <img className="list-skill-logo" src={require(`./skills/${sk}.svg`).default} />
                     </td>
                     <td className="td-title">{sk}</td>
-                    <td className="wordbreak-breakall">
+                    <td className="wordbreak-keepall">
                       {/* <p className="margin-0" dangerouslySetInnerHTML={{ __html: BEDescript[i] }}></p> */}
                     </td>
                   </tr>)
@@ -144,7 +145,7 @@ export default () => (
                       <img className="list-skill-logo" src={require(`./skills/${sk}.svg`).default} />
                     </td>
                     <td className="td-title">{sk}</td>
-                    <td className="wordbreak-breakall">
+                    <td className="wordbreak-keepall">
                       {/* <p className="margin-0" dangerouslySetInnerHTML={{ __html: BEDescript[i] }}></p> */}
                     </td>
                   </tr>)
@@ -155,5 +156,6 @@ export default () => (
         </div>
       </div>
     </div>
+    <Footer />
   </Fragment>
 )
