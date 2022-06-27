@@ -20,6 +20,10 @@ a {
     }
 }
 
+footer {
+  position : relative;
+}
+
 
 
 // react-time-line library
@@ -111,9 +115,20 @@ a {
 }
 
 .list-skill-logo {
-  width: 65px;
-  height: 65px;
-  margin: 0
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+}
+
+.img-td {
+  @media screen and (max-width: 550px) {
+    padding:0;
+    margin:0;
+    width:0;
+  }
 }
 
 .footer-logo {
@@ -121,6 +136,13 @@ a {
   height: 20px;
   margin: 0;
 }
+
+.min-h-74 {
+  min-height: 74vh;
+}
+
+
+
 @font-face {
     font-family: 'NanumSquareRound';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');

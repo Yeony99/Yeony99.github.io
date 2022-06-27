@@ -26,7 +26,7 @@ export default ({ data }) => {
                 <div className="wrap">
                     <h1 className="margin-top-1666">{meta.frontmatter.title}</h1>
                     <div className="flex align-center">
-                        <a href="https://github.com/Yeony99" target="_blank" className="margin-right-05">
+                        <a href="https://github.com/Yeony99" target="_blank" rel="noreferrer"className="margin-right-05">
                             <img style={{ height: 'auto' }} alt="" width="20" height="20" className="avatar-sm circle margin-bottom-1" src="https://avatars.githubusercontent.com/u/76241233?v=4" />
                         </a>
                         <h6>Yeony (Nayeon Kim) · {meta.frontmatter.date}</h6>
