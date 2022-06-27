@@ -44,15 +44,6 @@ export default () => (
           </a>
           <h6>Yeony (Nayeon Kim)</h6>
         </div>
-        {/* <div>
-          <table>
-              <thead>
-                <tr>
-                  <td colSpan={6}><h2>I develop myself through...</h2> </td>
-                </tr>
-              </thead>
-          </table>
-        </div> */}
         <div>
           <table>
             <thead>
@@ -61,10 +52,6 @@ export default () => (
               </tr>
             </thead>
             <tbody>
-              {/* <br />
-              <tr>
-                <td colSpan={6}><h4>Web Front-End</h4></td>
-              </tr> */}
               <tr>
                 {
                   FE.map((sk, i) =>
@@ -77,11 +64,6 @@ export default () => (
                   )
                 }
               </tr>
-
-              {/* <br />
-              <tr>
-                <td colSpan={6}><h4>Web Back-End</h4></td>
-              </tr> */}
               <tr>
                 {
                   BE.map((sk, i) =>
@@ -96,10 +78,6 @@ export default () => (
                 <td className="img-td"></td><td></td>
               </tr>
 
-              {/* <br />
-              <tr>
-                <td colSpan={6}><h4>Version Control</h4></td>
-              </tr> */}
               <tr>
                 {
                   Source.map((sk, i) =>
@@ -113,11 +91,6 @@ export default () => (
                 }
                 <td className="img-td"></td><td></td>
               </tr>
-
-              {/* <br />
-              <tr>
-                <td colSpan={6}><h4>DataBase & NoSQL DataStorage</h4></td>
-              </tr> */}
               <tr>
                 {
                   Data.map((sk, i) =>
@@ -131,10 +104,6 @@ export default () => (
                 }
               </tr>
 
-              {/* <br />
-              <tr>
-                <td colSpan={6}><h4>Design</h4></td>
-              </tr> */}
               <tr>
                 {
                   Design.map((sk, i) =>
