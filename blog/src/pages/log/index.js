@@ -35,9 +35,9 @@ export default ({ data }) => {
             <div className="wrap">
                 <PageHeader title="Log ☘" subtitle="개발, 읽을거리, 일 관련된 사소한 기록들" />
                 <div className="padding-bottom-1 wrap flex overflow-x-scroll">
-                  <Tag className="tag pointer bg-orange" onClick={() => test('')}>All</Tag>
+                  <Tag className={"tag pointer bg-orange " + (all == ''? 'selected-tag' : '')} onClick={() => test('')}>All</Tag>
                   {
-                    data.allMarkdownRemark.distinct.map(tag => <Tag key={tag} className="tag pointer bg-orange" onClick={() => test(tag)}>{tag}</Tag>)
+                    data.allMarkdownRemark.distinct.map(tag => <Tag key={tag} className={"tag pointer bg-orange " + (all == tag? 'selected-tag' : '')} onClick={() => test(tag)}>{tag}</Tag>)
                   }
                 </div>
                 
@@ -51,7 +51,7 @@ export default ({ data }) => {
                                  <div dangerouslySetInnerHTML={ {__html: obj.key == node.id? node.html : node.excerpt} }></div>
                               </div>
                               
-                              <div className="flex">{node.frontmatter.tags.map(tag => <Tag key={tag} className="tag">{tag}</Tag>)}</div>
+                              <div className="flex justify-content-between align-center"><div className="flex">{node.frontmatter.tags.map(tag => <Tag key={tag} className="tag">{tag}</Tag>)}</div><div style={{fontSize: 0.7+'rem'}}>{node.frontmatter.date}</div></div>
                               <hr/>
                           </div>
                       {/* </Link> */}
@@ -67,7 +67,7 @@ export default ({ data }) => {
 
 export const query = graphql`
 query MyQuery {
-  allMarkdownRemark(filter: {frontmatter: {category: {eq: "log"}}}) {
+  allMarkdownRemark(filter: {frontmatter: {category: {eq: "log"}}} sort: {fields: frontmatter___date, order: DESC}) {
     edges {
       node {
         frontmatter {
