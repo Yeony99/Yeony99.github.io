@@ -59,7 +59,7 @@ export default () => (
                       <td className="img-td">
                         <img className="list-skill-logo" src={require(`./skills/${sk}.svg`).default} />
                       </td>
-                      <td className="td-title">{sk}</td>
+                      <td className="td-title padding-right-1">{sk}</td>
                     </>
                   )
                 }
