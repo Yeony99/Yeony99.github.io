@@ -1,10 +1,16 @@
 div.tag {
     background-color: $tag-bg;
     color: $tag-color;
+    user-select: none;
 }
 div.tag-sm {
     font-size: 0.7rem !important;
     padding: 0.1rem 0.3rem !important;
+    user-select: none;
+}
+
+nav > ul > a > li {
+    user-select: none;
 }
 
 

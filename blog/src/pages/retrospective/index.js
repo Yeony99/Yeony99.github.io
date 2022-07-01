@@ -53,10 +53,12 @@ query MyQuery1 {
           date
           title
           tags    
+          img
           slug
         }
         excerpt
         id
+        tableOfContents 
       }
     }
     distinct(field: frontmatter___tags)

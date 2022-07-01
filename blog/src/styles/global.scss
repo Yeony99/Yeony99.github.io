@@ -1,5 +1,6 @@
 html {
     background-color: white;
+    scroll-behavior:smooth
 }
 
 * {
@@ -153,6 +154,33 @@ footer {
   margin: 0;
   position: absolute;
   top: 0;
+}
+
+.toc-container {
+  padding: 1rem;
+  position: fixed;
+  width: 15vw;
+  color: black;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  
+  ul {
+    li {
+      list-style: inherit;
+      p > a {
+        text-decoration: none;
+        color: #444;
+        &:hover {
+          color: $route-hover;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 
 
