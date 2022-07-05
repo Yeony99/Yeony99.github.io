@@ -60,7 +60,7 @@ export default ({ data }) => {
                         <h6>Yeony (Nayeon Kim) · {meta.frontmatter.date}</h6>
                     </div>
                 
-                    <div dangerouslySetInnerHTML={ {__html: meta.html} }></div>
+                    <div className="blog-post" dangerouslySetInnerHTML={ {__html: meta.html} }></div>
 
                     <hr className="margin-0" />
                     <div className="flex">{meta.frontmatter.tags.map(tag => <Tag key={tag} className="tag tag-sm">{tag}</Tag>)}</div>

@@ -13,6 +13,12 @@ ul {
     }
 }
 
+ol {
+  li {
+    list-style: inherit;
+  }
+}
+
 a {
     text-decoration: none;
     color: $header-menu-item-color;
@@ -159,7 +165,7 @@ footer {
 .toc-container {
   padding: 1rem;
   position: fixed;
-  width: 15vw;
+  width: 25vw;
   color: black;
   border-radius: 0.25rem;
   font-size: 0.9rem;
@@ -168,6 +174,8 @@ footer {
   ul {
     li {
       list-style: inherit;
+      border-bottom: 1px solid #444;
+      margin-bottom: 1rem;
       p > a {
         text-decoration: none;
         color: #444;
@@ -175,11 +183,20 @@ footer {
           color: $route-hover;
         }
       }
+      ul li {
+        border: none;
+      }
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     display: none;
+  }
+}
+
+.blog-post {
+  ul > li {
+    list-style: inherit;
   }
 }
 
