@@ -7,7 +7,7 @@ import Utterances from "../components/utterances";
 import Footer from "../components/footer";
 
 const ImgHeader = styled.div`
-    height: 25vh;
+    height: 35vh;
     width: 100%;
     background-color: #f5fff0;
 `
@@ -42,7 +42,7 @@ export default ({ data }) => {
                 <ImgHeader><img className="pg-header-img" src={meta.frontmatter.img}/></ImgHeader>
                 : <></>
             }
-            <div className="toc-container transition duration-500" style={ScrollY> 335? {top: 0} : ScrollY >= 300? {top: 35} : ScrollY >= 200? {top: 135} : ScrollY >= 100 ? {top: 235} : {}}>
+            <div className="toc-container transition duration-500" style={ScrollY> 335? {top: 0} : ScrollY >= 300? {top: 125} : ScrollY >= 200? {top: 225} : ScrollY >= 100 ? {top: 325} : {}}>
                 <div className="toc-wrapper">
                     <div className="toc-content">
                         <div className="toc" dangerouslySetInnerHTML={{ __html: data.allMarkdownRemark.edges[0].node.tableOfContents }} />
