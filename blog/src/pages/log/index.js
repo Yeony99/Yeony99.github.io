@@ -48,7 +48,7 @@ export default ({ data }) => {
                         <div className="padding-1 h-100" name="key" onClick={() => changeHandler(node.id, open)}>
                               <h3>{node.frontmatter.title}</h3>
                               <div className={`transition duration-500 ${obj.key == node.id? ' log-selected-bg' : ''}`}>
-                                 <div dangerouslySetInnerHTML={ {__html: obj.key == node.id? node.html : node.excerpt} }></div>
+                                 <div dangerouslySetInnerHTML={ {__html: obj.key == node.id? node.html : node.excerpt+' 더보기'} }></div>
                               </div>
                               
                               <div className="flex justify-content-between align-center"><div className="flex">{node.frontmatter.tags.map(tag => <Tag key={tag} className="tag">{tag}</Tag>)}</div><div style={{fontSize: 0.7+'rem'}}>{node.frontmatter.date}</div></div>
