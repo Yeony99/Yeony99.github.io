@@ -16,6 +16,23 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: "carbon",
+              theme: "blackboard",
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: true,
+              noInlineHighlight: false,
+            },
+          },
+          {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               offsetY: `0`,

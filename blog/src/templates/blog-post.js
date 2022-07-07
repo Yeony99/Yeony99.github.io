@@ -5,6 +5,9 @@ import styled from "styled-components";
 import Tag from "../components/tag";
 import Utterances from "../components/utterances";
 import Footer from "../components/footer";
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement();
+
 
 const ImgHeader = styled.div`
     height: 35vh;
