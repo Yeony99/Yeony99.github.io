@@ -63,8 +63,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: '${https://yeony99.github.io}',
-        sitemap: '${https://yeony99.github.io}/sitemap.xml',
+        host: 'https://yeony99.github.io',
+        sitemap: 'https://yeony99.github.io/sitemap.xml',
         policy: [{
           userAgent: '*',
           allow: '/'
