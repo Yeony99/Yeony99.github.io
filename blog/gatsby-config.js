@@ -8,7 +8,58 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-emotion`, 
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+            edges {
+              node {
+                path
+              }
+            }
+          }
+          allMarkdownRemark {
+            edges {
+              node {
+                frontmatter {
+                  slug
+                }
+              }
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
+          let pages = []
+          allSitePage.edges.map(edge => {
+            pages.push({
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `daily`,
+              priority: 0.7,
+            })
+          })
+          allMarkdownRemark.edges.map(edge => {
+            pages.push({
+              url: `${site.siteMetadata.siteUrl}/${
+                edge.node.frontmatter.slug
+              }`,
+              changefreq: `daily`,
+              priority: 0.7,
+            })
+          })
+
+          return pages
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
