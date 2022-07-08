@@ -17,6 +17,13 @@ module.exports = {
               siteUrl
             }
           }
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
           allMarkdownRemark {
             edges {
               node {
@@ -27,8 +34,15 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ site, allMarkdownRemark }) => {
+        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
           let pages = []
+          allSitePage.edges.map(edge => {
+            pages.push({
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `daily`,
+              priority: 0.7,
+            })
+          })
           allMarkdownRemark.edges.map(edge => {
             pages.push({
               url: `${site.siteMetadata.siteUrl}/${
