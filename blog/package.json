@@ -22,7 +22,7 @@
     "gatsby-plugin-robots-txt": "^1.7.1",
     "gatsby-plugin-sass": "^5.16.0",
     "gatsby-plugin-sharp": "^3.4.1",
-    "gatsby-plugin-sitemap": "^4.8.0",
+    "gatsby-plugin-sitemap": "^3.3.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-styled-components": "^4.7.1",
     "gatsby-plugin-typography": "^3.4.0",
