@@ -24,7 +24,7 @@ export default ({ data }) => {
     }
 
     useEffect(() => {
-        console.log("ScrollY is ", ScrollY); // ScrollY가 변화할때마다 값을 콘솔에 출력
+        // console.log("ScrollY is ", ScrollY); // ScrollY가 변화할때마다 값을 콘솔에 출력
     }, [ScrollY])
 
     useEffect(() => {
