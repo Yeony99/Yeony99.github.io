@@ -1,6 +1,6 @@
 ---
 title: "쫌만알자! (1) - JavaScript에 대해!"
-date: "2022-07-13"
+date: "2022-07-27"
 category: "tech"
 slug: "/tech/let-me-know-js-a-bit-about-what-js-can-do/"
 img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
@@ -54,6 +54,6 @@ tags:
 다음 글에선 자바스크립트 개발 환경을 세팅해보겠습니다.
 
 
-◾ [VSCode로 간단하게 구축하는 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-vscode/) 👈 다음 글 보기
+◾ [브라우저 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-devtool/) 👈 다음 글 보기
 
 
