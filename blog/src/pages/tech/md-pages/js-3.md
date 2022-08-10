@@ -31,8 +31,20 @@ tags:
 4. VSCode가 정상적으로 실행되면 설치가 완료된 것입니다.
 
 
-## VScode 
+## VScode 사용하기
+
+기본적으로 vscode는 영문으로 설정되어 있습니다.   
+한글 설정이 편하신 분들은 확장 프로그램을 설치해봅시다.
+
+확장 프로그램은 `ctrl + shift + x` 단축키 또는 아래 이미지의 ✅ 표시된 곳을 클릭하면 볼 수 있습니다.   
+![vscode 마켓플레이스](https://user-images.githubusercontent.com/76241233/183789539-09056dd3-549f-4de3-94fa-f97114cfd8ca.png)
+
+저는 이미 한글 확장 프로그램을 깔았는데요. `korean`을 검색한 후 가장 상위에 있는 마이크로소프트에서 만든 extension을 설치해봅시다.   
+![한글 확장 프로그램](https://user-images.githubusercontent.com/76241233/183789316-5bb3edc1-4788-4659-a345-ac954b4ca339.png)
+
+
+다음 글에서는 Node.js와 npm을 알아보도록 하겠습니다.
 
 
 ◾ [브라우저 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-devtool/) 👈 이전 글 보기
-◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-data-type/) 👈 다음 글 보기
+<!-- ◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-node-and-npm) 👈 다음 글 보기 -->
