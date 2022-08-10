@@ -1,6 +1,6 @@
 ---
 title: "쫌만알자! (3) - VSCode로 간단하게 구축하는 JavaScript 개발환경"
-date: "2022-08-17"
+date: "2022-08-10"
 category: "tech"
 slug: "/tech/let-me-know-js-a-bit-setting-vscode/"
 img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
