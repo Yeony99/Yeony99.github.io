@@ -47,4 +47,4 @@ tags:
 
 
 ◾ [브라우저 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-devtool/) 👈 이전 글 보기
-<!-- ◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-node-and-npm) 👈 다음 글 보기 -->
+◾ [Node.js와 npm](/tech/let-me-know-js-a-bit-js-node-and-npm) 👈 다음 글 보기
