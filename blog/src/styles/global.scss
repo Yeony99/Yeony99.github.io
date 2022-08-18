@@ -27,7 +27,7 @@ a {
     }
 }
 
-li > a {
+.blog-post li > a {
   text-decoration: underline;
   color: $route-hover;
 }
