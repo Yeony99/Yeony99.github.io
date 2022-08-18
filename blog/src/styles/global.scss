@@ -27,6 +27,10 @@ a {
     }
 }
 
+li > a {
+  text-decoration: underline;
+  color: $route-hover;
+}
 pre {
   overflow: auto;
 }
