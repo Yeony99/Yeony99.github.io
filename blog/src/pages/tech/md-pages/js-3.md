@@ -46,5 +46,5 @@ tags:
 다음 글에서는 Node.js와 npm을 알아보도록 하겠습니다.
 
 
-◾ [브라우저 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-devtool/) 👈 이전 글 보기
+◾ [브라우저 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-devtool/) 👈 이전 글 보기    
 ◾ [Node.js와 npm](/tech/let-me-know-js-a-bit-js-node-and-npm) 👈 다음 글 보기
