@@ -1,4 +1,173 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 18 Aug 2022 08:07:15 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (4) - Node.js와 npm]]></title><description><![CDATA[Node.js 란? 앞서 자바스크립트 개발 환경 에서 언급했다시피, 자바스크립트 실행환경인 Node.js가 있습니다. Node.js와 npm을 통해 React, Vue, Angular, Lodash…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-node-and-npm</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-node-and-npm</guid><pubDate>Wed, 17 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;nodejs-란&quot; style=&quot;position:relative;&quot;&gt;Node.js 란?&lt;a href=&quot;#nodejs-%EB%9E%80&quot; aria-label=&quot;nodejs 란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Aug 2022 00:36:42 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (5) - 자바스크립트 자료형]]></title><description><![CDATA[자료형이란? 자바스크립트는 동적언어입니다. 이 말은 런타임 시에 타입이 정해진다는 의미입니다. 간단하게만 알아보겠습니다. 컴파일 타임 & 런 타임 컴파일타임(Compile time)이란? The compile time is the time from…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-data-type</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-data-type</guid><pubDate>Wed, 24 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;자료형이란&quot; style=&quot;position:relative;&quot;&gt;자료형이란?&lt;a href=&quot;#%EC%9E%90%EB%A3%8C%ED%98%95%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;자료형이란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;자바스크립트는 &lt;a href=&quot;https://yeonydevlog.tistory.com/40&quot;&gt;동적언어&lt;/a&gt;입니다. 이 말은 런타임 시에 타입이 정해진다는 의미입니다. 간단하게만 알아보겠습니다.&lt;/p&gt;
+&lt;h3 id=&quot;컴파일-타임--런-타임&quot; style=&quot;position:relative;&quot;&gt;컴파일 타임 &amp;#x26; 런 타임&lt;a href=&quot;#%EC%BB%B4%ED%8C%8C%EC%9D%BC-%ED%83%80%EC%9E%84--%EB%9F%B0-%ED%83%80%EC%9E%84&quot; aria-label=&quot;컴파일 타임  런 타임 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&quot;컴파일타임compile-time이란&quot; style=&quot;position:relative;&quot;&gt;컴파일타임(Compile time)이란?&lt;a href=&quot;#%EC%BB%B4%ED%8C%8C%EC%9D%BC%ED%83%80%EC%9E%84compile-time%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;컴파일타임compile time이란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The compile time is the time from when the program is first loaded until the program is parsed. &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Compile_time&quot;&gt;참고 : MDN&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Syntax Error (문법 에러), File Reference Error (파일 참조 에러), 타입 체크 에러 등&lt;/li&gt;
+&lt;li&gt;컴파일러가 컴파일 타임 에러를 발생시키고, 보통 문제가 발생한 소스코드 라인을 알려줍니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;런타임run-time이란&quot; style=&quot;position:relative;&quot;&gt;런타임(Run time)이란?&lt;a href=&quot;#%EB%9F%B0%ED%83%80%EC%9E%84run-time%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;런타임run time이란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;컴파일 과정을 마친 프로그램이 &lt;strong&gt;실행되는 특정한 때&lt;/strong&gt;를 의미합니다.&lt;/li&gt;
+&lt;li&gt;Null 참조 오류, 메모리 부족 오류, n/0 (0으로 나누는 연산) 오류 등&lt;/li&gt;
+&lt;li&gt;런타임 에러는 프로그램이 실행 중이지만, 의도치 않게 발생하는 에러입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;자바스크립트는-동적-타입&quot; style=&quot;position:relative;&quot;&gt;자바스크립트는 동적 타입&lt;a href=&quot;#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EB%8F%99%EC%A0%81-%ED%83%80%EC%9E%85&quot; aria-label=&quot;자바스크립트는 동적 타입 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/&quot;&gt;MDN&lt;/a&gt;의 설명을 참고하겠습니다. MDN은 웹 표준 등에 관련된 정보를 문서화한 사이트입니다. 앞으로 쫌만알자 시리즈에 많이 등장할 예정이니 꼭 참고해주세요. &lt;br/&gt;&lt;br&gt;
+자바스크립트는 느슨한 타입(loosely typed)의 동적(dynamic) 언어입니다. &lt;strong&gt;자바스크립트의 변수는 어떤 특정 타입과 연결되지 않으며,&lt;/strong&gt; 모든 타입의 값으로 할당(및 재할당)이 가능합니다. 다시 말해 자료형의 구분은 있지만, 변수의 형(type)을 미리 정하지 않는다는 말입니다.&lt;/p&gt;
+&lt;p&gt;다른 개발 언어의 경우는 자료형을 명시하고 코드를 작성합니다. Java를 예시로 들어볼까요?&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;int num = 0; // integer: 정수 타입
+String str = &amp;quot;Hello World!&amp;quot;; // string: 문자열 타입&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이렇게 자료형을 먼저 명시합니다. 반면 자바스크립트의 경우에는 자료형을 적지 않습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;var num = 10;
+var str = &amp;#39;Hello World!&amp;#39;;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;변수 할당은 다음 글에서 알아보겠습니다.
+여기서는 자바스크립트는 느슨하게 작동되는 동적 언어라는 것만 알고 넘어갑시다.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h3 id=&quot;javascript의-type&quot; style=&quot;position:relative;&quot;&gt;JavaScript의 Type!&lt;a href=&quot;#javascript%EC%9D%98-type&quot; aria-label=&quot;javascript의 type permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;본격적으로 자료형을 알아보죠.&lt;/p&gt;
+&lt;p&gt;자바스크립트의 타입은 원시 타입&lt;span style=&quot;font-size: 0.7rem&quot;&gt;(primitive type)&lt;/span&gt;과 객체 타입&lt;span style=&quot;font-size: 0.7rem&quot;&gt;(object/reference type)&lt;/span&gt;으로 나뉩니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;원시 타입
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#number-%ED%83%80%EC%9E%85&quot;&gt;Number 타입&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#string-%ED%83%80%EC%9E%85&quot;&gt;String 타입&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#boolean-%ED%83%80%EC%9E%85&quot;&gt;Boolean 타입&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#undefined-%ED%83%80%EC%9E%85&quot;&gt;Undefined 타입&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#null-%ED%83%80%EC%9E%85&quot;&gt;Null 타입&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#symbol-%ED%83%80%EC%9E%85&quot;&gt;Symbol 타입&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#bigint-%ED%83%80%EC%9E%85&quot;&gt;BigInt 타입&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%ED%83%80%EC%9E%85&quot;&gt;객체 타입&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;자바스크립트는 타입을 명시하지 않는 동적언어인데 왜 자료형을 알아야 할까요?&lt;br&gt;
+자료형에 따라 변수가 차지하는 메모리 공간의 크기도 다르고, 엔진이 해석하는 방식도 달라지기 때문입니다.&lt;/p&gt;
+&lt;p&gt;각각의 자료형을 살펴봅시다.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;number-타입&quot; style=&quot;position:relative;&quot;&gt;Number 타입&lt;a href=&quot;#number-%ED%83%80%EC%9E%85&quot; aria-label=&quot;number 타입 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;숫자는 Number와 BigInt 두 가지의 내장 숫자 타입이 있습니다. BigInt는 뒤에서 살펴보구요. Number타입부터 알아봅니다.&lt;/p&gt;
+&lt;p&gt;다른 프로그래밍 언어(C, Java 등)은 정수(ex. -1, 0, 1)와 실수(ex. 3.14, 0.15)를 구분해 int, float, double 등 다양한 숫자 타입을 제공합니다.&lt;/p&gt;
+&lt;p&gt;하지만 자바스크립트는 Number로 정수와 실수 모두를 취급합니다.&lt;/p&gt;
+&lt;p&gt;Number타입은 정수이건 실수이건 &lt;strong&gt;모두 실수로 처리&lt;/strong&gt;합니다. 이것을 부동소수점 형식이라고 합니다. 정확한 이름을 굳이 외울 필요는 없습니다. 정수만을 따로 표현하기 위한 자료형이 없고 모두 실수로 처리한다는 것만 기억하면 됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 모두 숫자 타입
+var integer = 10;
+var double = 10.123456;
+var float = -10.3;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;console.log(1 === 1.0) // true&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;만약 정수와 실수를 구별해 관리했다면 false가 return 됐을겁니다.&lt;/p&gt;
+&lt;p&gt;실수와 정수 외에도 숫자 타입은 3가지의 특별한 값도 취급합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Infinity : 양의 무한대&lt;/li&gt;
+&lt;li&gt;-Infinity : 음의 무한대&lt;/li&gt;
+&lt;li&gt;NaN : Not a Number, 산술 연산 불가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;console.log(Number.POSITIVE_INFINITY); // Infinity
+console.log(Number.NEGATIVE_INFINITY); // -Infinity
+console.log(10 * &amp;#39;abcd&amp;#39;); // NaN &lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;자바스크립트는 대소문자를 구별하므로 &lt;strong&gt;NaN&lt;/strong&gt;을 작성할 때에는 꼭 주의하도록 합시다.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;string-타입&quot; style=&quot;position:relative;&quot;&gt;String 타입&lt;a href=&quot;#string-%ED%83%80%EC%9E%85&quot; aria-label=&quot;string 타입 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;문자열 타입입니다. String 타입은 말 그대로 텍스트 데이터를 나타낼 때 사용합니다. 16비트 유니코드 문자(UTF-16)으로 구성된 집합으로, 대부분의 언어를 표현할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;자바스크립트에서 문자열을 표현하는 3가지 방법이 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;var string;
+
+string = &amp;#39;작은 따옴표 문자열&amp;#39;;
+string = &amp;quot;큰 따옴표 문자열&amp;quot;;
+string = `백틱 문자열`;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;가장 보편적으로 사용하는 방식은 &lt;strong&gt;작은 따옴표(&apos; &apos;)&lt;/strong&gt; 방식입니다.&lt;/p&gt;
+&lt;p&gt;만약 작은 따옴표나 큰 따옴표를 문자열 내에서 직접 보이게 하고 싶으면 이렇게 작성합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;string = &amp;quot;큰 따옴표 속 &amp;#39;작은 따옴표&amp;#39;&amp;quot;;
+string = &amp;#39;작은 따옴표 속 &amp;quot;큰 따옴표&amp;quot;&amp;#39;;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;가장 바깥의 따옴표 속 즉, 문자열 속에 있는 따옴표는 문자로 취급됩니다.&lt;/p&gt;
+&lt;p&gt;조금 낯설 수 있는 것이 &lt;strong&gt;백틱(`)&lt;/strong&gt; 일텐데요. 백틱은 &lt;strong&gt;템플릿 리터럴&lt;/strong&gt;이라고 하는 문자열 표기법에 이용됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;var name = &amp;#39;Yeony&amp;#39;;
+
+var template = `Hi, I&amp;#39;m ${name}!` // Hi, I&amp;#39;m Yeony!&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이렇게 문자열 안에 변수를 집어넣는 템플릿을 만들 수 있습니다. 유용하죠?&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;boolean-타입&quot; style=&quot;position:relative;&quot;&gt;Boolean 타입&lt;a href=&quot;#boolean-%ED%83%80%EC%9E%85&quot; aria-label=&quot;boolean 타입 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Boolean 타입은 논리적 참/거짓을 나타내며, &lt;strong&gt;true&lt;/strong&gt; 혹은 &lt;strong&gt;false&lt;/strong&gt;로 두 가지의 값만 가질 수 있습니다.&lt;br&gt;
+Boolean 타입은 이후 조건문을 배우며 자세히 알아봅시다.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;undefined-타입&quot; style=&quot;position:relative;&quot;&gt;Undefined 타입&lt;a href=&quot;#undefined-%ED%83%80%EC%9E%85&quot; aria-label=&quot;undefined 타입 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;undefined 타입은 undefined가 유일합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;var variable;
+console.log(variable) // undefined&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이렇게 variable에 아무것도 값을 주지 않으면 variable은 어떤 타입과 값을 가질까요?&lt;br&gt;
+정답은 undefined 타입의 undefined 값을 가진다! 입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;var 키워드&lt;/strong&gt;로 변수를 선언만 한 경우 자바스크립트 엔진이 암묵적으로 undefined를 할당해버립니다. undefined의 의미를 생각해보면 &quot;개발자가 변수에 값을 할당해주지 않았다!&quot; 라는 것입니다&lt;/p&gt;
+&lt;p&gt;다시 말해 undefined가 반환된다면 개발자가 &lt;u&gt;초기화하지 않은 변수&lt;/u&gt;라고 바라볼 수 있습니다.&lt;br&gt;
+만약 변수에 값이 없다는 것을 명시하고 싶다면 &lt;strong&gt;null&lt;/strong&gt;을 할당하도록 합시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;var variable = null;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;null-타입&quot; style=&quot;position:relative;&quot;&gt;Null 타입&lt;a href=&quot;#null-%ED%83%80%EC%9E%85&quot; aria-label=&quot;null 타입 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;null 타입의 값 또한 null이 유일합니다.&lt;/p&gt;
+&lt;p&gt;앞서 말했다시피 null은 어떤 값이 의도적으로 비어있다는 것을 보여줍니다.&lt;/p&gt;
+&lt;h4 id=&quot;symbol-타입&quot; style=&quot;position:relative;&quot;&gt;Symbol 타입&lt;a href=&quot;#symbol-%ED%83%80%EC%9E%85&quot; aria-label=&quot;symbol 타입 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Symbol 타입은 ES6&lt;span style=&quot;font-size: 0.7rem;&quot;&gt;(ECMA2015, 15년도에 개정된 JS)&lt;/span&gt;에 추가된 타입입니다.&lt;/p&gt;
+&lt;p&gt;Symbol은 다른 값과 중복되지 않는 유일무이한 값입니다. 꼭 겹치지 않아야 하는 유일한 Key를 만들어야 할 때 유용하게 사용할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;var key = Symbol(&amp;#39;key&amp;#39;); // Symbol 함수를 호출해 할당
+
+var obj = {}; // 객체 생성
+
+// 객체에 접근할 수 있는 유일무이한 key값을 생성
+obj[key] = &amp;#39;value&amp;#39;;
+
+console.log(obj[key]); // value
+console.log(obj) // { Symbol(key): &amp;quot;value&amp;quot; }&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;bigint-타입&quot; style=&quot;position:relative;&quot;&gt;BigInt 타입&lt;a href=&quot;#bigint-%ED%83%80%EC%9E%85&quot; aria-label=&quot;bigint 타입 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;앞서 Number 타입을 봤는데요. BigInt는 Number와는 다르게 조금 특별한 숫자를 취급합니다.&lt;br&gt;
+Number가 정수, 실수를 표현할 수 있다면 BigInt는 이름대로 아주 큰 숫자를 다루는 타입입니다.&lt;/p&gt;
+&lt;p&gt;여기서 &lt;u&gt;아주 큰 숫자 &lt;/u&gt;는 얼마일까요?&lt;br&gt;
+당연하겠지만 Number 타입으로 다루지 못하는 범위의 숫자입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;console.log(Number.MAX_SAFE_INTEGER) // 9007199254740991&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;Number 타입으로 나타낼 수 있는 가장 큰 숫자(안전 한계)를 log로 출력해보았습니다.&lt;/p&gt;
+&lt;p&gt;BigInt는 숫자 뒤에 &lt;strong&gt;n&lt;/strong&gt;을 붙이면 BigInt로 치환됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let num = Number.MAX_SAFE_INTEGER; //  9007199254740991
+num = BigInt(num);
+
+console.log(num); // 9007199254740991n
+
+
+const x = 2n ** 53n; // 9007199254740992n
+const y = x + 1n; // 9007199254740993n&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;객체-타입&quot; style=&quot;position:relative;&quot;&gt;객체 타입&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%ED%83%80%EC%9E%85&quot; aria-label=&quot;객체 타입 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;객체 타입은 여기서 함께 적기에는 굉장히 분량이 길어집니다.&lt;br&gt;
+자바스크립트는 기본적으로 객체 기반의 언어이기 때문에 &lt;strong&gt;자바스크립트의 대부분이 객체&lt;/strong&gt;라 말해도 과언이 아닙니다. 앞서 살펴본 자료형 7가지 타입이 아닌 값은 &lt;strong&gt;모두 객체&lt;/strong&gt;입니다.&lt;br&gt;
+이후 객체를 좀더 자세히 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;다음 글에서는 변수에 대해 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-node-and-npm&quot;&gt;Node.js와 npm&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;
+&lt;!-- ◾ [변수 사용하기](/tech/let-me-know-js-a-bit-js-variable) 👈 다음 글 보기    --&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (4) - Node.js와 npm]]></title><description><![CDATA[Node.js 란? 앞서 자바스크립트 개발 환경 에서 언급했다시피, 자바스크립트 실행환경인 Node.js가 있습니다. Node.js와 npm을 통해 React, Vue, Angular, Lodash…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-node-and-npm</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-node-and-npm</guid><pubDate>Wed, 17 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;nodejs-란&quot; style=&quot;position:relative;&quot;&gt;Node.js 란?&lt;a href=&quot;#nodejs-%EB%9E%80&quot; aria-label=&quot;nodejs 란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;앞서 &lt;a href=&quot;/tech/let-me-know-js-a-bit-setting-devtool/&quot; target=&quot;_blank&quot;&gt;자바스크립트 개발 환경&lt;/a&gt; 에서 언급했다시피, 자바스크립트 실행환경인 Node.js가 있습니다.&lt;br&gt;
 Node.js와 npm을 통해 React, Vue, Angular, Lodash 같은 프레임워크(혹은 라이브러리)를 사용할 수 있게끔 하거나, Babel, Webpack 등의 도구를 사용할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;npm은 조금 생소하죠?&lt;br&gt;
