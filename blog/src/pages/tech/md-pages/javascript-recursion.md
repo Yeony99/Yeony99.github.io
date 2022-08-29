@@ -1,6 +1,6 @@
 ---
 title: "자바스크립트에서 재귀함수 사용하기"
-date: "2022-08-26"
+date: "2022-08-29"
 category: "tech"
 slug: "/tech/javascript-recursion"
 # img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
