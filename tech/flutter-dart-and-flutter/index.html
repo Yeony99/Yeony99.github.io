@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.666 'Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Georgia',serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}ul{margin-left:1.666rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.666rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;font-size:0.85rem;line-height:1.666rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;font-size:1rem;line-height:1.666rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}blockquote{margin-left:1.666rem;margin-right:1.666rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.666rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.666rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.666rem;margin-bottom:calc(1.666rem / 2);margin-top:calc(1.666rem / 2);}li > ul{margin-left:1.666rem;margin-bottom:calc(1.666rem / 2);margin-top:calc(1.666rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.666rem / 2);}code{font-size:0.85rem;line-height:1.666rem;}kbd{font-size:0.85rem;line-height:1.666rem;}samp{font-size:0.85rem;line-height:1.666rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.11067rem;padding-right:1.11067rem;padding-top:0.833rem;padding-bottom:calc(0.833rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><style data-href="/styles.dc5fc8f98436b537a527.css" data-identity="gatsby-global-css">.flex{display:flex!important}.flex-column{flex-direction:column}.justify-content-center{justify-content:center!important}.justify-content-end{justify-content:end!important}.justify-content-around{justify-content:space-around!important}.justify-content-between{justify-content:space-between!important}.justify-content-evenly{justify-content:space-evenly!important}.align-center{align-items:center!important}.align-end{align-items:flex-end!important}.row{display:flex;flex-wrap:wrap}.col{flex:1 0}.col-1{flex:0 0 auto;width:8.3333333333%}.col-2{flex:0 0 auto;width:16.6666666667%}.col-3{flex:0 0 auto;width:25%}.col-4{flex:0 0 auto;width:33.3333333333%}.col-5{flex:0 0 auto;width:41.6666666667%}.col-6{flex:0 0 auto;width:50%}.col-7{flex:0 0 auto;width:58.3333333333%}.col-8{flex:0 0 auto;width:66.6666666667%}.col-9{flex:0 0 auto;width:75%}.col-10{flex:0 0 auto;width:83.3333333333%}.col-11{flex:0 0 auto;width:91.6666666667%}.col-12{flex:0 0 auto;width:100%}.grid{display:grid}.text-center{text-align:center}.text-end{text-align:end}.text-justify{text-align:justify}.margin-0{margin:0!important}.margin-1{margin:1rem!important}.margin-top-1{margin-top:1rem!important}.margin-top-1666{margin-top:1.666rem!important}.margin-top-2{margin-top:2rem!important}.margin-bottom-05{margin-bottom:.5rem!important}.margin-bottom-1{margin-bottom:1rem!important}.margin-left-1{margin-left:1rem!important}.margin-right-05{margin-right:.5rem!important}.margin-right-1{margin-right:1rem!important}.padding-1{padding:1rem!important}.padding-top-1{padding-top:1rem!important}.padding-bottom-1{padding-bottom:1rem!important}.padding-left-1{padding-left:1rem!important}.padding-right-1{padding-right:1rem!important}.h-100{height:100%!important}.w-100{width:100%!important}.pg-header-img{height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center center;object-position:center center;opacity:1;width:100%}.overflow-x-scroll{overflow:auto}.overflow-x-scroll::-webkit-scrollbar{height:5px}.overflow-x-scroll::-webkit-scrollbar-thumb{background-color:#ffc079;border-radius:10px;height:17%}.overflow-x-scroll::-webkit-scrollbar-track{background-color:rgba(255,193,121,.337)}div.tag{background-color:#c6ffc6;color:#7b9e81}div.tag,div.tag-sm{-webkit-user-select:none;-ms-user-select:none;user-select:none}div.tag-sm{font-size:.7rem!important;padding:.1rem .3rem!important}nav>ul>a>li{-webkit-user-select:none;-ms-user-select:none;user-select:none}li.current-path{border-color:#c6ffc6}a{border-color:transparent}a :hover{border-color:#8eb98e}.log-selected-bg{background-color:#f2fcef}.circle{border-radius:50%}p>a{color:#8eb98e;text-decoration:underline}p>code,pre,pre>code{background-color:#eee;border-radius:.25rem;font-family:Segoe UI,Tahoma,Verdana,sans-serif;font-style:italic;padding:.2rem .5rem .3rem}p>strong{background-color:#faebd7;border-radius:10px 0 30px 0;padding:.2rem .5rem}.b-shadow-10-gray{box-shadow:10px 10px 10px #eee}.pointer{cursor:pointer}div.bg-orange{background-color:#ffc079;color:#502404}div.tag.selected-tag{background-color:#fff279;color:#502404}.wordbreak-breakall{font-size:.95rem;word-break:break-all}.wordbreak-keepall{font-size:.95rem;word-break:keep-all}.td-title{font-size:.9rem;font-weight:600;text-transform:capitalize}@media screen and (max-width:450px){.td-title{font-size:.7rem}}@media screen and (max-width:400px){.td-title{font-size:.65rem}}td>p{font-size:1rem}@media screen and (max-width:450px){td>p{font-size:.75rem}}h1,h2,h3,h4,h5{font-weight:700}h1,h2,h3,h4,h5,h6{font-family:NanumSquareRound}h6{font-weight:400}.text-xs{font-size:.5rem}.text-sm{font-size:.85rem}.text-md{font-size:1rem}.text-lg{font-size:1.2rem}.text-xl{font-size:1.5rem}.text-2xl{font-size:1.85rem}.wrap{margin:.5rem auto 0;max-width:768px;padding-left:1rem;padding-right:1rem}.main-img{height:30vh}.transition{transition-delay:0s;transition-property:all!important;transition-timing-function:ease-in!important}.duration-500{transition-duration:.5s!important}html{background-color:#fff;scroll-behavior:smooth}*{font-family:NanumSquareRound}ul li{list-style:none}ol li{list-style:inherit}a{color:#000;text-decoration:none}a .dark{color:#7d7}.blog-post li>a{color:#8eb98e;text-decoration:underline}pre{overflow:auto}footer{position:relative}.time-line-ctnr .time-line{list-style:none;margin:0;padding:0;position:relative}.time-line-ctnr .time-line:before{background:#3498db;border-radius:2px;bottom:-10px;content:"";left:32px;position:absolute;top:0;width:2px}.time-line-ctnr .time-line>.time-label>span{background-color:#e74c3c;border-radius:2px;color:#fff;display:inline-block;font-size:14px;font-weight:600;padding:5px 10px}.time-line-ctnr .time-line>li{margin-bottom:10px;margin-right:0;position:relative}.time-line-ctnr .time-line>li>.time-line-item{background:#fff;border-radius:3px;box-shadow:0 1px 1px rgba(0,0,0,.1);color:#444;margin-left:50px;margin-right:15px;position:relative}.time-line-ctnr .time-line>li>.time-line-item .time,.time-line-ctnr .time-line>li>.time-line-item>.time-line-header{font-size:14px;padding:6px 10px}.time-line-ctnr .time-line>li>.time-line-item .time{color:#999;float:right;font-size:12px}.time-line-ctnr .time-line>li>.time-line-item .time-line-header{border-bottom:1px solid #f4f4f4;color:#555;line-height:1.1;margin:0}.time-line-ctnr .time-line>li>.fa{background:#ecf0f1;border:2px solid #3498db;border-radius:50%;box-sizing:border-box;color:#666;display:inline-block;height:10px;left:28px;position:absolute;top:9px;width:10px}.time-line-ctnr .time-line>.time-label>span{background-color:#84e07d!important}.time-line-ctnr .time-line:before{background:#7aff2e!important}.time-line-ctnr .time-line>li>.fa{border:2px solid #1c8e46!important}.list-skill-logo{height:35px;margin:0;width:35px}@media screen and (max-width:550px){.list-skill-logo{display:none}.img-td{margin:0;padding:0;width:0}}.footer-logo{height:20px;margin:0;width:20px}.min-h-74{min-height:74vh}.min-h-76{min-height:76vh}.page-404{background:#dcfcc3;height:100vh;margin:0;padding:0;position:absolute;top:0;width:99vw}.toc-container{border-radius:.25rem;color:#000;font-size:.9rem;font-weight:700;padding:1rem;position:fixed;width:22vw}.toc-container ul li{border-bottom:1px solid #444;list-style:inherit;margin-bottom:1rem}.toc-container ul li p>a{color:#444;text-decoration:none}.toc-container ul li p>a:hover{color:#8eb98e}.toc-container ul li ul li{border:none}@media screen and (max-width:1300px){.toc-container{display:none}}.blog-post ul>li{list-style:inherit}@font-face{font-family:NanumSquareRound;font-style:normal;font-weight:400;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff) format("woff")}code[class*=language-],pre[class*=language-]{word-wrap:normal;color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{background:#eee8d5;color:#657b83}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 3.8.0"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" title="Your Site&#x27;s RSS Feed" href="/rss.xml"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><style data-styled="" data-styled-version="5.3.0">.dOWfuK{border-bottom:2px solid transparent;}/*!sc*/
+@media screen and (max-width:300px){.dOWfuK{font-size:0.75rem;margin:0.5rem;}}/*!sc*/
+data-styled.g2[id="header__ListLink-sc-31ozxh-0"]{content:"dOWfuK,"}/*!sc*/
+.gljqsN{width:4em;margin:0;}/*!sc*/
+@media screen and (max-width:400px){.gljqsN{width:3em;}}/*!sc*/
+data-styled.g3[id="header__LogoImg-sc-31ozxh-1"]{content:"gljqsN,"}/*!sc*/
+.gBHogO{padding:0.1rem 0.5rem;margin:0.5rem;margin-left:0;font-size:0.85rem;border-radius:0.25rem;}/*!sc*/
+data-styled.g5[id="tag__Tag-g53uox-0"]{content:"gBHogO,"}/*!sc*/
+.dbNTDD{height:35vh;width:100%;background-color:#f5fff0;}/*!sc*/
+data-styled.g6[id="blog-post__ImgHeader-sc-1g2ojw6-0"]{content:"dbNTDD,"}/*!sc*/
+</style><title data-react-helmet="true">[Flutter] Dart 기본 문법 | It&#x27;s Yeony here</title><meta data-react-helmet="true" name="description" content="This is Yeony&#x27;s portfolio"/><meta data-react-helmet="true" property="og:title" content="[Flutter] Dart 기본 문법"/><meta data-react-helmet="true" property="og:description" content="This is Yeony&#x27;s portfolio"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Nayeon Kim"/><meta data-react-helmet="true" name="twitter:title" content="[Flutter] Dart 기본 문법"/><meta data-react-helmet="true" name="twitter:description" content="This is Yeony&#x27;s portfolio"/><meta data-react-helmet="true" name="google-site-verification" content="MFqADXYC_GWZWqMXa_PmGCNiBU1BBs1wHXayWN0tUMI"/><script data-react-helmet="true" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6821625180589271" crossorigin="anonymous"></script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="icon" href="/favicon-32x32.png?v=f35cbae2280223c8c3407f41b97872a1" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=f35cbae2280223c8c3407f41b97872a1"/><link as="script" rel="preload" href="/webpack-runtime-0440f503388a7e66c5b1.js"/><link as="script" rel="preload" href="/framework-3e59b0ca76e46f05ca8d.js"/><link as="script" rel="preload" href="/app-1cd3562afdbfcd162549.js"/><link as="script" rel="preload" href="/commons-b52596be09ee140c9e61.js"/><link as="script" rel="preload" href="/14d71c03043037e9fc0fce6c9585270af8eaca3c-1567ef9bae1dbd90c7c9.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-1637dab430fe33a26281.js"/><link as="fetch" rel="preload" href="/page-data/tech/flutter-dart-and-flutter/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2665612806.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header><div class="wrap flex justify-content-between align-center"><div class="padding-top-1"><a aria-current="page" class="" href="/"><img src="/static/logo-911a5d3d860b3feffbed028611556aeb.svg" class="header__LogoImg-sc-31ozxh-1 gljqsN"/><h1 style="display:none">Yeony</h1></a></div><nav class="padding-top-1 margin-0"><ul class="flex justify-content-around text-sm margin-0"><a href="/tech"><li class="header__ListLink-sc-31ozxh-0 dOWfuK transition duration-500 text-sm margin-1 current-path">Tech</li></a><a href="/log"><li class="header__ListLink-sc-31ozxh-0 dOWfuK transition duration-500 text-sm margin-1 route-path">Log</li></a><a href="/retrospective"><li class="header__ListLink-sc-31ozxh-0 dOWfuK transition duration-500 text-sm margin-1 route-path">Retrospective</li></a></ul></nav></div></header><div class="blog-post__ImgHeader-sc-1g2ojw6-0 dbNTDD"><img class="pg-header-img" src="https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"/></div><div class="toc-container transition duration-500"><div class="toc-wrapper"><div class="toc-content"><div class="toc"><ul>
+<li>
+<p><a href="#dart%EB%9E%80">Dart란?</a></p>
+<ul>
+<li><a href="#dart-%ED%8A%B9%EC%A7%95">Dart 특징</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#dart-%EC%9E%90%EB%A3%8C%ED%98%95">Dart 자료형</a></p>
+<ul>
+<li><a href="#dynamic">dynamic</a></li>
+<li><a href="#var">var</a></li>
+<li><a href="#final--const">final / const</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#dart%EC%9D%98-%EC%97%B0%EC%82%B0%EC%9E%90">Dart의 연산자</a></p>
+<ul>
+<li><a href="#-%EC%A0%95%EC%88%98-%EB%82%98%EB%88%97%EC%85%88-%EC%97%B0%EC%82%B0%EC%9E%90">~/ (정수 나눗셈 연산자)</a></li>
+<li><a href="#is--is-%ED%83%80%EC%9E%85-%ED%99%95%EC%9D%B8-%ED%82%A4%EC%9B%8C%EB%93%9C">is / is! (타입 확인 키워드)</a></li>
+<li><a href="#ab-optional-chaining">A?.B (optional chaining)</a></li>
+<li><a href="#a--b-%EB%85%BC%EB%A6%AC-or">A ?? B (논리 OR)</a></li>
+<li><a href="#a--b-%EB%85%BC%EB%A6%AC">A ??= B (논리)</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#dart%EC%9D%98-class">Dart의 Class</a></p>
+<ul>
+<li><a href="#%EC%83%9D%EC%84%B1%EC%9E%90">생성자</a></li>
+<li><a href="#%EC%83%81%EC%86%8D">상속</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#dart%EC%9D%98-interface">Dart의 Interface</a></p>
+</li>
+</ul></div></div></div></div><div class="wrap margin-top-1 margin-bottom-1 transition duration-500"><div class="wrap"><h1 class="margin-top-1666">[Flutter] Dart 기본 문법</h1><div class="flex align-center"><a href="https://github.com/Yeony99" target="_blank" rel="noreferrer" class="margin-right-05"><img style="height:auto" alt="" width="20" height="20" class="avatar-sm circle margin-bottom-1" src="https://avatars.githubusercontent.com/u/76241233?v=4"/></a><h6>Yeony (Nayeon Kim) · <!-- -->2022-09-02</h6></div><div class="blog-post"><h2 id="dart란" style="position:relative;">Dart란?<a href="#dart%EB%9E%80" aria-label="dart란 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p><a href="https://dart.dev/">다트(Dart)</a>는 구글이 자바스크립트를 대체하기 위해 2011년도 개발한 <strong>멀티 플랫폼</strong> 프로그래밍 언어입니다.</p>
+<p>다트의 특징으로는 모바일 앱, 웹 앱 등 여러 플랫폼을 다트를 이용해 만들 수 있습니다.</p>
+<h3 id="dart-특징" style="position:relative;">Dart 특징<a href="#dart-%ED%8A%B9%EC%A7%95" aria-label="dart 특징 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>statically typed
+<ul>
+<li>dyanmic type을 지원</li>
+</ul>
+</li>
+<li>객체 지향 언어</li>
+<li>단일 상속 지원</li>
+<li>mixin 지원</li>
+</ul>
+<h2 id="dart-자료형" style="position:relative;">Dart 자료형<a href="#dart-%EC%9E%90%EB%A3%8C%ED%98%95" aria-label="dart 자료형 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>다트는 <code class="language-text">Java</code> 혹은 <code class="language-text">Javascript</code>와 유사한 문법을 가지고 있습니다.</p>
+<p>먼저 자료형부터 살펴보겠습니다.</p>
+<ul>
+<li>num : 숫자 타입
+<ul>
+<li>int : 정수 타입</li>
+<li>double : 실수 타입</li>
+</ul>
+</li>
+<li>bool : true/false 불리언 타입</li>
+<li>String : 문자열 타입</li>
+<li>List : 중복 허용, 순서가 있는 집합</li>
+<li>Set : 중복 허용하지 않는 순서 없는 집합</li>
+<li>Map : key-value 쌍으로 구성된 집합 (자바스크립트의 Object 타입과 유사)</li>
+</ul>
+<p>변수와 함수 선언 예시는 아래와 같습니다.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">String name;
+num age;
+
+List&lt;String&gt; students = [&#39;Nayeon&#39;, &#39;Yeony&#39;, &#39;Kim&#39;];
+
+Map&lt;String, int&gt; scores = {
+    &#39;math&#39;: 97,
+    &#39;eng&#39;: 77
+}
+
+voin main() {
+    print(&#39;Hello World!&#39;);
+}
+
+String sayHi() {
+    return &#39;Hi!&#39;;
+}</code>
+        </deckgo-highlight-code>
+<h3 id="dynamic" style="position:relative;">dynamic<a href="#dynamic" aria-label="dynamic permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>다트의 특징으로 <strong>dyanmic type</strong>이 있다고 했는데요.</p>
+<p>변수 선언 시 <code class="language-text">dynamic</code>을 붙이면 해당 변수는 모든 형식을 허용하는 형태가 됩니다. 처음 타입이 String이고 후에 int 타입을 할당해도 에러가 나지 않습니다.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">void main() {
+    dynamic changing = &#39;Hi!!&#39;;
+    changing = 123;
+
+    print(changing); // 123
+}</code>
+        </deckgo-highlight-code>
+<h3 id="var" style="position:relative;">var<a href="#var" aria-label="var permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><code class="language-text">var</code>는 <strong>타입 추론</strong>을 가능케 하는 키워드입니다.</p>
+<p>타입을 꼭 선언하지 않아도, 변수에 처음으로 할당되는 값에 따라 자동으로 타입을 추론합니다.<br>
+단, 이후 다른 타입의 값이 할당된다 해도 그 변수의 타입은 변경되지 않습니다.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">void main() {
+    var age = 10; // age는 int 타입으로 고정
+
+    age = 20;
+    print(age); // 20
+
+    age = &#39;I am so young&#39;; // Error! (int 변수에는 String을 할당할 수 없음)
+}</code>
+        </deckgo-highlight-code>
+<h3 id="final--const" style="position:relative;">final / const<a href="#final--const" aria-label="final  const permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>자바나 자바스크립트에서 볼 수 있던 키워드를 다트에서도 볼 수 있습니다.</p>
+<p>모두 <strong>상수</strong>를 의미하지만 차이가 있습니다.</p>
+<ul>
+<li>const : compile-time constant로 앱 빌드시 값 정해짐.
+<ul>
+<li>life cycle 상 절대 변하지 않음을 의미. (재빌드하지 않아 성능 개선)</li>
+</ul>
+</li>
+<li>final : run-time constant로 앱 실행시 값이 정해짐</li>
+</ul>
+<h2 id="dart의-연산자" style="position:relative;">Dart의 연산자<a href="#dart%EC%9D%98-%EC%97%B0%EC%82%B0%EC%9E%90" aria-label="dart의 연산자 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>자바스크립트를 주로 사용하는 개발자로서 자바스크립트 연산자와 아주 유사하다고 생각되었습니다.<br>
+자바스크립트와 다르거나 다트에만 있는 독특한 연산자만 정리합니다.</p>
+<h3 id="-정수-나눗셈-연산자" style="position:relative;">~/ (정수 나눗셈 연산자)<a href="#-%EC%A0%95%EC%88%98-%EB%82%98%EB%88%97%EC%85%88-%EC%97%B0%EC%82%B0%EC%9E%90" aria-label=" 정수 나눗셈 연산자 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">void main() {
+    print(101~/2); // 50
+}</code>
+        </deckgo-highlight-code>
+<h3 id="is--is-타입-확인-키워드" style="position:relative;">is / is! (타입 확인 키워드)<a href="#is--is-%ED%83%80%EC%9E%85-%ED%99%95%EC%9D%B8-%ED%82%A4%EC%9B%8C%EB%93%9C" aria-label="is  is 타입 확인 키워드 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>자바스크립트의 <code class="language-text">typeof</code> 연산자와 유사합니다.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">void main() {
+    var name = &#39;Yeony&#39;;
+    print(name is int); // false;
+    print(name is String); // true;
+}</code>
+        </deckgo-highlight-code>
+<h3 id="ab-optional-chaining" style="position:relative;">A?.B (optional chaining)<a href="#ab-optional-chaining" aria-label="ab optional chaining permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><code class="language-text">?.</code>를 적어줌으로써 해당 객체의 속성을 사용할 수 있는지 여부에 따라 반환되는 값이 달라집니다.</p>
+<p>객체의 속성에 접근할 수 있다면 그대로 반환하고, 사용할 수 없다면 <code class="language-text">null</code>을 반환합니다.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">void main() {
+    String? name;
+
+    print(name.length); // Error!
+    print(name?.length); // null
+}</code>
+        </deckgo-highlight-code>
+<h3 id="a--b-논리-or" style="position:relative;">A ?? B (논리 OR)<a href="#a--b-%EB%85%BC%EB%A6%AC-or" aria-label="a  b 논리 or permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>자바스크립트의 <code class="language-text">||</code> 연산자와 똑같이 동작합니다.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">void main() {
+    String name;
+
+    String myName = name ?? &#39;Yeony&#39;;
+
+    print(myName); // name이 null이므로 &#39;Yeony&#39;
+}</code>
+        </deckgo-highlight-code>
+<h3 id="a--b-논리" style="position:relative;">A ??= B (논리)<a href="#a--b-%EB%85%BC%EB%A6%AC" aria-label="a  b 논리 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><code class="language-text">??</code> 연산자와 반대로 동작합니다.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">void main() {
+  int age;
+
+  int myAge = 24;
+
+  myAge ??= age;
+
+  print(myAge);	//age가 null이므로 24
+}</code>
+        </deckgo-highlight-code>
+<h2 id="dart의-class" style="position:relative;">Dart의 Class<a href="#dart%EC%9D%98-class" aria-label="dart의 class permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>class는 객체를 정의하는 일종의 틀입니다. 특정한 모양의 객체를 생성하기 위해 변수, 메소드를 지정하는 것이죠.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">class Fruit {
+    String name = &#39;Banana&#39;;
+
+    void printFruitName() {
+        print(&#39;This is a ${name}!&#39;); 
+    } 
+}
+
+void main() {
+    Fruit fruit = new Fruit();
+
+    fruit.printFruitName(); // This is a Banana!
+
+    fruit.name = &#39;Grapes&#39;;
+    fruit.printFruitName(); // This is a Grapes!
+}</code>
+        </deckgo-highlight-code>
+<h3 id="생성자" style="position:relative;">생성자<a href="#%EC%83%9D%EC%84%B1%EC%9E%90" aria-label="생성자 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>다트의 class또한 다른 객체지향언어와 같이 생성자(constructor)를 가질 수 있습니다</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">class Fruit {
+    String? name;
+    int? price;
+
+    Fruit(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    void printFruitName() {
+        print(&#39;This is a ${name}! This is ${price} won!&#39;); 
+    } 
+}
+
+void main() {
+    Fruit fruit = new Fruit(&#39;Strawberry&#39;, 10000);
+
+    fruit.printFruitName(); // This is a Strawberry! This is 10000 won!
+}</code>
+        </deckgo-highlight-code>
+<p><strong>Named Parameter</strong> 를 사용하면 이렇게 작성할 수도 있습니다.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">class Fruit {
+    String? name;
+    int? price;
+
+    Fruit({String? name, int? price}) // named parameter
+        : this.name = name,
+          this.price = price;
+
+    void printFruitName() {
+        print(&#39;This is a ${name}! This is ${price} won!&#39;); 
+    } 
+}
+
+void main() {
+    Fruit fruit = new Fruit(name: &#39;Strawberry&#39;, price: 10000);
+
+    fruit.printFruitName(); // This is a Strawberry! This is 10000 won!
+}</code>
+        </deckgo-highlight-code>
+<h3 id="상속" style="position:relative;">상속<a href="#%EC%83%81%EC%86%8D" aria-label="상속 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>클래스에서는 상속이 가능합니다.</p>
+<p>상속의 개념을 간단히 설명해보죠.</p>
+<p>부모와 자식이 있습니다. 부모는 부모가 가진 것들만 자식에게 줄 수 있습니다. 반면 자식은 부모의 것도 가지고, 본인만의 것도 가질 수 있습니다. 자식이 부모의 것을 가지는 것이 <strong>상속</strong>, 자식이 부모의 것에 더해 자신만의 것을 가지는 것을 <strong>확장</strong>이라고 합니다.</p>
+<p>상속을 받을 때는 <code class="language-text">extends</code> 키워드를 사용합니다.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">class Fruit {
+    String? name;
+    int? price;
+
+    Fruit({String? name, int? price}) // named parameter
+        : this.name = name,
+          this.price = price;
+
+    void printFruitName() {
+        print(&#39;This is a ${name}! This is ${price} won!&#39;); 
+    } 
+}
+
+
+class Juice extends Fruit {
+    Juice({super.name, super.price});
+
+    void printJuiceName() {
+        print(&#39;This is juice made of ${this.name}!!&#39;);
+    }
+}
+
+void main() {
+    Juice juice = new Juice(name: &#39;Lemon&#39;, price : 5000);
+
+    // 부모 class인 Fruit에도 접근 가능
+    juice.printFruitName(); // This is a Lemon! This is 5000 won!
+    juice.printJuiceName(); // This is juice made of Lemon!!
+}</code>
+        </deckgo-highlight-code>
+<h2 id="dart의-interface" style="position:relative;">Dart의 Interface<a href="#dart%EC%9D%98-interface" aria-label="dart의 interface permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>다트는 클래스를 활용해 인터페이스를 정의할 수 있습니다.</p>
+<p>인터페이스란, 클래스 정의 시 <strong>반드시 정의해야하는 변수 및 함수를 지정</strong>할 때 사용합니다.</p>
+<p>앞서 클래스가 일종의 틀이라고 언급했는데, 인터페이스도 유사하지만 <strong>규격</strong>에 가깝습니다.<br>
+다른 클래스를 작성할 때 기본 틀을 제공하는 것이죠.</p>
+<p>자바 등에서는 interface 키워드를 이용해 정의하지만, 다트는 <code class="language-text">class</code> 키워드를 사용해 인터페이스를 정의하고, <code class="language-text">implements</code> 키워드로 인터페이스를 사용합니다.</p>
+<deckgo-highlight-code language="dart" terminal="carbon" theme="blackboard"  >
+          <code slot="code">class Food {
+    String? name;
+
+    void printFoodName() {} // 함수 정의만 함
+}
+
+class Fruit implements Food {
+    String? name;
+
+    Fruit(String name) : this.name = name;
+
+    // 함수 작성
+    void printFoodName() {
+        print(&#39;Hi! There is ${name} here!&#39;);
+    }
+}
+
+void main() {
+    Fruit fruit = new Fruit(&#39;Melon&#39;);
+
+    fruit.printFoodName();
+}</code>
+        </deckgo-highlight-code>
+<!-- 
+📍 Dart Language와 Flutter Framework가 각각 무엇인지 이해하고, 둘의 관계를 이해한다.
+
+📍 Dart Language와 Flutter Framework의 장점을 이해하고, 왜/어떻게 사용되는지 이해한다.
+
+📍 C Programming을 배웠다고 가정하고, 프로그래밍 언어의 기본적 문법들을 복습한다.
+
+📍 OOP Language(객체지향언어)인 Dart가 어떤 특징을 가지는지 이해한다.
+
+📍 Dart만이 가진 독특한 문법들을 숙지한다. -->
+<!-- ◾ [브라우저 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-devtool/) 👈 다음 글 보기 --></div><hr class="margin-0"/><div class="flex"><div class="tag__Tag-g53uox-0 gBHogO tag tag-sm">Flutter Basic</div></div></div><div class="padding-1 margin-top-2"><div class="b-shadow-10-gray"><div class="comments-wrapper"><div>Loading script...</div><div></div></div></div></div></div><footer><div class="margin-top-1 padding-1 w-100 "><div class="wrap flex align-center justify-content-between padding-1"><div style="font-size:0.9rem">© 2022 Nayeon Yeony Kim</div><div class="flex"><div class="margin-right-1"><a href="/rss.xml" target="_blank"><img class="footer-logo" src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UlNTPC90aXRsZT48cGF0aCBkPSJNMTkuMTk5IDI0QzE5LjE5OSAxMy40NjcgMTAuNTMzIDQuOCAwIDQuOFYwYzEzLjE2NSAwIDI0IDEwLjgzNSAyNCAyNGgtNC44MDF6TTMuMjkxIDE3LjQxNWMxLjgxNCAwIDMuMjkzIDEuNDc5IDMuMjkzIDMuMjk1IDAgMS44MTMtMS40ODUgMy4yOS0zLjMwMSAzLjI5QzEuNDcgMjQgMCAyMi41MjYgMCAyMC43MXMxLjQ3NS0zLjI5NCAzLjI5MS0zLjI5NXpNMTUuOTA5IDI0aC00LjY2NWMwLTYuMTY5LTUuMDc1LTExLjI0NS0xMS4yNDQtMTEuMjQ1VjguMDljOC43MjcgMCAxNS45MDkgNy4xODQgMTUuOTA5IDE1LjkxeiIvPjwvc3ZnPg=="/></a></div><div><a href="https://github.com/Yeony99" target="_blank"><img class="footer-logo" src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0SHViPC90aXRsZT48cGF0aCBkPSJNMTIgLjI5N2MtNi42MyAwLTEyIDUuMzczLTEyIDEyIDAgNS4zMDMgMy40MzggOS44IDguMjA1IDExLjM4NS42LjExMy44Mi0uMjU4LjgyLS41NzcgMC0uMjg1LS4wMS0xLjA0LS4wMTUtMi4wNC0zLjMzOC43MjQtNC4wNDItMS42MS00LjA0Mi0xLjYxQzQuNDIyIDE4LjA3IDMuNjMzIDE3LjcgMy42MzMgMTcuN2MtMS4wODctLjc0NC4wODQtLjcyOS4wODQtLjcyOSAxLjIwNS4wODQgMS44MzggMS4yMzYgMS44MzggMS4yMzYgMS4wNyAxLjgzNSAyLjgwOSAxLjMwNSAzLjQ5NS45OTguMTA4LS43NzYuNDE3LTEuMzA1Ljc2LTEuNjA1LTIuNjY1LS4zLTUuNDY2LTEuMzMyLTUuNDY2LTUuOTMgMC0xLjMxLjQ2NS0yLjM4IDEuMjM1LTMuMjItLjEzNS0uMzAzLS41NC0xLjUyMy4xMDUtMy4xNzYgMCAwIDEuMDA1LS4zMjIgMy4zIDEuMjMuOTYtLjI2NyAxLjk4LS4zOTkgMy0uNDA1IDEuMDIuMDA2IDIuMDQuMTM4IDMgLjQwNSAyLjI4LTEuNTUyIDMuMjg1LTEuMjMgMy4yODUtMS4yMy42NDUgMS42NTMuMjQgMi44NzMuMTIgMy4xNzYuNzY1Ljg0IDEuMjMgMS45MSAxLjIzIDMuMjIgMCA0LjYxLTIuODA1IDUuNjI1LTUuNDc1IDUuOTIuNDIuMzYuODEgMS4wOTYuODEgMi4yMiAwIDEuNjA2LS4wMTUgMi44OTYtLjAxNSAzLjI4NiAwIC4zMTUuMjEuNjkuODI1LjU3QzIwLjU2NSAyMi4wOTIgMjQgMTcuNTkyIDI0IDEyLjI5N2MwLTYuNjI3LTUuMzczLTEyLTEyLTEyIi8+PC9zdmc+"/></a></div></div></div></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><div id="portal"></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/tech/flutter-dart-and-flutter";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-72b219bae196683411be.js"],"app":["/app-1cd3562afdbfcd162549.js"],"component---src-pages-404-js":["/component---src-pages-404-js-1cb785892f5048112473.js"],"component---src-pages-index-js":["/component---src-pages-index-js-9ef7436fc7c958e93ecb.js"],"component---src-pages-log-index-js":["/component---src-pages-log-index-js-17dfa7f7c0f330c9ca17.js"],"component---src-pages-retrospective-index-js":["/component---src-pages-retrospective-index-js-8d93b3f9aadd8f34e1ae.js"],"component---src-pages-tech-index-js":["/component---src-pages-tech-index-js-b95c7b61daf398b59504.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-1637dab430fe33a26281.js"]};/*]]>*/</script><script src="/polyfill-72b219bae196683411be.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-1637dab430fe33a26281.js" async=""></script><script src="/14d71c03043037e9fc0fce6c9585270af8eaca3c-1567ef9bae1dbd90c7c9.js" async=""></script><script src="/commons-b52596be09ee140c9e61.js" async=""></script><script src="/app-1cd3562afdbfcd162549.js" async=""></script><script src="/framework-3e59b0ca76e46f05ca8d.js" async=""></script><script src="/webpack-runtime-0440f503388a7e66c5b1.js" async=""></script></body></html>
