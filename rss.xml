@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 31 Aug 2022 00:10:03 GMT</lastBuildDate><item><title><![CDATA[[Flutter] Dart 기본 문법]]></title><description><![CDATA[Dart란? 다트(Dart)는 구글이 자바스크립트를 대체하기 위해 2011년도 개발한 멀티 플랫폼 프로그래밍 언어입니다. 다트의 특징으로는 모바일 앱, 웹 앱 등 여러 플랫폼을 다트를 이용해 만들 수 있습니다. Dart 특징 statically…]]></description><link>https://yeony99.github.io/tech/flutter-dart-and-flutter</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-dart-and-flutter</guid><pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;dart란&quot; style=&quot;position:relative;&quot;&gt;Dart란?&lt;a href=&quot;#dart%EB%9E%80&quot; aria-label=&quot;dart란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 31 Aug 2022 00:18:37 GMT</lastBuildDate><item><title><![CDATA[[Flutter] Dart 기본 문법]]></title><description><![CDATA[Dart란? 다트(Dart)는 구글이 자바스크립트를 대체하기 위해 2011년도 개발한 멀티 플랫폼 프로그래밍 언어입니다. 다트의 특징으로는 모바일 앱, 웹 앱 등 여러 플랫폼을 다트를 이용해 만들 수 있습니다. Dart 특징 statically…]]></description><link>https://yeony99.github.io/tech/flutter-dart-and-flutter</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-dart-and-flutter</guid><pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;dart란&quot; style=&quot;position:relative;&quot;&gt;Dart란?&lt;a href=&quot;#dart%EB%9E%80&quot; aria-label=&quot;dart란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://dart.dev/&quot;&gt;다트(Dart)&lt;/a&gt;는 구글이 자바스크립트를 대체하기 위해 2011년도 개발한 &lt;strong&gt;멀티 플랫폼&lt;/strong&gt; 프로그래밍 언어입니다.&lt;/p&gt;
 &lt;p&gt;다트의 특징으로는 모바일 앱, 웹 앱 등 여러 플랫폼을 다트를 이용해 만들 수 있습니다.&lt;/p&gt;
 &lt;h3 id=&quot;dart-특징&quot; style=&quot;position:relative;&quot;&gt;Dart 특징&lt;a href=&quot;#dart-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;dart 특징 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
@@ -12,6 +12,8 @@
 &lt;li&gt;단일 상속 지원&lt;/li&gt;
 &lt;li&gt;mixin 지원&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
+&lt;br/&gt;
 &lt;h2 id=&quot;dart-자료형&quot; style=&quot;position:relative;&quot;&gt;Dart 자료형&lt;a href=&quot;#dart-%EC%9E%90%EB%A3%8C%ED%98%95&quot; aria-label=&quot;dart 자료형 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;다트는 &lt;code class=&quot;language-text&quot;&gt;Java&lt;/code&gt; 혹은 &lt;code class=&quot;language-text&quot;&gt;Javascript&lt;/code&gt;와 유사한 문법을 가지고 있습니다.&lt;/p&gt;
 &lt;p&gt;먼저 자료형부터 살펴보겠습니다.&lt;/p&gt;
@@ -48,6 +50,7 @@ String sayHi() {
     return &amp;#39;Hi!&amp;#39;;
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;h3 id=&quot;dynamic&quot; style=&quot;position:relative;&quot;&gt;dynamic&lt;a href=&quot;#dynamic&quot; aria-label=&quot;dynamic permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;다트의 특징으로 &lt;strong&gt;dyanmic type&lt;/strong&gt;이 있다고 했는데요.&lt;/p&gt;
 &lt;p&gt;변수 선언 시 &lt;code class=&quot;language-text&quot;&gt;dynamic&lt;/code&gt;을 붙이면 해당 변수는 모든 형식을 허용하는 형태가 됩니다. 처음 타입이 String이고 후에 int 타입을 할당해도 에러가 나지 않습니다.&lt;/p&gt;
@@ -59,6 +62,7 @@ String sayHi() {
     print(changing); // 123
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;h3 id=&quot;var&quot; style=&quot;position:relative;&quot;&gt;var&lt;a href=&quot;#var&quot; aria-label=&quot;var permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;var&lt;/code&gt;는 &lt;strong&gt;타입 추론&lt;/strong&gt;을 가능케 하는 키워드입니다.&lt;/p&gt;
 &lt;p&gt;타입을 꼭 선언하지 않아도, 변수에 처음으로 할당되는 값에 따라 자동으로 타입을 추론합니다.&lt;br&gt;
@@ -73,6 +77,7 @@ String sayHi() {
     age = &amp;#39;I am so young&amp;#39;; // Error! (int 변수에는 String을 할당할 수 없음)
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;h3 id=&quot;final--const&quot; style=&quot;position:relative;&quot;&gt;final / const&lt;a href=&quot;#final--const&quot; aria-label=&quot;final  const permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;자바나 자바스크립트에서 볼 수 있던 키워드를 다트에서도 볼 수 있습니다.&lt;/p&gt;
 &lt;p&gt;모두 &lt;strong&gt;상수&lt;/strong&gt;를 의미하지만 차이가 있습니다.&lt;/p&gt;
@@ -84,6 +89,8 @@ String sayHi() {
 &lt;/li&gt;
 &lt;li&gt;final : run-time constant로 앱 실행시 값이 정해짐&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
+&lt;br/&gt;
 &lt;h2 id=&quot;dart의-연산자&quot; style=&quot;position:relative;&quot;&gt;Dart의 연산자&lt;a href=&quot;#dart%EC%9D%98-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;dart의 연산자 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;자바스크립트를 주로 사용하는 개발자로서 자바스크립트 연산자와 아주 유사하다고 생각되었습니다.&lt;br&gt;
 자바스크립트와 다르거나 다트에만 있는 독특한 연산자만 정리합니다.&lt;/p&gt;
@@ -93,6 +100,7 @@ String sayHi() {
     print(101~/2); // 50
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;h3 id=&quot;is--is-타입-확인-키워드&quot; style=&quot;position:relative;&quot;&gt;is / is! (타입 확인 키워드)&lt;a href=&quot;#is--is-%ED%83%80%EC%9E%85-%ED%99%95%EC%9D%B8-%ED%82%A4%EC%9B%8C%EB%93%9C&quot; aria-label=&quot;is  is 타입 확인 키워드 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;자바스크립트의 &lt;code class=&quot;language-text&quot;&gt;typeof&lt;/code&gt; 연산자와 유사합니다.&lt;/p&gt;
 &lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
@@ -102,6 +110,7 @@ String sayHi() {
     print(name is String); // true;
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;h3 id=&quot;ab-optional-chaining&quot; style=&quot;position:relative;&quot;&gt;A?.B (optional chaining)&lt;a href=&quot;#ab-optional-chaining&quot; aria-label=&quot;ab optional chaining permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;?.&lt;/code&gt;를 적어줌으로써 해당 객체의 속성을 사용할 수 있는지 여부에 따라 반환되는 값이 달라집니다.&lt;/p&gt;
 &lt;p&gt;객체의 속성에 접근할 수 있다면 그대로 반환하고, 사용할 수 없다면 &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt;을 반환합니다.&lt;/p&gt;
@@ -113,6 +122,7 @@ String sayHi() {
     print(name?.length); // null
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;h3 id=&quot;a--b-논리-or&quot; style=&quot;position:relative;&quot;&gt;A ?? B (논리 OR)&lt;a href=&quot;#a--b-%EB%85%BC%EB%A6%AC-or&quot; aria-label=&quot;a  b 논리 or permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;자바스크립트의 &lt;code class=&quot;language-text&quot;&gt;||&lt;/code&gt; 연산자와 똑같이 동작합니다.&lt;/p&gt;
 &lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
@@ -124,6 +134,7 @@ String sayHi() {
     print(myName); // name이 null이므로 &amp;#39;Yeony&amp;#39;
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;h3 id=&quot;a--b-논리&quot; style=&quot;position:relative;&quot;&gt;A ??= B (논리)&lt;a href=&quot;#a--b-%EB%85%BC%EB%A6%AC&quot; aria-label=&quot;a  b 논리 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;??&lt;/code&gt; 연산자와 반대로 동작합니다.&lt;/p&gt;
 &lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
@@ -137,6 +148,9 @@ String sayHi() {
   print(myAge);	//age가 null이므로 24
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;br/&gt;
 &lt;h2 id=&quot;dart의-class&quot; style=&quot;position:relative;&quot;&gt;Dart의 Class&lt;a href=&quot;#dart%EC%9D%98-class&quot; aria-label=&quot;dart의 class permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;class는 객체를 정의하는 일종의 틀입니다. 특정한 모양의 객체를 생성하기 위해 변수, 메소드를 지정하는 것이죠.&lt;/p&gt;
 &lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
@@ -157,6 +171,7 @@ void main() {
     fruit.printFruitName(); // This is a Grapes!
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;h3 id=&quot;생성자&quot; style=&quot;position:relative;&quot;&gt;생성자&lt;a href=&quot;#%EC%83%9D%EC%84%B1%EC%9E%90&quot; aria-label=&quot;생성자 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;다트의 class또한 다른 객체지향언어와 같이 생성자(constructor)를 가질 수 있습니다&lt;/p&gt;
 &lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
@@ -201,6 +216,7 @@ void main() {
     fruit.printFruitName(); // This is a Strawberry! This is 10000 won!
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;h3 id=&quot;상속&quot; style=&quot;position:relative;&quot;&gt;상속&lt;a href=&quot;#%EC%83%81%EC%86%8D&quot; aria-label=&quot;상속 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;클래스에서는 상속이 가능합니다.&lt;/p&gt;
 &lt;p&gt;상속의 개념을 간단히 설명해보죠.&lt;/p&gt;
@@ -237,6 +253,7 @@ void main() {
     juice.printJuiceName(); // This is juice made of Lemon!!
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;h2 id=&quot;dart의-interface&quot; style=&quot;position:relative;&quot;&gt;Dart의 Interface&lt;a href=&quot;#dart%EC%9D%98-interface&quot; aria-label=&quot;dart의 interface permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;다트는 클래스를 활용해 인터페이스를 정의할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;인터페이스란, 클래스 정의 시 &lt;strong&gt;반드시 정의해야하는 변수 및 함수를 지정&lt;/strong&gt;할 때 사용합니다.&lt;/p&gt;
@@ -267,6 +284,7 @@ void main() {
     fruit.printFoodName();
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
 &lt;!-- 
 📍 Dart Language와 Flutter Framework가 각각 무엇인지 이해하고, 둘의 관계를 이해한다.
 
