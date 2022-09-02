@@ -1,9 +1,9 @@
 ---
-title: "[Flutter] Install Flutter"
+title: "[Flutter] Dart 기본 문법"
 date: "2022-09-02"
 category: "tech"
 slug: "/tech/flutter-dart-and-flutter"
-img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
+img: "https://user-images.githubusercontent.com/76241233/187564792-d9177d6e-ab8b-4919-8593-128e5ddc9476.png"
 tags: 
  - "Flutter Basic"
 ---
@@ -17,10 +17,13 @@ tags:
 ### Dart 특징
 
 * statically typed 
-    * dyanmic type을 지원
+    * dynamic type을 지원
 * 객체 지향 언어
 * 단일 상속 지원
 * mixin 지원
+
+---
+<br/>
 
 ## Dart 자료형
 
@@ -58,10 +61,11 @@ String sayHi() {
     return 'Hi!';
 }
 ```
+<br/>
 
 ### dynamic
 
-다트의 특징으로 **dyanmic type**이 있다고 했는데요.
+다트의 특징으로 **dynamic type**이 있다고 했는데요.
 
 변수 선언 시 `dynamic`을 붙이면 해당 변수는 모든 형식을 허용하는 형태가 됩니다. 처음 타입이 String이고 후에 int 타입을 할당해도 에러가 나지 않습니다.
 
@@ -73,6 +77,7 @@ void main() {
     print(changing); // 123
 }
 ```
+<br/>
 
 ### var
 `var`는 **타입 추론**을 가능케 하는 키워드입니다. 
@@ -90,6 +95,7 @@ void main() {
     age = 'I am so young'; // Error! (int 변수에는 String을 할당할 수 없음)
 }
 ```
+<br/>
 
 ### final / const 
 
@@ -101,7 +107,8 @@ void main() {
     * life cycle 상 절대 변하지 않음을 의미. (재빌드하지 않아 성능 개선)
 * final : run-time constant로 앱 실행시 값이 정해짐
 
-
+---
+<br/>
 
 ## Dart의 연산자
 
@@ -114,6 +121,8 @@ void main() {
     print(101~/2); // 50
 }
 ```
+<br/>
+
 
 ### is / is! (타입 확인 키워드)
 
@@ -126,6 +135,7 @@ void main() {
     print(name is String); // true;
 }
 ```
+<br/>
 
 ### A?.B (optional chaining)
 
@@ -141,6 +151,7 @@ void main() {
     print(name?.length); // null
 }
 ```
+<br/>
 
 ### A ?? B (논리 OR)
 
@@ -155,6 +166,7 @@ void main() {
     print(myName); // name이 null이므로 'Yeony'
 }
 ```
+<br/>
 
 ### A ??= B (논리)
 `??` 연산자와 반대로 동작합니다.
@@ -170,6 +182,10 @@ void main() {
   print(myAge);	//age가 null이므로 24
 }
 ```
+<br/>
+
+---
+<br/>
 
 ## Dart의 Class
 
@@ -193,6 +209,7 @@ void main() {
     fruit.printFruitName(); // This is a Grapes!
 }
 ```
+<br/>
 
 ### 생성자
 
@@ -245,6 +262,8 @@ void main() {
 }
 ```
 
+<br/>
+
 ### 상속
 
 클래스에서는 상속이 가능합니다.
@@ -287,6 +306,7 @@ void main() {
     juice.printJuiceName(); // This is juice made of Lemon!!
 }
 ```
+<br/>
 
 ## Dart의 Interface
 
@@ -324,6 +344,7 @@ void main() {
     fruit.printFoodName();
 }
 ```
+<br/>
 
 
 
