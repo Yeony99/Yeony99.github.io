@@ -233,4 +233,4 @@ const y = x + 1n; // 9007199254740993n
 다음 글에서는 변수에 대해 알아보겠습니다.
  
 ◾ [Node.js와 npm](/tech/let-me-know-js-a-bit-js-node-and-npm) 👈 이전 글 보기   
-<!-- ◾ [변수 사용하기](/tech/let-me-know-js-a-bit-js-variable) 👈 다음 글 보기    -->
+◾ [변수 사용하기](/tech/let-me-know-js-a-bit-js-variable) 👈 다음 글 보기   

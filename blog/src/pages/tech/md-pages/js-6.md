@@ -197,4 +197,4 @@ let name = 'Yeony';
 
  
 ◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-data-type)  👈 이전 글 보기   
-<!-- ◾ [브라우저 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-devtool/) 👈 다음 글 보기    -->
+◾ [변수 명명 규칙](/tech/let-me-know-js-a-bit-js-variable-naming) 👈 다음 글 보기   

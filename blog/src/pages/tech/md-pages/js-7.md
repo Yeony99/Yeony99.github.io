@@ -119,5 +119,5 @@ const FINAL_SCORE = mathScore + engScore;
 
 다음 글에서는 자바스크립트의 예약어에 대해 알아보겠습니다.
 
-◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-data-type)  👈 이전 글 보기   
+◾ [변수 사용하기](/tech/let-me-know-js-a-bit-js-variable)  👈 이전 글 보기   
 <!-- ◾ [브라우저 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-devtool/) 👈 다음 글 보기    -->`
