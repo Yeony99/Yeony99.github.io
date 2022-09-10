@@ -1,4 +1,198 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 07 Sep 2022 12:31:25 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (7) - 변수 명명 규칙]]></title><description><![CDATA[변수 이름짓기(명명 규칙, Naming…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable-naming</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable-naming</guid><pubDate>Wed, 07 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;변수-이름짓기명명-규칙-naming란&quot; style=&quot;position:relative;&quot;&gt;변수 이름짓기(명명 규칙, Naming)란?&lt;a href=&quot;#%EB%B3%80%EC%88%98-%EC%9D%B4%EB%A6%84%EC%A7%93%EA%B8%B0%EB%AA%85%EB%AA%85-%EA%B7%9C%EC%B9%99-naming%EB%9E%80&quot; aria-label=&quot;변수 이름짓기명명 규칙 naming란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 10 Sep 2022 06:59:04 GMT</lastBuildDate><item><title><![CDATA[[Flutter] Widget 다루기]]></title><description><![CDATA[모든 것이 Widget인 Flutter widget이라고만 하면 인터페이스 요소 하나로 받아들일 수 있습니다. ppt로 발표자료를 만들어 보신 적이 있다면 이해하기 쉽습니다. 큰제목은 4…]]></description><link>https://yeony99.github.io/tech/flutter-what-is-widget</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-what-is-widget</guid><pubDate>Sat, 10 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;모든-것이-widget인-flutter&quot; style=&quot;position:relative;&quot;&gt;모든 것이 Widget인 Flutter&lt;a href=&quot;#%EB%AA%A8%EB%93%A0-%EA%B2%83%EC%9D%B4-widget%EC%9D%B8-flutter&quot; aria-label=&quot;모든 것이 widget인 flutter permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;widget&lt;/strong&gt;이라고만 하면 인터페이스 요소 하나로 받아들일 수 있습니다.&lt;/p&gt;
+&lt;p&gt;ppt로 발표자료를 만들어 보신 적이 있다면 이해하기 쉽습니다.&lt;br&gt;
+큰제목은 48포인트 글자 크기가 설정된 텍스트 상자에, 여러 이미지나 도형은 그룹화를 해 동일한 간격을 두고 배치하기도 합니다.&lt;br&gt;
+메뉴라든가, 텍스트 상자 등 ppt를 만들 때 네모 상자를 그려 만드는 것들을 위젯이라고 볼 수 있죠.&lt;/p&gt;
+&lt;p&gt;플러터도 똑같습니다. 플러터에선 &lt;strong&gt;모든 것이 위젯&lt;/strong&gt;이라 생각하면 됩니다.
+ppt예시를 위에서 들었는데요. 플러터의 위젯도 비슷합니다.&lt;/p&gt;
+&lt;p&gt;플러터에서는 &lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Container&lt;/code&gt;, 가로 세로 정렬을 하는 &lt;code class=&quot;language-text&quot;&gt;Row&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Column&lt;/code&gt; 등이 모두 &lt;strong&gt;위젯&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h2 id=&quot;widget의-구분&quot; style=&quot;position:relative;&quot;&gt;Widget의 구분&lt;a href=&quot;#widget%EC%9D%98-%EA%B5%AC%EB%B6%84&quot; aria-label=&quot;widget의 구분 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;플러터의 Widget은 2가지로 구분됩니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;State-full Widget&lt;/li&gt;
+&lt;li&gt;Stateless Widget&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;별도의 해석이 없더라도 &lt;strong&gt;상태&lt;/strong&gt;의 여부에 따라 위젯이 구분됨을 알 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;상태state란&quot; style=&quot;position:relative;&quot;&gt;상태(state)란?&lt;a href=&quot;#%EC%83%81%ED%83%9Cstate%EB%9E%80&quot; aria-label=&quot;상태state란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;그러면 위젯의 상태란 무엇일까요?&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html&quot;&gt;공식 docs&lt;/a&gt;에 따르면 &lt;strong&gt;State&lt;/strong&gt;란,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;위젯이 빌드될 때 동기적으로 읽을 수 있는 정보&lt;/li&gt;
+&lt;li&gt;위젯의 생명주기가 끝나기 전까지 변경될 수 있는 정보&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이렇게 두 가지를 의미합니다. 결국은 어플리케이션에서 보여지는 모든 &lt;strong&gt;동적인 데이터&lt;/strong&gt;를 뜻하죠.&lt;/p&gt;
+&lt;p&gt;예시를 들어보겠습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;어플 시작 화면의 어플 이름 표시 텍스트&lt;/li&gt;
+&lt;li&gt;로그인된 회원의 닉네임 표시 텍스트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;어떤 게 동적인 데이터일까요? 후자라고 생각하셨죠?&lt;br&gt;
+로그인된 사용자의 닉네임은 사용자에 따라서, 혹은 로그인 여부에 따라 보여지는 텍스트가 다를테니까요.&lt;/p&gt;
+&lt;h4 id=&quot;app-state--widget-state&quot; style=&quot;position:relative;&quot;&gt;App State / Widget State&lt;a href=&quot;#app-state--widget-state&quot; aria-label=&quot;app state  widget state permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;이런 데이터는 전역(global)/지역(local)로 나뉘어 관리할 수 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;App state : 앱 전체에 걸쳐 사용되며, 여러 위젯에 반복되어 사용될 수 있는 상태 데이터&lt;/li&gt;
+&lt;li&gt;Widget state : 특정 위젯 내에서만 사용되며, 공유나 반환할 필요가 없는 상태 데이터&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이런 데이터 처리를 플러터에서는 &lt;code class=&quot;language-text&quot;&gt;State-full Widget&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;Stateless Widget&lt;/code&gt;으로 구분해 작성하는 것입니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;state-full-widget&quot; style=&quot;position:relative;&quot;&gt;State-full Widget&lt;a href=&quot;#state-full-widget&quot; aria-label=&quot;state full widget permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;State-full 위젯은 상태 변화를 감지하고, 변화가 있으면 다시 빌드하는 위젯입니다.&lt;/p&gt;
+&lt;p&gt;플러터 프로젝트를 처음 시작하면 볼 수 있는 Flutter Demo Home Page 코드를 보겠습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// main.dart 파일
+
+// 머티리얼 스타일 import
+import &amp;#39;package:flutter/material.dart&amp;#39;;
+
+// 앱 실행부
+void main() {
+  runApp(MyApp());
+}
+
+// StatelessWidget
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &amp;#39;Flutter Demo&amp;#39;,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: &amp;#39;Flutter Demo Home Page&amp;#39;),
+    );
+  }
+}
+
+
+// StatefulWidget -- 1)
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() =&amp;gt; _MyHomePageState();
+}
+
+
+// State 객체 -- 2)
+class _MyHomePageState extends State&amp;lt;MyHomePage&amp;gt; {
+
+  // 변수 선언 및 초기화
+  int _counter = 0;
+
+  // 카운터 증가함수
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+
+  // 위젯 구현부
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        //...
+    );
+  }
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;위 코드에서 &lt;code class=&quot;language-text&quot;&gt;MyHomePage&lt;/code&gt; class가 &lt;code class=&quot;language-text&quot;&gt;StatefulWidget&lt;/code&gt;을 상속(extends)받은 것을 볼 수 있습니다.&lt;br&gt;
+그리고 &lt;code class=&quot;language-text&quot;&gt;_counter&lt;/code&gt; 변수를 이용해 &lt;strong&gt;State가 변화&lt;/strong&gt;할 때마다 다시 빌드합니다.&lt;/p&gt;
+&lt;h4 id=&quot;statefulwidget의-구성&quot; style=&quot;position:relative;&quot;&gt;StatefulWidget의 구성&lt;a href=&quot;#statefulwidget%EC%9D%98-%EA%B5%AC%EC%84%B1&quot; aria-label=&quot;statefulwidget의 구성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;StatefulWidget은 2가지 클래스로 구성되어 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;변하는 부분&lt;/li&gt;
+&lt;li&gt;변하지 않는 부분&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위 예시코드에서 1번과 2번으로 표시해 둔 곳이 그렇습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// StatefulWidget -- 1)
+class MyHomePage extends StatefulWidget {
+  //...
+  @override
+  _MyHomePageState createState() =&amp;gt; _MyHomePageState();
+}
+
+// State 객체 -- 2)
+class _MyHomePageState extends State&amp;lt;MyHomePage&amp;gt; {
+  //...
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;플러터는 본래 React에서 영감을 받은 프레임워크인데요. React의 특징을 간단하게 말하면 &lt;strong&gt;변화하는 부분만 교체한다&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;다시 말해 플러터에서 &lt;code class=&quot;language-text&quot;&gt;StatefulWidget&lt;/code&gt;을 사용할 때, 변하는 부분과 변하지 않는 부분을 나누어 2개의 &lt;code class=&quot;language-text&quot;&gt;class&lt;/code&gt;를 작성하게 되는 것이죠.&lt;/p&gt;
+&lt;h3 id=&quot;stateless-widget&quot; style=&quot;position:relative;&quot;&gt;Stateless Widget&lt;a href=&quot;#stateless-widget&quot; aria-label=&quot;stateless widget permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;반대로 상태 Stateless Widget은 상태 변화에 반응하지 않고, 위젯의 라이프사이클 동안 정적인 상태를 유지합니다.&lt;/p&gt;
+&lt;p&gt;말 그대로 State가 없는 위젯이지만, 그렇다고 Data가 없는 것은 아닙니다. 정확히는 &lt;strong&gt;변경될 데이터가 없다&lt;/strong&gt;고 이해할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;StatelessWidget은 이렇게 작성합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &amp;#39;Flutter Demo&amp;#39;, // 정적 데이터
+      theme: ThemeData(
+        primarySwatch: Colors.blue, // 정적 데이터
+      ),
+      home: MyHomePage(title: &amp;#39;Flutter Demo Home Page&amp;#39;), // 정적 데이터
+    );
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;변할 State가 없으니 변하지 않는 부분만 작성하면 됩니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h2 id=&quot;기본-widget-정리&quot; style=&quot;position:relative;&quot;&gt;기본 Widget 정리&lt;a href=&quot;#%EA%B8%B0%EB%B3%B8-widget-%EC%A0%95%EB%A6%AC&quot; aria-label=&quot;기본 widget 정리 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;플러터에서는 모든 게 위젯입니다.&lt;/p&gt;
+&lt;p&gt;다만 자주 쓰이고 기본적인 위젯만 알아보도록 합시다.&lt;/p&gt;
+&lt;p&gt;참고 : &lt;a href=&quot;https://docs.flutter.dev/development/ui/widgets/basics&quot;&gt;Basic Widget&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;container&quot; style=&quot;position:relative;&quot;&gt;Container&lt;a href=&quot;#container&quot; aria-label=&quot;container permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Container&lt;/code&gt; 위젯은 다른 자식 위젯들을 감쌀 수 있는(wrap) 위젯입니다.&lt;/p&gt;
+&lt;p&gt;Container위젯을 사용할 때 다음과 같은 옵션들을 정의할 수 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;alignment : 정렬&lt;/li&gt;
+&lt;li&gt;constraints : 최대최소 너비, 높이 등을 제약&lt;/li&gt;
+&lt;li&gt;padding : 내용과 테두리 사이의 간격 지정&lt;/li&gt;
+&lt;li&gt;color : 컨테이너의 색상 지정&lt;/li&gt;
+&lt;li&gt;transform : 변화되는 모션 지정(화면 전환 효과)&lt;/li&gt;
+&lt;li&gt;child: 자식 위젯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://api.flutter.dev/flutter/widgets/Container-class.html&quot;&gt;Container Widget&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;row--column&quot; style=&quot;position:relative;&quot;&gt;Row &amp;#x26; Column&lt;a href=&quot;#row--column&quot; aria-label=&quot;row  column permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Row&lt;/code&gt; 위젯은 &lt;strong&gt;children&lt;/strong&gt; 프로퍼티에 지정된 자식 위젯들을 가로로 배열하는 위젯입니다.&lt;/p&gt;
+&lt;p&gt;플러터 공식문서에서는 자식 위젯이 여럿 있을 때 사용하는 것을 권장합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;children : List&lt;Widget&gt;&lt;/li&gt;
+&lt;li&gt;derection : 주축(Axis)으로 사용할 방향&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://api.flutter.dev/flutter/widgets/Row-class.html&quot;&gt;Row Widget&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Row&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;Column&lt;/code&gt;이 상대되는 개념인 것을 이미 아셨으리라고 봅니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Column&lt;/code&gt; 위젯은 자식 위젯들을 수직으로 배열하는 위젯입니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://api.flutter.dev/flutter/widgets/Column-class.html&quot;&gt;Column Widget&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;text&quot; style=&quot;position:relative;&quot;&gt;Text&lt;a href=&quot;#text&quot; aria-label=&quot;text permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; 위젯은 말 그대로 문자를 표시하는 위젯입니다.&lt;/p&gt;
+&lt;p&gt;단일한 스타일의 텍스트 문자열을 보여주고, 레이아웃에 따라 여러 줄로 표시될 수도 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;style : Text의 스타일 명시. 생략 시 DefaultTextStyle로 자동 지정&lt;/li&gt;
+&lt;li&gt;textAlign : 정렬&lt;/li&gt;
+&lt;li&gt;overflow: 레이아웃보다 문자열의 길이가 더 길 때 어떻게 처리할 지 명시&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://api.flutter.dev/flutter/widgets/Text-class.html&quot;&gt;Text Widget&lt;/a&gt;&lt;/p&gt;
+&lt;!--
+📍 Flutter의 핵심 Architecture를 이루는 Widget이 무엇이고, 어떤 구조로 앱을 구성하는지 이해한다.
+
+📍 Flutter에서 Layout을 어떻게 만들어 나가는지 이해한다.
+
+📍 Flutter의 기본적인 Layout Widget들의 사용법을 숙지하고 실습해본다. --&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-dart-and-flutter&quot;&gt;[Flutter] Dart 기본 문법&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;
+&lt;!-- ◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-data-type) 👈 다음 글 보기 --&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (7) - 변수 명명 규칙]]></title><description><![CDATA[변수 이름짓기(명명 규칙, Naming…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable-naming</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable-naming</guid><pubDate>Wed, 07 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;변수-이름짓기명명-규칙-naming란&quot; style=&quot;position:relative;&quot;&gt;변수 이름짓기(명명 규칙, Naming)란?&lt;a href=&quot;#%EB%B3%80%EC%88%98-%EC%9D%B4%EB%A6%84%EC%A7%93%EA%B8%B0%EB%AA%85%EB%AA%85-%EA%B7%9C%EC%B9%99-naming%EB%9E%80&quot; aria-label=&quot;변수 이름짓기명명 규칙 naming란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;변수, 상수, 함수 이름들을 &lt;strong&gt;식별자&lt;/strong&gt;라고 합니다.&lt;/p&gt;
 &lt;p&gt;자바스크립트로 코딩할 때는 식별자들의 명명규칙을 지켜서 코딩하는 것이 좋습니다. 마치 글을 작성할 때 톤앤매너를 맞추는 것과 비슷한 맥락입니다.&lt;/p&gt;
 &lt;p&gt;변수명만으로도 어떤 역할을 하는 변수인지 알 수 있는 경우도 많구요, 코드의 통일성, 가독성 또한 높여줍니다.&lt;/p&gt;
@@ -228,8 +422,8 @@ String sayHi() {
     String name = &amp;#39;Banana&amp;#39;;
 
     void printFruitName() {
-        print(&amp;#39;This is a ${name}!&amp;#39;); 
-    } 
+        print(&amp;#39;This is a ${name}!&amp;#39;);
+    }
 }
 
 void main() {
@@ -255,8 +449,8 @@ void main() {
     }
 
     void printFruitName() {
-        print(&amp;#39;This is a ${name}! This is ${price} won!&amp;#39;); 
-    } 
+        print(&amp;#39;This is a ${name}! This is ${price} won!&amp;#39;);
+    }
 }
 
 void main() {
@@ -276,8 +470,8 @@ void main() {
           this.price = price;
 
     void printFruitName() {
-        print(&amp;#39;This is a ${name}! This is ${price} won!&amp;#39;); 
-    } 
+        print(&amp;#39;This is a ${name}! This is ${price} won!&amp;#39;);
+    }
 }
 
 void main() {
@@ -302,8 +496,8 @@ void main() {
           this.price = price;
 
     void printFruitName() {
-        print(&amp;#39;This is a ${name}! This is ${price} won!&amp;#39;); 
-    } 
+        print(&amp;#39;This is a ${name}! This is ${price} won!&amp;#39;);
+    }
 }
 
 
@@ -355,7 +549,7 @@ void main() {
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
 &lt;br/&gt;
-&lt;!-- 
+&lt;!--
 📍 Dart Language와 Flutter Framework가 각각 무엇인지 이해하고, 둘의 관계를 이해한다.
 
 📍 Dart Language와 Flutter Framework의 장점을 이해하고, 왜/어떻게 사용되는지 이해한다.
@@ -365,7 +559,7 @@ void main() {
 📍 OOP Language(객체지향언어)인 Dart가 어떤 특징을 가지는지 이해한다.
 
 📍 Dart만이 가진 독특한 문법들을 숙지한다. --&gt;
-&lt;!-- ◾ [브라우저 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-devtool/) 👈 다음 글 보기 --&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (6) - 변수 사용하기]]></title><description><![CDATA[변수란? 사람이 사람과 대화를 한다 생각해봅시다. A가 말을 하면 B가 듣고 대답을 하겠죠? 프로그램도 똑같습니다. 값을 입력하면 결과가 출력되는 과정이 프로그램의 전부죠. 위 식을 보면 자연스럽게 결과가 11…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable</guid><pubDate>Wed, 31 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;변수란&quot; style=&quot;position:relative;&quot;&gt;변수란?&lt;a href=&quot;#%EB%B3%80%EC%88%98%EB%9E%80&quot; aria-label=&quot;변수란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-what-is-widget&quot;&gt;[Flutter] Widget 다루기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (6) - 변수 사용하기]]></title><description><![CDATA[변수란? 사람이 사람과 대화를 한다 생각해봅시다. A가 말을 하면 B가 듣고 대답을 하겠죠? 프로그램도 똑같습니다. 값을 입력하면 결과가 출력되는 과정이 프로그램의 전부죠. 위 식을 보면 자연스럽게 결과가 11…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable</guid><pubDate>Wed, 31 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;변수란&quot; style=&quot;position:relative;&quot;&gt;변수란?&lt;a href=&quot;#%EB%B3%80%EC%88%98%EB%9E%80&quot; aria-label=&quot;변수란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;사람이 사람과 대화를 한다 생각해봅시다.&lt;/p&gt;
 &lt;p&gt;A가 말을 하면 B가 듣고 대답을 하겠죠? 프로그램도 똑같습니다.&lt;br&gt;
 값을 입력&lt;code class=&quot;language-text&quot;&gt;input&lt;/code&gt;하면 결과가 출력&lt;code class=&quot;language-text&quot;&gt;output&lt;/code&gt;되는 과정이 프로그램의 전부죠.&lt;/p&gt;
