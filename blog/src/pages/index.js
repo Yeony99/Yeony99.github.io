@@ -16,7 +16,7 @@ import Header from "../components/header"
 
 const FE = ['react', 'vue', 'typescript']
 
-const BE = ['node', 'springboot']
+const BE = ['node', 'spring-boot']
 
 const Source = ['git', 'github']
 
