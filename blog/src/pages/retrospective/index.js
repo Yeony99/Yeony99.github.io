@@ -18,10 +18,10 @@ export default ({ data }) => {
             <Header path="/retrospective" title="회고" />
             <div className="wrap min-h-76">
                 <PageHeader title="Retrospective ☘" subtitle="시간들을 되돌아보며 적는 회고록" />
-                <div className="padding-bottom-1 wrap flex overflow-x-scroll">
-                  <Tag className={"tag pointer bg-orange " + (all == ''? 'selected-tag' : '')} onClick={() => test('')}>All</Tag>
+                <div className="padding-bottom-1 wrap flex overflow-x-scroll ws-nowrap">
+                  <Tag className={"tag pointer bg-orange wordbreak-keepall" + (all == ''? 'selected-tag' : '')} onClick={() => test('')}>All</Tag>
                   {
-                    data.allMarkdownRemark.distinct.map(tag => <Tag key={tag} className={"tag pointer bg-orange " + (all == tag? 'selected-tag' : '')} onClick={() => test(tag)}>{tag}</Tag>)
+                    data.allMarkdownRemark.distinct.map(tag => <Tag key={tag} className={"tag pointer bg-orange wordbreak-keepall" + (all == tag? 'selected-tag' : '')} onClick={() => test(tag)}>{tag}</Tag>)
                   }
                 </div>
                 {data.allMarkdownRemark.edges.map(({ node }) => (

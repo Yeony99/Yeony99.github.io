@@ -18,7 +18,7 @@ export default ({ data }) => {
             <Header path="/tech" title="테크" />
             <div className="wrap min-h-76">
                 <PageHeader title="Tech ☘" subtitle="기술 사용, 프로그래밍, 기술서에 관한 글" />
-                <div className="padding-bottom-1 wrap flex overflow-x-scroll">
+                <div className="padding-bottom-1 wrap flex overflow-x-scroll ws-nowrap">
                   <Tag className={"tag pointer bg-orange " + (all == ''? 'selected-tag' : '')} onClick={() => test('')}>All</Tag>
                   {
                     data.allMarkdownRemark.distinct.map(tag => <Tag key={tag} className={"tag pointer bg-orange " + (all == tag? 'selected-tag' : '')} onClick={() => test(tag)}>{tag}</Tag>)
