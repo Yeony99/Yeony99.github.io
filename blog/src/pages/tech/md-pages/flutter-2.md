@@ -253,6 +253,5 @@ Container위젯을 사용할 때 다음과 같은 옵션들을 정의할 수 있
 
 📍 Flutter의 기본적인 Layout Widget들의 사용법을 숙지하고 실습해본다. -->
 
-◾ [[Flutter] Dart 기본 문법](/tech/flutter-dart-and-flutter) 👈 이전 글 보기
-
-<!-- ◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-data-type) 👈 다음 글 보기 -->
+◾ [[Flutter] Dart 기본 문법](/tech/flutter-dart-and-flutter) 👈 이전 글 보기  
+◾ [Layout Widget 정리](/tech/flutter-layout-widget) 👈 다음 글 보기
