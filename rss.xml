@@ -1,4 +1,214 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 17 Sep 2022 01:45:47 GMT</lastBuildDate><item><title><![CDATA[프로젝트 아이디어가 생겼다.]]></title><description><![CDATA[옛날부터 하고싶었던, 내가 관심 있는 분야로 서비스를 하나 만들어볼 생각이다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 17 Sep 2022 04:20:27 GMT</lastBuildDate><item><title><![CDATA[[Flutter] Layout Widget 정리]]></title><description><![CDATA[Flutter에서는 모든 것이 위젯입니다. Layout도 위젯을 통해 구성할 수 있습니다. Flutter 레이아웃 위젯은 2가지 유형이 있습니다. Single-child layout Multi-child layout Single-child layout…]]></description><link>https://yeony99.github.io/tech/flutter-layout-widget</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-layout-widget</guid><pubDate>Fri, 16 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;!--
+📍 어떤 Layout Widget들이 있고, 어떤 역할인지 빠르게 익힌다.
+
+📍 code lab을 공부하며 직접 배운 내용을 적용해본다. --&gt;
+&lt;p&gt;Flutter에서는 모든 것이 위젯입니다. Layout도 위젯을 통해 구성할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;Flutter 레이아웃 위젯은 2가지 유형이 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Single-child layout&lt;/li&gt;
+&lt;li&gt;Multi-child layout&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;single-child-layout&quot; style=&quot;position:relative;&quot;&gt;Single-child layout&lt;a href=&quot;#single-child-layout&quot; aria-label=&quot;single child layout permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;먼저 Signle-child layout은 이름에서 알 수 있듯이, 하나의 자식(하위) 위젯만 가질 수 있습니다.&lt;/p&gt;
+&lt;p&gt;플러터의 위젯은 정말 많기 때문에 일부 필수적인 위젯만 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;h3 id=&quot;container&quot; style=&quot;position:relative;&quot;&gt;Container&lt;a href=&quot;#container&quot; aria-label=&quot;container permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Container&lt;/code&gt;는 크기(height, width), 배경색, 위치 지정 등의 옵션을 제공하는 위젯입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Container(
+  height: 200.0,
+  width: double.infinity, // 스크린에 맞춰 확장
+  padding: cosnt Edgeinsets.all(7.0),
+  color: Colors.red,
+  child: Center(
+    //...
+  ),
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;padding&quot; style=&quot;position:relative;&quot;&gt;Padding&lt;a href=&quot;#padding&quot; aria-label=&quot;padding permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Padding&lt;/code&gt;은 자식 위젯에 패딩을 추가합니다.&lt;/p&gt;
+&lt;p&gt;padding은 여백을 의미하는데요. 테두리를 기준으로 컨텐츠 안쪽의 여백을 의미합니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/190837580-e3d14f06-6d2b-4faa-8f7f-61a79434fb99.png&quot; alt=&quot;Flutter Padding&quot;&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Padding(
+  padding: EdgeInsets.all(10.0),
+  child: Container(
+    //...
+  ),
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;center&quot; style=&quot;position:relative;&quot;&gt;Center&lt;a href=&quot;#center&quot; aria-label=&quot;center permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Center&lt;/code&gt;는 이름 그대로 자식 위젯을 가운데에 위치시킬 수 있는 위젯입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Center(
+  child: //...
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;align&quot; style=&quot;position:relative;&quot;&gt;Align&lt;a href=&quot;#align&quot; aria-label=&quot;align permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Align&lt;/code&gt;은 자식 위젯의 위치를 세밀하게 지정할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Align(
+  alignment: Alignment.bottomCenter,
+  child: const Container(
+    //...
+  ),
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;ul&gt;
+&lt;li&gt;Alignment.topLeft&lt;/li&gt;
+&lt;li&gt;Alignment.topCenter&lt;/li&gt;
+&lt;li&gt;Alignment.topRight&lt;/li&gt;
+&lt;li&gt;Alignment.bottomLeft&lt;/li&gt;
+&lt;li&gt;Alignment.bottomCenter&lt;/li&gt;
+&lt;li&gt;Alignment.bottomRight&lt;/li&gt;
+&lt;li&gt;Alignment.center&lt;/li&gt;
+&lt;li&gt;Alignment.centerLeft&lt;/li&gt;
+&lt;li&gt;Alignment.centerRight&lt;/li&gt;
+&lt;li&gt;Alignment(x, y)
+&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/190838139-0a0828c1-8e49-4678-a8e9-4795dbdc38fe.png&quot; alt=&quot;Aligment coordinate&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;마지막 Alignment를 사용해 x, y 좌표를 기준으로 값을 입력하면 해당 위치에 자식 위젯이 자리잡습니다. 다만 이름이 명확한(상수로 취급되는) 다른 속성들을 사용하는 걸 권장한다고 합니다.&lt;/p&gt;
+&lt;h3 id=&quot;sizedbox&quot; style=&quot;position:relative;&quot;&gt;SizedBox&lt;a href=&quot;#sizedbox&quot; aria-label=&quot;sizedbox permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;SizedBox&lt;/code&gt;는 height, width를 지정할 수 있는 위젯입니다.&lt;/p&gt;
+&lt;p&gt;만약 부모 위젯이 SideBox위젯의 크기를 제한하는 위젯이거나, 다른 SizedBox일 경우에는 자식 SizedBox위젯의 height, width값이 무시됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;SizedBox(
+  height: 300.0,
+  width: 300.0,
+  child: const Container(
+    //...
+  ),
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;aspectratio&quot; style=&quot;position:relative;&quot;&gt;AspectRatio&lt;a href=&quot;#aspectratio&quot; aria-label=&quot;aspectratio permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;AspectRatio&lt;/code&gt;는 16:9와 같은 비율을 지정할 수 있게 하는 위젯입니다.&lt;/p&gt;
+&lt;p&gt;정확한 크기와는 관계없이 지정된 비율(종횡비)로 자식 위젯의 비율을 유지합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;AspectRatio(
+  aspectRatio: 16 / 9,
+  child: const Container(
+    //...
+  ),
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;baseline&quot; style=&quot;position:relative;&quot;&gt;Baseline&lt;a href=&quot;#baseline&quot; aria-label=&quot;baseline permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Baseline&lt;/code&gt;은 자식 기준선에 따라 자식의 위치를 지정하는 위젯입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Center(
+  child: const Container(
+    height: 200,
+    width: 200,
+    color: Colors.blue,
+    child: Baseline(
+      baseline: 20.0, // 기준선 범위 지정
+      baselineType: TextBaseline.alphabetic,
+      child: const Container(
+        height: 50,
+        width: 50,
+        color: Colors.red,
+      ),
+    ),
+  ),
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/190838738-4da461be-319f-4d74-bc4d-0c74f01e1bab.png&quot; alt=&quot;Flutter Baseline&quot;&gt;&lt;/p&gt;
+&lt;p&gt;baseline 속성을 20.0으로 주니 부모 위젯의 상위부터 20까지 가상의 기준선이 그어진 겁니다. 그 기준선 위부터 자식 위젯이 위치하게 됩니다. 위 이미지에서는 자식 위젯이 남은 부모위젯의 공간(20.0)보다 높이(50.0)가 길죠? 따라서 부모 위젯을 벗어나는 모양으로 그려진 겁니다.&lt;/p&gt;
+&lt;h3 id=&quot;constrainedbox&quot; style=&quot;position:relative;&quot;&gt;ConstrainedBox&lt;a href=&quot;#constrainedbox&quot; aria-label=&quot;constrainedbox permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ConstrainedBox&lt;/code&gt;는 자식에 추가적인 제약사항을 거는 위젯입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;ConstrainedBox(
+  constraints: const BoxConstraints.expand(),
+  child: const Container(
+    //...
+  ),
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;multi-child-layout&quot; style=&quot;position:relative;&quot;&gt;Multi-child layout&lt;a href=&quot;#multi-child-layout&quot; aria-label=&quot;multi child layout permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Multi-child layout은 자식 위젯을 여러 개 가질 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;row&quot; style=&quot;position:relative;&quot;&gt;Row&lt;a href=&quot;#row&quot; aria-label=&quot;row permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Row&lt;/code&gt; 위젯은 자식 위젯들을 수평 배열로 표시합니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Expaneded&lt;/code&gt;로 감싸면 차지할 수 있는 가로 공간을 꽉 채우도록 확장됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Row(
+  children: const &amp;lt;Widget&amp;gt;[
+    Expanded(
+      child: Text(&amp;#39;Hi&amp;#39;, textAlign: TextAlign.center),
+    ),
+    Expanded(
+      child: Text(&amp;#39;Hi2&amp;#39;, textAlign: TextAlign.center),
+    ),
+  ],
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;column&quot; style=&quot;position:relative;&quot;&gt;Column&lt;a href=&quot;#column&quot; aria-label=&quot;column permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Column&lt;/code&gt; 위젯은 자식 위젯들을 수직 배열로 표시합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  mainAxisSize: MainAxisSize.min,
+  children: &amp;lt;Widget&amp;gt;[
+    const Text(&amp;#39;HI&amp;#39;),
+    const Text(&amp;#39;HI2&amp;#39;),
+    const Text(&amp;#39;HI3&amp;#39;),
+    const Text(&amp;#39;HI4&amp;#39;),
+    //...
+  ],
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;만약 수직 정렬된 위젯들을 스크린 범위를 넘어 스크롤하고 싶으면 &lt;code class=&quot;language-text&quot;&gt;ListView&lt;/code&gt;를 사용해야 합니다. 기본적으로 Column은 사용할 수 있는 공간을 넘은 자식 위젯들을 오류로 간주합니다.&lt;/p&gt;
+&lt;h3 id=&quot;listview&quot; style=&quot;position:relative;&quot;&gt;ListView&lt;a href=&quot;#listview&quot; aria-label=&quot;listview permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ListView&lt;/code&gt;는 가장 흔하게 사용되는 &lt;strong&gt;스크롤&lt;/strong&gt; 위젯입니다. 스크롤되는 방향으로 자식을 차례로 나열합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;ListView(
+  padding: const EdgeInsets.all(5),
+  // scrollDirection: Axis.horizontal, // 수평 정렬
+  children: &amp;lt;Widget&amp;gt;[
+    Container(
+      height: 50,
+      color: Colors.black[600],
+      child: const Center(child: Text(&amp;#39;A&amp;#39;)),
+    ),
+    Container(
+      height: 50,
+      color: Colors.black[500],
+      child: const Center(child: Text(&amp;#39;B&amp;#39;)),
+    ),
+    Container(
+      height: 50,
+      color: Colors.black[100],
+      child: const Center(child: Text(&amp;#39;C&amp;#39;)),
+    ),
+  ],
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;stack&quot; style=&quot;position:relative;&quot;&gt;Stack&lt;a href=&quot;#stack&quot; aria-label=&quot;stack permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Stack&lt;/code&gt; 위젯은 자식 위젯들을 겹치게 할 때 유용하게 사용됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Stack(
+  children: &amp;lt;Widget&amp;gt;[
+    Container(
+      width: 100,
+      height: 100,
+      color: Colors.red,
+    ),
+    Container(
+      width: 90,
+      height: 90,
+      color: Colors.green,
+    ),
+    Container(
+      width: 80,
+      height: 80,
+      color: Colors.blue,
+    ),
+  ],
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이름 그대로 &lt;strong&gt;스택&lt;/strong&gt;구조처럼, 선입후출 방식으로 위젯이 표현됩니다.&lt;br&gt;
+가장 마지막에 있는 파란색 위젯이 가장 앞에 위치합니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-what-is-widget&quot;&gt;[Flutter] Widget 다루기&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;
+&lt;!-- ◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-data-type) 👈 다음 글 보기 --&gt;</content:encoded></item><item><title><![CDATA[프로젝트 아이디어가 생겼다.]]></title><description><![CDATA[옛날부터 하고싶었던, 내가 관심 있는 분야로 서비스를 하나 만들어볼 생각이다.
 React Pattern을 공부하면서 어떤 디자인 패턴으로 프로젝트를 구상할 지 구체화해봐야겠다.]]></description><link>https://yeony99.github.io/log/think-about-idea</link><guid isPermaLink="false">https://yeony99.github.io/log/think-about-idea</guid><pubDate>Wed, 14 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;옛날부터 하고싶었던, 내가 관심 있는 분야로 서비스를 하나 만들어볼 생각이다.
 React Pattern을 공부하면서 어떤 디자인 패턴으로 프로젝트를 구상할 지 구체화해봐야겠다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (8) - 자바스크립트 예약어 모음]]></title><description><![CDATA[예약어란? 예약어(Reserved Words…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-reserved-words</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-reserved-words</guid><pubDate>Wed, 14 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;예약어란&quot; style=&quot;position:relative;&quot;&gt;예약어란?&lt;a href=&quot;#%EC%98%88%EC%95%BD%EC%96%B4%EB%9E%80&quot; aria-label=&quot;예약어란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;예약어(Reserved Words)란 자바스크립트 엔진이 &lt;strong&gt;이 단어는 이 뜻으로만 해석하겠다&lt;/strong&gt;라고 정해놓은 단어입니다.&lt;/p&gt;
@@ -364,8 +574,8 @@ class _MyHomePageState extends State&amp;lt;MyHomePage&amp;gt; {
 📍 Flutter에서 Layout을 어떻게 만들어 나가는지 이해한다.
 
 📍 Flutter의 기본적인 Layout Widget들의 사용법을 숙지하고 실습해본다. --&gt;
-&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-dart-and-flutter&quot;&gt;[Flutter] Dart 기본 문법&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;
-&lt;!-- ◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-data-type) 👈 다음 글 보기 --&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (7) - 변수 명명 규칙]]></title><description><![CDATA[변수 이름짓기(명명 규칙, Naming…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable-naming</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable-naming</guid><pubDate>Wed, 07 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;변수-이름짓기명명-규칙-naming란&quot; style=&quot;position:relative;&quot;&gt;변수 이름짓기(명명 규칙, Naming)란?&lt;a href=&quot;#%EB%B3%80%EC%88%98-%EC%9D%B4%EB%A6%84%EC%A7%93%EA%B8%B0%EB%AA%85%EB%AA%85-%EA%B7%9C%EC%B9%99-naming%EB%9E%80&quot; aria-label=&quot;변수 이름짓기명명 규칙 naming란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-dart-and-flutter&quot;&gt;[Flutter] Dart 기본 문법&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
+◾ &lt;a href=&quot;/tech/flutter-layout-widget&quot;&gt;Layout Widget 정리&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (7) - 변수 명명 규칙]]></title><description><![CDATA[변수 이름짓기(명명 규칙, Naming…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable-naming</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-variable-naming</guid><pubDate>Wed, 07 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;변수-이름짓기명명-규칙-naming란&quot; style=&quot;position:relative;&quot;&gt;변수 이름짓기(명명 규칙, Naming)란?&lt;a href=&quot;#%EB%B3%80%EC%88%98-%EC%9D%B4%EB%A6%84%EC%A7%93%EA%B8%B0%EB%AA%85%EB%AA%85-%EA%B7%9C%EC%B9%99-naming%EB%9E%80&quot; aria-label=&quot;변수 이름짓기명명 규칙 naming란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;변수, 상수, 함수 이름들을 &lt;strong&gt;식별자&lt;/strong&gt;라고 합니다.&lt;/p&gt;
 &lt;p&gt;자바스크립트로 코딩할 때는 식별자들의 명명규칙을 지켜서 코딩하는 것이 좋습니다. 마치 글을 작성할 때 톤앤매너를 맞추는 것과 비슷한 맥락입니다.&lt;/p&gt;
 &lt;p&gt;변수명만으로도 어떤 역할을 하는 변수인지 알 수 있는 경우도 많구요, 코드의 통일성, 가독성 또한 높여줍니다.&lt;/p&gt;
