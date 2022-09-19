@@ -44,7 +44,7 @@ tags:
   - 조건이 falsy 라면 다른 조건절 속 코드 실행
 - switch ~ case
   - 특정 표현식을 평가해 case절과 일치하는 명령을 수행
-- default 
+- default
   - switch ~ case 문에 해당하는 case가 없을 경우 실행되는 문
 - true
 - false
@@ -68,7 +68,7 @@ tags:
   - 사용자 정의 인스턴스 혹은 생성자 함수가 있는 기본 인스턴스를 통해 새로운 인스턴스 생성 가능
 - void
   - 연산자
-  - 주어진 값(표현식)을 평가 후 undefined를 반환 
+  - 주어진 값(표현식)을 평가 후 undefined를 반환
 - try...catch
   - 문
   - try코드 블록 속에서 예외(exception) 발생(throw)시 응답을 지정
@@ -126,9 +126,9 @@ tags:
 - get : 객체 속성 접근 시 호출할 함수 바인딩
 - set : 객체 속성 할당 시도할 시 호출할 함수 바인딩
 
-
 모든 키워드를 당장 이해할 수 없습니다. 그저 이런 키워드들은 단독으로 변수명 등에 사용할 수 없다는 사실을 유념하고 넘어가도록 합니다.
 
 다음 글에서는 값, 식, 문에 대해 알아보도록 하겠습니다.
 
-◾ [변수 명명 규칙](/tech/let-me-know-js-a-bit-js-variable-naming) 👈 이전 글 보기   
+◾ [변수 명명 규칙](/tech/let-me-know-js-a-bit-js-variable-naming) 👈 이전 글 보기  
+◾ [값, 식, 문](/tech/let-me-know-js-a-bit-js-value-expression-statement) 👈 다음 글 보기

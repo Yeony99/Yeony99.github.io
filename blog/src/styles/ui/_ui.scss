@@ -13,6 +13,16 @@ nav > ul > a > li {
     user-select: none;
 }
 
+table {
+    font-size: 0.8rem;
+    tr > th {
+        @extend .text-center;
+        background-color: $table-th-bg-color;
+    }
+    tr > td {
+        @extend .text-center;
+    }
+}
 
 li.current-path {
     border-color: $current-page;
