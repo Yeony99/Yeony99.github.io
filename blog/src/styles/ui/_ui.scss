@@ -13,8 +13,8 @@ nav > ul > a > li {
     user-select: none;
 }
 
-table {
-    font-size: 0.8rem;
+.blog-post table {
+    font-size: 0.9rem;
     tr > th {
         @extend .text-center;
         background-color: $table-th-bg-color;
