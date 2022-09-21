@@ -1,4 +1,268 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 17 Sep 2022 04:20:27 GMT</lastBuildDate><item><title><![CDATA[[Flutter] Layout Widget 정리]]></title><description><![CDATA[Flutter에서는 모든 것이 위젯입니다. Layout도 위젯을 통해 구성할 수 있습니다. Flutter 레이아웃 위젯은 2가지 유형이 있습니다. Single-child layout Multi-child layout Single-child layout…]]></description><link>https://yeony99.github.io/tech/flutter-layout-widget</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-layout-widget</guid><pubDate>Fri, 16 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;!--
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Sep 2022 00:04:34 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (9) - 값, 식, 문]]></title><description><![CDATA[…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</guid><pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;값-식-문&quot; style=&quot;position:relative;&quot;&gt;값, 식, 문&lt;a href=&quot;#%EA%B0%92-%EC%8B%9D-%EB%AC%B8&quot; aria-label=&quot;값 식 문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;값을 할당한다&lt;/strong&gt; 라는 말을 이전 글에서 자주 사용했습니다.&lt;/p&gt;
+&lt;p&gt;값은 무엇일까요? 자바스크립트 뿐 아니라 값은 프로그래밍 전반에서 사용하는 용어입니다.&lt;/p&gt;
+&lt;p&gt;값과 식, 문의 차이에 대해서 알아봅시다.&lt;/p&gt;
+&lt;h3 id=&quot;값&quot; style=&quot;position:relative;&quot;&gt;값&lt;a href=&quot;#%EA%B0%92&quot; aria-label=&quot;값 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;먼저 값부터 알아봅니다.&lt;/p&gt;
+&lt;p&gt;값은 식(=표현식, expression)이 평가되고 생성된 결과&lt;strong&gt;값&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;10 + 100 // 110&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;식이 평가되어 값이 생성되었습니다.&lt;/p&gt;
+&lt;p&gt;변수에 할당해 볼까요?&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let num = 10 + 100&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;10 + 100&lt;/code&gt;이라는 식이 평가되어 &lt;code class=&quot;language-text&quot;&gt;110&lt;/code&gt;이라는 값이 할당됩니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;표현식&quot; style=&quot;position:relative;&quot;&gt;표현식&lt;a href=&quot;#%ED%91%9C%ED%98%84%EC%8B%9D&quot; aria-label=&quot;표현식 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;표현식은 값으로 여겨지는 문(statement)입니다.&lt;/p&gt;
+&lt;p&gt;표현식이 평가되면 새로운 값을 만들거나 혹은 기존의 값을 참조합니다. 이런 연산과정을 **평가(evaluate)**라고 합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let valueNum = 10 // 선언/할당문
+let expressionNum = 10 + 10 // 표현식, 선언/할당문
+
+valueNum * 10 // 표현식
+valueNum - 100 // 표현식
+
+console.log(valueNum) // 10
+console.log(expressionNum) // 20&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;위 &lt;code class=&quot;language-text&quot;&gt;valueNum&lt;/code&gt; 변수는 아무리 표현식을 작성한다 하더라도 값에 할당하지 않았기 때문에 여전히 처음 할당된 값인 &lt;code class=&quot;language-text&quot;&gt;10&lt;/code&gt;인 것을 볼 수 있습니다. 변수 식별자를 참조하는 것은 값을 생성하진 않지만 값을 평가하므로 &lt;code class=&quot;language-text&quot;&gt;value * 10&lt;/code&gt;은 표현식입니다.&lt;/p&gt;
+&lt;p&gt;반면 &lt;code class=&quot;language-text&quot;&gt;expressionNum&lt;/code&gt;은 &lt;strong&gt;표현식이 평가된 결과&lt;/strong&gt;가 할당되어 &lt;code class=&quot;language-text&quot;&gt;20&lt;/code&gt;이라는 값이 반영되었습니다.&lt;/p&gt;
+&lt;p&gt;따라서 식이란, &lt;strong&gt;값으로 평가될 수 있는 모든 문&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;값으로 평가된다는 말을 다시 한 번 살펴봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;1 + 2 == 3 // true&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;좌항 &lt;code class=&quot;language-text&quot;&gt;1+2&lt;/code&gt;는 표현식인데, 값과 동등하다고 결과가 나옵니다. 표현식과 표현식이 평가된 결과(=값)은 &lt;strong&gt;동치&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;이 말은 값이 위치할 수 있는 곳에 표현식이 있을 수 있다는 뜻입니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;문&quot; style=&quot;position:relative;&quot;&gt;문&lt;a href=&quot;#%EB%AC%B8&quot; aria-label=&quot;문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;문은 기본적으로 어떤 태스크를 수행합니다. 프로그램 실행의 최소 단위죠. 무언가를 실행하라고 컴퓨터에게 지시하기 때문에 &lt;strong&gt;명령문&lt;/strong&gt;이라고도 불립니다.&lt;/p&gt;
+&lt;p&gt;문들이 모여 프고그램이 되고, 이 문을 잘 작성하고 나열하는 것이 프로그래밍이 됩니다.&lt;/p&gt;
+&lt;p&gt;자바스크립트의 문은 앞서 살펴본 예약어에 나온 것들이 있습니다. 종류는 선언문, 할당문, 조건문, 반복문 등으로 구분할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;다시 한번 살펴봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 선언문
+let num
+
+// 할당문
+num = 100
+
+// 함수 선언문
+function foo() {}
+
+// 조건문
+if (num &amp;gt; 1) {
+  console.log(&amp;quot;1보다 큰 수!&amp;quot;)
+}
+
+// 반복문
+for (let i = 0; i &amp;lt; num; i++) {
+  console.log(i)
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이 외에도&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;do ... while&lt;/li&gt;
+&lt;li&gt;switch ~ case ... default&lt;/li&gt;
+&lt;li&gt;debugger&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이런 문들이 있습니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h2 id=&quot;문과-표현식의-구분&quot; style=&quot;position:relative;&quot;&gt;문과 표현식의 구분&lt;a href=&quot;#%EB%AC%B8%EA%B3%BC-%ED%91%9C%ED%98%84%EC%8B%9D%EC%9D%98-%EA%B5%AC%EB%B6%84&quot; aria-label=&quot;문과 표현식의 구분 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;표현식과 문의 구분이 애매모호하다고 느끼셨을 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let num // 선언문. 값으로 평가될 수 없음
+
+num = 1 + 1 // 값으로 표현되는 표현식이면서도 할당문&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;위 예제처럼 표현식이 문의 일부가 될 수도 있고, 표현식이 문 자체일 수도 있기 때문입니다.&lt;/p&gt;
+&lt;p&gt;그렇다면 어떻게 이 둘을 구분하면 좋을까요?&lt;/p&gt;
+&lt;p&gt;답은 간단합니다. &lt;strong&gt;표현식은 값으로 평가&lt;/strong&gt;될 수 있다 하였죠? 변수에 할당해보면 됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const alwaysTrue = true;
+let foo = if(alwaysTrue) {console.log(&amp;#39;HI&amp;#39;)}; // Uncaught SyntaxError: Unexpected token &amp;#39;if&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;if&lt;/code&gt;는 문이기 때문에 변수에 할당할 수 없습니다.&lt;/p&gt;
+&lt;p&gt;에러 메시지를 보면 &lt;code class=&quot;language-text&quot;&gt;Uncaught SyntaxError: Unexpected token &apos;if&apos;&lt;/code&gt; 라고 뜨는데요. 여기서 &lt;strong&gt;token&lt;/strong&gt;이라는 게 문을 구성하는 최소단위 요소입니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let score = 10 + 20&lt;/code&gt;이라는 문에서는 &lt;code class=&quot;language-text&quot;&gt;let&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;score&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;=&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;10&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;+&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;20&lt;/code&gt;이 각각의 토큰입니다.&lt;/p&gt;
+&lt;p&gt;또 다른 예제를 살펴볼게요.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 선언문
+let x
+
+x = 100 // 할당문이자 표현식&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;x = 100&lt;/code&gt;은 표현식입니다. 하지만 할당되는 &lt;strong&gt;값&lt;/strong&gt;이죠. 따라서 값처럼 사용할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;심지어 이런 모습도 가능합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;var x = (y = 10)
+
+console.log(x) // 10
+console.log(y) // 10&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;도대체 무슨 코드인가 싶죠? 이 코드는 아래코드의 축약형입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;y = 10 // y는 글로벌 변수
+var x = y&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;다만 변수를 이런 식으로 할당하는 건 글로벌 변수가 되는 등의 위험이 존재하고, 또한 읽기 쉬운 코드가 아니기에 추천하진 않습니다.&lt;/p&gt;
+&lt;p&gt;이 밖에도 &lt;strong&gt;함수 표현식&lt;/strong&gt;이 있습니다. 함수는 함수 선언식과 함수 표현식으로 나뉘는데요.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 함수 선언식
+function foo() {
+  //...
+}
+
+// 함수 표현식
+let bar = function () {
+  //...
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이 둘의 차이는 &lt;strong&gt;호이스팅&lt;/strong&gt;입니다. 선언식은 호이스팅에 영향을 받지만, 표현식은 영향받지 않습니다.&lt;br&gt;
+함수에 대해서는 이후에 좀더 자세히 살펴보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;다음 글에서는 자바스크립트의 연산자에 대해 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-variable-naming&quot;&gt;변수 명명 규칙&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
+◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-value-expression-statement&quot;&gt;자바스크립트 연산자&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[리액트 패턴 - 싱글톤 패턴]]></title><description><![CDATA[시리즈를 시작하며... patterns…]]></description><link>https://yeony99.github.io/tech/react-pattern-singleton</link><guid isPermaLink="false">https://yeony99.github.io/tech/react-pattern-singleton</guid><pubDate>Sun, 18 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;시리즈를-시작하며&quot; style=&quot;position:relative;&quot;&gt;시리즈를 시작하며...&lt;a href=&quot;#%EC%8B%9C%EB%A6%AC%EC%A6%88%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%98%EB%A9%B0&quot; aria-label=&quot;시리즈를 시작하며 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.patterns.dev/&quot;&gt;patterns&lt;/a&gt;에 정리된 리액트 프로젝트 패턴을 공부하며 정리하는 글임을 알립니다.&lt;br&gt;
+시리즈 내 모든 글의 출처는 위 사이트를 기반으로 합니다.&lt;/p&gt;
+&lt;p&gt;별도 참고 자료가 있을 시 해당 자료의 출처만 기재합니다.&lt;/p&gt;
+&lt;h2 id=&quot;디자인-패턴이란&quot; style=&quot;position:relative;&quot;&gt;디자인 패턴이란&lt;a href=&quot;#%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;디자인 패턴이란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;디자인 패턴은 소프트웨어 개발 과정에서 발생하는 문제에 해결책을 제시하는 개념입니다. 구현을 직접적으로 제공하지는 않지만, 문제 상황을 최적화된 방법으로 해결할 수 있도록 돕는 컨셉입니다.&lt;/p&gt;
+&lt;h2 id=&quot;싱글톤-패턴-singleton-pattern&quot; style=&quot;position:relative;&quot;&gt;싱글톤 패턴 (Singleton Pattern)&lt;a href=&quot;#%EC%8B%B1%EA%B8%80%ED%86%A4-%ED%8C%A8%ED%84%B4-singleton-pattern&quot; aria-label=&quot;싱글톤 패턴 singleton pattern permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;싱글톤은 &lt;strong&gt;단 한 번만 인스턴스화 가능&lt;/strong&gt;하며, **전역(globa)**에서 접근 가능한 클래스를 일컫습니다. &lt;i&gt;Singleton 인스턴스&lt;/i&gt;는 앱 전역에서 공유되어, 앱 전역 상태관리에 적합합니다.&lt;/p&gt;
+&lt;h3 id=&quot;단-한-번만-인스턴스화-가능&quot; style=&quot;position:relative;&quot;&gt;단 한 번만 인스턴스화 가능&lt;a href=&quot;#%EB%8B%A8-%ED%95%9C-%EB%B2%88%EB%A7%8C-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%ED%99%94-%EA%B0%80%EB%8A%A5&quot; aria-label=&quot;단 한 번만 인스턴스화 가능 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;이 말의 의미는 &lt;code class=&quot;language-text&quot;&gt;new&lt;/code&gt; 키워드로 인스턴스 생성을 여러 번 하지 못한다는 의미입니다.&lt;/p&gt;
+&lt;p&gt;일반적인 인스턴스 생성방법은 이렇습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let counter = 0
+
+class Counter {
+  getInstance() {
+    return this
+  }
+
+  getCount() {
+    return counter
+  }
+
+  increment() {
+    return ++counter
+  }
+
+  decrement() {
+    return --counter
+  }
+}
+
+const counter1 = new Counter()
+const counter2 = new Counter()
+
+console.log(counter1.getInstance() === counter2.getInstance()) // false&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이렇게 &lt;code class=&quot;language-text&quot;&gt;new&lt;/code&gt; 키워드로 생성한 인스턴스는 서로 같지 않음을 알 수 있습니다. 인스턴스가 다르다는 것은 같은 레퍼런스를 가지지 않는다는 의미입니다.&lt;/p&gt;
+&lt;p&gt;그렇다면 동일한 레퍼런스를 가지게 하려면 어떻게 하면 될까요? 여러 방법이 있습니다.&lt;/p&gt;
+&lt;h4 id=&quot;instance-변수-만들기&quot; style=&quot;position:relative;&quot;&gt;instance 변수 만들기&lt;a href=&quot;#instance-%EB%B3%80%EC%88%98-%EB%A7%8C%EB%93%A4%EA%B8%B0&quot; aria-label=&quot;instance 변수 만들기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let instance // instance 변수 선언
+let counter = 0
+
+class Counter {
+  constructor() {
+    if (instance) {
+      // instance가 존재하면 에러 발생시키기
+      throw new Error(&amp;quot;인스턴스는 한 번만 만들 수 있습니다!&amp;quot;)
+    }
+  }
+
+  getInstance() {
+    return this
+  }
+
+  getCount() {
+    return counter
+  }
+
+  increment() {
+    return ++counter
+  }
+
+  decrement() {
+    return --counter
+  }
+}
+
+const singletonCounter = Object.freeze(new Counter())
+// const counter2 = new Counter() // 에러 발생&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;constructor&lt;/code&gt; 생성자에 객체 초기화시 instance가 이미 있는지 여부를 확인합니다. 그리고 &lt;code class=&quot;language-text&quot;&gt;Object.freeze&lt;/code&gt;를 통해 객체를 수정할 수 없게 합니다.&lt;/p&gt;
+&lt;p&gt;인스턴스를 하나만 만들게 강제하는 방식에는 장단점이 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ul&gt;
+&lt;li&gt;메모리 공간 절약&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ul&gt;
+&lt;li&gt;자바스크립트 언어 자체의 한계점이 있다. 클래스 작성 없이도 객체를 만들 수 있기 때문에 일종의 오버 엔지니어링에 해당&lt;/li&gt;
+&lt;li&gt;JS에서 싱글톤은 안티패턴으로 취급됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위의 예제는 &lt;code class=&quot;language-text&quot;&gt;class&lt;/code&gt;로 객체를 생성해 컨트롤하였는데, 자바스크립트는 그냥 &lt;code class=&quot;language-text&quot;&gt;const counter = {}&lt;/code&gt; 라는 간단한 할당으로 객체 리터럴을 만들 수 있습니다. 따라서 위와 같은 패턴은 적합하지는 않습니다.&lt;/p&gt;
+&lt;h3 id=&quot;객체-리터럴-사용&quot; style=&quot;position:relative;&quot;&gt;객체 리터럴 사용&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%EB%A6%AC%ED%84%B0%EB%9F%B4-%EC%82%AC%EC%9A%A9&quot; aria-label=&quot;객체 리터럴 사용 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let count = 0
+
+const counter = {
+  increment() {
+    return ++count
+  },
+
+  decrement() {
+    return --count
+  },
+}
+
+Object.freeze(counter)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;class&lt;/code&gt;로 인스턴스를 생성하는 것보다 훨씬 간편하다고 느껴집니다.&lt;/p&gt;
+&lt;h3 id=&quot;테스팅&quot; style=&quot;position:relative;&quot;&gt;테스팅&lt;a href=&quot;#%ED%85%8C%EC%8A%A4%ED%8C%85&quot; aria-label=&quot;테스팅 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;싱글톤 패턴으로 구현된 코드를 테스트하는 것은 조금 까다롭다고 합니다. 인스턴스를 한 번만 생성할 수 있기 때문에, 이전에 생성된 전역 인스턴스를 수정하는 방향으로 테스트가 진행됩니다. 테스트 진행에 순서가 생기게 되면 이전 테스트에서 사용된 값이 남아있어 원활히 진행되지 못할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;따라서 하나의 테스트가 끝나면 인스턴스 변경사항들을 초기화한 후 다음 테스트를 진행합니다.&lt;/p&gt;
+&lt;p&gt;patterns에서는 테스트 라이브러리 &lt;strong&gt;jest&lt;/strong&gt; 를 사용한 예제를 제공하였습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 테스트를 진행할 인스턴스 불러오기
+import Counter from &amp;quot;../src/counterTest&amp;quot;
+
+test(&amp;quot;incrementing 1 time should be 1&amp;quot;, () =&amp;gt; {
+  Counter.increment()
+  expect(Counter.getCount()).toBe(1)
+})
+
+test(&amp;quot;incrementing 3 extra times should be 4&amp;quot;, () =&amp;gt; {
+  Counter.increment()
+  Counter.increment()
+  Counter.increment()
+  expect(Counter.getCount()).toBe(4)
+})
+
+test(&amp;quot;decrementing 1  times should be 3&amp;quot;, () =&amp;gt; {
+  Counter.decrement()
+  expect(Counter.getCount()).toBe(3)
+})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;!-- 추가) js test, test libraries --&gt;
+&lt;h2 id=&quot;리액트의-상태관리&quot; style=&quot;position:relative;&quot;&gt;리액트의 상태관리&lt;a href=&quot;#%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%EC%83%81%ED%83%9C%EA%B4%80%EB%A6%AC&quot; aria-label=&quot;리액트의 상태관리 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;React를 사용하며 전역 상태 관리가 필요할 때에는 싱글톤 객체를 만들기보다 &lt;strong&gt;Redux&lt;/strong&gt;나 &lt;strong&gt;React Context&lt;/strong&gt;를 사용합니다.&lt;/p&gt;
+&lt;p&gt;싱글톤 객체가 인스턴스 값을 직접 수정할 수 있다면, 위 두 가지 도구는 &lt;strong&gt;read only&lt;/strong&gt; 상태를 갖도록 합니다. 디스패처 =&gt; (액션) =&gt; 실행 =&gt; 순수함수 reducer =&gt; 상태 업데이트로 이뤄지는 과정은 개발자가 의도한대로만 전역 상태가 움직이도록 그 흐름과 제어를 명확히 한다는 장점이 있습니다.&lt;/p&gt;
+&lt;!-- ◾ [변수 명명 규칙](/tech/let-me-know-js-a-bit-js-variable-naming) 👈 이전 글 보기    --&gt;</content:encoded></item><item><title><![CDATA[[Flutter] Layout Widget 정리]]></title><description><![CDATA[Flutter에서는 모든 것이 위젯입니다. Layout도 위젯을 통해 구성할 수 있습니다. Flutter 레이아웃 위젯은 2가지 유형이 있습니다. Single-child layout Multi-child layout Single-child layout…]]></description><link>https://yeony99.github.io/tech/flutter-layout-widget</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-layout-widget</guid><pubDate>Fri, 16 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;!--
 📍 어떤 Layout Widget들이 있고, 어떤 역할인지 빠르게 익힌다.
 
 📍 code lab을 공부하며 직접 배운 내용을 적용해본다. --&gt;
@@ -381,7 +645,8 @@ React Pattern을 공부하면서 어떤 디자인 패턴으로 프로젝트를 �
 &lt;/ul&gt;
 &lt;p&gt;모든 키워드를 당장 이해할 수 없습니다. 그저 이런 키워드들은 단독으로 변수명 등에 사용할 수 없다는 사실을 유념하고 넘어가도록 합니다.&lt;/p&gt;
 &lt;p&gt;다음 글에서는 값, 식, 문에 대해 알아보도록 하겠습니다.&lt;/p&gt;
-&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-variable-naming&quot;&gt;변수 명명 규칙&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Flutter] Widget 다루기]]></title><description><![CDATA[모든 것이 Widget인 Flutter widget이라고만 하면 인터페이스 요소 하나로 받아들일 수 있습니다. ppt로 발표자료를 만들어 보신 적이 있다면 이해하기 쉽습니다. 큰제목은 4…]]></description><link>https://yeony99.github.io/tech/flutter-what-is-widget</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-what-is-widget</guid><pubDate>Sat, 10 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;모든-것이-widget인-flutter&quot; style=&quot;position:relative;&quot;&gt;모든 것이 Widget인 Flutter&lt;a href=&quot;#%EB%AA%A8%EB%93%A0-%EA%B2%83%EC%9D%B4-widget%EC%9D%B8-flutter&quot; aria-label=&quot;모든 것이 widget인 flutter permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-variable-naming&quot;&gt;변수 명명 규칙&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
+◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-value-expression-statement&quot;&gt;값, 식, 문&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Flutter] Widget 다루기]]></title><description><![CDATA[모든 것이 Widget인 Flutter widget이라고만 하면 인터페이스 요소 하나로 받아들일 수 있습니다. ppt로 발표자료를 만들어 보신 적이 있다면 이해하기 쉽습니다. 큰제목은 4…]]></description><link>https://yeony99.github.io/tech/flutter-what-is-widget</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-what-is-widget</guid><pubDate>Sat, 10 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;모든-것이-widget인-flutter&quot; style=&quot;position:relative;&quot;&gt;모든 것이 Widget인 Flutter&lt;a href=&quot;#%EB%AA%A8%EB%93%A0-%EA%B2%83%EC%9D%B4-widget%EC%9D%B8-flutter&quot; aria-label=&quot;모든 것이 widget인 flutter permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;widget&lt;/strong&gt;이라고만 하면 인터페이스 요소 하나로 받아들일 수 있습니다.&lt;/p&gt;
 &lt;p&gt;ppt로 발표자료를 만들어 보신 적이 있다면 이해하기 쉽습니다.&lt;br&gt;
 큰제목은 48포인트 글자 크기가 설정된 텍스트 상자에, 여러 이미지나 도형은 그룹화를 해 동일한 간격을 두고 배치하기도 합니다.&lt;br&gt;
