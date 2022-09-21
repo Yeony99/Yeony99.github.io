@@ -5,7 +5,7 @@ category: "tech"
 slug: "/tech/flutter-dart-and-flutter"
 img: "https://user-images.githubusercontent.com/76241233/187564792-d9177d6e-ab8b-4919-8593-128e5ddc9476.png"
 tags:
-  - "Flutter Basic"
+  - "Study Flutter"
 ---
 
 ## Dart란?
