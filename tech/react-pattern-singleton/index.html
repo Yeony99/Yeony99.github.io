@@ -87,10 +87,15 @@ data-styled.g5[id="tag__Tag-g53uox-0"]{content:"gBHogO,"}/*!sc*/
 <p><a href="https://www.patterns.dev/">patterns</a>에 정리된 리액트 프로젝트 패턴을 공부하며 정리하는 글임을 알립니다.<br>
 시리즈 내 모든 글의 출처는 위 사이트를 기반으로 합니다.</p>
 <p>별도 참고 자료가 있을 시 해당 자료의 출처만 기재합니다.</p>
+<br/>
+<hr>
 <h2 id="디자인-패턴이란" style="position:relative;">디자인 패턴이란<a href="#%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80" aria-label="디자인 패턴이란 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
-<p>디자인 패턴은 소프트웨어 개발 과정에서 발생하는 문제에 해결책을 제시하는 개념입니다. 구현을 직접적으로 제공하지는 않지만, 문제 상황을 최적화된 방법으로 해결할 수 있도록 돕는 컨셉입니다.</p>
+<p>디자인 패턴은 소프트웨어 개발 과정에서 발생하는 문제에 해결책을 제시하는 개념입니다. 구현을 직접적으로 제공하지는 않지만, 문제 상황을 최적화된 방법으로 해결할 수 있도록 돕는 컨셉입니다.
+<br/></p>
+<hr>
 <h2 id="싱글톤-패턴-singleton-pattern" style="position:relative;">싱글톤 패턴 (Singleton Pattern)<a href="#%EC%8B%B1%EA%B8%80%ED%86%A4-%ED%8C%A8%ED%84%B4-singleton-pattern" aria-label="싱글톤 패턴 singleton pattern permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
-<p>싱글톤은 <strong>단 한 번만 인스턴스화 가능</strong>하며, **전역(globa)**에서 접근 가능한 클래스를 일컫습니다. <i>Singleton 인스턴스</i>는 앱 전역에서 공유되어, 앱 전역 상태관리에 적합합니다.</p>
+<p>싱글톤은 <strong>단 한 번만 인스턴스화 가능</strong>하며, <strong>전역(global)</strong> 에서 접근 가능한 클래스를 일컫습니다. <i>Singleton 인스턴스</i>는 앱 전역에서 공유되어, 앱 전역 상태관리에 적합합니다.
+<br/></p>
 <h3 id="단-한-번만-인스턴스화-가능" style="position:relative;">단 한 번만 인스턴스화 가능<a href="#%EB%8B%A8-%ED%95%9C-%EB%B2%88%EB%A7%8C-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%ED%99%94-%EA%B0%80%EB%8A%A5" aria-label="단 한 번만 인스턴스화 가능 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
 <p>이 말의 의미는 <code class="language-text">new</code> 키워드로 인스턴스 생성을 여러 번 하지 못한다는 의미입니다.</p>
 <p>일반적인 인스턴스 생성방법은 이렇습니다.</p>
@@ -214,6 +219,8 @@ test(&quot;decrementing 1  times should be 3&quot;, () =&gt; {
 })</code>
         </deckgo-highlight-code>
 <!-- 추가) js test, test libraries -->
+<br/>
+<hr>
 <h2 id="리액트의-상태관리" style="position:relative;">리액트의 상태관리<a href="#%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%EC%83%81%ED%83%9C%EA%B4%80%EB%A6%AC" aria-label="리액트의 상태관리 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <p>React를 사용하며 전역 상태 관리가 필요할 때에는 싱글톤 객체를 만들기보다 <strong>Redux</strong>나 <strong>React Context</strong>를 사용합니다.</p>
 <p>싱글톤 객체가 인스턴스 값을 직접 수정할 수 있다면, 위 두 가지 도구는 <strong>read only</strong> 상태를 갖도록 합니다. 디스패처 => (액션) => 실행 => 순수함수 reducer => 상태 업데이트로 이뤄지는 과정은 개발자가 의도한대로만 전역 상태가 움직이도록 그 흐름과 제어를 명확히 한다는 장점이 있습니다.</p>
