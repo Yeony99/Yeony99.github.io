@@ -1,6 +1,6 @@
 ---
 title: "프록시 패턴"
-date: "2022-09-23"
+date: "2022-09-22"
 category: "tech"
 slug: "/tech/react-pattern-proxy"
 # img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
@@ -116,5 +116,42 @@ const personProxy = new Proxy(person, {
 
 자바스크립트에서는 [Reflect](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect) 라는 빌트인 객체를 제공합니다.
 
+`Reflect`는 중간에서 가로챌 수 있는 자바스크립트 작업에 대한 메소드를 제공합니다. 메소드 종류는 `Proxy`와 동일합니다. 단, 함수 객체가 아니라 생성자로 사용은 불가능합니다.
+
+`Reflect`는 이렇게 사용합니다
+
+```javascript
+// Proxy
+const personProxy = new Proxy(person, {
+  get: (obj, prop) => {
+    console.log(`The value of ${prop} is ${obj[prop]}`)
+  },
+  set: (obj, prop, value) => {
+    console.log(`Changed ${prop} from ${obj[prop]} to ${value}`)
+    obj[prop] = value
+  },
+})
+
+
+// Reflect 사용
+const personProxy = new Proxy(person, {
+  get: (obj, prop) => {
+    console.log(`The value of ${prop} is ${Reflect.get(obj, prop)}`)
+  },
+  set: (obj, prop, value) => {
+    console.log(`Changed ${prop} from ${obj[prop]} to ${value}`)
+    Reflect.set(obj, prop, value)
+  },
+})
+```
+
+`obj[prop] = value` 형태가 아니라, `Reflect.get(obj, prop)`, `Reflect.set(obj, prop, value)`의 형태로 작성할 수 있습니다. 
+
+
+## 결론
+
+Proxy는 객체의 동작을 커스터마이징할 수 있는 유용한 기능입니다. 유효성 검사, formatting, 알림, 디버깅 등에 유용합니다.
+
+핸들러 객체에서 Proxy를 과도하게 사용하면 성능이 저하될 수 있습니다.
 
 
