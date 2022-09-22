@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Sep 2022 00:08:43 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (9) - 값, 식, 문]]></title><description><![CDATA[…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</guid><pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;값-식-문&quot; style=&quot;position:relative;&quot;&gt;값, 식, 문&lt;a href=&quot;#%EA%B0%92-%EC%8B%9D-%EB%AC%B8&quot; aria-label=&quot;값 식 문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 22 Sep 2022 02:42:51 GMT</lastBuildDate><item><title><![CDATA[프록시 패턴]]></title><description><![CDATA[프록시 패턴 (Proxy Pattern)  단어의 뜻은 대리인입니다. Proxy 단어 뜻 - 네이버 사전 Proxy 패턴은 실제 객체에 직접 접근하는 것이 아닌, 실 객체를 대리하는 객체인 Proxy 객체를 다루는 패턴입니다. Proxy…]]></description><link>https://yeony99.github.io/tech/react-pattern-proxy</link><guid isPermaLink="false">https://yeony99.github.io/tech/react-pattern-proxy</guid><pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프록시-패턴-proxy-pattern&quot; style=&quot;position:relative;&quot;&gt;프록시 패턴 (Proxy Pattern)&lt;a href=&quot;#%ED%94%84%EB%A1%9D%EC%8B%9C-%ED%8C%A8%ED%84%B4-proxy-pattern&quot; aria-label=&quot;프록시 패턴 proxy pattern permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;proxy&lt;/code&gt; 단어의 뜻은 &lt;strong&gt;대리인&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/191401927-69d5773e-a6ef-467f-96b8-5aa3ee883097.png&quot; alt=&quot;Proxy 단어 뜻 - 네이버 사전&quot;&gt;&lt;/p&gt;
+&lt;div style=&quot;font-size: 0.7rem; text-align: end&quot;&gt;출처 : 네이버 사전&lt;/div&gt;&lt;br/&gt;
+&lt;p&gt;Proxy 패턴은 실제 객체에 직접 접근하는 것이 아닌, 실 객체를 대리하는 객체인 Proxy 객체를 다루는 패턴입니다.&lt;/p&gt;
+&lt;h3 id=&quot;proxy-객체와-상호작용하기&quot; style=&quot;position:relative;&quot;&gt;Proxy 객체와 상호작용하기&lt;a href=&quot;#proxy-%EA%B0%9D%EC%B2%B4%EC%99%80-%EC%83%81%ED%98%B8%EC%9E%91%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;proxy 객체와 상호작용하기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;먼저 객체를 만들고 그 객체의 Proxy 객체를 만들어봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const person = {
+  name: &amp;#39;yeony&amp;#39;,
+  age: 24,
+  job: &amp;#39;frontend developer&amp;#39;
+}
+
+//Proxy 객체
+const personProxy = new Proxy(person, {})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Proxy&lt;/code&gt;객체는 프록시 인스턴스 생성(new 키워드)으로 쉽게 만들 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;proxy-객체-살펴보기&quot; style=&quot;position:relative;&quot;&gt;Proxy 객체 살펴보기&lt;a href=&quot;#proxy-%EA%B0%9D%EC%B2%B4-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0&quot; aria-label=&quot;proxy 객체 살펴보기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Proxy&lt;/code&gt; 클래스의 구조를 살펴봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;new Proxy(target, handler)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Proxy&lt;/code&gt;의 첫 번째 매개변수는 프록시객체로 만들 타깃 객체입니다.&lt;br&gt;
+두 번째 매개변수는 &lt;code class=&quot;language-text&quot;&gt;핸들러&lt;/code&gt;로, proxy의 행동을 정의합니다.&lt;/p&gt;
+&lt;p&gt;핸들러 객체에서 인터랙션 동작을 정의하고, 메소드를 추가할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;가장 흔히 사용되는 메소드인 &lt;code class=&quot;language-text&quot;&gt;get&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;set&lt;/code&gt; 메소드를 보겠습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;get : 프로퍼티에 접근하려 할 때 실행&lt;/li&gt;
+&lt;li&gt;set : 프로퍼티에 값을 수정하려 할 때 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const person = {
+  name: &amp;#39;yeony&amp;#39;,
+  age: 24,
+  job: &amp;#39;frontend developer&amp;#39;
+}
+
+//Proxy 객체
+const personProxy = new Proxy(person, {
+  get: (obj, prop) =&amp;gt; {
+    console.log(`The value of ${prop} is ${obj[prop]}`)
+  },
+  set: (obj, prop, value) =&amp;gt; {
+    console.log(`Changed ${prop} from ${obj[prop]} to ${value}`)
+    obj[prop] = value
+    return true
+  },
+})
+
+personProxy.name = &amp;#39;Nayeon&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이렇게 되면 &lt;code class=&quot;language-text&quot;&gt;personProxy&lt;/code&gt;를 통해 &lt;code class=&quot;language-text&quot;&gt;person&lt;/code&gt;객체가 수정됩니다.&lt;/p&gt;
+&lt;h3 id=&quot;유효성-검사&quot; style=&quot;position:relative;&quot;&gt;유효성 검사&lt;a href=&quot;#%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%82%AC&quot; aria-label=&quot;유효성 검사 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;이러한 프록시 패턴은 유효성 검사를 구현할 때 유용하게 사용할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const personProxy = new Proxy(person, {
+  get: (obj, prop) =&amp;gt; {
+
+    // 원본 person 객체에 key가 존재하지 않으면 접근할 수 없도록 방지
+    if (!obj[prop]) {
+      console.log(
+        `Hmm.. this property doesn&amp;#39;t seem to exist on the target object`
+      )
+    } else {
+      console.log(`The value of ${prop} is ${obj[prop]}`)
+    }
+  },
+  set: (obj, prop, value) =&amp;gt; {
+
+    // 타입이나 제약을 추가하여 변경 시 안정성 보장
+    if (prop === &amp;#39;age&amp;#39; &amp;amp;&amp;amp; typeof value !== &amp;#39;number&amp;#39;) {
+      console.log(`Sorry, you can only pass numeric values for age.`)
+    } else if (prop === &amp;#39;name&amp;#39; &amp;amp;&amp;amp; value.length &amp;lt; 2) {
+      console.log(`You need to provide a valid name.`)
+    } else {
+      console.log(`Changed ${prop} from ${obj[prop]} to ${value}.`)
+      obj[prop] = value
+    }
+  },
+})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;원본 객체에 존재하지 않는 key로 접근하거나, 예상하지 못한 타입의 값을 할당하려는 경우에 proxy객체를 통해 방지할 수 있습니다. 따라서 실수를 예방함으로써 &lt;strong&gt;데이터의 안정성&lt;/strong&gt;을 관리할 수 있는 패턴이 됩니다.&lt;/p&gt;
+&lt;h3 id=&quot;reflect&quot; style=&quot;position:relative;&quot;&gt;Reflect&lt;a href=&quot;#reflect&quot; aria-label=&quot;reflect permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;자바스크립트에서는 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect&quot;&gt;Reflect&lt;/a&gt; 라는 빌트인 객체를 제공합니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Reflect&lt;/code&gt;는 중간에서 가로챌 수 있는 자바스크립트 작업에 대한 메소드를 제공합니다. 메소드 종류는 &lt;code class=&quot;language-text&quot;&gt;Proxy&lt;/code&gt;와 동일합니다. 단, 함수 객체가 아니라 생성자로 사용은 불가능합니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Reflect&lt;/code&gt;는 이렇게 사용합니다&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// Proxy
+const personProxy = new Proxy(person, {
+  get: (obj, prop) =&amp;gt; {
+    console.log(`The value of ${prop} is ${obj[prop]}`)
+  },
+  set: (obj, prop, value) =&amp;gt; {
+    console.log(`Changed ${prop} from ${obj[prop]} to ${value}`)
+    obj[prop] = value
+  },
+})
+
+
+// Reflect 사용
+const personProxy = new Proxy(person, {
+  get: (obj, prop) =&amp;gt; {
+    console.log(`The value of ${prop} is ${Reflect.get(obj, prop)}`)
+  },
+  set: (obj, prop, value) =&amp;gt; {
+    console.log(`Changed ${prop} from ${obj[prop]} to ${value}`)
+    Reflect.set(obj, prop, value)
+  },
+})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;obj[prop] = value&lt;/code&gt; 형태가 아니라, &lt;code class=&quot;language-text&quot;&gt;Reflect.get(obj, prop)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Reflect.set(obj, prop, value)&lt;/code&gt;의 형태로 작성할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&quot;결론&quot; style=&quot;position:relative;&quot;&gt;결론&lt;a href=&quot;#%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot;결론 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Proxy는 객체의 동작을 커스터마이징할 수 있는 유용한 기능입니다. 유효성 검사, formatting, 알림, 디버깅 등에 유용합니다.&lt;/p&gt;
+&lt;p&gt;핸들러 객체에서 Proxy를 과도하게 사용하면 성능이 저하될 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (9) - 값, 식, 문]]></title><description><![CDATA[…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</guid><pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;값-식-문&quot; style=&quot;position:relative;&quot;&gt;값, 식, 문&lt;a href=&quot;#%EA%B0%92-%EC%8B%9D-%EB%AC%B8&quot; aria-label=&quot;값 식 문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;값을 할당한다&lt;/strong&gt; 라는 말을 이전 글에서 자주 사용했습니다.&lt;/p&gt;
 &lt;p&gt;값은 무엇일까요? 자바스크립트 뿐 아니라 값은 프로그래밍 전반에서 사용하는 용어입니다.&lt;/p&gt;
 &lt;p&gt;값과 식, 문의 차이에 대해서 알아봅시다.&lt;/p&gt;
@@ -128,7 +242,7 @@ let bar = function () {
 함수에 대해서는 이후에 좀더 자세히 살펴보도록 하겠습니다.&lt;/p&gt;
 &lt;p&gt;다음 글에서는 자바스크립트의 연산자에 대해 알아보도록 하겠습니다.&lt;/p&gt;
 &lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-variable-naming&quot;&gt;변수 명명 규칙&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
-◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-value-expression-statement&quot;&gt;자바스크립트 연산자&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[리액트 패턴 - 싱글톤 패턴]]></title><description><![CDATA[시리즈를 시작하며... patterns…]]></description><link>https://yeony99.github.io/tech/react-pattern-singleton</link><guid isPermaLink="false">https://yeony99.github.io/tech/react-pattern-singleton</guid><pubDate>Sun, 18 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;시리즈를-시작하며&quot; style=&quot;position:relative;&quot;&gt;시리즈를 시작하며...&lt;a href=&quot;#%EC%8B%9C%EB%A6%AC%EC%A6%88%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%98%EB%A9%B0&quot; aria-label=&quot;시리즈를 시작하며 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-value-expression-statement&quot;&gt;자바스크립트 연산자&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[싱글톤 패턴]]></title><description><![CDATA[시리즈를 시작하며... patterns…]]></description><link>https://yeony99.github.io/tech/react-pattern-singleton</link><guid isPermaLink="false">https://yeony99.github.io/tech/react-pattern-singleton</guid><pubDate>Sun, 18 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;시리즈를-시작하며&quot; style=&quot;position:relative;&quot;&gt;시리즈를 시작하며...&lt;a href=&quot;#%EC%8B%9C%EB%A6%AC%EC%A6%88%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%98%EB%A9%B0&quot; aria-label=&quot;시리즈를 시작하며 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.patterns.dev/&quot;&gt;patterns&lt;/a&gt;에 정리된 리액트 프로젝트 패턴을 공부하며 정리하는 글임을 알립니다.&lt;br&gt;
 시리즈 내 모든 글의 출처는 위 사이트를 기반으로 합니다.&lt;/p&gt;
 &lt;p&gt;별도 참고 자료가 있을 시 해당 자료의 출처만 기재합니다.&lt;/p&gt;
