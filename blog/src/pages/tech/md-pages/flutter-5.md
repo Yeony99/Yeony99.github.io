@@ -5,7 +5,7 @@ category: "tech"
 slug: "/tech/flutter-understanding-constraints"
 # img: "https://user-images.githubusercontent.com/76241233/189472910-3ae9b4a8-6fd6-484c-8e00-d07dab309b45.jpeg"
 tags:
-  - "Study Flutter"
+  - "스터디 Flutter"
 ---
 
 ## Constraints란?

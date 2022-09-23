@@ -87,5 +87,5 @@ REPL을 종료할 때는 `ctrl + C`를 두 번 눌러주면 됩니다.
 
 다음 글에서는 본격적으로 자바스크립트 문법을 알아보도록 하겠습니다.
 
-◾ [VSCode로 간단하게 구축하는 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-vscode/) 👈 이전 글 보기
-<!-- ◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-data-type) 👈 다음 글 보기 -->
+◾ [VSCode로 간단하게 구축하는 JavaScript 개발환경](/tech/let-me-know-js-a-bit-setting-vscode/) 👈 이전 글 보기   
+◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-data-type) 👈 다음 글 보기

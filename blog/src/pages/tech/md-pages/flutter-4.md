@@ -5,7 +5,7 @@ category: "tech"
 slug: "/tech/flutter-text-widget"
 # img: "https://user-images.githubusercontent.com/76241233/189472910-3ae9b4a8-6fd6-484c-8e00-d07dab309b45.jpeg"
 tags:
-  - "Study Flutter"
+  - "스터디 Flutter"
 ---
 
 <!-- 📍 텍스트에 대한 다양한 반응의 종류를 알고 이해한다.
