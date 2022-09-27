@@ -175,19 +175,19 @@ footer {
 }
 
 .toc-container {
-  padding: 1rem;
+  padding: 0.7rem;
   position: fixed;
   width: 22vw;
   color: black;
   border-radius: 0.25rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 700;
   
   ul {
     li {
       list-style: inherit;
       border-bottom: 1px solid #444;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       p > a {
         text-decoration: none;
         color: #444;
@@ -209,6 +209,7 @@ footer {
 .blog-post {
   ul > li {
     list-style: inherit;
+    font-size: 0.9rem;
   }
 }
 

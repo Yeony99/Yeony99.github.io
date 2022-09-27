@@ -16,7 +16,7 @@ tags:
 
 ## Text Widget
 
-Flutter에서 아주 흔하게 사용되는 위젯 중 하나가 `Text` 위젯입니다. 
+Flutter에서 아주 흔하게 사용되는 위젯 중 하나가 `Text` 위젯입니다.
 
 Text 위젯은 이름에서부터 알 수 있듯이 텍스트를 화면에 그리는 위젯입니다. 뿐만 아니라 텍스트에 style을 입힐 수도 있습니다.
 
@@ -70,10 +70,5 @@ RichText(
 
 `RichText` 안에 들어가는 여러 개의 텍스트들은 `TextSpan`을 사용해 보여집니다.
 
-
-◾ [[Flutter] Layout Widget 정리](/tech/flutter-layout-widget) 👈 이전 글 보기   
+◾ [[Flutter] Layout Widget 정리](/tech/flutter-layout-widget) 👈 이전 글 보기  
 ◾ [[Flutter] Constraints 이해하기](/tech/flutter-understanding-constraints) 👈 다음 글 보기
-
-
-
-

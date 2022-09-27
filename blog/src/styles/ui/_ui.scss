@@ -13,6 +13,13 @@ nav > ul > a > li {
     user-select: none;
 }
 
+.toc-container ul > li > ul > li {
+    font-size: 0.7rem;
+    > ul > li > ul > li {
+        display: none;
+    }
+}
+
 .blog-post table {
     font-size: 0.9rem;
     tr > th {
