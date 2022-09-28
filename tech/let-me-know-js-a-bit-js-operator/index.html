@@ -1,0 +1,439 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.666 'Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Georgia',serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}ul{margin-left:1.666rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.666rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;font-size:0.85rem;line-height:1.666rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;font-size:1rem;line-height:1.666rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}blockquote{margin-left:1.666rem;margin-right:1.666rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.666rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.666rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.666rem;margin-bottom:calc(1.666rem / 2);margin-top:calc(1.666rem / 2);}li > ul{margin-left:1.666rem;margin-bottom:calc(1.666rem / 2);margin-top:calc(1.666rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.666rem / 2);}code{font-size:0.85rem;line-height:1.666rem;}kbd{font-size:0.85rem;line-height:1.666rem;}samp{font-size:0.85rem;line-height:1.666rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.11067rem;padding-right:1.11067rem;padding-top:0.833rem;padding-bottom:calc(0.833rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><style data-href="/styles.704d6fcd3eab6f11f6e6.css" data-identity="gatsby-global-css">.flex{display:flex!important}.flex-column{flex-direction:column}.justify-content-center{justify-content:center!important}.justify-content-end{justify-content:end!important}.justify-content-around{justify-content:space-around!important}.justify-content-between{justify-content:space-between!important}.justify-content-evenly{justify-content:space-evenly!important}.align-center{align-items:center!important}.align-end{align-items:flex-end!important}.row{display:flex;flex-wrap:wrap}.col{flex:1 0}.col-1{flex:0 0 auto;width:8.3333333333%}.col-2{flex:0 0 auto;width:16.6666666667%}.col-3{flex:0 0 auto;width:25%}.col-4{flex:0 0 auto;width:33.3333333333%}.col-5{flex:0 0 auto;width:41.6666666667%}.col-6{flex:0 0 auto;width:50%}.col-7{flex:0 0 auto;width:58.3333333333%}.col-8{flex:0 0 auto;width:66.6666666667%}.col-9{flex:0 0 auto;width:75%}.col-10{flex:0 0 auto;width:83.3333333333%}.col-11{flex:0 0 auto;width:91.6666666667%}.col-12{flex:0 0 auto;width:100%}.grid{display:grid}.blog-post table tr>td,.blog-post table tr>th,.text-center{text-align:center}.text-end{text-align:end}.text-justify{text-align:justify}.margin-0{margin:0!important}.margin-1{margin:1rem!important}.margin-top-1{margin-top:1rem!important}.margin-top-1666{margin-top:1.666rem!important}.margin-top-2{margin-top:2rem!important}.margin-bottom-05{margin-bottom:.5rem!important}.margin-bottom-1{margin-bottom:1rem!important}.margin-left-1{margin-left:1rem!important}.margin-right-05{margin-right:.5rem!important}.margin-right-1{margin-right:1rem!important}.padding-1{padding:1rem!important}.padding-top-1{padding-top:1rem!important}.padding-bottom-1{padding-bottom:1rem!important}.padding-left-1{padding-left:1rem!important}.padding-right-1{padding-right:1rem!important}.h-100{height:100%!important}.w-100{width:100%!important}.pg-header-img{height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center center;object-position:center center;opacity:1;width:100%}.overflow-x-scroll{overflow:auto}.overflow-x-scroll::-webkit-scrollbar{height:5px}.overflow-x-scroll::-webkit-scrollbar-thumb{background-color:#ffc079;border-radius:10px;height:17%}.overflow-x-scroll::-webkit-scrollbar-track{background-color:rgba(255,193,121,.337)}div.tag{background-color:#c6ffc6;color:#7b9e81}div.tag,div.tag-sm{-webkit-user-select:none;-ms-user-select:none;user-select:none}div.tag-sm{font-size:.7rem!important;padding:.1rem .3rem!important}nav>ul>a>li{-webkit-user-select:none;-ms-user-select:none;user-select:none}.toc-container ul>li>ul>li{font-size:.7rem}.toc-container ul>li>ul>li>ul>li>ul>li{display:none}.blog-post table{font-size:.9rem}.blog-post table tr>th{background-color:#eee}li.current-path{border-color:#c6ffc6}a{border-color:transparent}a :hover{border-color:#8eb98e}.log-selected-bg{background-color:#f2fcef}.circle{border-radius:50%}p>a{color:#8eb98e;text-decoration:underline}p>code,pre,pre>code{background-color:#eee;border-radius:.25rem;font-family:Segoe UI,Tahoma,Verdana,sans-serif;font-style:italic;padding:.2rem .5rem .3rem}p>strong{background-color:#faebd7;border-radius:10px 0 30px 0;padding:.2rem .5rem}.b-shadow-10-gray{box-shadow:10px 10px 10px #eee}.pointer{cursor:pointer}div.bg-orange{background-color:#ffc079;color:#502404}div.tag.selected-tag{background-color:#fff279;color:#502404}.wordbreak-breakall{font-size:.95rem;word-break:break-all}.wordbreak-keepall{font-size:.95rem;word-break:keep-all}.ws-nowrap{white-space:nowrap}.td-title{font-size:.9rem;font-weight:600;text-transform:capitalize}@media screen and (max-width:450px){.td-title{font-size:.7rem}}@media screen and (max-width:400px){.td-title{font-size:.65rem}}td>p{font-size:1rem}@media screen and (max-width:450px){td>p{font-size:.75rem}}h1,h2,h3,h4,h5{font-weight:700}h1,h2,h3,h4,h5,h6{font-family:NanumSquareRound}h6{font-weight:400}.text-xs{font-size:.5rem}.text-sm{font-size:.85rem}.text-md{font-size:1rem}.text-lg{font-size:1.2rem}.text-xl{font-size:1.5rem}.text-2xl{font-size:1.85rem}.wrap{margin:.5rem auto 0;max-width:768px;padding-left:1rem;padding-right:1rem}.main-img{height:30vh}.scroll-area{max-width:90vw}.transition{transition-delay:0s;transition-property:all!important;transition-timing-function:ease-in!important}.duration-500{transition-duration:.5s!important}html{background-color:#fff;scroll-behavior:smooth}*{font-family:NanumSquareRound}.blog-post p{font-size:.9rem}ul li{list-style:none}ol li{list-style:inherit}a{color:#000;text-decoration:none}a .dark{color:#7d7}.blog-post li>a{color:#8eb98e;text-decoration:underline}pre{overflow:auto}footer{position:relative}.time-line-ctnr .time-line{list-style:none;margin:0;padding:0;position:relative}.time-line-ctnr .time-line:before{background:#3498db;border-radius:2px;bottom:-10px;content:"";left:32px;position:absolute;top:0;width:2px}.time-line-ctnr .time-line>.time-label>span{background-color:#e74c3c;border-radius:2px;color:#fff;display:inline-block;font-size:14px;font-weight:600;padding:5px 10px}.time-line-ctnr .time-line>li{margin-bottom:10px;margin-right:0;position:relative}.time-line-ctnr .time-line>li>.time-line-item{background:#fff;border-radius:3px;box-shadow:0 1px 1px rgba(0,0,0,.1);color:#444;margin-left:50px;margin-right:15px;position:relative}.time-line-ctnr .time-line>li>.time-line-item .time,.time-line-ctnr .time-line>li>.time-line-item>.time-line-header{font-size:14px;padding:6px 10px}.time-line-ctnr .time-line>li>.time-line-item .time{color:#999;float:right;font-size:12px}.time-line-ctnr .time-line>li>.time-line-item .time-line-header{border-bottom:1px solid #f4f4f4;color:#555;line-height:1.1;margin:0}.time-line-ctnr .time-line>li>.fa{background:#ecf0f1;border:2px solid #3498db;border-radius:50%;box-sizing:border-box;color:#666;display:inline-block;height:10px;left:28px;position:absolute;top:9px;width:10px}.time-line-ctnr .time-line>.time-label>span{background-color:#84e07d!important}.time-line-ctnr .time-line:before{background:#7aff2e!important}.time-line-ctnr .time-line>li>.fa{border:2px solid #1c8e46!important}.list-skill-logo{height:35px;margin:0;width:35px}@media screen and (max-width:550px){.list-skill-logo{display:none}.img-td{margin:0;padding:0;width:0}}.footer-logo{height:20px;margin:0;width:20px}.min-h-74{min-height:74vh}.min-h-76{min-height:76vh}.page-404{background:#dcfcc3;height:100vh;margin:0;padding:0;position:absolute;top:0;width:99vw}.toc-container{border-radius:.25rem;color:#000;font-size:.8rem;font-weight:700;padding:.7rem;position:fixed;width:22vw}.toc-container ul li{border-bottom:1px solid #444;list-style:inherit;margin-bottom:.5rem}.toc-container ul li p>a{color:#444;text-decoration:none}.toc-container ul li p>a:hover{color:#8eb98e}.toc-container ul li ul li{border:none}@media screen and (max-width:1300px){.toc-container{display:none}}.blog-post ul>li{font-size:.9rem;list-style:inherit}@font-face{font-family:NanumSquareRound;font-style:normal;font-weight:400;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff) format("woff")}code[class*=language-],pre[class*=language-]{word-wrap:normal;color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{background:#eee8d5;color:#657b83}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 3.8.0"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" title="Your Site&#x27;s RSS Feed" href="/rss.xml"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><style data-styled="" data-styled-version="5.3.0">.dOWfuK{border-bottom:2px solid transparent;}/*!sc*/
+@media screen and (max-width:300px){.dOWfuK{font-size:0.75rem;margin:0.5rem;}}/*!sc*/
+data-styled.g2[id="header__ListLink-sc-31ozxh-0"]{content:"dOWfuK,"}/*!sc*/
+.gljqsN{width:4em;margin:0;}/*!sc*/
+@media screen and (max-width:400px){.gljqsN{width:3em;}}/*!sc*/
+data-styled.g3[id="header__LogoImg-sc-31ozxh-1"]{content:"gljqsN,"}/*!sc*/
+.gBHogO{padding:0.1rem 0.5rem;margin:0.5rem;margin-left:0;font-size:0.85rem;border-radius:0.25rem;}/*!sc*/
+data-styled.g5[id="tag__Tag-g53uox-0"]{content:"gBHogO,"}/*!sc*/
+.dbNTDD{height:35vh;width:100%;background-color:#f5fff0;}/*!sc*/
+data-styled.g6[id="blog-post__ImgHeader-sc-1g2ojw6-0"]{content:"dbNTDD,"}/*!sc*/
+</style><title data-react-helmet="true">쫌만알자! (10) - 자바스크립트 연산자 | It&#x27;s Yeony here</title><meta data-react-helmet="true" name="description" content="This is Yeony&#x27;s portfolio"/><meta data-react-helmet="true" property="og:title" content="쫌만알자! (10) - 자바스크립트 연산자"/><meta data-react-helmet="true" property="og:description" content="This is Yeony&#x27;s portfolio"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Nayeon Kim"/><meta data-react-helmet="true" name="twitter:title" content="쫌만알자! (10) - 자바스크립트 연산자"/><meta data-react-helmet="true" name="twitter:description" content="This is Yeony&#x27;s portfolio"/><meta data-react-helmet="true" name="google-site-verification" content="MFqADXYC_GWZWqMXa_PmGCNiBU1BBs1wHXayWN0tUMI"/><script data-react-helmet="true" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6821625180589271" crossorigin="anonymous"></script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="icon" href="/favicon-32x32.png?v=f35cbae2280223c8c3407f41b97872a1" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=f35cbae2280223c8c3407f41b97872a1"/><link as="script" rel="preload" href="/webpack-runtime-ed440f3bbe472954a187.js"/><link as="script" rel="preload" href="/framework-3e59b0ca76e46f05ca8d.js"/><link as="script" rel="preload" href="/app-1cd3562afdbfcd162549.js"/><link as="script" rel="preload" href="/commons-b52596be09ee140c9e61.js"/><link as="script" rel="preload" href="/14d71c03043037e9fc0fce6c9585270af8eaca3c-1567ef9bae1dbd90c7c9.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-1637dab430fe33a26281.js"/><link as="fetch" rel="preload" href="/page-data/tech/let-me-know-js-a-bit-js-operator/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2665612806.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header><div class="wrap flex justify-content-between align-center"><div class="padding-top-1"><a aria-current="page" class="" href="/"><img src="/static/logo-911a5d3d860b3feffbed028611556aeb.svg" class="header__LogoImg-sc-31ozxh-1 gljqsN"/><h1 style="display:none">Yeony</h1></a></div><nav class="padding-top-1 margin-0"><ul class="flex justify-content-around text-sm margin-0"><a href="/tech"><li class="header__ListLink-sc-31ozxh-0 dOWfuK transition duration-500 text-sm margin-1 current-path">Tech</li></a><a href="/log"><li class="header__ListLink-sc-31ozxh-0 dOWfuK transition duration-500 text-sm margin-1 route-path">Log</li></a><a href="/retrospective"><li class="header__ListLink-sc-31ozxh-0 dOWfuK transition duration-500 text-sm margin-1 route-path">Retrospective</li></a></ul></nav></div></header><div class="blog-post__ImgHeader-sc-1g2ojw6-0 dbNTDD"><img class="pg-header-img" src="https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"/></div><div class="toc-container transition duration-500"><div class="toc-wrapper"><div class="toc-content"><div class="toc"><ul>
+<li>
+<p><a href="#%EC%97%B0%EC%82%B0%EC%9E%90operator%EB%9E%80">연산자(Operator)란?</a></p>
+<ul>
+<li>
+<p><a href="#%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90-arithmetic-operator">산술 연산자 (Arithmetic Operator)</a></p>
+<ul>
+<li><a href="#%EC%9D%B4%ED%95%AD-%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90-binary-operator">이항 산술 연산자 (Binary Operator)</a></li>
+<li><a href="#%EB%8B%A8%ED%95%AD-%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90-unary-operator">단항 산술 연산자 (Unary Operator)</a></li>
+<li><a href="#%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%97%B0%EA%B2%B0-%EC%97%B0%EC%82%B0%EC%9E%90">문자열 연결 연산자</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%ED%95%A0%EB%8B%B9-%EC%97%B0%EC%82%B0%EC%9E%90-assignment-operator">할당 연산자 (Assignment Operator)</a></p>
+</li>
+<li>
+<p><a href="#%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90">비교 연산자</a></p>
+<ul>
+<li><a href="#%EB%8F%99%EB%93%B1-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90-equality-operator">동등 비교 연산자 (Equality Operator)</a></li>
+<li><a href="#%EC%9D%BC%EC%B9%98-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90-strict-equality-operator">일치 비교 연산자 (Strict Equality Operator)</a></li>
+<li><a href="#%EB%B6%80%EB%8F%99%EB%93%B1%EB%B6%88%EC%9D%BC%EC%B9%98-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90-inequality--string-inequality-operator">부동등/불일치 비교 연산자 (Inequality / String Inequality Operator)</a></li>
+<li><a href="#%EB%8C%80%EC%86%8C-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90">대소 비교 연산자</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%82%BC%ED%95%AD-%EC%97%B0%EC%82%B0%EC%9E%90-ternary-operator">삼항 연산자 (Ternary Operator)</a></p>
+</li>
+<li>
+<p><a href="#%EB%85%BC%EB%A6%AC-%EC%97%B0%EC%82%B0%EC%9E%90-logical-operator">논리 연산자 (Logical Operator)</a></p>
+</li>
+<li>
+<p><a href="#typeof">typeof</a></p>
+</li>
+</ul>
+</li>
+</ul></div></div></div></div><div class="wrap margin-top-1 margin-bottom-1 transition duration-500"><div class="wrap"><h1 class="margin-top-1666">쫌만알자! (10) - 자바스크립트 연산자</h1><div class="flex align-center"><a href="https://github.com/Yeony99" target="_blank" rel="noreferrer" class="margin-right-05"><img style="height:auto" alt="" width="20" height="20" class="avatar-sm circle margin-bottom-1" src="https://avatars.githubusercontent.com/u/76241233?v=4"/></a><h6>Yeony (Nayeon Kim) · <!-- -->2022-09-28</h6></div><div class="blog-post"><h2 id="연산자operator란" style="position:relative;">연산자(Operator)란?<a href="#%EC%97%B0%EC%82%B0%EC%9E%90operator%EB%9E%80" aria-label="연산자operator란 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>연산자란 문장 부호 혹은 영어, 숫자로 구성된 <strong>예약된 구문</strong>입니다.</p>
+<p><code class="language-text">+</code>라는 기호는 숫자를 추가하거나 문자열을 연결할 수 있게 하고, <code class="language-text">&lt;</code> 기호는 좌항과 우항의 값을 비교합니다.</p>
+<p>이러한 연산자는 여러 종류로 분류할 수 있습니다.</p>
+<h3 id="산술-연산자-arithmetic-operator" style="position:relative;">산술 연산자 (Arithmetic Operator)<a href="#%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90-arithmetic-operator" aria-label="산술 연산자 arithmetic operator permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><strong>연산</strong>이라고 하면 가장 먼저 사칙연산이 떠오릅니다. 자바스크립트 또한 이런 산술적인 연산을 제공합니다. 사칙연산은 우리가 흔히 아는 기호(+, -, *, /)와 동일하게 움직입니다.</p>
+<p>산술 연산자는 2가지로 나뉩니다.</p>
+<h4 id="이항-산술-연산자-binary-operator" style="position:relative;">이항 산술 연산자 (Binary Operator)<a href="#%EC%9D%B4%ED%95%AD-%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90-binary-operator" aria-label="이항 산술 연산자 binary operator permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p><strong>이항</strong>이라는 말은 항이 2개가 있다는 의미입니다. <code class="language-text">x + y</code>는 연산되는 대상인 피연산자가 2개이죠? 그래서 이항(binary) 산술 연산자입니다.</p>
+<table>
+    <tr>
+        <th>연산자</td>
+        <th>동작</td>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>덧셈</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>뺄셈</td>
+    </tr>
+    <tr>
+        <td>*</td>
+        <td>곱셈</td>
+    </tr>
+    <tr>
+        <td>/</td>
+        <td>나눗셈</td>
+    </tr>
+    <tr>
+        <td>%</td>
+        <td>나머지</td>
+    </tr>
+</table>
+<br/>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">5 + 2 // 7
+5 - 2 // 3
+5 * 2 // 10
+5 / 2 // 2.5
+5 % 2 // 1</code>
+        </deckgo-highlight-code>
+<h4 id="단항-산술-연산자-unary-operator" style="position:relative;">단항 산술 연산자 (Unary Operator)<a href="#%EB%8B%A8%ED%95%AD-%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90-unary-operator" aria-label="단항 산술 연산자 unary operator permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>이항 연산자와 달리 단항 산술 연산자는 1개의 피연산자만이 존재합니다.</p>
+<p>조금 낯선 모양일 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>연산자</th>
+<th>동작</th>
+<th>부수효과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>++</td>
+<td>증가</td>
+<td>피연산자의 값을 변경</td>
+</tr>
+<tr>
+<td>--</td>
+<td>감소</td>
+<td>피연산자의 값을 변경</td>
+</tr>
+<tr>
+<td>+</td>
+<td>숫자타입에는 효과없음. <br/>숫자타입으로 변환될 수 있는 경우 변환된 값 반환</td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td>양수를 음수로, 음수를 양수로 반전</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">let x = 1
+
+x++ // 2
+x-- // 1
+
+console.log(-x) // -1</code>
+        </deckgo-highlight-code>
+<p>여기서 증가/감소 연산자는 피연산자의 앞에 붙는지, 뒤에 붙는지에 따라 동작하는 시점에 차이가 있습니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">let x = 10
+let result
+
+// 선할당 후증가(postfix increment operator)
+result = x++
+console.log(result, x) // 10, 11
+
+// 선증가 후할당(prefix increment operator)
+result = ++x
+console.log(result, x) // 12 12
+
+// 선할당 후감소(postfix decrement operator)
+result = x--
+console.log(result, x) // 12 11
+
+// 선감소 후할당(prefix decrement operator)
+result = --x
+console.log(result, x) // 10 10</code>
+        </deckgo-highlight-code>
+<p>조금 복잡하죠? 사실 저는 이런 증가/감소 단항 연산자는 잘 사용하지 않습니다. 잘못된 연산이 될 수도 있고, 처음 값을 할당한 변수의 값이 계속 바뀌기 때문이죠. 그래서 아래와 같은 방식을 추천합니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">let x = 10
+let result
+
+result = x + 1
+console.log(result, x) // 11, 10
+
+result = x - 1
+console.log(result, x) // 10, 10</code>
+        </deckgo-highlight-code>
+<p><code class="language-text">x</code>의 값은 변하지 않고 <code class="language-text">result</code>값만 계속 변화합니다. 만약 <code class="language-text">x</code>가 내부적으로 계산되는 임시 변수가 아니라 함수의 인자 등으로 처음 넘겨받은 값이라면 변하지 않는 것이 더욱 좋을 것입니다.</p>
+<h4 id="문자열-연결-연산자" style="position:relative;">문자열 연결 연산자<a href="#%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%97%B0%EA%B2%B0-%EC%97%B0%EC%82%B0%EC%9E%90" aria-label="문자열 연결 연산자 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p><code class="language-text">+</code> 연산자는 피연산자 중 문자열이 하나라도 존재할 때 문자열로 형변환하여 연결합니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">1 + &quot;1&quot; // 11
+1 + &quot;1&quot; + 1 + 0 // 1110
+
+// true는 1로, false는 0으로 변환
+1 + true // 2
+1 + false // 1
+
+// null은 0으로 변환
+1 + null // 1
+
+// undefined는 정의되지 않았기 때문에
+// 숫자로 변환되지 않음
+1 + undefined // NaN
+
+// 문자열에 + 붙이면 숫자타입으로 변환
+1 + &quot;1&quot; // 2</code>
+        </deckgo-highlight-code>
+<br/>
+<hr>
+<h3 id="할당-연산자-assignment-operator" style="position:relative;">할당 연산자 (Assignment Operator)<a href="#%ED%95%A0%EB%8B%B9-%EC%97%B0%EC%82%B0%EC%9E%90-assignment-operator" aria-label="할당 연산자 assignment operator permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>할당 연산자는 우항 피연산자의 평가 결과를 좌항 변수에 할당합니다.</p>
+<table>
+<thead>
+<tr>
+<th>연산자</th>
+<th>동작</th>
+<th>부수효과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>할당</td>
+<td>우항의 표현식 결과 값을 좌항의 변수에 할당</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>x = x + 2</td>
+<td>"</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>x = x - 2</td>
+<td>"</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>x = x * 2</td>
+<td>"</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>x = x / 2</td>
+<td>"</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>x = x % 2</td>
+<td>"</td>
+</tr>
+</tbody>
+</table>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">let x = 3
+
+x += 3 // 6
+
+x -= 3 // 3
+
+x *= 3 // 9
+
+x /= 3 // 3
+
+x %= 3 // 0</code>
+        </deckgo-highlight-code>
+<br/>
+<hr>
+<h3 id="비교-연산자" style="position:relative;">비교 연산자<a href="#%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90" aria-label="비교 연산자 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>비교 연산자는 좌항과 우항의 피연산자를 비교해 그 값을 불리언(true/false) 타입으로 반환합니다.</p>
+<h4 id="동등-비교-연산자-equality-operator" style="position:relative;">동등 비교 연산자 (Equality Operator)<a href="#%EB%8F%99%EB%93%B1-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90-equality-operator" aria-label="동등 비교 연산자 equality operator permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>값이 <strong>동등</strong>한 지를 평가하는 연산자입니다.</p>
+<p>여기서 동등하다는 자바스크립트 엔진이 자체적으로 형변환을 한 후에 비교했을 때에 같다고 평가되었다는 의미입니다.<br>
+자바스크립트는 굉장히 자유로운 언어라고 했죠? 따라서 변수를 할당하면 자체적으로 타입을 추론합니다. 그리고 동등한지를 평가할 때 <strong>암묵적인 타입 변환</strong>을 합니다. 이런 형변환은 이따금 약간의 골칫거리가 되기도 하는데요. 형변환에 대해서는 추후 자세히 다룰 예정입니다. 지금은 자바스크립트가 타입을 추론해 바꾸기도 한다는 점만 알고 가기로 해요.</p>
+<p>예시를 보겠습니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">2 == 2 // true
+
+// 암묵적 타입 변환해 타입이 같을 경우에
+2 == &quot;2&quot; // true</code>
+        </deckgo-highlight-code>
+<p>분명 숫자와 문자열을 비교했는데 두 값이 같다고 <code class="language-text">true</code>를 반환하네요.
+동등 비교가 타입을 바꿔서도 검사해주니 좋다고 생각할 수도 있지만, 사실 클린 코드를 작성하는 데에는 취약점입니다. 이미 우리는 앞서 타입 변환이 일어나 <code class="language-text">1 + '1'</code>이 <code class="language-text">11</code>이 되는 걸 확인했죠. 비슷한 예기치 못한 결과를 낳을 수 있기 때문에 <strong>일치 비교 연산자</strong>를 쓰는 것을 권장합니다.</p>
+<h4 id="일치-비교-연산자-strict-equality-operator" style="position:relative;">일치 비교 연산자 (Strict Equality Operator)<a href="#%EC%9D%BC%EC%B9%98-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90-strict-equality-operator" aria-label="일치 비교 연산자 strict equality operator permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>일치 비교 연산자는 <strong>타입과 값</strong>이 모두 같을 경우에만 true를 반환합니다. 동등 비교보다 한층 강화된 연산자이기 때문에 <strong>엄격한 동등 연산자</strong>입니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">2 === 2 // true
+
+2 === &quot;2&quot; // false</code>
+        </deckgo-highlight-code>
+<p>일치 비교 연산자로 다 비교할 수 있으면 좋겠지만, 유의해야 할 값이 있습니다. 바로 <code class="language-text">NaN</code>입니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">NaN === NaN // false</code>
+        </deckgo-highlight-code>
+<p>MDN의 설명을 참고하면, <code class="language-text">NaN</code>은 자신과 일치하지 않는 유일한 값입니다 (NaN is the only value that compares unequal to itself). 이건 일종의 버그에</p>
+<p>따라서 <code class="language-text">isNaN()</code></p>
+<h4 id="부동등불일치-비교-연산자-inequality--string-inequality-operator" style="position:relative;">부동등/불일치 비교 연산자 (Inequality / String Inequality Operator)<a href="#%EB%B6%80%EB%8F%99%EB%93%B1%EB%B6%88%EC%9D%BC%EC%B9%98-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90-inequality--string-inequality-operator" aria-label="부동등불일치 비교 연산자 inequality  string inequality operator permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>동등, 일치가 있다면 동등하지 않은 것과 불일치하는 것도 비교할 수 있어야겠죠?</p>
+<p>자바스크립트에서는 <code class="language-text">!</code> 느낌표를 <strong>NOT</strong> 의미로 사용합니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">1 != 5 // true
+1 !== &quot;1&quot; // true</code>
+        </deckgo-highlight-code>
+<p>동등/일치 연산자에 <code class="language-text">!</code>를 붙여주면, 부동등 연산자는 값이 같지 않을 때, 불일치 연산자는 값과 타입이 모두 같지 않을 때 <code class="language-text">true</code> 값을 리턴합니다.</p>
+<h4 id="대소-비교-연산자" style="position:relative;">대소 비교 연산자<a href="#%EB%8C%80%EC%86%8C-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90" aria-label="대소 비교 연산자 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<p>수학 연산에서 쓰이는 기호와 같습니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">1 &gt;= 2 // false
+2 &gt; 1 // true</code>
+        </deckgo-highlight-code>
+<h3 id="삼항-연산자-ternary-operator" style="position:relative;">삼항 연산자 (Ternary Operator)<a href="#%EC%82%BC%ED%95%AD-%EC%97%B0%EC%82%B0%EC%9E%90-ternary-operator" aria-label="삼항 연산자 ternary operator permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>삼항 연산자는 자바스크립트에서 유일하게 <strong>3개의 피연산자</strong>를 가지는 연산자입니다.</p>
+<p>삼항 연산자는 조건식의 평가에 따라 반환되는 값이 달라집니다.</p>
+<p>삼항 연산자를 세 부분으로 나누어 살펴보겠습니다.</p>
+<p><img src="https://user-images.githubusercontent.com/76241233/191170567-ccb8f67f-0b77-40d8-8199-7a73eabe51de.png" alt="삼항연산자"></p>
+<p><code class="language-text">?</code> 전까지는 조건식이 들어갑니다. 조건식의 결과는 Boolean 타입으로 평가되고, 만약 Boolean 타입이 아니라면 암묵적인 형변환을 통해 그 값을 Boolean으로 변환합니다.</p>
+<p>만약 조건식이 <code class="language-text">true</code>라면 <code class="language-text">?</code> 뒤의 값이, <code class="language-text">false</code>라면 <code class="language-text">:</code> 뒤의 값이 삼항연산자의 값으로 평가됩니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">function isAdult(age) {
+  return age &gt; 19 ? &quot;You are an adult!&quot; : &quot;You are too young...&quot;
+}
+
+isAdult(15) // &#39;You are too young...&#39;
+
+isAdult(24) // You are an adult!</code>
+        </deckgo-highlight-code>
+<p>삼항 연산자는 <code class="language-text">if...else</code>문과 비슷하다고 생각할 수 있는데요. 유의해야 할 차이점이 있습니다. <code class="language-text">if...else</code>는 <strong>조건문</strong>이고, 삼항 연산자는 <strong>표현식</strong>이란 점입니다.</p>
+<p>이전 글에서 값, 식, 문의 차이를 알아보며 문은 변수에 할당할 수 없지만, 표현식은 값으로 평가되어 할당할 수 있다고 설명한 바가 있습니다. 따라서 값처럼 사용할 수 있는 삼항 연산자는 무척 유용합니다.</p>
+<br/>
+<hr>
+<h3 id="논리-연산자-logical-operator" style="position:relative;">논리 연산자 (Logical Operator)<a href="#%EB%85%BC%EB%A6%AC-%EC%97%B0%EC%82%B0%EC%9E%90-logical-operator" aria-label="논리 연산자 logical operator permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>논리 연산자는 우항과 좌항의 피연산자를 논리적으로 연산합니다.</p>
+<p>논리적으로 연산한다는 말이 조금 어렵게 느껴집니다. 간단하게 Boolean 연산이라고 생각하면 됩니다. 논리연산은 <code class="language-text">true</code>와 <code class="language-text">false</code>만 존재하는 연산입니다.</p>
+<table>
+<thead>
+<tr>
+<th>연산자</th>
+<th>동작</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>||</td>
+<td>논리합(OR)</td>
+<td>피연산자 중 하나라도 true이면 true</td>
+</tr>
+<tr>
+<td>&#x26;&#x26;</td>
+<td>논리곱(AND)</td>
+<td>피연산자 모두 true여야 true</td>
+</tr>
+<tr>
+<td>!</td>
+<td>논리부정(NOT)</td>
+<td>피연산자의 값을 반전한 값 반환</td>
+</tr>
+</tbody>
+</table>
+<p>이렇게만 봐서는 좀 어렵습니다. 예제를 함께 살펴보겠습니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">// 논리합 (||)
+true || true // true
+true || false // true
+false || true // true
+false || false // false
+
+// 논리곱(&amp;&amp;)
+true &amp;&amp; true // true
+true &amp;&amp; false // false
+false &amp;&amp; true // false
+false &amp;&amp; false // false
+
+// 부정 (!)
+!true // false
+!false // true</code>
+        </deckgo-highlight-code>
+<p>논리 부정 연산자(!)는 항상 Boolean값으로 반환되는데, 피연산자의 값이 Boolean이 아니면 Boolean 값으로 암묵적 형변환하여 평가합니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">console.log(!0) // true
+console.log(!&quot;Any String&quot;) // false</code>
+        </deckgo-highlight-code>
+<p>논리 곱 연산자(&#x26;&#x26;)는 늘 2개의 피연산자 중 하나로 평가됩니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">console.log(&quot;Apple&quot; &amp;&amp; &quot;Banana&quot;) // Banana</code>
+        </deckgo-highlight-code>
+<br/>
+<hr>
+<h3 id="typeof" style="position:relative;">typeof<a href="#typeof" aria-label="typeof permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>typeof 연산자는 이름에서 알 수 있듯 피연산자의 타입을 문자열로 반환합니다.</p>
+<p>typeof 연산자가 반환하는 값의 종류는 다음과 같습니다.</p>
+<ul>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>undefined</li>
+<li>symbol</li>
+<li>object</li>
+<li>function</li>
+</ul>
+<p>사실 typeof 로 검사해도 우리가 원하는 타입과 정확히 맞아떨어지는 결과가 반환되지만은 않습니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">typeof &quot;&quot; // string (null 예상)
+typeof NaN // number
+typeof null // object
+typeof [] // object
+typeof new Date() // object</code>
+        </deckgo-highlight-code>
+<p>조금 이상하죠? 특히 <code class="language-text">null</code>을 검사했는데 object로 넘기는 건 정말 이상합니다. 이건 자바스크립트의 버그입니다. 하지만 기존에 이미 작성된 코드와의 호환을 위해 의도적으로 남긴 버그입니다.</p>
+<p>따라서 null을 체크할 때에는 <code class="language-text">===</code>일치 연산자를 사용하는 것이 좋습니다.</p>
+<p>ES6 이후 자바스크립트 스펙에서 추가된 연산자들은 추후 알아보도록 하겠습니다.</p>
+<p>다음 글에서는 제어문에 대해 알아보겠습니다.</p>
+<p>◾ <a href="/tech/let-me-know-js-a-bit-js-value-expression-statement">값, 식, 문</a> 👈 이전 글 보기<br>
+◾ <a href="/tech/let-me-know-js-a-bit-js-control-flow-statement-conditional">제어문(1) - 조건문</a> 👈 다음 글 보기</p></div><hr class="margin-0"/><div class="flex"><div class="tag__Tag-g53uox-0 gBHogO tag tag-sm">쫌만알자</div></div></div><div class="padding-1 margin-top-2"><div class="b-shadow-10-gray"><div class="comments-wrapper"><div>Loading script...</div><div></div></div></div></div></div><footer><div class="margin-top-1 padding-1 w-100 "><div class="wrap flex align-center justify-content-between padding-1"><div style="font-size:0.9rem">© 2022 Nayeon Yeony Kim</div><div class="flex"><div class="margin-right-1"><a href="/rss.xml" target="_blank"><img class="footer-logo" src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UlNTPC90aXRsZT48cGF0aCBkPSJNMTkuMTk5IDI0QzE5LjE5OSAxMy40NjcgMTAuNTMzIDQuOCAwIDQuOFYwYzEzLjE2NSAwIDI0IDEwLjgzNSAyNCAyNGgtNC44MDF6TTMuMjkxIDE3LjQxNWMxLjgxNCAwIDMuMjkzIDEuNDc5IDMuMjkzIDMuMjk1IDAgMS44MTMtMS40ODUgMy4yOS0zLjMwMSAzLjI5QzEuNDcgMjQgMCAyMi41MjYgMCAyMC43MXMxLjQ3NS0zLjI5NCAzLjI5MS0zLjI5NXpNMTUuOTA5IDI0aC00LjY2NWMwLTYuMTY5LTUuMDc1LTExLjI0NS0xMS4yNDQtMTEuMjQ1VjguMDljOC43MjcgMCAxNS45MDkgNy4xODQgMTUuOTA5IDE1LjkxeiIvPjwvc3ZnPg=="/></a></div><div><a href="https://github.com/Yeony99" target="_blank"><img class="footer-logo" src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0SHViPC90aXRsZT48cGF0aCBkPSJNMTIgLjI5N2MtNi42MyAwLTEyIDUuMzczLTEyIDEyIDAgNS4zMDMgMy40MzggOS44IDguMjA1IDExLjM4NS42LjExMy44Mi0uMjU4LjgyLS41NzcgMC0uMjg1LS4wMS0xLjA0LS4wMTUtMi4wNC0zLjMzOC43MjQtNC4wNDItMS42MS00LjA0Mi0xLjYxQzQuNDIyIDE4LjA3IDMuNjMzIDE3LjcgMy42MzMgMTcuN2MtMS4wODctLjc0NC4wODQtLjcyOS4wODQtLjcyOSAxLjIwNS4wODQgMS44MzggMS4yMzYgMS44MzggMS4yMzYgMS4wNyAxLjgzNSAyLjgwOSAxLjMwNSAzLjQ5NS45OTguMTA4LS43NzYuNDE3LTEuMzA1Ljc2LTEuNjA1LTIuNjY1LS4zLTUuNDY2LTEuMzMyLTUuNDY2LTUuOTMgMC0xLjMxLjQ2NS0yLjM4IDEuMjM1LTMuMjItLjEzNS0uMzAzLS41NC0xLjUyMy4xMDUtMy4xNzYgMCAwIDEuMDA1LS4zMjIgMy4zIDEuMjMuOTYtLjI2NyAxLjk4LS4zOTkgMy0uNDA1IDEuMDIuMDA2IDIuMDQuMTM4IDMgLjQwNSAyLjI4LTEuNTUyIDMuMjg1LTEuMjMgMy4yODUtMS4yMy42NDUgMS42NTMuMjQgMi44NzMuMTIgMy4xNzYuNzY1Ljg0IDEuMjMgMS45MSAxLjIzIDMuMjIgMCA0LjYxLTIuODA1IDUuNjI1LTUuNDc1IDUuOTIuNDIuMzYuODEgMS4wOTYuODEgMi4yMiAwIDEuNjA2LS4wMTUgMi44OTYtLjAxNSAzLjI4NiAwIC4zMTUuMjEuNjkuODI1LjU3QzIwLjU2NSAyMi4wOTIgMjQgMTcuNTkyIDI0IDEyLjI5N2MwLTYuNjI3LTUuMzczLTEyLTEyLTEyIi8+PC9zdmc+"/></a></div></div></div></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><div id="portal"></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/tech/let-me-know-js-a-bit-js-operator";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-72b219bae196683411be.js"],"app":["/app-1cd3562afdbfcd162549.js"],"component---src-pages-404-js":["/component---src-pages-404-js-1cb785892f5048112473.js"],"component---src-pages-index-js":["/component---src-pages-index-js-7a46d729f2bf556bff5e.js"],"component---src-pages-log-index-js":["/component---src-pages-log-index-js-136047a7efa77f6e8ce3.js"],"component---src-pages-retrospective-index-js":["/component---src-pages-retrospective-index-js-486faf119afa7e370ea3.js"],"component---src-pages-tech-index-js":["/component---src-pages-tech-index-js-75aa8a9f8c956828bb8f.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-1637dab430fe33a26281.js"]};/*]]>*/</script><script src="/polyfill-72b219bae196683411be.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-1637dab430fe33a26281.js" async=""></script><script src="/14d71c03043037e9fc0fce6c9585270af8eaca3c-1567ef9bae1dbd90c7c9.js" async=""></script><script src="/commons-b52596be09ee140c9e61.js" async=""></script><script src="/app-1cd3562afdbfcd162549.js" async=""></script><script src="/framework-3e59b0ca76e46f05ca8d.js" async=""></script><script src="/webpack-runtime-ed440f3bbe472954a187.js" async=""></script></body></html>

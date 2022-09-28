@@ -1,4 +1,489 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 22 Sep 2022 05:58:23 GMT</lastBuildDate><item><title><![CDATA[[Flutter] Constraints 이해하기]]></title><description><![CDATA[Constraints란? 어떤 프로그래밍이든 제약조건이 있습니다. 실생활에 지켜야 할 법이 있듯이 프로그래밍에서도 규칙을 지키도록 강제해놓은 것이죠. Flutter…]]></description><link>https://yeony99.github.io/tech/flutter-understanding-constraints</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-understanding-constraints</guid><pubDate>Fri, 23 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;constraints란&quot; style=&quot;position:relative;&quot;&gt;Constraints란?&lt;a href=&quot;#constraints%EB%9E%80&quot; aria-label=&quot;constraints란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 28 Sep 2022 00:00:24 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (10) - 자바스크립트 연산자]]></title><description><![CDATA[연산자(Operator…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-operator</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-operator</guid><pubDate>Wed, 28 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;연산자operator란&quot; style=&quot;position:relative;&quot;&gt;연산자(Operator)란?&lt;a href=&quot;#%EC%97%B0%EC%82%B0%EC%9E%90operator%EB%9E%80&quot; aria-label=&quot;연산자operator란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;연산자란 문장 부호 혹은 영어, 숫자로 구성된 &lt;strong&gt;예약된 구문&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;+&lt;/code&gt;라는 기호는 숫자를 추가하거나 문자열을 연결할 수 있게 하고, &lt;code class=&quot;language-text&quot;&gt;&amp;lt;&lt;/code&gt; 기호는 좌항과 우항의 값을 비교합니다.&lt;/p&gt;
+&lt;p&gt;이러한 연산자는 여러 종류로 분류할 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;산술-연산자-arithmetic-operator&quot; style=&quot;position:relative;&quot;&gt;산술 연산자 (Arithmetic Operator)&lt;a href=&quot;#%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90-arithmetic-operator&quot; aria-label=&quot;산술 연산자 arithmetic operator permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;연산&lt;/strong&gt;이라고 하면 가장 먼저 사칙연산이 떠오릅니다. 자바스크립트 또한 이런 산술적인 연산을 제공합니다. 사칙연산은 우리가 흔히 아는 기호(+, -, *, /)와 동일하게 움직입니다.&lt;/p&gt;
+&lt;p&gt;산술 연산자는 2가지로 나뉩니다.&lt;/p&gt;
+&lt;h4 id=&quot;이항-산술-연산자-binary-operator&quot; style=&quot;position:relative;&quot;&gt;이항 산술 연산자 (Binary Operator)&lt;a href=&quot;#%EC%9D%B4%ED%95%AD-%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90-binary-operator&quot; aria-label=&quot;이항 산술 연산자 binary operator permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;이항&lt;/strong&gt;이라는 말은 항이 2개가 있다는 의미입니다. &lt;code class=&quot;language-text&quot;&gt;x + y&lt;/code&gt;는 연산되는 대상인 피연산자가 2개이죠? 그래서 이항(binary) 산술 연산자입니다.&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;연산자&lt;/td&gt;
+        &lt;th&gt;동작&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;+&lt;/td&gt;
+        &lt;td&gt;덧셈&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;-&lt;/td&gt;
+        &lt;td&gt;뺄셈&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;*&lt;/td&gt;
+        &lt;td&gt;곱셈&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;/&lt;/td&gt;
+        &lt;td&gt;나눗셈&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;%&lt;/td&gt;
+        &lt;td&gt;나머지&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;5 + 2 // 7
+5 - 2 // 3
+5 * 2 // 10
+5 / 2 // 2.5
+5 % 2 // 1&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;단항-산술-연산자-unary-operator&quot; style=&quot;position:relative;&quot;&gt;단항 산술 연산자 (Unary Operator)&lt;a href=&quot;#%EB%8B%A8%ED%95%AD-%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90-unary-operator&quot; aria-label=&quot;단항 산술 연산자 unary operator permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;이항 연산자와 달리 단항 산술 연산자는 1개의 피연산자만이 존재합니다.&lt;/p&gt;
+&lt;p&gt;조금 낯선 모양일 수 있습니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;연산자&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;th&gt;부수효과&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;++&lt;/td&gt;
+&lt;td&gt;증가&lt;/td&gt;
+&lt;td&gt;피연산자의 값을 변경&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;--&lt;/td&gt;
+&lt;td&gt;감소&lt;/td&gt;
+&lt;td&gt;피연산자의 값을 변경&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;td&gt;숫자타입에는 효과없음. &lt;br/&gt;숫자타입으로 변환될 수 있는 경우 변환된 값 반환&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;양수를 음수로, 음수를 양수로 반전&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let x = 1
+
+x++ // 2
+x-- // 1
+
+console.log(-x) // -1&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;여기서 증가/감소 연산자는 피연산자의 앞에 붙는지, 뒤에 붙는지에 따라 동작하는 시점에 차이가 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let x = 10
+let result
+
+// 선할당 후증가(postfix increment operator)
+result = x++
+console.log(result, x) // 10, 11
+
+// 선증가 후할당(prefix increment operator)
+result = ++x
+console.log(result, x) // 12 12
+
+// 선할당 후감소(postfix decrement operator)
+result = x--
+console.log(result, x) // 12 11
+
+// 선감소 후할당(prefix decrement operator)
+result = --x
+console.log(result, x) // 10 10&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;조금 복잡하죠? 사실 저는 이런 증가/감소 단항 연산자는 잘 사용하지 않습니다. 잘못된 연산이 될 수도 있고, 처음 값을 할당한 변수의 값이 계속 바뀌기 때문이죠. 그래서 아래와 같은 방식을 추천합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let x = 10
+let result
+
+result = x + 1
+console.log(result, x) // 11, 10
+
+result = x - 1
+console.log(result, x) // 10, 10&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;x&lt;/code&gt;의 값은 변하지 않고 &lt;code class=&quot;language-text&quot;&gt;result&lt;/code&gt;값만 계속 변화합니다. 만약 &lt;code class=&quot;language-text&quot;&gt;x&lt;/code&gt;가 내부적으로 계산되는 임시 변수가 아니라 함수의 인자 등으로 처음 넘겨받은 값이라면 변하지 않는 것이 더욱 좋을 것입니다.&lt;/p&gt;
+&lt;h4 id=&quot;문자열-연결-연산자&quot; style=&quot;position:relative;&quot;&gt;문자열 연결 연산자&lt;a href=&quot;#%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%97%B0%EA%B2%B0-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;문자열 연결 연산자 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;+&lt;/code&gt; 연산자는 피연산자 중 문자열이 하나라도 존재할 때 문자열로 형변환하여 연결합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;1 + &amp;quot;1&amp;quot; // 11
+1 + &amp;quot;1&amp;quot; + 1 + 0 // 1110
+
+// true는 1로, false는 0으로 변환
+1 + true // 2
+1 + false // 1
+
+// null은 0으로 변환
+1 + null // 1
+
+// undefined는 정의되지 않았기 때문에
+// 숫자로 변환되지 않음
+1 + undefined // NaN
+
+// 문자열에 + 붙이면 숫자타입으로 변환
+1 + &amp;quot;1&amp;quot; // 2&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;할당-연산자-assignment-operator&quot; style=&quot;position:relative;&quot;&gt;할당 연산자 (Assignment Operator)&lt;a href=&quot;#%ED%95%A0%EB%8B%B9-%EC%97%B0%EC%82%B0%EC%9E%90-assignment-operator&quot; aria-label=&quot;할당 연산자 assignment operator permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;할당 연산자는 우항 피연산자의 평가 결과를 좌항 변수에 할당합니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;연산자&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;th&gt;부수효과&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;=&lt;/td&gt;
+&lt;td&gt;할당&lt;/td&gt;
+&lt;td&gt;우항의 표현식 결과 값을 좌항의 변수에 할당&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;+=&lt;/td&gt;
+&lt;td&gt;x = x + 2&lt;/td&gt;
+&lt;td&gt;&quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-=&lt;/td&gt;
+&lt;td&gt;x = x - 2&lt;/td&gt;
+&lt;td&gt;&quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;*=&lt;/td&gt;
+&lt;td&gt;x = x * 2&lt;/td&gt;
+&lt;td&gt;&quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/=&lt;/td&gt;
+&lt;td&gt;x = x / 2&lt;/td&gt;
+&lt;td&gt;&quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;%=&lt;/td&gt;
+&lt;td&gt;x = x % 2&lt;/td&gt;
+&lt;td&gt;&quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let x = 3
+
+x += 3 // 6
+
+x -= 3 // 3
+
+x *= 3 // 9
+
+x /= 3 // 3
+
+x %= 3 // 0&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;비교-연산자&quot; style=&quot;position:relative;&quot;&gt;비교 연산자&lt;a href=&quot;#%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;비교 연산자 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;비교 연산자는 좌항과 우항의 피연산자를 비교해 그 값을 불리언(true/false) 타입으로 반환합니다.&lt;/p&gt;
+&lt;h4 id=&quot;동등-비교-연산자-equality-operator&quot; style=&quot;position:relative;&quot;&gt;동등 비교 연산자 (Equality Operator)&lt;a href=&quot;#%EB%8F%99%EB%93%B1-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90-equality-operator&quot; aria-label=&quot;동등 비교 연산자 equality operator permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;값이 &lt;strong&gt;동등&lt;/strong&gt;한 지를 평가하는 연산자입니다.&lt;/p&gt;
+&lt;p&gt;여기서 동등하다는 자바스크립트 엔진이 자체적으로 형변환을 한 후에 비교했을 때에 같다고 평가되었다는 의미입니다.&lt;br&gt;
+자바스크립트는 굉장히 자유로운 언어라고 했죠? 따라서 변수를 할당하면 자체적으로 타입을 추론합니다. 그리고 동등한지를 평가할 때 &lt;strong&gt;암묵적인 타입 변환&lt;/strong&gt;을 합니다. 이런 형변환은 이따금 약간의 골칫거리가 되기도 하는데요. 형변환에 대해서는 추후 자세히 다룰 예정입니다. 지금은 자바스크립트가 타입을 추론해 바꾸기도 한다는 점만 알고 가기로 해요.&lt;/p&gt;
+&lt;p&gt;예시를 보겠습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;2 == 2 // true
+
+// 암묵적 타입 변환해 타입이 같을 경우에
+2 == &amp;quot;2&amp;quot; // true&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;분명 숫자와 문자열을 비교했는데 두 값이 같다고 &lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt;를 반환하네요.
+동등 비교가 타입을 바꿔서도 검사해주니 좋다고 생각할 수도 있지만, 사실 클린 코드를 작성하는 데에는 취약점입니다. 이미 우리는 앞서 타입 변환이 일어나 &lt;code class=&quot;language-text&quot;&gt;1 + &apos;1&apos;&lt;/code&gt;이 &lt;code class=&quot;language-text&quot;&gt;11&lt;/code&gt;이 되는 걸 확인했죠. 비슷한 예기치 못한 결과를 낳을 수 있기 때문에 &lt;strong&gt;일치 비교 연산자&lt;/strong&gt;를 쓰는 것을 권장합니다.&lt;/p&gt;
+&lt;h4 id=&quot;일치-비교-연산자-strict-equality-operator&quot; style=&quot;position:relative;&quot;&gt;일치 비교 연산자 (Strict Equality Operator)&lt;a href=&quot;#%EC%9D%BC%EC%B9%98-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90-strict-equality-operator&quot; aria-label=&quot;일치 비교 연산자 strict equality operator permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;일치 비교 연산자는 &lt;strong&gt;타입과 값&lt;/strong&gt;이 모두 같을 경우에만 true를 반환합니다. 동등 비교보다 한층 강화된 연산자이기 때문에 &lt;strong&gt;엄격한 동등 연산자&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;2 === 2 // true
+
+2 === &amp;quot;2&amp;quot; // false&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;일치 비교 연산자로 다 비교할 수 있으면 좋겠지만, 유의해야 할 값이 있습니다. 바로 &lt;code class=&quot;language-text&quot;&gt;NaN&lt;/code&gt;입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;NaN === NaN // false&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;MDN의 설명을 참고하면, &lt;code class=&quot;language-text&quot;&gt;NaN&lt;/code&gt;은 자신과 일치하지 않는 유일한 값입니다 (NaN is the only value that compares unequal to itself). 이건 일종의 버그에&lt;/p&gt;
+&lt;p&gt;따라서 &lt;code class=&quot;language-text&quot;&gt;isNaN()&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&quot;부동등불일치-비교-연산자-inequality--string-inequality-operator&quot; style=&quot;position:relative;&quot;&gt;부동등/불일치 비교 연산자 (Inequality / String Inequality Operator)&lt;a href=&quot;#%EB%B6%80%EB%8F%99%EB%93%B1%EB%B6%88%EC%9D%BC%EC%B9%98-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90-inequality--string-inequality-operator&quot; aria-label=&quot;부동등불일치 비교 연산자 inequality  string inequality operator permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;동등, 일치가 있다면 동등하지 않은 것과 불일치하는 것도 비교할 수 있어야겠죠?&lt;/p&gt;
+&lt;p&gt;자바스크립트에서는 &lt;code class=&quot;language-text&quot;&gt;!&lt;/code&gt; 느낌표를 &lt;strong&gt;NOT&lt;/strong&gt; 의미로 사용합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;1 != 5 // true
+1 !== &amp;quot;1&amp;quot; // true&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;동등/일치 연산자에 &lt;code class=&quot;language-text&quot;&gt;!&lt;/code&gt;를 붙여주면, 부동등 연산자는 값이 같지 않을 때, 불일치 연산자는 값과 타입이 모두 같지 않을 때 &lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt; 값을 리턴합니다.&lt;/p&gt;
+&lt;h4 id=&quot;대소-비교-연산자&quot; style=&quot;position:relative;&quot;&gt;대소 비교 연산자&lt;a href=&quot;#%EB%8C%80%EC%86%8C-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;대소 비교 연산자 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;수학 연산에서 쓰이는 기호와 같습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;1 &amp;gt;= 2 // false
+2 &amp;gt; 1 // true&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;삼항-연산자-ternary-operator&quot; style=&quot;position:relative;&quot;&gt;삼항 연산자 (Ternary Operator)&lt;a href=&quot;#%EC%82%BC%ED%95%AD-%EC%97%B0%EC%82%B0%EC%9E%90-ternary-operator&quot; aria-label=&quot;삼항 연산자 ternary operator permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;삼항 연산자는 자바스크립트에서 유일하게 &lt;strong&gt;3개의 피연산자&lt;/strong&gt;를 가지는 연산자입니다.&lt;/p&gt;
+&lt;p&gt;삼항 연산자는 조건식의 평가에 따라 반환되는 값이 달라집니다.&lt;/p&gt;
+&lt;p&gt;삼항 연산자를 세 부분으로 나누어 살펴보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/191170567-ccb8f67f-0b77-40d8-8199-7a73eabe51de.png&quot; alt=&quot;삼항연산자&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;?&lt;/code&gt; 전까지는 조건식이 들어갑니다. 조건식의 결과는 Boolean 타입으로 평가되고, 만약 Boolean 타입이 아니라면 암묵적인 형변환을 통해 그 값을 Boolean으로 변환합니다.&lt;/p&gt;
+&lt;p&gt;만약 조건식이 &lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt;라면 &lt;code class=&quot;language-text&quot;&gt;?&lt;/code&gt; 뒤의 값이, &lt;code class=&quot;language-text&quot;&gt;false&lt;/code&gt;라면 &lt;code class=&quot;language-text&quot;&gt;:&lt;/code&gt; 뒤의 값이 삼항연산자의 값으로 평가됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;function isAdult(age) {
+  return age &amp;gt; 19 ? &amp;quot;You are an adult!&amp;quot; : &amp;quot;You are too young...&amp;quot;
+}
+
+isAdult(15) // &amp;#39;You are too young...&amp;#39;
+
+isAdult(24) // You are an adult!&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;삼항 연산자는 &lt;code class=&quot;language-text&quot;&gt;if...else&lt;/code&gt;문과 비슷하다고 생각할 수 있는데요. 유의해야 할 차이점이 있습니다. &lt;code class=&quot;language-text&quot;&gt;if...else&lt;/code&gt;는 &lt;strong&gt;조건문&lt;/strong&gt;이고, 삼항 연산자는 &lt;strong&gt;표현식&lt;/strong&gt;이란 점입니다.&lt;/p&gt;
+&lt;p&gt;이전 글에서 값, 식, 문의 차이를 알아보며 문은 변수에 할당할 수 없지만, 표현식은 값으로 평가되어 할당할 수 있다고 설명한 바가 있습니다. 따라서 값처럼 사용할 수 있는 삼항 연산자는 무척 유용합니다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;논리-연산자-logical-operator&quot; style=&quot;position:relative;&quot;&gt;논리 연산자 (Logical Operator)&lt;a href=&quot;#%EB%85%BC%EB%A6%AC-%EC%97%B0%EC%82%B0%EC%9E%90-logical-operator&quot; aria-label=&quot;논리 연산자 logical operator permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;논리 연산자는 우항과 좌항의 피연산자를 논리적으로 연산합니다.&lt;/p&gt;
+&lt;p&gt;논리적으로 연산한다는 말이 조금 어렵게 느껴집니다. 간단하게 Boolean 연산이라고 생각하면 됩니다. 논리연산은 &lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;false&lt;/code&gt;만 존재하는 연산입니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;연산자&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;th&gt;의미&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;||&lt;/td&gt;
+&lt;td&gt;논리합(OR)&lt;/td&gt;
+&lt;td&gt;피연산자 중 하나라도 true이면 true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;#x26;&amp;#x26;&lt;/td&gt;
+&lt;td&gt;논리곱(AND)&lt;/td&gt;
+&lt;td&gt;피연산자 모두 true여야 true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;!&lt;/td&gt;
+&lt;td&gt;논리부정(NOT)&lt;/td&gt;
+&lt;td&gt;피연산자의 값을 반전한 값 반환&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;이렇게만 봐서는 좀 어렵습니다. 예제를 함께 살펴보겠습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 논리합 (||)
+true || true // true
+true || false // true
+false || true // true
+false || false // false
+
+// 논리곱(&amp;amp;&amp;amp;)
+true &amp;amp;&amp;amp; true // true
+true &amp;amp;&amp;amp; false // false
+false &amp;amp;&amp;amp; true // false
+false &amp;amp;&amp;amp; false // false
+
+// 부정 (!)
+!true // false
+!false // true&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;논리 부정 연산자(!)는 항상 Boolean값으로 반환되는데, 피연산자의 값이 Boolean이 아니면 Boolean 값으로 암묵적 형변환하여 평가합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;console.log(!0) // true
+console.log(!&amp;quot;Any String&amp;quot;) // false&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;논리 곱 연산자(&amp;#x26;&amp;#x26;)는 늘 2개의 피연산자 중 하나로 평가됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;console.log(&amp;quot;Apple&amp;quot; &amp;amp;&amp;amp; &amp;quot;Banana&amp;quot;) // Banana&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;typeof&quot; style=&quot;position:relative;&quot;&gt;typeof&lt;a href=&quot;#typeof&quot; aria-label=&quot;typeof permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;typeof 연산자는 이름에서 알 수 있듯 피연산자의 타입을 문자열로 반환합니다.&lt;/p&gt;
+&lt;p&gt;typeof 연산자가 반환하는 값의 종류는 다음과 같습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;string&lt;/li&gt;
+&lt;li&gt;number&lt;/li&gt;
+&lt;li&gt;boolean&lt;/li&gt;
+&lt;li&gt;undefined&lt;/li&gt;
+&lt;li&gt;symbol&lt;/li&gt;
+&lt;li&gt;object&lt;/li&gt;
+&lt;li&gt;function&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;사실 typeof 로 검사해도 우리가 원하는 타입과 정확히 맞아떨어지는 결과가 반환되지만은 않습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;typeof &amp;quot;&amp;quot; // string (null 예상)
+typeof NaN // number
+typeof null // object
+typeof [] // object
+typeof new Date() // object&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;조금 이상하죠? 특히 &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt;을 검사했는데 object로 넘기는 건 정말 이상합니다. 이건 자바스크립트의 버그입니다. 하지만 기존에 이미 작성된 코드와의 호환을 위해 의도적으로 남긴 버그입니다.&lt;/p&gt;
+&lt;p&gt;따라서 null을 체크할 때에는 &lt;code class=&quot;language-text&quot;&gt;===&lt;/code&gt;일치 연산자를 사용하는 것이 좋습니다.&lt;/p&gt;
+&lt;p&gt;ES6 이후 자바스크립트 스펙에서 추가된 연산자들은 추후 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;다음 글에서는 제어문에 대해 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-value-expression-statement&quot;&gt;값, 식, 문&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
+◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-control-flow-statement-conditional&quot;&gt;제어문(1) - 조건문&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[UX - 목표 지향 디자인]]></title><description><![CDATA[사용자를 만족시키면 서비스는 성공한다 모든 서비스가 쉽게 성공하지 못하는 이유는, 제품기획과 개발 프로세스의 근본적이고 동등한 부분으로 디자인이 존재하지 않기 때문이다. 빅터 파파넥에 따르면, 디자인(Design…]]></description><link>https://yeony99.github.io/tech/ux-goal-directed-design</link><guid isPermaLink="false">https://yeony99.github.io/tech/ux-goal-directed-design</guid><pubDate>Tue, 27 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;사용자를-만족시키면-서비스는-성공한다&quot; style=&quot;position:relative;&quot;&gt;사용자를 만족시키면 서비스는 성공한다&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90%EB%A5%BC-%EB%A7%8C%EC%A1%B1%EC%8B%9C%ED%82%A4%EB%A9%B4-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%8A%94-%EC%84%B1%EA%B3%B5%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;사용자를 만족시키면 서비스는 성공한다 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;모든 서비스가 쉽게 성공하지 못하는 이유는, 제품기획과 개발 프로세스의 근본적이고 동등한 부분으로 디자인이 존재하지 않기 때문이다.&lt;/p&gt;
+&lt;p&gt;빅터 파파넥에 따르면, 디자인(Design)이란 &lt;strong&gt;직관적이고 의미있는 질서를 부여하는 과정&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;h3 id=&quot;인간-중심-디자인&quot; style=&quot;position:relative;&quot;&gt;인간 중심 디자인&lt;a href=&quot;#%EC%9D%B8%EA%B0%84-%EC%A4%91%EC%8B%AC-%EB%94%94%EC%9E%90%EC%9D%B8&quot; aria-label=&quot;인간 중심 디자인 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;제품 사용자의 요구와 니즈, 동기, 정황을 이해하는 과정&lt;/li&gt;
+&lt;li&gt;사업 측면과 기술 측면의 요구사항과 제약, 시장 기회를 파악하는 과정&lt;/li&gt;
+&lt;li&gt;이 두 가지에 대한 이해를 바탕으로 기능, 사용성, 경제성, 기술적 측면에서도 성공적인 제품을 디자인하는 과정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;올바른 방법론을 적용한 디자인은 사용자에게 좀 더 가깝게 다가간다.&lt;/p&gt;
+&lt;h4 id=&quot;디지털-제품이-엉터리인-이유&quot; style=&quot;position:relative;&quot;&gt;디지털 제품이 엉터리인 이유&lt;a href=&quot;#%EB%94%94%EC%A7%80%ED%84%B8-%EC%A0%9C%ED%92%88%EC%9D%B4-%EC%97%89%ED%84%B0%EB%A6%AC%EC%9D%B8-%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;디지털 제품이 엉터리인 이유 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;현재 디자인 프로세스에서 잘못된 부분&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;제품 관리와 개발 팀 간의 잘못된 우선순위&lt;/li&gt;
+&lt;li&gt;제품의 실사용자와, 성공의 기준선이 되는 니즈에 관한 무지&lt;/li&gt;
+&lt;li&gt;사용자 경험 디자인과 구축을 개발 팀이 책임질 때의 이해관계 충돌&lt;/li&gt;
+&lt;li&gt;최종 경험의 개발을 주도하기 위해 수집, 분석, 사용할 니즈 관련 지식을 허용하는 디자인 프로세스 부족&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;잘못된 우선순위&lt;/h5&gt;
+&lt;p&gt;시장 설문 조사로 사용자 니즈를 파악하기는 어렵다.&lt;br&gt;
+원하는 바를 명쾌하게 설명할 수 있는 사용자는 극히 드물고, 마음 속 깊이 내재된 니즈보다는 표면적인 기능이나 오류에만 초점을 맞춘다.&lt;/p&gt;
+&lt;p&gt;서비스 디자인 프로세스에서 &lt;strong&gt;사용자의 목표, 니즈, 동기&lt;/strong&gt; 같은 중요한 정보는 종종 무시된다. 니즈를 고려하지 않은 서비스는 사용자 경험을 망친다.&lt;/p&gt;
+&lt;p&gt;사용자를 만족시키려면 인터랙션 디자인은 반드시 &lt;strong&gt;개발과 QA 이전&lt;/strong&gt;에 진행해야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/191703007-a3c15b2d-013f-455c-b987-569d17ee209d.png&quot; alt=&quot;목표 지향 디자인 방법론&quot;&gt;&lt;/p&gt;
+&lt;h5&gt;사용자에 대한 무지&lt;/h5&gt;
+&lt;p&gt;사용자의 정보를 수집해도 제품 디자인에 유효한 정보는 거의 없다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;제품을 활용해 사용자가 성취하고자 하는 바&lt;/li&gt;
+&lt;li&gt;경쟁사 제품 대신 선택한 이유&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이러한 정보를 알아내 사용자의 니즈를 깊이 이해해야 한다.&lt;/p&gt;
+&lt;h5&gt;디자인 방법론의 부재&lt;/h5&gt;
+&lt;p&gt;디지털 제품의 인터랙션은 제작 과정 초기에 미리 계획해야 한다.&lt;/p&gt;
+&lt;p&gt;사용자의 참여가 인터페이스 디자인에 도움을 주고 있지만, 한계가 있다. 사용자는 현재 버전의 문제점을 짚어낼 수 있을지 모르지만, 적절한 해결책을 제시하기는 어렵다.&lt;/p&gt;
+&lt;h5&gt;성공적인 디지털 제품에 필요한 3요소&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 만족도&lt;/li&gt;
+&lt;li&gt;판매 가능성&lt;/li&gt;
+&lt;li&gt;구현 가능성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;사용자-목표-탐색&quot; style=&quot;position:relative;&quot;&gt;사용자 목표 탐색&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%AA%A9%ED%91%9C-%ED%83%90%EC%83%89&quot; aria-label=&quot;사용자 목표 탐색 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;사용자 개인적 목표를 만족시키면 사업적 목표도 달성되는 경우가 많다.&lt;/p&gt;
+&lt;p&gt;사용자를 만족시키지 못하는 제품의 특징은 이러하다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 스스로 멍청하다고 생각하게 만든다.&lt;/li&gt;
+&lt;li&gt;사용자가 실수하도록 유도한다.&lt;/li&gt;
+&lt;li&gt;효율적으로 사용하려면 너무 많은 노력이 요구된다.&lt;/li&gt;
+&lt;li&gt;훌륭한 사용자 경험을 제공하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;목표와-과업&quot; style=&quot;position:relative;&quot;&gt;목표와 과업&lt;a href=&quot;#%EB%AA%A9%ED%91%9C%EC%99%80-%EA%B3%BC%EC%97%85&quot; aria-label=&quot;목표와 과업 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div style=&quot;background-color: #eee; border-radius: 1rem; font-size: 0.9rem; padding: 1rem&quot;&gt;사용자의 목표 ≠ 과업&lt;/div&gt;
+&lt;br/&gt;
+&lt;ul&gt;
+&lt;li&gt;목표 : 사용자가 이루고자 하는 기대치&lt;/li&gt;
+&lt;li&gt;업무 : 사용자가 목표를 성취하려고 밟아가는 중간 과정(과업의 모음)&lt;/li&gt;
+&lt;li&gt;과업 : 액션의 모음&lt;/li&gt;
+&lt;li&gt;액션 : 세부 기능을 조작하는 행위&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;도널드 노먼은 &lt;strong&gt;과업 중심 디자인이 적절치 않다&lt;/strong&gt;고 지적했다.&lt;/p&gt;
+&lt;p&gt;과업 중심 디자인은 사용자가 &lt;strong&gt;왜&lt;/strong&gt; 이런 행동을 했는지, &lt;strong&gt;왜&lt;/strong&gt; 이 과업과 업무를 완료하려 했는지를 설명하지 않기 때문이다.&lt;/p&gt;
+&lt;div style=&quot;background-color: #eee; border-radius: 1rem; font-size: 0.9rem; padding: 1rem&quot;&gt;
+  &lt;h6&gt;❗ 목표와 과업의 차이&lt;/h6&gt;
+  - 사용자의 목표는 마음 속 깊은 곳에서 우러나온다. 시간이 지나도 변하지 않는다. &lt;br/&gt;
+  - 과업과 업무는 시간에 따라 달라진다.
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;h4 id=&quot;정황을-고려한-디자인&quot; style=&quot;position:relative;&quot;&gt;정황을 고려한 디자인&lt;a href=&quot;#%EC%A0%95%ED%99%A9%EC%9D%84-%EA%B3%A0%EB%A0%A4%ED%95%9C-%EB%94%94%EC%9E%90%EC%9D%B8&quot; aria-label=&quot;정황을 고려한 디자인 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;제품의 사용법을 시작 시 일일이 알려주는 제품이 있다면 초보자에게는 좋다. 다만 그 제품에 충분히 익숙해지고 난 뒤의 상황도 고려한다면, 사용법 안내가 오히려 짜증나는 디자인이 될 수도 있다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;구현-모델과-멘탈-모델&quot; style=&quot;position:relative;&quot;&gt;구현 모델과 멘탈 모델&lt;a href=&quot;#%EA%B5%AC%ED%98%84-%EB%AA%A8%EB%8D%B8%EA%B3%BC-%EB%A9%98%ED%83%88-%EB%AA%A8%EB%8D%B8&quot; aria-label=&quot;구현 모델과 멘탈 모델 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;구현 모델 : 컴퓨터 코드를 바탕으로 프로그램이 구현되는 과정
+&lt;ul&gt;
+&lt;li&gt;모든 기능마다 버튼을 하나씩 맵핑하면 구현이 된 것.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;멘탈 모델 : 사용자가 제품을 이해하는 방식
+&lt;ul&gt;
+&lt;li&gt;유선 전화와 휴대폰은 전혀 다른 구현 방식이지만 사용자는 이를 인지하지 않고 사용.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;표현-모델&quot; style=&quot;position:relative;&quot;&gt;표현 모델&lt;a href=&quot;#%ED%91%9C%ED%98%84-%EB%AA%A8%EB%8D%B8&quot; aria-label=&quot;표현 모델 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;사용자에게 중요하지 않은 정보를 뒤편으로 보내버리는 것.&lt;/p&gt;
+&lt;p&gt;실제 구현방식과는 다르게 제품이 작동하는 방법을 &lt;strong&gt;쉽게 표현&lt;/strong&gt;하는 모델이다. 예시로 공유폴더와 하드디스크의 폴더는 작동방식이 완전히 다르지만, 보여질 때는 유사한 모양의 폴더로 보인다.&lt;/p&gt;
+&lt;p&gt;표현모델이 멘탈모델과 유사할수록 프로그램을 쉽게 사용할 수 있어 사용자에게 유리하다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;목표-지향-디자인-프로세스&quot; style=&quot;position:relative;&quot;&gt;목표 지향 디자인 프로세스&lt;a href=&quot;#%EB%AA%A9%ED%91%9C-%EC%A7%80%ED%96%A5-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4&quot; aria-label=&quot;목표 지향 디자인 프로세스 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;리서치 : 사용자 및 프로젝트 전문 분야&lt;/li&gt;
+&lt;li&gt;사용자 모델 : 사용자 및 시나리오, 정황&lt;/li&gt;
+&lt;li&gt;요구사항 도출 : 구체적인 사용자 니즈, 사업 요구사항, 기술 제약사항&lt;/li&gt;
+&lt;li&gt;디자인 설계 : 화면 레이아웃, UI 구조와 흐름&lt;/li&gt;
+&lt;li&gt;수정 : 인터랙션, 인터페이스, 컨텐츠&lt;/li&gt;
+&lt;li&gt;관리 : 개발 지원&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;리서치&quot; style=&quot;position:relative;&quot;&gt;리서치&lt;a href=&quot;#%EB%A6%AC%EC%84%9C%EC%B9%98&quot; aria-label=&quot;리서치 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;사용자를 이해하는데 필요한 자료를 수집한다. 사용자는 제품의 실사용자와 잠재 고객을 모두 포함한다.
+사용자의 행동패턴을 파악해 적절한 퍼소나(페르소나)를 설계한다.
+&lt;br/&gt;&lt;/p&gt;
+&lt;h3 id=&quot;사용자-모델&quot; style=&quot;position:relative;&quot;&gt;사용자 모델&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%AA%A8%EB%8D%B8&quot; aria-label=&quot;사용자 모델 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;행동 패턴과 업무 흐름 파악이 중요하다. 리서치 단계에서 관찰한 사용자의 행동, 태도, 적성, 목표, 동기를 담은 페르소나를 만든다.&lt;/p&gt;
+&lt;p&gt;여러 개의 페르소나를 제작한 뒤, 중요도에 따라 대표 페르소나와 부가적 페르소나를 구분한다.
+&lt;br/&gt;&lt;/p&gt;
+&lt;h3 id=&quot;요구사항-도출&quot; style=&quot;position:relative;&quot;&gt;요구사항 도출&lt;a href=&quot;#%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD-%EB%8F%84%EC%B6%9C&quot; aria-label=&quot;요구사항 도출 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;사용자 모델과 디자인을 부드럽게 연결하는 것이 중요하다.&lt;/p&gt;
+&lt;p&gt;대표 페르소나를 만족시키는 인터페이스를 설계하려면 페르소나가 원하는 기능을 분석해야 한다. 사용자에게 필요한 인터페이스와 기능을 생각해, 페르소나의 &lt;strong&gt;하루 일상&lt;/strong&gt;을 그리는 것에서 시작한다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;디자인-설계&quot; style=&quot;position:relative;&quot;&gt;디자인 설계&lt;a href=&quot;#%EB%94%94%EC%9E%90%EC%9D%B8-%EC%84%A4%EA%B3%84&quot; aria-label=&quot;디자인 설계 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;제품의 구체적인 컨셉을 결정한다.&lt;/p&gt;
+&lt;p&gt;기본적인 기능, 인터랙션을 결정하고, 인터페이스, 시각적인 요소 등까지 결정할 수도 있다.&lt;/p&gt;
+&lt;p&gt;인터랙션 설계 시 효과적인 접근 방식은 1. 인터랙션 디자인 원칙 적용 2. 인터랙션 디자인 패턴 적용 2가지가 있다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;수정&quot; style=&quot;position:relative;&quot;&gt;수정&lt;a href=&quot;#%EC%88%98%EC%A0%95&quot; aria-label=&quot;수정 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;사용자의 과업이 일관되게 흘러가는지 점검한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;주요 경로 시나리오&lt;/strong&gt; 와 &lt;strong&gt;점검 시나리오&lt;/strong&gt;를 바탕으로 스토리보드에 문제가 없는지 인터페이스를 살펴본다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;디자인-원칙&quot; style=&quot;position:relative;&quot;&gt;디자인 원칙&lt;a href=&quot;#%EB%94%94%EC%9E%90%EC%9D%B8-%EC%9B%90%EC%B9%99&quot; aria-label=&quot;디자인 원칙 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;추측을 바탕으로 인터랙션을 디자인해서는 안된다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;디지털 제품을 디자인하는 과정에서 다음 질문에 대답할 수 있어야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자가 누구인가?&lt;/li&gt;
+&lt;li&gt;사용자가 무엇을 성취하고자 하는가?&lt;/li&gt;
+&lt;li&gt;사용자가 스스로 성취하고자 하는 목표에 대해 어떻게 생각하는가?&lt;/li&gt;
+&lt;li&gt;어떤 종류의 경험을 중요하게 생각하는가?&lt;/li&gt;
+&lt;li&gt;제품이 어떤 식으로 동작해야 하는가?&lt;/li&gt;
+&lt;li&gt;제품이 어떤 모습을 갖춰야 하는가?&lt;/li&gt;
+&lt;li&gt;사용자가 어떻게 제품과 상호작용하는가?&lt;/li&gt;
+&lt;li&gt;제품의 기능을 가장 효과적으로 구성하는 방법은 무엇인가?&lt;/li&gt;
+&lt;li&gt;처음 접하는 사용자에게 친근한 제품을 디자인하는 방법은 무엇인가?&lt;/li&gt;
+&lt;li&gt;제품의 기술을 바탕으로 이해와 조작이 쉽고 매력적인 인터페이스를 설계하려면 어떻게 해야하는가?&lt;/li&gt;
+&lt;li&gt;제품을 사용하면서 접하는 문제를 어떻게 해결할 수 있는가?&lt;/li&gt;
+&lt;li&gt;제품을 자주 사용하지 않거나 조작이 미숙한 사용자도 쉽게 이해하고 목표를 빠르게 달성하려면 어떻게 해야 하는가?&lt;/li&gt;
+&lt;li&gt;전문 사용자에게도 충분한 고급 기능을 제공하려면 어떻게 해야 하는가?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;Reference&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;About Face 4&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Flutter] Constraints 이해하기]]></title><description><![CDATA[Constraints란? 어떤 프로그래밍이든 제약조건이 있습니다. 실생활에 지켜야 할 법이 있듯이 프로그래밍에서도 규칙을 지키도록 강제해놓은 것이죠. Flutter…]]></description><link>https://yeony99.github.io/tech/flutter-understanding-constraints</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-understanding-constraints</guid><pubDate>Fri, 23 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;constraints란&quot; style=&quot;position:relative;&quot;&gt;Constraints란?&lt;a href=&quot;#constraints%EB%9E%80&quot; aria-label=&quot;constraints란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;어떤 프로그래밍이든 &lt;strong&gt;제약조건&lt;/strong&gt;이 있습니다. 실생활에 지켜야 할 법이 있듯이 프로그래밍에서도 규칙을 지키도록 강제해놓은 것이죠.&lt;/p&gt;
 &lt;p&gt;Flutter도 마찬가지입니다. 일반적으로 많은 개발자가 가장 먼저 접하는 웹, &lt;code class=&quot;language-text&quot;&gt;HTML&lt;/code&gt;과는 다른 방식으로 움직이기 때문에 다른 Constraints를 가지고 있습니다.&lt;/p&gt;
 &lt;br/&gt;
@@ -69,9 +554,9 @@
 &lt;p&gt;먼저 객체를 만들고 그 객체의 Proxy 객체를 만들어봅시다.&lt;/p&gt;
 &lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
           &lt;code slot=&quot;code&quot;&gt;const person = {
-  name: &amp;#39;yeony&amp;#39;,
+  name: &amp;quot;yeony&amp;quot;,
   age: 24,
-  job: &amp;#39;frontend developer&amp;#39;
+  job: &amp;quot;frontend developer&amp;quot;,
 }
 
 //Proxy 객체
@@ -93,9 +578,9 @@ const personProxy = new Proxy(person, {})&lt;/code&gt;
 &lt;/ul&gt;
 &lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
           &lt;code slot=&quot;code&quot;&gt;const person = {
-  name: &amp;#39;yeony&amp;#39;,
+  name: &amp;quot;yeony&amp;quot;,
   age: 24,
-  job: &amp;#39;frontend developer&amp;#39;
+  job: &amp;quot;frontend developer&amp;quot;,
 }
 
 //Proxy 객체
@@ -110,7 +595,7 @@ const personProxy = new Proxy(person, {
   },
 })
 
-personProxy.name = &amp;#39;Nayeon&amp;#39;&lt;/code&gt;
+personProxy.name = &amp;quot;Nayeon&amp;quot;&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;이렇게 되면 &lt;code class=&quot;language-text&quot;&gt;personProxy&lt;/code&gt;를 통해 &lt;code class=&quot;language-text&quot;&gt;person&lt;/code&gt;객체가 수정됩니다.&lt;/p&gt;
 &lt;h3 id=&quot;유효성-검사&quot; style=&quot;position:relative;&quot;&gt;유효성 검사&lt;a href=&quot;#%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%82%AC&quot; aria-label=&quot;유효성 검사 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
@@ -118,7 +603,6 @@ personProxy.name = &amp;#39;Nayeon&amp;#39;&lt;/code&gt;
 &lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
           &lt;code slot=&quot;code&quot;&gt;const personProxy = new Proxy(person, {
   get: (obj, prop) =&amp;gt; {
-
     // 원본 person 객체에 key가 존재하지 않으면 접근할 수 없도록 방지
     if (!obj[prop]) {
       console.log(
@@ -129,11 +613,10 @@ personProxy.name = &amp;#39;Nayeon&amp;#39;&lt;/code&gt;
     }
   },
   set: (obj, prop, value) =&amp;gt; {
-
     // 타입이나 제약을 추가하여 변경 시 안정성 보장
-    if (prop === &amp;#39;age&amp;#39; &amp;amp;&amp;amp; typeof value !== &amp;#39;number&amp;#39;) {
+    if (prop === &amp;quot;age&amp;quot; &amp;amp;&amp;amp; typeof value !== &amp;quot;number&amp;quot;) {
       console.log(`Sorry, you can only pass numeric values for age.`)
-    } else if (prop === &amp;#39;name&amp;#39; &amp;amp;&amp;amp; value.length &amp;lt; 2) {
+    } else if (prop === &amp;quot;name&amp;quot; &amp;amp;&amp;amp; value.length &amp;lt; 2) {
       console.log(`You need to provide a valid name.`)
     } else {
       console.log(`Changed ${prop} from ${obj[prop]} to ${value}.`)
@@ -158,7 +641,6 @@ const personProxy = new Proxy(person, {
     obj[prop] = value
   },
 })
-
 
 // Reflect 사용
 const personProxy = new Proxy(person, {
@@ -217,10 +699,10 @@ const personProxy = new Proxy(person, {
         &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;RichText&lt;/code&gt; 안에 들어가는 여러 개의 텍스트들은 &lt;code class=&quot;language-text&quot;&gt;TextSpan&lt;/code&gt;을 사용해 보여집니다.&lt;/p&gt;
 &lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-layout-widget&quot;&gt;[Flutter] Layout Widget 정리&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
-◾ &lt;a href=&quot;/tech/flutter-understanding-constraints&quot;&gt;[Flutter] Constraints 이해하기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (9) - 값, 식, 문]]></title><description><![CDATA[…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</guid><pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;값-식-문&quot; style=&quot;position:relative;&quot;&gt;값, 식, 문&lt;a href=&quot;#%EA%B0%92-%EC%8B%9D-%EB%AC%B8&quot; aria-label=&quot;값 식 문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+◾ &lt;a href=&quot;/tech/flutter-understanding-constraints&quot;&gt;[Flutter] Constraints 이해하기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (9) - 값, 식, 문]]></title><description><![CDATA[값, 식, 문 값을 할당한다 라는 말을 이전 글에서 자주 사용했습니다. 값은 무엇일까요? 자바스크립트 뿐 아니라 값은 프로그래밍 전반에서 사용하는 용어입니다. 값(value)과 식(expression), 문(statement…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</guid><pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;값-식-문&quot; style=&quot;position:relative;&quot;&gt;값, 식, 문&lt;a href=&quot;#%EA%B0%92-%EC%8B%9D-%EB%AC%B8&quot; aria-label=&quot;값 식 문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;값을 할당한다&lt;/strong&gt; 라는 말을 이전 글에서 자주 사용했습니다.&lt;/p&gt;
 &lt;p&gt;값은 무엇일까요? 자바스크립트 뿐 아니라 값은 프로그래밍 전반에서 사용하는 용어입니다.&lt;/p&gt;
-&lt;p&gt;값과 식, 문의 차이에 대해서 알아봅시다.&lt;/p&gt;
+&lt;p&gt;값(value)과 식(expression), 문(statement)의 차이에 대해서 알아봅시다.&lt;/p&gt;
 &lt;h3 id=&quot;값&quot; style=&quot;position:relative;&quot;&gt;값&lt;a href=&quot;#%EA%B0%92&quot; aria-label=&quot;값 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;먼저 값부터 알아봅니다.&lt;/p&gt;
 &lt;p&gt;값은 식(=표현식, expression)이 평가되고 생성된 결과&lt;strong&gt;값&lt;/strong&gt;입니다.&lt;/p&gt;
@@ -1900,8 +2382,8 @@ Type &amp;quot;.help&amp;quot; for more information.
         &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;REPL을 종료할 때는 &lt;code class=&quot;language-text&quot;&gt;ctrl + C&lt;/code&gt;를 두 번 눌러주면 됩니다.&lt;/p&gt;
 &lt;p&gt;다음 글에서는 본격적으로 자바스크립트 문법을 알아보도록 하겠습니다.&lt;/p&gt;
-&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-setting-vscode/&quot;&gt;VSCode로 간단하게 구축하는 JavaScript 개발환경&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;
-&lt;!-- ◾ [자바스크립트 자료형](/tech/let-me-know-js-a-bit-js-data-type) 👈 다음 글 보기 --&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (3) - VSCode로 간단하게 구축하는 JavaScript 개발환경]]></title><description><![CDATA[VSCode 설치 앞서 개발자 도구에서 자바스크립트를 사용해봤는데요. 코딩은 메모장으로도 가능하지만, 에디터가 있으면 보다 수월하게 사용할 수 있습니다. 각종 IDE 등 개발 툴이 많이 있지만, 여기서는 마이크로소프트가 만든 Visual Studio…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-setting-vscode/</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-setting-vscode/</guid><pubDate>Wed, 10 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;vscode-설치&quot; style=&quot;position:relative;&quot;&gt;VSCode 설치&lt;a href=&quot;#vscode-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;vscode 설치 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-setting-vscode/&quot;&gt;VSCode로 간단하게 구축하는 JavaScript 개발환경&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
+◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-data-type&quot;&gt;자바스크립트 자료형&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (3) - VSCode로 간단하게 구축하는 JavaScript 개발환경]]></title><description><![CDATA[VSCode 설치 앞서 개발자 도구에서 자바스크립트를 사용해봤는데요. 코딩은 메모장으로도 가능하지만, 에디터가 있으면 보다 수월하게 사용할 수 있습니다. 각종 IDE 등 개발 툴이 많이 있지만, 여기서는 마이크로소프트가 만든 Visual Studio…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-setting-vscode/</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-setting-vscode/</guid><pubDate>Wed, 10 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;vscode-설치&quot; style=&quot;position:relative;&quot;&gt;VSCode 설치&lt;a href=&quot;#vscode-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;vscode 설치 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;앞서 개발자 도구에서 자바스크립트를 사용해봤는데요.&lt;/p&gt;
 &lt;p&gt;코딩은 메모장으로도 가능하지만, 에디터가 있으면 보다 수월하게 사용할 수 있습니다. 각종 IDE 등 개발 툴이 많이 있지만, 여기서는 마이크로소프트가 만든 Visual Studio Code라는 소스 편집기를 사용하도록 하겠습니다.&lt;/p&gt;
 &lt;h3 id=&quot;windows&quot; style=&quot;position:relative;&quot;&gt;Windows&lt;a href=&quot;#windows&quot; aria-label=&quot;windows permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
