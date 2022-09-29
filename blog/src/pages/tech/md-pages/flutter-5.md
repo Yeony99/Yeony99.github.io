@@ -90,3 +90,4 @@ Center(
 3. 위치를 지정하는 것은 부모 위젯
 
 ◾ [[Flutter] Text Widget 사용하기](/tech/flutter-text-widget) 👈 이전 글 보기
+◾ [[Flutter] 다양한 위젯 사용하기](/tech/flutter-use-several-widgets) 👈 이전 글 보기

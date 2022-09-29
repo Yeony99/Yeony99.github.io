@@ -1,6 +1,6 @@
 ---
 title: "UX - 목표 지향 디자인"
-date: "2022-09-25"
+date: "2022-09-27"
 category: "tech"
 slug: "/tech/ux-goal-directed-design"
 # img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
