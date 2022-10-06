@@ -4,26 +4,36 @@ date: "2022-10-10"
 category: "tech"
 slug: "/tech/react-native-with-monorepo"
 # img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
-tags: 
- - "React/RN"
+tags:
+  - "React/RN"
 ---
+
 ## 들어가며
+
 React와 React Native를 공부하며 웹과 앱 간에 소스를 공유할 수 있으면 좋겠다는 생각이 들었습니다.
 flutter web도 고려사항에 있었지만, 고민 끝에 React와 RN으로 노선을 정했습니다.
 
-* 언어의 숙련도
-* 플랫폼에 관계없는 동일한 사용자 경험 제공
+- 언어의 숙련도
+- 플랫폼에 관계없는 동일한 사용자 경험 제공 (UX/UI 통일)
+- 소스 중복 최소화
 
 이 두 가지를 고려했습니다.
 
 요구사항이 추가될 수 있기 때문에, 언젠가 네이티브 코드 연동이 필요하지 않을까 싶어 expo는 고려하지 않았습니다.
+
+### 프로젝트
+
+[Yeony99 - react-native-monorepo](https://github.com/Yeony99/react-native-monorepo) 프로젝트를 본 글의 예시로 올려놓았습니다.
+
+`node_modules` 설치한 후 루트의 `package.json`의 scripts를 참고해 실행해볼 수 있습니다.
+
 <br/>
 
 ---
 
 ## Yarn workspace 모노레포 설정하기
 
-모바일과 웹 소스를 각각의 레포지토리로 만드는 멀티 레포도 괜찮을 것 같지만, 장기적으로 생각했을 때 하나의 레포지토리로 여러 패키지를 관리하는 것이 부담이 덜할 것이라 판단했습니다. 
+모바일과 웹 소스를 각각의 레포지토리로 만드는 멀티 레포도 괜찮을 것 같지만, 장기적으로 생각했을 때 하나의 레포지토리로 여러 패키지를 관리하는 것이 부담이 덜할 것이라 판단했습니다.
 
 웹과 앱에서 동일한 사용자 경험을 주고 싶기도 했구요. <br/>
 
@@ -56,6 +66,7 @@ yarn에서는 root 경로의 package.json 파일이 하위 폴더의 package.jso
         └── package.json
 └─ package.json
 ```
+
 <br/>
 
 ### yarn 설치
@@ -96,16 +107,14 @@ $ yarn init -y
   "main": "index.js",
   "license": "MIT",
   // 추가
-  "workspaces": { 
-    "packages": [
-      "packages/*"
-    ],
+  "workspaces": {
+    "packages": ["packages/*"],
     "nohoist": ["**/react", "**/react-dom"]
   }
 }
 ```
 
-workspaces 속 packages에는 yarn workspace에서 관리할 패키지 경로를 입력합니다.   
+workspaces 속 packages에는 yarn workspace에서 관리할 패키지 경로를 입력합니다.  
 `nohoist`는 루트 프로젝트 디렉토리가 아닌, 각 패키지 디렉토리에 설치되어야 한다고 yarn에 알려줍니다.
 
 그 후 packages 디렉토리를 생성합니다.
@@ -122,7 +131,6 @@ $ mkdir packages/app && cd packages/app
 
 app 디렉토리의 루트에서 **package.json**을 추가하고 아래와 같이 작성합니다.
 
-
 ```json
 // app의 package.json
 {
@@ -136,6 +144,7 @@ app 디렉토리의 루트에서 **package.json**을 추가하고 아래와 같�
   }
 }
 ```
+
 <br/>
 
 <div style="background-color: #eee; border-radius: 1rem; font-size: 0.9rem; padding: 1rem">
@@ -149,18 +158,13 @@ app 디렉토리의 루트에서 **package.json**을 추가하고 아래와 같�
 ```jsx
 // react-native-monorepo/packages/app/src/index.js
 
-import React from "react";
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import React from "react"
+import { Platform, StyleSheet, Text, View } from "react-native"
 
 export function App() {
   return (
     <View>
-     <Text style={styles.text}>Hello from React Native! </Text>
+      <Text style={styles.text}>Hello from React Native! </Text>
       <View style={styles.platformRow}>
         <Text style={styles.text}>Platform: </Text>
         <View style={styles.platformBackground}>
@@ -168,7 +172,7 @@ export function App() {
         </View>
       </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -193,16 +197,15 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     alignItems: "center",
   },
-});
+})
 
-export default App;
+export default App
 ```
 
 yarn workspace 덕분에 `@react-native-monorepo/app`을 다른 작업 공간에서도 사용할 수 있습니다.
 
-* `@react-native-monorepo/app`으로 dependencies에 표시
-* `import App from "@react-native-monorepo/app";`
-
+- `@react-native-monorepo/app`으로 dependencies에 표시
+- `import App from "@react-native-monorepo/app";`
 
 ### mobile 코드 생성
 
@@ -257,11 +260,11 @@ package.json에 패키지 이름을 바꾸고, `@react-native-monorepo/app` 종�
 React Native에서 제공하는 앱 템플릿 대신, `@react-native-monorepo/app`을 사용하도록 `packages/mobile/index.js`을 수정합니다.
 
 ```jsx
-import {AppRegistry} from 'react-native';
-import App from '@react-native-monorepo/app';
-import {name as appName} from './app.json';
+import { AppRegistry } from "react-native"
+import App from "@react-native-monorepo/app"
+import { name as appName } from "./app.json"
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => App)
 ```
 
 그리고 네이티브 코드를 실행해보기 전 nohoist에 react-native를 명시해야 제대로 실행됩니다.
@@ -274,10 +277,8 @@ AppRegistry.registerComponent(appName, () => App);
   "private": "true",
   "main": "index.js",
   "license": "MIT",
-  "workspaces": { 
-    "packages": [
-      "packages/*"
-    ],
+  "workspaces": {
+    "packages": ["packages/*"],
     "nohoist": [
       "**/react",
       "**/react-dom",
@@ -286,7 +287,6 @@ AppRegistry.registerComponent(appName, () => App);
     ]
   }
 }
-
 ```
 
 또한 workspace는 `"private": true`일 때만 작동하므로 private 옵션을 추가합니다.
@@ -304,12 +304,15 @@ metro 구성을 업데이트 합니다.
 
 ```javascript
 // react-native-monorepo/packages/mobile/metro.config.js
-const exclusionList = require("metro-config/src/defaults/exclusionList");
-const { getMetroTools, getMetroAndroidAssetsResolutionFix } = require("react-native-monorepo-tools");
+const exclusionList = require("metro-config/src/defaults/exclusionList")
+const {
+  getMetroTools,
+  getMetroAndroidAssetsResolutionFix,
+} = require("react-native-monorepo-tools")
 
-const monorepoMetroTools = getMetroTools();
+const monorepoMetroTools = getMetroTools()
 
-const androidAssetsResolutionFix = getMetroAndroidAssetsResolutionFix();
+const androidAssetsResolutionFix = getMetroAndroidAssetsResolutionFix()
 
 module.exports = {
   transformer: {
@@ -323,8 +326,8 @@ module.exports = {
   },
   server: {
     // ...and to the server middleware.
-    enhanceMiddleware: (middleware) => {
-      return androidAssetsResolutionFix.applyMiddleware(middleware);
+    enhanceMiddleware: middleware => {
+      return androidAssetsResolutionFix.applyMiddleware(middleware)
     },
   },
   // Add additional Yarn workspace package roots to the module map.
@@ -335,7 +338,7 @@ module.exports = {
     blockList: exclusionList(monorepoMetroTools.blockList),
     extraNodeModules: monorepoMetroTools.extraNodeModules,
   },
-};
+}
 ```
 
 ### 루트에 스크립트 추가
@@ -354,8 +357,33 @@ module.exports = {
 },
 ```
 
-에뮬레이터가 설치되어 있으면 잘 작동하는 걸 확인할 수 있습니다.
+#### ios 실행
 
+```bash
+# packages/mobile/ios
+$ pod install
+```
+
+만약 m1 유저라면
+
+```bash
+$ sudo arch -x86_64 gem install ffi
+$ arch -x86_64 pod install
+```
+
+위 명령어를 실행해 pod을 설치합니다.
+
+```bash
+# 루트
+$ yarn ios:start
+```
+
+#### android 실행
+
+```bash
+# 루트에서
+$ yarn android:start
+```
 
 ### web 코드 생성
 
@@ -397,17 +425,17 @@ $ cd web && yarn add react-native-web
 웹 프로젝트 내에서 React Native 앱을 사용하기 위해 `src/index.js`를 수정합니다.
 
 ```jsx
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import { App } from "@react-native-monorepo/app"; // 수정
+import React from "react"
+import ReactDOM from "react-dom"
+import "./index.css"
+import { App } from "@react-native-monorepo/app" // 수정
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById("root")
-);
+)
 ```
 
 CRA는 yarn workspace를 지원하지 않습니다. 따라서 외부 패키지를 가져올 수 있도록 craco를 설치합니다.
@@ -420,27 +448,30 @@ $ yarn add -D @craco/craco react-native-monorepo-tools
 
 ```javascript
 /* eslint-disable @typescript-eslint/no-var-requires */
-const path = require('path');
-const { getLoader, loaderByName } = require('@craco/craco');
+const path = require("path")
+const { getLoader, loaderByName } = require("@craco/craco")
 
-const absolutePath = path.join(__dirname, '../core');
+const absolutePath = path.join(__dirname, "../core")
 
 module.exports = {
   webpack: {
     alias: {},
     plugins: [],
-    configure: (webpackConfig) => {
-      const { isFound, match } = getLoader(webpackConfig, loaderByName('babel-loader'));
+    configure: webpackConfig => {
+      const { isFound, match } = getLoader(
+        webpackConfig,
+        loaderByName("babel-loader")
+      )
       if (isFound) {
         const include = Array.isArray(match.loader.include)
           ? match.loader.include
-          : [match.loader.include];
-        match.loader.include = include.concat[absolutePath];
+          : [match.loader.include]
+        match.loader.include = include.concat[absolutePath]
       }
-      return webpackConfig;
+      return webpackConfig
     },
   },
-};
+}
 ```
 
 그리고 `web/package.json`에서 script를 craco로 시작할 수 있도록 변경합니다.
@@ -460,7 +491,6 @@ module.exports = {
 
 마지막으로 프로젝트 루트에 있는 package.json의 scripts를 수정해줍니다.
 
-
 ```json
  "scripts": {
     "android:metro": "yarn workspace @react-native-monorepo/mobile start",
@@ -475,3 +505,13 @@ module.exports = {
 ```
 
 `yarn web:start`를 통해 실행할 수 있습니다.
+
+<br/>
+
+---
+
+## 참고
+
+[mmazzarolo/react-native-universal-monorepo](https://github.com/mmazzarolo/react-native-universal-monorepo)  
+[yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/)  
+[react native web](https://necolas.github.io/react-native-web/)
