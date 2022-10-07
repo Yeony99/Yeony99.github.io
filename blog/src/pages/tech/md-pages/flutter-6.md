@@ -317,3 +317,4 @@ SliverList는 child 목록으로 `SliverChildBuilderDelegate` 위젯을 이용�
 
 
 ◾ [[Flutter] Constraints 이해하기](/tech/flutter-understanding-constraints) 👈 이전 글 보기
+◾ [[Flutter] 다양한 버튼 사용하기](/tech/flutter-use-several-buttons) 👈 다음 글 보기
