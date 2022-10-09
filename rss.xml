@@ -1,4 +1,837 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 05 Oct 2022 02:23:51 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (11) - 자바스크립트 제어문(1) - 조건문]]></title><description><![CDATA[자바스크립트에서는 조건문, 반복문 등의 제어문(control flow statement…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-control-flow-statement-conditional</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-control-flow-statement-conditional</guid><pubDate>Wed, 05 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;자바스크립트에서는 조건문, 반복문 등의 제어문(control flow statement)이 있습니다. 제어문은 특정한 &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-control-flow-statement#%EC%BD%94%EB%93%9C%EB%B8%94%EB%A1%9D&quot;&gt;&lt;strong&gt;코드블록&lt;/strong&gt;&lt;/a&gt;을 조건에 따라 실행하거나, 반복실행합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 09 Oct 2022 14:03:11 GMT</lastBuildDate><item><title><![CDATA[리액트 네이티브 모노레포 프로젝트 구축하기]]></title><description><![CDATA[들어가며 React와 React Native를 공부하며 웹과 앱 간에 소스를 공유할 수 있으면 좋겠다는 생각이 들었습니다.
+flutter web도 고려사항에 있었지만, 고민 끝에 React와 RN…]]></description><link>https://yeony99.github.io/tech/react-native-with-monorepo</link><guid isPermaLink="false">https://yeony99.github.io/tech/react-native-with-monorepo</guid><pubDate>Mon, 10 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가며&quot; style=&quot;position:relative;&quot;&gt;들어가며&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0&quot; aria-label=&quot;들어가며 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;React와 React Native를 공부하며 웹과 앱 간에 소스를 공유할 수 있으면 좋겠다는 생각이 들었습니다.
+flutter web도 고려사항에 있었지만, 고민 끝에 React와 RN으로 노선을 정했습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;언어의 숙련도&lt;/li&gt;
+&lt;li&gt;플랫폼에 관계없는 동일한 사용자 경험 제공 (UX/UI 통일)&lt;/li&gt;
+&lt;li&gt;소스 중복 최소화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이 두 가지를 고려했습니다.&lt;/p&gt;
+&lt;p&gt;요구사항이 추가될 수 있기 때문에, 언젠가 네이티브 코드 연동이 필요하지 않을까 싶어 expo는 고려하지 않았습니다.&lt;/p&gt;
+&lt;h3 id=&quot;프로젝트&quot; style=&quot;position:relative;&quot;&gt;프로젝트&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8&quot; aria-label=&quot;프로젝트 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Yeony99/react-native-monorepo&quot;&gt;Yeony99 - react-native-monorepo&lt;/a&gt; 프로젝트를 본 글의 예시로 올려놓았습니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt; 설치한 후 루트의 &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;의 scripts를 참고해 실행해볼 수 있습니다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;yarn-workspace-모노레포-설정하기&quot; style=&quot;position:relative;&quot;&gt;Yarn workspace 모노레포 설정하기&lt;a href=&quot;#yarn-workspace-%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0&quot; aria-label=&quot;yarn workspace 모노레포 설정하기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;모바일과 웹 소스를 각각의 레포지토리로 만드는 멀티 레포도 괜찮을 것 같지만, 장기적으로 생각했을 때 하나의 레포지토리로 여러 패키지를 관리하는 것이 부담이 덜할 것이라 판단했습니다.&lt;/p&gt;
+&lt;p&gt;웹과 앱에서 동일한 사용자 경험을 주고 싶기도 했구요. &lt;br/&gt;&lt;/p&gt;
+&lt;h3 id=&quot;yarn-workspace&quot; style=&quot;position:relative;&quot;&gt;yarn workspace&lt;a href=&quot;#yarn-workspace&quot; aria-label=&quot;yarn workspace permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;yarn에서는 root 경로의 package.json 파일이 하위 폴더의 package.json에 정의된 dependencies를 &lt;code class=&quot;language-text&quot;&gt;yarn install&lt;/code&gt;로 한번에 설치할 수 있게 하는 &lt;a href=&quot;https://classic.yarnpkg.com/lang/en/docs/workspaces/&quot;&gt;workspace&lt;/a&gt; 설정이 가능합니다.&lt;/p&gt;
+&lt;p&gt;구성할 프로젝트 구조는 아래와 같습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;&amp;lt;root&amp;gt;/
+└─ packages/
+    ├── app/
+    │   ├── src/
+    │   └── package.json
+    # Android/iOS app configuration files and native code
+    ├── mobile/
+    │   ├── android/
+    │   ├── ios/
+    │   ├── app.json
+    │   ├── babel.config.js
+    │   ├── index.js
+    │   ├── metro.config.js
+    │   └── package.json
+    # Windows app configuration files and native code
+    └── web/
+        ├── public/
+        ├── src/
+        ├── carco.config.js
+        └── package.json
+└─ package.json&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;yarn-설치&quot; style=&quot;position:relative;&quot;&gt;yarn 설치&lt;a href=&quot;#yarn-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;yarn 설치 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;node가 설치되어 있다면 npm으로 설치합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ npm install -g yarn&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;node가 설치되어 있지 않다면 node부터 설치합니다.&lt;/p&gt;
+&lt;p&gt;그 외에도 homebrew, chocolatey 등을 이용해 설치할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;설치 완료 후 확인합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ yarn --version&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;프로젝트-생성&quot; style=&quot;position:relative;&quot;&gt;프로젝트 생성&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;프로젝트 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;원하는 프로젝트명으로 폴더를 하나 생성합니다. 저는 &lt;code class=&quot;language-text&quot;&gt;react-native-monorepo&lt;/code&gt;로 설정하였습니다. 여기가 프로젝트의 루트 디렉토리입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ yarn init -y&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;위 명령어로 package.json을 생성해줍니다. 생성된 package.json을 수정해봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 루트 package.json
+{
+  &amp;quot;name&amp;quot;: &amp;quot;react-native-monorepo&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;index.js&amp;quot;,
+  &amp;quot;license&amp;quot;: &amp;quot;MIT&amp;quot;,
+  // 추가
+  &amp;quot;workspaces&amp;quot;: {
+    &amp;quot;packages&amp;quot;: [&amp;quot;packages/*&amp;quot;],
+    &amp;quot;nohoist&amp;quot;: [&amp;quot;**/react&amp;quot;, &amp;quot;**/react-dom&amp;quot;]
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;workspaces 속 packages에는 yarn workspace에서 관리할 패키지 경로를 입력합니다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;nohoist&lt;/code&gt;는 루트 프로젝트 디렉토리가 아닌, 각 패키지 디렉토리에 설치되어야 한다고 yarn에 알려줍니다.&lt;/p&gt;
+&lt;p&gt;그 후 packages 디렉토리를 생성합니다.&lt;/p&gt;
+&lt;p&gt;pacakges 폴더로 &lt;code class=&quot;language-text&quot;&gt;cd packages&lt;/code&gt; 한 뒤 각각의 프로젝트를 생성해봅시다.&lt;/p&gt;
+&lt;h3 id=&quot;app-패키지-생성&quot; style=&quot;position:relative;&quot;&gt;app 패키지 생성&lt;a href=&quot;#app-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;app 패키지 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;공유될 React Native 코드를 담을 &lt;code class=&quot;language-text&quot;&gt;app&lt;/code&gt; 디렉토리를 생성해봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ mkdir packages/app &amp;amp;&amp;amp; cd packages/app&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;app 디렉토리의 루트에서 &lt;strong&gt;package.json&lt;/strong&gt;을 추가하고 아래와 같이 작성합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// app의 package.json
+{
+  &amp;quot;name&amp;quot;: &amp;quot;@react-native-monorepo/app&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.0&amp;quot;,
+  &amp;quot;private&amp;quot;: true,
+  &amp;quot;main&amp;quot;: &amp;quot;src&amp;quot;,
+  &amp;quot;peerDependencies&amp;quot;: {
+    &amp;quot;react&amp;quot;: &amp;quot;*&amp;quot;,
+    &amp;quot;react-native&amp;quot;: &amp;quot;*&amp;quot;
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;div style=&quot;background-color: #eee; border-radius: 1rem; font-size: 0.9rem; padding: 1rem&quot;&gt;
+  &lt;h6&gt;❗ peerDependencies 란?&lt;/h6&gt;
+  실제로 app 패키지 내부에서 import하지는 않지만, 패키지에 의존하는 각각의 앱들이 라이브러리 버전을 제공합니다.&lt;br/&gt;
+  app 패키지의 `peerDependencies`는 이후 생성할 mobile, web 앱으로부터 각각의 버전을 받게 됩니다.
+&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;src/index.js&lt;/code&gt;에 앱을 만들어봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;jsx&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// react-native-monorepo/packages/app/src/index.js
+
+import React from &amp;quot;react&amp;quot;
+import { Platform, StyleSheet, Text, View } from &amp;quot;react-native&amp;quot;
+
+export function App() {
+  return (
+    &amp;lt;View&amp;gt;
+      &amp;lt;Text style={styles.text}&amp;gt;Hello from React Native! &amp;lt;/Text&amp;gt;
+      &amp;lt;View style={styles.platformRow}&amp;gt;
+        &amp;lt;Text style={styles.text}&amp;gt;Platform: &amp;lt;/Text&amp;gt;
+        &amp;lt;View style={styles.platformBackground}&amp;gt;
+          &amp;lt;Text style={styles.platformValue}&amp;gt;{Platform.OS}&amp;lt;/Text&amp;gt;
+        &amp;lt;/View&amp;gt;
+      &amp;lt;/View&amp;gt;
+    &amp;lt;/View&amp;gt;
+  )
+}
+
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 28,
+    fontWeight: &amp;quot;600&amp;quot;,
+  },
+  platformRow: {
+    marginTop: 12,
+    flexDirection: &amp;quot;row&amp;quot;,
+    alignItems: &amp;quot;center&amp;quot;,
+  },
+  platformValue: {
+    fontSize: 28,
+    fontWeight: &amp;quot;500&amp;quot;,
+  },
+  platformBackground: {
+    backgroundColor: &amp;quot;#ececec&amp;quot;,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: &amp;quot;#d4d4d4&amp;quot;,
+    paddingHorizontal: 6,
+    borderRadius: 6,
+    alignItems: &amp;quot;center&amp;quot;,
+  },
+})
+
+export default App&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;yarn workspace 덕분에 &lt;code class=&quot;language-text&quot;&gt;@react-native-monorepo/app&lt;/code&gt;을 다른 작업 공간에서도 사용할 수 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;@react-native-monorepo/app&lt;/code&gt;으로 dependencies에 표시&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;import App from &quot;@react-native-monorepo/app&quot;;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;mobile-코드-생성&quot; style=&quot;position:relative;&quot;&gt;mobile 코드 생성&lt;a href=&quot;#mobile-%EC%BD%94%EB%93%9C-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;mobile 코드 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;React Native를 사용할 수 있게 되었으니 &lt;code class=&quot;language-text&quot;&gt;packages/mobile&lt;/code&gt;에 Android 와 iOS 네이티브 코드를 작성할 수 있도록 프로젝트를 생성해봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;# window
+$ cd packages &amp;amp;&amp;amp; npx react-native init MyApp &amp;amp;&amp;amp; move MyApp mobile
+
+# macOS
+$ cd packages &amp;amp;&amp;amp; npx react-native init MyApp &amp;amp;&amp;amp; mv MyApp mobile&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;package.json에 패키지 이름을 바꾸고, &lt;code class=&quot;language-text&quot;&gt;@react-native-monorepo/app&lt;/code&gt; 종속성을 추가합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// packages/mobile/package.json
+{
+  // 이름 수정
+  &amp;quot;name&amp;quot;: &amp;quot;@react-native-monorepo/mobile&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.1&amp;quot;,
+  &amp;quot;private&amp;quot;: true,
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;android&amp;quot;: &amp;quot;react-native run-android&amp;quot;,
+    &amp;quot;ios&amp;quot;: &amp;quot;react-native run-ios&amp;quot;,
+    &amp;quot;start&amp;quot;: &amp;quot;react-native start&amp;quot;,
+    &amp;quot;test&amp;quot;: &amp;quot;jest&amp;quot;,
+    &amp;quot;lint&amp;quot;: &amp;quot;eslint .&amp;quot;
+  },
+  &amp;quot;dependencies&amp;quot;: {
+    // 종속성 추가
+    &amp;quot;@react-native-monorepo/app&amp;quot;: &amp;quot;*&amp;quot;,
+    &amp;quot;react&amp;quot;: &amp;quot;18.1.0&amp;quot;,
+    &amp;quot;react-native&amp;quot;: &amp;quot;0.70.2&amp;quot;
+  },
+  &amp;quot;devDependencies&amp;quot;: {
+    &amp;quot;@babel/core&amp;quot;: &amp;quot;^7.12.9&amp;quot;,
+    &amp;quot;@babel/runtime&amp;quot;: &amp;quot;^7.12.5&amp;quot;,
+    &amp;quot;@react-native-community/eslint-config&amp;quot;: &amp;quot;^2.0.0&amp;quot;,
+    &amp;quot;babel-jest&amp;quot;: &amp;quot;^26.6.3&amp;quot;,
+    &amp;quot;eslint&amp;quot;: &amp;quot;^7.32.0&amp;quot;,
+    &amp;quot;jest&amp;quot;: &amp;quot;^26.6.3&amp;quot;,
+    &amp;quot;metro-react-native-babel-preset&amp;quot;: &amp;quot;0.72.3&amp;quot;,
+    &amp;quot;react-test-renderer&amp;quot;: &amp;quot;18.1.0&amp;quot;
+  },
+  &amp;quot;jest&amp;quot;: {
+    &amp;quot;preset&amp;quot;: &amp;quot;react-native&amp;quot;
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;React Native에서 제공하는 앱 템플릿 대신, &lt;code class=&quot;language-text&quot;&gt;@react-native-monorepo/app&lt;/code&gt;을 사용하도록 &lt;code class=&quot;language-text&quot;&gt;packages/mobile/index.js&lt;/code&gt;을 수정합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;jsx&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;import { AppRegistry } from &amp;quot;react-native&amp;quot;
+import App from &amp;quot;@react-native-monorepo/app&amp;quot;
+import { name as appName } from &amp;quot;./app.json&amp;quot;
+
+AppRegistry.registerComponent(appName, () =&amp;gt; App)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;그리고 네이티브 코드를 실행해보기 전 nohoist에 react-native를 명시해야 제대로 실행됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// react-native-monorepo/package.json
+{
+  &amp;quot;name&amp;quot;: &amp;quot;react-native-monorepo&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+  &amp;quot;private&amp;quot;: &amp;quot;true&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;index.js&amp;quot;,
+  &amp;quot;license&amp;quot;: &amp;quot;MIT&amp;quot;,
+  &amp;quot;workspaces&amp;quot;: {
+    &amp;quot;packages&amp;quot;: [&amp;quot;packages/*&amp;quot;],
+    &amp;quot;nohoist&amp;quot;: [
+      &amp;quot;**/react&amp;quot;,
+      &amp;quot;**/react-dom&amp;quot;,
+      &amp;quot;**/react-native&amp;quot;,
+      &amp;quot;**/react-native/**&amp;quot;
+    ]
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;또한 workspace는 &lt;code class=&quot;language-text&quot;&gt;&quot;private&quot;: true&lt;/code&gt;일 때만 작동하므로 private 옵션을 추가합니다.&lt;/p&gt;
+&lt;p&gt;nohoist는 수정할 때마다 &lt;code class=&quot;language-text&quot;&gt;yarn reset &amp;amp;&amp;amp; yarn&lt;/code&gt;명령어로 프로젝트 루트에서 실행해야 종속성을 다시 설치합니다.&lt;/p&gt;
+&lt;p&gt;아직 문제는 있습니다. 다른 디렉토리에 있는 걸 사용하려면 monorepo tool이 필요합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;# react-native-monorepo/packages/mobile
+$ yarn add -D react-native-monorepo-tools&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;metro 구성을 업데이트 합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// react-native-monorepo/packages/mobile/metro.config.js
+const exclusionList = require(&amp;quot;metro-config/src/defaults/exclusionList&amp;quot;)
+const {
+  getMetroTools,
+  getMetroAndroidAssetsResolutionFix,
+} = require(&amp;quot;react-native-monorepo-tools&amp;quot;)
+
+const monorepoMetroTools = getMetroTools()
+
+const androidAssetsResolutionFix = getMetroAndroidAssetsResolutionFix()
+
+module.exports = {
+  transformer: {
+    publicPath: androidAssetsResolutionFix.publicPath,
+    getTransformOptions: async () =&amp;gt; ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: true,
+      },
+    }),
+  },
+  server: {
+    // ...and to the server middleware.
+    enhanceMiddleware: middleware =&amp;gt; {
+      return androidAssetsResolutionFix.applyMiddleware(middleware)
+    },
+  },
+  // Add additional Yarn workspace package roots to the module map.
+  // This allows importing importing from all the project&amp;#39;s packages.
+  watchFolders: monorepoMetroTools.watchFolders,
+  resolver: {
+    // Ensure we resolve nohoist libraries from this directory.
+    blockList: exclusionList(monorepoMetroTools.blockList),
+    extraNodeModules: monorepoMetroTools.extraNodeModules,
+  },
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;루트에-스크립트-추가&quot; style=&quot;position:relative;&quot;&gt;루트에 스크립트 추가&lt;a href=&quot;#%EB%A3%A8%ED%8A%B8%EC%97%90-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%B6%94%EA%B0%80&quot; aria-label=&quot;루트에 스크립트 추가 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;루트에서 각각의 프로젝트를 실행할 수 있도록 스크립트를 작성해보겠습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// react-native-monorepo/package.json
+&amp;quot;scripts&amp;quot;: {
+  &amp;quot;android:metro&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile start&amp;quot;,
+  &amp;quot;android:start&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile android&amp;quot;,
+  &amp;quot;android:studio&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile studio&amp;quot;,
+  &amp;quot;ios:metro&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile start&amp;quot;,
+  &amp;quot;ios:start&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile ios&amp;quot;,
+  &amp;quot;ios:xcode&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile xcode&amp;quot;
+},&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;ios-실행&quot; style=&quot;position:relative;&quot;&gt;ios 실행&lt;a href=&quot;#ios-%EC%8B%A4%ED%96%89&quot; aria-label=&quot;ios 실행 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;# packages/mobile/ios
+$ pod install&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;만약 m1 유저라면&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ sudo arch -x86_64 gem install ffi
+$ arch -x86_64 pod install&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;위 명령어를 실행해 pod을 설치합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;# 루트
+$ yarn ios:start&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;android-실행&quot; style=&quot;position:relative;&quot;&gt;android 실행&lt;a href=&quot;#android-%EC%8B%A4%ED%96%89&quot; aria-label=&quot;android 실행 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;# 루트에서
+$ yarn android:start&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;web-코드-생성&quot; style=&quot;position:relative;&quot;&gt;web 코드 생성&lt;a href=&quot;#web-%EC%BD%94%EB%93%9C-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;web 코드 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;웹에서 react-native를 사용하기 위해 react-native-web을 적극적으로 사용합니다.&lt;/p&gt;
+&lt;p&gt;여기서는 CRA로 리액트 앱을 생성합니다.&lt;/p&gt;
+&lt;p&gt;먼저 루트의 package.json에 nohoist를 수정합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;&amp;quot;nohoist&amp;quot;: [
+  &amp;quot;**/react&amp;quot;,
+  &amp;quot;**/react-dom&amp;quot;,
+  &amp;quot;**/react-native&amp;quot;,
+  &amp;quot;**/react-native/**&amp;quot;,
+  &amp;quot;**/react-native-web&amp;quot;
+]&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;그리고 packages 디렉토리에서 CRA로 프로젝트를 생성합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ npx create-react-app my-app &amp;amp;&amp;amp; mv my-app web&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;패키지 이름을 변경합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// react-native-monorepo/packages/web/package.json
+&amp;quot;name&amp;quot;: &amp;quot;@react-native-monorepo/web&amp;quot;,&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;react-native-web을 설치합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ cd web &amp;amp;&amp;amp; yarn add react-native-web&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;웹 프로젝트 내에서 React Native 앱을 사용하기 위해 &lt;code class=&quot;language-text&quot;&gt;src/index.js&lt;/code&gt;를 수정합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;jsx&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;import React from &amp;quot;react&amp;quot;
+import ReactDOM from &amp;quot;react-dom&amp;quot;
+import &amp;quot;./index.css&amp;quot;
+import { App } from &amp;quot;@react-native-monorepo/app&amp;quot; // 수정
+
+ReactDOM.render(
+  &amp;lt;React.StrictMode&amp;gt;
+    &amp;lt;App /&amp;gt;
+  &amp;lt;/React.StrictMode&amp;gt;,
+  document.getElementById(&amp;quot;root&amp;quot;)
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;CRA는 yarn workspace를 지원하지 않습니다. 따라서 외부 패키지를 가져올 수 있도록 craco를 설치합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ yarn add -D @craco/craco react-native-monorepo-tools&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;그리고 &lt;code class=&quot;language-text&quot;&gt;packages/web&lt;/code&gt;에 &lt;code class=&quot;language-text&quot;&gt;craco.config.js&lt;/code&gt; 파일을 생성합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require(&amp;quot;path&amp;quot;)
+const { getLoader, loaderByName } = require(&amp;quot;@craco/craco&amp;quot;)
+
+const absolutePath = path.join(__dirname, &amp;quot;../core&amp;quot;)
+
+module.exports = {
+  webpack: {
+    alias: {},
+    plugins: [],
+    configure: webpackConfig =&amp;gt; {
+      const { isFound, match } = getLoader(
+        webpackConfig,
+        loaderByName(&amp;quot;babel-loader&amp;quot;)
+      )
+      if (isFound) {
+        const include = Array.isArray(match.loader.include)
+          ? match.loader.include
+          : [match.loader.include]
+        match.loader.include = include.concat[absolutePath]
+      }
+      return webpackConfig
+    },
+  },
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;그리고 &lt;code class=&quot;language-text&quot;&gt;web/package.json&lt;/code&gt;에서 script를 craco로 시작할 수 있도록 변경합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;{
+  &amp;quot;name&amp;quot;: &amp;quot;@react-native-monorepo/web&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.0&amp;quot;,
+  &amp;quot;private&amp;quot;: true,
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;start&amp;quot;: &amp;quot;craco start&amp;quot;, // 수정
+    &amp;quot;build&amp;quot;: &amp;quot;craco build&amp;quot;, // 수정
+    &amp;quot;test&amp;quot;: &amp;quot;react-scripts test&amp;quot;,
+    &amp;quot;eject&amp;quot;: &amp;quot;react-scripts eject&amp;quot;
+  },&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;마지막으로 프로젝트 루트에 있는 package.json의 scripts를 수정해줍니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt; &amp;quot;scripts&amp;quot;: {
+    &amp;quot;android:metro&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile start&amp;quot;,
+    &amp;quot;android:start&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile android&amp;quot;,
+    &amp;quot;android:studio&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile studio&amp;quot;,
+    &amp;quot;ios:metro&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile start&amp;quot;,
+    &amp;quot;ios:start&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile ios&amp;quot;,
+    &amp;quot;ios:xcode&amp;quot;: &amp;quot;yarn workspace @react-native-monorepo/mobile xcode&amp;quot;,
+    &amp;quot;web:start&amp;quot;: &amp;quot;yarn workspace @@react-native-monorepo/web start&amp;quot;, // 추가
+    &amp;quot;web:build&amp;quot;: &amp;quot;yarn workspace @@react-native-monorepo/web build&amp;quot; // 추가
+  }&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;yarn web:start&lt;/code&gt;를 통해 실행할 수 있습니다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;참고&quot; style=&quot;position:relative;&quot;&gt;참고&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mmazzarolo/react-native-universal-monorepo&quot;&gt;mmazzarolo/react-native-universal-monorepo&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://classic.yarnpkg.com/lang/en/docs/workspaces/&quot;&gt;yarn workspaces&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://necolas.github.io/react-native-web/&quot;&gt;react native web&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Flutter] 다양한 버튼 사용하기]]></title><description><![CDATA[Flutter Buttons 사용하기 플러터는 다양한 버튼을 위젯으로 제공합니다. 이 코드를 기본으로 두고 시작해봅시다.
+ TextButton TextButton…]]></description><link>https://yeony99.github.io/tech/flutter-use-several-buttons</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-use-several-buttons</guid><pubDate>Fri, 07 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;flutter-buttons-사용하기&quot; style=&quot;position:relative;&quot;&gt;Flutter Buttons 사용하기&lt;a href=&quot;#flutter-buttons-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;flutter buttons 사용하기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;플러터는 다양한 버튼을 위젯으로 제공합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;import &amp;#39;package:flutter/material.dart&amp;#39;;
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: &amp;#39;MaterialApp&amp;#39;,
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text(&amp;#39;Flutter Buttons&amp;#39;),
+            centerTitle: true,
+          ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: &amp;lt;Widget&amp;gt;[
+                // Write your Buttons!
+              ],
+            ),
+          )),
+    );
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이 코드를 기본으로 두고 시작해봅시다.
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h3 id=&quot;textbutton&quot; style=&quot;position:relative;&quot;&gt;TextButton&lt;a href=&quot;#textbutton&quot; aria-label=&quot;textbutton permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;TextButton은 이름 그대로 버튼으로 동작하는 텍스트입니다.&lt;br&gt;
+테두리가 보이지 않아, 주의해서 배치해야합니다.&lt;/p&gt;
+&lt;p&gt;TextButton은 이렇게 구성됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const TextButton({
+  Key? key,
+  required void Function()? onPressed,
+  void Function()? onLongPress,
+  void Function(bool)? onHover,
+  void Function(bool)? onFocusChange,
+  ButtonStyle? style,
+  FocusNode? focusNode,
+  bool autofocus = false,
+  Clip clipBehavior = Clip.none,
+  required Widget child,
+})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;예시를 살펴봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt; body: Center(
+  child: Column(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: &amp;lt;Widget&amp;gt;[
+      TextButton(
+        style: TextButton.styleFrom(
+          textStyle: const TextStyle(fontSize: 20),
+        ),
+        onPressed: null,
+        child: const Text(&amp;#39;Disabled&amp;#39;),
+      ),
+      TextButton(
+        style: TextButton.styleFrom(
+          textStyle: const TextStyle(fontSize: 20),
+        ),
+        onPressed: () {},
+        child: const Text(&amp;#39;Click Me!&amp;#39;),
+      ),
+      TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor: Colors.amber,
+          primary: Colors.white,
+          textStyle: const TextStyle(fontSize: 20),
+        ),
+        onPressed: () {},
+        child: const Text(&amp;#39;Set primary!&amp;#39;),
+      ),
+    ],
+  ),
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;화면에는 이렇게 보여집니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/194450721-5f36a597-550c-4f18-9a5e-1c25c712beef.png&quot; alt=&quot;flutter TextButton&quot;&gt;&lt;/p&gt;
+&lt;p&gt;TextButton에서 글자색상을 변경할 경우에는 &lt;code class=&quot;language-text&quot;&gt;TextButton.styleFrom&lt;/code&gt;에서 primary 속성을 지정해 변경할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;보다 자세한 색상 변경에 관해서는 &lt;a href=&quot;https://www.flutterbeads.com/text-button-color-in-flutter/&quot;&gt;Changing Text Button Color in Flutter – The Right Way in 2022&lt;/a&gt; 를 참고해주세요.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;elevatedbutton&quot; style=&quot;position:relative;&quot;&gt;ElevatedButton&lt;a href=&quot;#elevatedbutton&quot; aria-label=&quot;elevatedbutton permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;ElevatedButton은 오른쪽과 아래쪽으로 그림자가 생겨 버튼이 주변과 구분됩니다.&lt;/p&gt;
+&lt;p&gt;이렇게 구성됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const ElevatedButton({
+  Key? key,
+  required VoidCallback? onPressed,
+  VoidCallback? onLongPress,
+  ValueChanged&amp;lt;bool&amp;gt;? onHover,
+  ValueChanged&amp;lt;bool&amp;gt;? onFocusChange,
+  ButtonStyle? style,
+  FocusNode? focusNode,
+  bool autofocus = false,
+  Clip clipBehavior = Clip.none,
+  required Widget? child,
+})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;예제는 TextButton과 큰 차이가 없습니다. 다만 명확하게 border가 있어 구분됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt; body: Center(
+  child: Column(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: &amp;lt;Widget&amp;gt;[
+      ElevatedButton(
+        style: TextButton.styleFrom(
+          textStyle: const TextStyle(fontSize: 20),
+        ),
+        onPressed: null,
+        child: const Text(&amp;#39;Disabled&amp;#39;),
+      ),
+      ElevatedButton(
+        style: TextButton.styleFrom(
+          textStyle: const TextStyle(fontSize: 20),
+        ),
+        onPressed: () {},
+        child: const Text(&amp;#39;Click Me!&amp;#39;),
+      ),
+      ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: Colors.amber,
+          textStyle: const TextStyle(fontSize: 20),
+        ),
+        onPressed: () {},
+        child: const Text(&amp;#39;Set primary!&amp;#39;),
+      ),
+    ],
+  ),
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ElevatedButton.styleFfrom&lt;/code&gt; 으로 스타일을 지정합니다. TextButton과 다르게 primary를 지정하면 배경색이 바뀝니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/194460842-ba2965a7-3654-4b38-8f66-55846cdfb5b4.png&quot; alt=&quot;Flutter ElevatedButton&quot;&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;outlinedbutton&quot; style=&quot;position:relative;&quot;&gt;OutlinedButton&lt;a href=&quot;#outlinedbutton&quot; aria-label=&quot;outlinedbutton permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;이름 그대로 테두리가 있는 버튼입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const OutlinedButton({
+  Key? key,
+  required VoidCallback? onPressed,
+  VoidCallback? onLongPress,
+  ValueChanged&amp;lt;bool&amp;gt;? onHover,
+  ValueChanged&amp;lt;bool&amp;gt;? onFocusChange,
+  ButtonStyle? style,
+  FocusNode? focusNode,
+  bool autofocus = false,
+  Clip clipBehavior = Clip.none,
+  required Widget child,
+})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;앞선 버튼들과 크게 다르지 않지만, 테두리 색상이 기본적으로 회색으로 지정되어 있습니다.
+&lt;code class=&quot;language-text&quot;&gt;side: BorderSide(widht: 2.0, color: Colors.amber)&lt;/code&gt; 등으로 속성을 지정하면 테두리 색깔을 바꿀 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt; body: Center(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: &amp;lt;Widget&amp;gt;[
+        OutlinedButton(
+          style: OutlinedButton.styleFrom(
+            textStyle: const TextStyle(fontSize: 20),
+          ),
+          onPressed: null,
+          child: const Text(&amp;#39;Disabled&amp;#39;),
+        ),
+        OutlinedButton(
+          style: OutlinedButton.styleFrom(
+            textStyle: const TextStyle(fontSize: 20),
+          ),
+          onPressed: () {},
+          child: const Text(&amp;#39;Click Me!&amp;#39;),
+        ),
+        OutlinedButton(
+          style: OutlinedButton.styleFrom(
+            primary: Colors.amber,
+            // Border Style 변경
+            side: BorderSide(width: 2.0, color: Colors.amber),
+            textStyle: const TextStyle(fontSize: 20),
+          ),
+          onPressed: () {},
+          child: const Text(&amp;#39;Set primary!&amp;#39;),
+        ),
+      ],
+    ),
+  )
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/194468926-efe48563-af80-4709-bb37-aeb53d42a1f9.png&quot; alt=&quot;Flutter OutlinedButton&quot;&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;iconbutton&quot; style=&quot;position:relative;&quot;&gt;IconButton&lt;a href=&quot;#iconbutton&quot; aria-label=&quot;iconbutton permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;아이콘으로 버튼을 만들 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const IconButton({
+  Key? key,
+  this.iconSize,
+  this.visualDensity,
+  this.padding = const EdgeInsets.all(8.0),
+  this.alignment = Alignment.center,
+  this.splashRadius,
+  this.color,
+  this.focusColor,
+  this.hoverColor,
+  this.highlightColor,
+  this.splashColor,
+  this.disabledColor,
+  required this.onPressed,
+  this.mouseCursor,
+  this.focusNode,
+  this.autofocus = false,
+  this.tooltip,
+  this.enableFeedback = true,
+  this.constraints,
+  required this.icon,
+})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;body: Center(
+  child: Column(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: &amp;lt;Widget&amp;gt;[
+      IconButton(
+        icon: const Icon(Icons.arrow_back),
+        onPressed: null,
+      ),
+      IconButton(
+        icon: const Icon(Icons.arrow_forward),
+        onPressed: () {},
+      ),
+      IconButton(
+        icon: const Icon(Icons.alarm_add),
+        onPressed: () {},
+      ),
+    ],
+  ),
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/194475945-2e87a65d-cf96-4875-825a-fe3462757f12.png&quot; alt=&quot;Flutter IconButton&quot;&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;floatingactionbutton&quot; style=&quot;position:relative;&quot;&gt;FloatingActionButton&lt;a href=&quot;#floatingactionbutton&quot; aria-label=&quot;floatingactionbutton permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;FloatingActionButton&lt;/code&gt;은 둥둥 떠있는 버튼입니다.&lt;/p&gt;
+&lt;p&gt;이 버튼을 사용하기 위해서는 &lt;code class=&quot;language-text&quot;&gt;Scaffold&lt;/code&gt; 위젯에 &lt;code class=&quot;language-text&quot;&gt;floatingActionButton&lt;/code&gt; 속성을 추가해야 합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Scaffold(
+  floatingActionButton: FloatingActionButton(),
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이렇게 아이콘을 지정할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;floatingActionButton: FloatingActionButton(
+  onPressed: () {},
+  child: const Icon(Icons.thumb_up),
+  backgroundColor: Colors.pink,
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/194480681-d2b0b282-2867-47ae-bcd3-df9d74fffadb.png&quot; alt=&quot;Flutter FloatingActionButton&quot;&gt;&lt;/p&gt;
+&lt;p&gt;만약 버튼에 label을 넣고 싶다면, &lt;code class=&quot;language-text&quot;&gt;FloatingActionButton.extended&lt;/code&gt;를 이용해 작성합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;floatingActionButton: FloatingActionButton.extended(
+  onPressed: () {},
+  icon: Icon(Icons.thumb_up),
+  label: Text(&amp;#39;Thumb Up!&amp;#39;),
+  backgroundColor: Colors.pink,
+),&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/194481144-024867c9-3ebd-4efb-8303-915475bad22c.png&quot; alt=&quot;Flutter FloatingActionButton extended&quot;&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;popupmenubutton&quot; style=&quot;position:relative;&quot;&gt;PopupMenuButton&lt;a href=&quot;#popupmenubutton&quot; aria-label=&quot;popupmenubutton permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;이 버튼을 사용하려면 &lt;code class=&quot;language-text&quot;&gt;Scaffold&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;AppBar&lt;/code&gt; 위젯에 actions 속성을 추가합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Scaffold(
+  appBar: AppBar(
+    title: Text(&amp;#39;Flutter Buttons&amp;#39;),
+    centerTitle: true,
+    actions: [
+      PopupMenuButton(
+          itemBuilder: (context) =&amp;gt; [
+                PopupMenuItem(
+                  child: Text(&amp;quot;First&amp;quot;),
+                  value: 1,
+                ),
+                PopupMenuItem(
+                  child: Text(&amp;quot;Second&amp;quot;),
+                  value: 2,
+                )
+              ])
+    ],
+  ),
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/194481812-9aaa08f3-8760-4c9e-a3f2-97e10bde5867.png&quot; alt=&quot;Flutter PopupMenuButton closed&quot;&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/194481750-70fc7ba9-7b99-4ebe-ac1b-0030b62c4f8e.png&quot; alt=&quot;Flutter PopupMenuButton opened&quot;&gt; 
+&lt;h3 id=&quot;dropdownbutton&quot; style=&quot;position:relative;&quot;&gt;DropdownButton&lt;a href=&quot;#dropdownbutton&quot; aria-label=&quot;dropdownbutton permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;web의 select 기능을 하는 버튼입니다. Dropdown을 사용하기 위해서는 먼저 StatefulWidget으로 변경합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;DropdownButton({
+  Key key, 
+  @required List&amp;lt;DropdownMenuItem&amp;lt;T&amp;gt;&amp;gt; items, 
+  DropdownButtonBuilder selectedItemBuilder, 
+  T value, 
+  Widget hint, 
+  Widget disabledHint, 
+  @required ValueChanged&amp;lt;T&amp;gt; onChanged, 
+  VoidCallback onTap, 
+  int elevation: 8, 
+  TextStyle style, 
+  Widget underline, 
+  Widget icon, 
+  Color iconDisabledColor, 
+  Color iconEnabledColor, 
+  double iconSize: 24.0, 
+  bool isDense: false, 
+  bool isExpanded: false, 
+  double itemHeight: kMinInteractiveDimension,
+  Color focusColor, 
+  FocusNode focusNode, 
+  bool autofocus: false, 
+  Color dropdownColor
+})&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;StatefulWidget으로 바꾸는 이유는 DropdownButton으로 선택된 값이라는 &lt;strong&gt;상태 변화&lt;/strong&gt;가 있기 때문입니다.&lt;/p&gt;
+&lt;p&gt;Stateless에서도 DropdownButton을 그릴 수는 있지만, setState를 사용하지 못하기 때문에 의미가 없습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;import &amp;#39;package:flutter/material.dart&amp;#39;;
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: &amp;#39;MaterialApp&amp;#39;,
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  _MyHomePageState createState() =&amp;gt; _MyHomePageState();
+}
+
+class _MyHomePageState extends State&amp;lt;MyHomePage&amp;gt; {
+// Initial Selected Value
+  String dropdownvalue = &amp;#39;Item 1&amp;#39;;
+
+// List of items in our dropdown menu
+  var items = [
+    &amp;#39;Item 1&amp;#39;,
+    &amp;#39;Item 2&amp;#39;,
+    &amp;#39;Item 3&amp;#39;,
+    &amp;#39;Item 4&amp;#39;,
+    &amp;#39;Item 5&amp;#39;,
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(&amp;#39;Flutter Buttons&amp;#39;),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            DropdownButton(
+              // Initial Value
+              value: dropdownvalue,
+
+              // Down Arrow Icon
+              icon: const Icon(Icons.keyboard_arrow_down),
+
+              // Array list of items
+              items: items.map((String items) {
+                return DropdownMenuItem(
+                  value: items,
+                  child: Text(items),
+                );
+              }).toList(),
+              // After selecting the desired option,it will
+              // change button value to selected value
+              onChanged: (String? newValue) {
+                setState(() {
+                  dropdownvalue = newValue!;
+                });
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;onpressed-null-or--&quot; style=&quot;position:relative;&quot;&gt;onPressed null or () {}&lt;a href=&quot;#onpressed-null-or--&quot; aria-label=&quot;onpressed null or   permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;버튼에서는 &lt;code class=&quot;language-text&quot;&gt;onPressed&lt;/code&gt; 라는 클릭 이벤트를 정의할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;위의 예제에서는 onPressed를 &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt;로 두는 경우와, &lt;code class=&quot;language-text&quot;&gt;() {}&lt;/code&gt; 로 두는 경우가 있었습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;null : disabled&lt;/li&gt;
+&lt;li&gt;() {} : 클릭시 실행될 함수를 정의하지 않은 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이러한 차이가 있습니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-use-several-widgets&quot;&gt;[Flutter] 다양한 위젯 사용하기&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (11) - 자바스크립트 제어문(1) - 조건문]]></title><description><![CDATA[자바스크립트에서는 조건문, 반복문 등의 제어문(control flow statement…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-control-flow-statement-conditional</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-control-flow-statement-conditional</guid><pubDate>Wed, 05 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;자바스크립트에서는 조건문, 반복문 등의 제어문(control flow statement)이 있습니다. 제어문은 특정한 &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-control-flow-statement#%EC%BD%94%EB%93%9C%EB%B8%94%EB%A1%9D&quot;&gt;&lt;strong&gt;코드블록&lt;/strong&gt;&lt;/a&gt;을 조건에 따라 실행하거나, 반복실행합니다.&lt;/p&gt;
 &lt;p&gt;프로그램은 위에서부터 아래로 순차적으로 실행되지만, 이런 제어문을 사용하면 실행 흐름을 조작할 수 있습니다.&lt;/p&gt;
 &lt;div style=&quot;background-color: #eee; border-radius: 1rem; font-size: 0.9rem; padding: 1rem&quot;&gt;
 &lt;h6&gt;❕ 참고&lt;/h6&gt;
@@ -594,7 +1427,8 @@ class MyApp extends StatelessWidget {
 &lt;p&gt;SliverList는 child 목록으로 &lt;code class=&quot;language-text&quot;&gt;SliverChildBuilderDelegate&lt;/code&gt; 위젯을 이용합니다. &lt;code class=&quot;language-text&quot;&gt;childCount&lt;/code&gt; 속성으로 리스트의 개수를 컨트롤할 수 있습니다.&lt;/p&gt;
 &lt;img src=&quot;https://user-images.githubusercontent.com/76241233/192960322-b9cf7280-66bf-482f-931d-a3834c3ab265.png&quot; alt=&quot;SliverAppBar &amp;amp; Sliver list&quot;&gt; 
 &lt;img src=&quot;https://user-images.githubusercontent.com/76241233/192962714-4c44deae-4fba-48f3-802e-3903b7cf1cef.png&quot; alt=&quot;Sliver&quot;&gt;
-&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-understanding-constraints&quot;&gt;[Flutter] Constraints 이해하기&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (10) - 자바스크립트 연산자]]></title><description><![CDATA[연산자(Operator…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-operator</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-operator</guid><pubDate>Wed, 28 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;연산자operator란&quot; style=&quot;position:relative;&quot;&gt;연산자(Operator)란?&lt;a href=&quot;#%EC%97%B0%EC%82%B0%EC%9E%90operator%EB%9E%80&quot; aria-label=&quot;연산자operator란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-understanding-constraints&quot;&gt;[Flutter] Constraints 이해하기&lt;/a&gt; 👈 이전 글 보기
+◾ &lt;a href=&quot;/tech/flutter-use-several-buttons&quot;&gt;[Flutter] 다양한 버튼 사용하기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (10) - 자바스크립트 연산자]]></title><description><![CDATA[연산자(Operator…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-operator</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-operator</guid><pubDate>Wed, 28 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;연산자operator란&quot; style=&quot;position:relative;&quot;&gt;연산자(Operator)란?&lt;a href=&quot;#%EC%97%B0%EC%82%B0%EC%9E%90operator%EB%9E%80&quot; aria-label=&quot;연산자operator란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;연산자란 문장 부호 혹은 영어, 숫자로 구성된 &lt;strong&gt;예약된 구문&lt;/strong&gt;입니다.&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;+&lt;/code&gt;라는 기호는 숫자를 추가하거나 문자열을 연결할 수 있게 하고, &lt;code class=&quot;language-text&quot;&gt;&amp;lt;&lt;/code&gt; 기호는 좌항과 우항의 값을 비교합니다.&lt;/p&gt;
 &lt;p&gt;이러한 연산자는 여러 종류로 분류할 수 있습니다.&lt;/p&gt;
@@ -1142,7 +1976,50 @@ typeof new Date() // object&lt;/code&gt;
 &lt;li&gt;위치를 지정하는 것은 부모 위젯&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-text-widget&quot;&gt;[Flutter] Text Widget 사용하기&lt;/a&gt; 👈 이전 글 보기
-◾ &lt;a href=&quot;/tech/flutter-use-several-widgets&quot;&gt;[Flutter] 다양한 위젯 사용하기&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[프록시 패턴]]></title><description><![CDATA[프록시 패턴 (Proxy Pattern)  단어의 뜻은 대리인입니다. Proxy 단어 뜻 - 네이버 사전 Proxy 패턴은 실제 객체에 직접 접근하는 것이 아닌, 실 객체를 대리하는 객체인 Proxy 객체를 다루는 패턴입니다. Proxy…]]></description><link>https://yeony99.github.io/tech/react-pattern-proxy</link><guid isPermaLink="false">https://yeony99.github.io/tech/react-pattern-proxy</guid><pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프록시-패턴-proxy-pattern&quot; style=&quot;position:relative;&quot;&gt;프록시 패턴 (Proxy Pattern)&lt;a href=&quot;#%ED%94%84%EB%A1%9D%EC%8B%9C-%ED%8C%A8%ED%84%B4-proxy-pattern&quot; aria-label=&quot;프록시 패턴 proxy pattern permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+◾ &lt;a href=&quot;/tech/flutter-use-several-widgets&quot;&gt;[Flutter] 다양한 위젯 사용하기&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Flutter] Text Widget 사용하기]]></title><description><![CDATA[Text Widget Flutter에서 아주 흔하게 사용되는 위젯 중 하나가  위젯입니다. Text 위젯은 이름에서부터 알 수 있듯이 텍스트를 화면에 그리는 위젯입니다. 뿐만 아니라 텍스트에 style을 입힐 수도 있습니다. Text Widget…]]></description><link>https://yeony99.github.io/tech/flutter-text-widget</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-text-widget</guid><pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 📍 텍스트에 대한 다양한 반응의 종류를 알고 이해한다.
+
+📍 constraints의 의미를 알고 적절하게 사용한다.
+
+📍 tutorial app을 만들어보며 배운 내용을 정리한다. --&gt;
+&lt;h2 id=&quot;text-widget&quot; style=&quot;position:relative;&quot;&gt;Text Widget&lt;a href=&quot;#text-widget&quot; aria-label=&quot;text widget permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Flutter에서 아주 흔하게 사용되는 위젯 중 하나가 &lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; 위젯입니다.&lt;/p&gt;
+&lt;p&gt;Text 위젯은 이름에서부터 알 수 있듯이 텍스트를 화면에 그리는 위젯입니다. 뿐만 아니라 텍스트에 style을 입힐 수도 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;text-widget-작성하기&quot; style=&quot;position:relative;&quot;&gt;Text Widget 작성하기&lt;a href=&quot;#text-widget-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;text widget 작성하기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;기본적인 Text 위젯은 이렇게 작성할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const Text(&amp;#39;Hello World!&amp;#39;)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;여기에 style을 입히고 싶다면 &lt;code class=&quot;language-text&quot;&gt;style&lt;/code&gt; 속성을 지정하면 됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Text(
+  &amp;#39;Hello World!&amp;#39;,
+  style: TextStyle(fontSize: 20),
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;textstyle-class&quot; style=&quot;position:relative;&quot;&gt;TextStyle class&lt;a href=&quot;#textstyle-class&quot; aria-label=&quot;textstyle class permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Flutter에는 Text를 스타일링할 수 있는 &lt;code class=&quot;language-text&quot;&gt;TextStyle&lt;/code&gt; class가 존재합니다.&lt;/p&gt;
+&lt;p&gt;TextStyle class는 &lt;code class=&quot;language-text&quot;&gt;immutable&lt;/code&gt;하다고 설명하고 있는데요. 이 말은 사용할 때 명시한 값 외에는 런타임 시 변하게 할 수 없다는 의미입니다.&lt;/p&gt;
+&lt;p&gt;TextStyle 클래스를 통해 지정할 수 있는 속성은 아래 링크에서 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://api.flutter.dev/flutter/painting/TextStyle-class.html&quot;&gt;TextStyle class&lt;/a&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;richtext-widget&quot; style=&quot;position:relative;&quot;&gt;RichText Widget&lt;a href=&quot;#richtext-widget&quot; aria-label=&quot;richtext widget permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; 위젯은 하나의 문장을 작성할 수 있었는데요. 텍스트를 나누어 스타일링하고 싶거나 여러 개의 텍스트를 합쳐서 보여주고 싶다면 &lt;code class=&quot;language-text&quot;&gt;RichText&lt;/code&gt;를 사용하면 됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;RichText(
+  text: TextSpan(
+    text: &amp;#39;Hello &amp;#39;,
+    style: DefaultTextStyle.of(context).style,
+    children: const &amp;lt;TextSpan&amp;gt;[
+      TextSpan(text: &amp;#39;bold&amp;#39;, style: TextStyle(fontWeight: FontWeight.bold)),
+      TextSpan(text: &amp;#39; world!&amp;#39;),
+    ],
+  ),
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;RichText&lt;/code&gt; 안에 들어가는 여러 개의 텍스트들은 &lt;code class=&quot;language-text&quot;&gt;TextSpan&lt;/code&gt;을 사용해 보여집니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-layout-widget&quot;&gt;[Flutter] Layout Widget 정리&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
+◾ &lt;a href=&quot;/tech/flutter-understanding-constraints&quot;&gt;[Flutter] Constraints 이해하기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[프록시 패턴]]></title><description><![CDATA[프록시 패턴 (Proxy Pattern)  단어의 뜻은 대리인입니다. Proxy 단어 뜻 - 네이버 사전 Proxy 패턴은 실제 객체에 직접 접근하는 것이 아닌, 실 객체를 대리하는 객체인 Proxy 객체를 다루는 패턴입니다. Proxy…]]></description><link>https://yeony99.github.io/tech/react-pattern-proxy</link><guid isPermaLink="false">https://yeony99.github.io/tech/react-pattern-proxy</guid><pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프록시-패턴-proxy-pattern&quot; style=&quot;position:relative;&quot;&gt;프록시 패턴 (Proxy Pattern)&lt;a href=&quot;#%ED%94%84%EB%A1%9D%EC%8B%9C-%ED%8C%A8%ED%84%B4-proxy-pattern&quot; aria-label=&quot;프록시 패턴 proxy pattern permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;proxy&lt;/code&gt; 단어의 뜻은 &lt;strong&gt;대리인&lt;/strong&gt;입니다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/191401927-69d5773e-a6ef-467f-96b8-5aa3ee883097.png&quot; alt=&quot;Proxy 단어 뜻 - 네이버 사전&quot;&gt;&lt;/p&gt;
 &lt;div style=&quot;font-size: 0.7rem; text-align: end&quot;&gt;출처 : 네이버 사전&lt;/div&gt;&lt;br/&gt;
@@ -1253,50 +2130,7 @@ const personProxy = new Proxy(person, {
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;obj[prop] = value&lt;/code&gt; 형태가 아니라, &lt;code class=&quot;language-text&quot;&gt;Reflect.get(obj, prop)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Reflect.set(obj, prop, value)&lt;/code&gt;의 형태로 작성할 수 있습니다.&lt;/p&gt;
 &lt;h2 id=&quot;결론&quot; style=&quot;position:relative;&quot;&gt;결론&lt;a href=&quot;#%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot;결론 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Proxy는 객체의 동작을 커스터마이징할 수 있는 유용한 기능입니다. 유효성 검사, formatting, 알림, 디버깅 등에 유용합니다.&lt;/p&gt;
-&lt;p&gt;핸들러 객체에서 Proxy를 과도하게 사용하면 성능이 저하될 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Flutter] Text Widget 사용하기]]></title><description><![CDATA[Text Widget Flutter에서 아주 흔하게 사용되는 위젯 중 하나가  위젯입니다. Text 위젯은 이름에서부터 알 수 있듯이 텍스트를 화면에 그리는 위젯입니다. 뿐만 아니라 텍스트에 style을 입힐 수도 있습니다. Text Widget…]]></description><link>https://yeony99.github.io/tech/flutter-text-widget</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-text-widget</guid><pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 📍 텍스트에 대한 다양한 반응의 종류를 알고 이해한다.
-
-📍 constraints의 의미를 알고 적절하게 사용한다.
-
-📍 tutorial app을 만들어보며 배운 내용을 정리한다. --&gt;
-&lt;h2 id=&quot;text-widget&quot; style=&quot;position:relative;&quot;&gt;Text Widget&lt;a href=&quot;#text-widget&quot; aria-label=&quot;text widget permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Flutter에서 아주 흔하게 사용되는 위젯 중 하나가 &lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; 위젯입니다.&lt;/p&gt;
-&lt;p&gt;Text 위젯은 이름에서부터 알 수 있듯이 텍스트를 화면에 그리는 위젯입니다. 뿐만 아니라 텍스트에 style을 입힐 수도 있습니다.&lt;/p&gt;
-&lt;h3 id=&quot;text-widget-작성하기&quot; style=&quot;position:relative;&quot;&gt;Text Widget 작성하기&lt;a href=&quot;#text-widget-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;text widget 작성하기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;기본적인 Text 위젯은 이렇게 작성할 수 있습니다.&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;const Text(&amp;#39;Hello World!&amp;#39;)&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;여기에 style을 입히고 싶다면 &lt;code class=&quot;language-text&quot;&gt;style&lt;/code&gt; 속성을 지정하면 됩니다.&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;Text(
-  &amp;#39;Hello World!&amp;#39;,
-  style: TextStyle(fontSize: 20),
-)&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;h4 id=&quot;textstyle-class&quot; style=&quot;position:relative;&quot;&gt;TextStyle class&lt;a href=&quot;#textstyle-class&quot; aria-label=&quot;textstyle class permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Flutter에는 Text를 스타일링할 수 있는 &lt;code class=&quot;language-text&quot;&gt;TextStyle&lt;/code&gt; class가 존재합니다.&lt;/p&gt;
-&lt;p&gt;TextStyle class는 &lt;code class=&quot;language-text&quot;&gt;immutable&lt;/code&gt;하다고 설명하고 있는데요. 이 말은 사용할 때 명시한 값 외에는 런타임 시 변하게 할 수 없다는 의미입니다.&lt;/p&gt;
-&lt;p&gt;TextStyle 클래스를 통해 지정할 수 있는 속성은 아래 링크에서 확인할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://api.flutter.dev/flutter/painting/TextStyle-class.html&quot;&gt;TextStyle class&lt;/a&gt;&lt;/p&gt;
-&lt;br/&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;richtext-widget&quot; style=&quot;position:relative;&quot;&gt;RichText Widget&lt;a href=&quot;#richtext-widget&quot; aria-label=&quot;richtext widget permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; 위젯은 하나의 문장을 작성할 수 있었는데요. 텍스트를 나누어 스타일링하고 싶거나 여러 개의 텍스트를 합쳐서 보여주고 싶다면 &lt;code class=&quot;language-text&quot;&gt;RichText&lt;/code&gt;를 사용하면 됩니다.&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;RichText(
-  text: TextSpan(
-    text: &amp;#39;Hello &amp;#39;,
-    style: DefaultTextStyle.of(context).style,
-    children: const &amp;lt;TextSpan&amp;gt;[
-      TextSpan(text: &amp;#39;bold&amp;#39;, style: TextStyle(fontWeight: FontWeight.bold)),
-      TextSpan(text: &amp;#39; world!&amp;#39;),
-    ],
-  ),
-)&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;RichText&lt;/code&gt; 안에 들어가는 여러 개의 텍스트들은 &lt;code class=&quot;language-text&quot;&gt;TextSpan&lt;/code&gt;을 사용해 보여집니다.&lt;/p&gt;
-&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-layout-widget&quot;&gt;[Flutter] Layout Widget 정리&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
-◾ &lt;a href=&quot;/tech/flutter-understanding-constraints&quot;&gt;[Flutter] Constraints 이해하기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (9) - 값, 식, 문]]></title><description><![CDATA[값, 식, 문 값을 할당한다 라는 말을 이전 글에서 자주 사용했습니다. 값은 무엇일까요? 자바스크립트 뿐 아니라 값은 프로그래밍 전반에서 사용하는 용어입니다. 값(value)과 식(expression), 문(statement…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</guid><pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;값-식-문&quot; style=&quot;position:relative;&quot;&gt;값, 식, 문&lt;a href=&quot;#%EA%B0%92-%EC%8B%9D-%EB%AC%B8&quot; aria-label=&quot;값 식 문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;핸들러 객체에서 Proxy를 과도하게 사용하면 성능이 저하될 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (9) - 값, 식, 문]]></title><description><![CDATA[값, 식, 문 값을 할당한다 라는 말을 이전 글에서 자주 사용했습니다. 값은 무엇일까요? 자바스크립트 뿐 아니라 값은 프로그래밍 전반에서 사용하는 용어입니다. 값(value)과 식(expression), 문(statement…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</guid><pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;값-식-문&quot; style=&quot;position:relative;&quot;&gt;값, 식, 문&lt;a href=&quot;#%EA%B0%92-%EC%8B%9D-%EB%AC%B8&quot; aria-label=&quot;값 식 문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;값을 할당한다&lt;/strong&gt; 라는 말을 이전 글에서 자주 사용했습니다.&lt;/p&gt;
 &lt;p&gt;값은 무엇일까요? 자바스크립트 뿐 아니라 값은 프로그래밍 전반에서 사용하는 용어입니다.&lt;/p&gt;
 &lt;p&gt;값(value)과 식(expression), 문(statement)의 차이에 대해서 알아봅시다.&lt;/p&gt;

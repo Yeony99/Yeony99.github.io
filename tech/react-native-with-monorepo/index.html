@@ -1,0 +1,513 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.666 'Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Georgia',serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;color:inherit;font-family:'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}ul{margin-left:1.666rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.666rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;font-size:0.85rem;line-height:1.666rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;font-size:1rem;line-height:1.666rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}blockquote{margin-left:1.666rem;margin-right:1.666rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.666rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.666rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.666rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.666rem;margin-bottom:calc(1.666rem / 2);margin-top:calc(1.666rem / 2);}li > ul{margin-left:1.666rem;margin-bottom:calc(1.666rem / 2);margin-top:calc(1.666rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.666rem / 2);}code{font-size:0.85rem;line-height:1.666rem;}kbd{font-size:0.85rem;line-height:1.666rem;}samp{font-size:0.85rem;line-height:1.666rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.11067rem;padding-right:1.11067rem;padding-top:0.833rem;padding-bottom:calc(0.833rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><style data-href="/styles.a89dcc8518172717c942.css" data-identity="gatsby-global-css">.flex{display:flex!important}.flex-column{flex-direction:column}.justify-content-center{justify-content:center!important}.justify-content-end{justify-content:end!important}.justify-content-around{justify-content:space-around!important}.justify-content-between{justify-content:space-between!important}.justify-content-evenly{justify-content:space-evenly!important}.align-center{align-items:center!important}.align-end{align-items:flex-end!important}.row{display:flex;flex-wrap:wrap}.col{flex:1 0}.col-1{flex:0 0 auto;width:8.3333333333%}.col-2{flex:0 0 auto;width:16.6666666667%}.col-3{flex:0 0 auto;width:25%}.col-4{flex:0 0 auto;width:33.3333333333%}.col-5{flex:0 0 auto;width:41.6666666667%}.col-6{flex:0 0 auto;width:50%}.col-7{flex:0 0 auto;width:58.3333333333%}.col-8{flex:0 0 auto;width:66.6666666667%}.col-9{flex:0 0 auto;width:75%}.col-10{flex:0 0 auto;width:83.3333333333%}.col-11{flex:0 0 auto;width:91.6666666667%}.col-12{flex:0 0 auto;width:100%}.grid{display:grid}.blog-post table tr>td,.blog-post table tr>th,.text-center{text-align:center}.text-end{text-align:end}.text-justify{text-align:justify}.margin-0{margin:0!important}.margin-1{margin:1rem!important}.margin-top-1{margin-top:1rem!important}.margin-top-1666{margin-top:1.666rem!important}.margin-top-2{margin-top:2rem!important}.margin-bottom-05{margin-bottom:.5rem!important}.margin-bottom-1{margin-bottom:1rem!important}.margin-left-1{margin-left:1rem!important}.margin-right-05{margin-right:.5rem!important}.margin-right-1{margin-right:1rem!important}.padding-1{padding:1rem!important}.padding-top-1{padding-top:1rem!important}.padding-bottom-1{padding-bottom:1rem!important}.padding-left-1{padding-left:1rem!important}.padding-right-1{padding-right:1rem!important}.h-100{height:100%!important}.w-100{width:100%!important}.pg-header-img{height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center center;object-position:center center;opacity:1;width:100%}.overflow-x-scroll{overflow:auto}.overflow-x-scroll::-webkit-scrollbar{height:5px}.overflow-x-scroll::-webkit-scrollbar-thumb{background-color:#ffc079;border-radius:10px;height:17%}.overflow-x-scroll::-webkit-scrollbar-track{background-color:rgba(255,193,121,.337)}div.tag{background-color:#c6ffc6;color:#7b9e81}div.tag,div.tag-sm{-webkit-user-select:none;user-select:none}div.tag-sm{font-size:.7rem!important;padding:.1rem .3rem!important}nav>ul>a>li{-webkit-user-select:none;user-select:none}.toc-container ul>li>ul>li{font-size:.7rem}.toc-container ul>li>ul>li>ul>li>ul>li{display:none}.blog-post table{font-size:.9rem}.blog-post table tr>th{background-color:#eee}li.current-path{border-color:#c6ffc6}a{border-color:transparent}a :hover{border-color:#8eb98e}.log-selected-bg{background-color:#f2fcef}.circle{border-radius:50%}p>a{color:#8eb98e;text-decoration:underline}p>code,pre,pre>code{background-color:#eee;border-radius:.25rem;font-family:Segoe UI,Tahoma,Verdana,sans-serif;font-style:italic;padding:.2rem .5rem .3rem}p>strong{background-color:#faebd7;border-radius:10px 0 30px 0;padding:.2rem .5rem}.b-shadow-10-gray{box-shadow:10px 10px 10px #eee}.pointer{cursor:pointer}div.bg-orange{background-color:#ffc079;color:#502404}div.tag.selected-tag{background-color:#fff279;color:#502404}.wordbreak-breakall{font-size:.95rem;word-break:break-all}.wordbreak-keepall{font-size:.95rem;word-break:keep-all}.ws-nowrap{white-space:nowrap}.td-title{font-size:.9rem;font-weight:600;text-transform:capitalize}@media screen and (max-width:450px){.td-title{font-size:.7rem}}@media screen and (max-width:400px){.td-title{font-size:.65rem}}td>p{font-size:1rem}@media screen and (max-width:450px){td>p{font-size:.75rem}}h1,h2,h3,h4,h5{font-weight:700}h1,h2,h3,h4,h5,h6{font-family:NanumSquareRound}h6{font-weight:400}.text-xs{font-size:.5rem}.text-sm{font-size:.85rem}.text-md{font-size:1rem}.text-lg{font-size:1.2rem}.text-xl{font-size:1.5rem}.text-2xl{font-size:1.85rem}.wrap{margin:.5rem auto 0;max-width:768px;padding-left:1rem;padding-right:1rem}.main-img{height:30vh}.scroll-area{max-width:90vw}.transition{transition-delay:0s;transition-property:all!important;transition-timing-function:ease-in!important}.duration-500{transition-duration:.5s!important}html{background-color:#fff;scroll-behavior:smooth}*{font-family:NanumSquareRound}.blog-post p{font-size:.9rem}ul li{list-style:none}ol li{list-style:inherit}a{color:#000;text-decoration:none}a .dark{color:#7d7}.blog-post li>a{color:#8eb98e;text-decoration:underline}pre{overflow:auto}footer{position:relative}.time-line-ctnr .time-line{list-style:none;margin:0;padding:0;position:relative}.time-line-ctnr .time-line:before{background:#3498db;border-radius:2px;bottom:-10px;content:"";left:32px;position:absolute;top:0;width:2px}.time-line-ctnr .time-line>.time-label>span{background-color:#e74c3c;border-radius:2px;color:#fff;display:inline-block;font-size:14px;font-weight:600;padding:5px 10px}.time-line-ctnr .time-line>li{margin-bottom:10px;margin-right:0;position:relative}.time-line-ctnr .time-line>li>.time-line-item{background:#fff;border-radius:3px;box-shadow:0 1px 1px rgba(0,0,0,.1);color:#444;margin-left:50px;margin-right:15px;position:relative}.time-line-ctnr .time-line>li>.time-line-item .time,.time-line-ctnr .time-line>li>.time-line-item>.time-line-header{font-size:14px;padding:6px 10px}.time-line-ctnr .time-line>li>.time-line-item .time{color:#999;float:right;font-size:12px}.time-line-ctnr .time-line>li>.time-line-item .time-line-header{border-bottom:1px solid #f4f4f4;color:#555;line-height:1.1;margin:0}.time-line-ctnr .time-line>li>.fa{background:#ecf0f1;border:2px solid #3498db;border-radius:50%;box-sizing:border-box;color:#666;display:inline-block;height:10px;left:28px;position:absolute;top:9px;width:10px}.time-line-ctnr .time-line>.time-label>span{background-color:#84e07d!important}.time-line-ctnr .time-line:before{background:#7aff2e!important}.time-line-ctnr .time-line>li>.fa{border:2px solid #1c8e46!important}.list-skill-logo{height:35px;margin:0;width:35px}@media screen and (max-width:550px){.list-skill-logo{display:none}.img-td{margin:0;padding:0;width:0}}.footer-logo{height:20px;margin:0;width:20px}.min-h-74{min-height:74vh}.min-h-76{min-height:76vh}.page-404{background:#dcfcc3;height:100vh;margin:0;padding:0;position:absolute;top:0;width:99vw}.toc-container{border-radius:.25rem;color:#000;font-size:.8rem;font-weight:700;padding:.7rem;position:fixed;width:22vw}.toc-container ul li{border-bottom:2px dashed #71bea8;list-style:inherit;margin-bottom:.5rem}.toc-container ul li p>a{color:#444;text-decoration:none}.toc-container ul li p>a:hover{color:#8eb98e}.toc-container ul li ul li{border:none}@media screen and (max-width:1300px){.toc-container{display:none}}.blog-post ul>li{font-size:.9rem;list-style:inherit}@font-face{font-family:NanumSquareRound;font-style:normal;font-weight:400;src:url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff) format("woff")}code[class*=language-],pre[class*=language-]{word-wrap:normal;color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#073642}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{background:#eee8d5;color:#657b83}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 3.14.6"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" title="Your Site&#x27;s RSS Feed" href="/rss.xml"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><style data-styled="" data-styled-version="5.3.5">.jlPQqN{border-bottom:2px solid transparent;}/*!sc*/
+@media screen and (max-width:300px){.jlPQqN{font-size:0.75rem;margin:0.5rem;}}/*!sc*/
+data-styled.g2[id="header__ListLink-sc-31ozxh-0"]{content:"jlPQqN,"}/*!sc*/
+.jybriV{width:4em;margin:0;}/*!sc*/
+@media screen and (max-width:400px){.jybriV{width:3em;}}/*!sc*/
+data-styled.g3[id="header__LogoImg-sc-31ozxh-1"]{content:"jybriV,"}/*!sc*/
+.hjYOdx{padding:0.1rem 0.5rem;margin:0.5rem;margin-left:0;font-size:0.85rem;border-radius:0.25rem;}/*!sc*/
+data-styled.g5[id="tag__Tag-sc-g53uox-0"]{content:"hjYOdx,"}/*!sc*/
+</style><title data-react-helmet="true">리액트 네이티브 모노레포 프로젝트 구축하기 | It&#x27;s Yeony here</title><meta data-react-helmet="true" name="description" content="This is Yeony&#x27;s portfolio"/><meta data-react-helmet="true" property="og:title" content="리액트 네이티브 모노레포 프로젝트 구축하기"/><meta data-react-helmet="true" property="og:description" content="This is Yeony&#x27;s portfolio"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Nayeon Kim"/><meta data-react-helmet="true" name="twitter:title" content="리액트 네이티브 모노레포 프로젝트 구축하기"/><meta data-react-helmet="true" name="twitter:description" content="This is Yeony&#x27;s portfolio"/><meta data-react-helmet="true" name="google-site-verification" content="MFqADXYC_GWZWqMXa_PmGCNiBU1BBs1wHXayWN0tUMI"/><script data-react-helmet="true" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6821625180589271" crossorigin="anonymous"></script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="icon" href="/favicon-32x32.png?v=f35cbae2280223c8c3407f41b97872a1" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=f35cbae2280223c8c3407f41b97872a1"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=f35cbae2280223c8c3407f41b97872a1"/><link as="script" rel="preload" href="/webpack-runtime-e647d30ff76147c6a48f.js"/><link as="script" rel="preload" href="/framework-a41a30b6052f08f79325.js"/><link as="script" rel="preload" href="/app-4485dd3a7955390fa6c4.js"/><link as="script" rel="preload" href="/14d71c03043037e9fc0fce6c9585270af8eaca3c-44879e2e3412c1be9cad.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-0a7b2fe336707df4ca1f.js"/><link as="fetch" rel="preload" href="/page-data/tech/react-native-with-monorepo/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2665612806.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header><div class="wrap flex justify-content-between align-center"><div class="padding-top-1"><a aria-current="page" class="" href="/"><img src="/static/logo-cf7d8af8c417044e878e4948981e9547.svg" class="header__LogoImg-sc-31ozxh-1 jybriV"/><h1 style="display:none">Yeony</h1></a></div><nav class="padding-top-1 margin-0"><ul class="flex justify-content-around text-sm margin-0"><a href="/tech"><li class="header__ListLink-sc-31ozxh-0 jlPQqN transition duration-500 text-sm margin-1 current-path">Tech</li></a><a href="/log"><li class="header__ListLink-sc-31ozxh-0 jlPQqN transition duration-500 text-sm margin-1 route-path">Log</li></a><a href="/retrospective"><li class="header__ListLink-sc-31ozxh-0 jlPQqN transition duration-500 text-sm margin-1 route-path">Retrospective</li></a></ul></nav></div></header><div class="toc-container transition duration-500"><div class="toc-wrapper"><div class="toc-content"><div class="toc"><ul>
+<li>
+<p><a href="#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0">들어가며</a></p>
+<ul>
+<li><a href="#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">프로젝트</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#yarn-workspace-%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0">Yarn workspace 모노레포 설정하기</a></p>
+<ul>
+<li>
+<p><a href="#yarn-workspace">yarn workspace</a></p>
+</li>
+<li>
+<p><a href="#yarn-%EC%84%A4%EC%B9%98">yarn 설치</a></p>
+</li>
+<li>
+<p><a href="#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1">프로젝트 생성</a></p>
+</li>
+<li>
+<p><a href="#app-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%83%9D%EC%84%B1">app 패키지 생성</a></p>
+</li>
+<li>
+<p><a href="#mobile-%EC%BD%94%EB%93%9C-%EC%83%9D%EC%84%B1">mobile 코드 생성</a></p>
+</li>
+<li>
+<p><a href="#%EB%A3%A8%ED%8A%B8%EC%97%90-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%B6%94%EA%B0%80">루트에 스크립트 추가</a></p>
+<ul>
+<li><a href="#ios-%EC%8B%A4%ED%96%89">ios 실행</a></li>
+<li><a href="#android-%EC%8B%A4%ED%96%89">android 실행</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#web-%EC%BD%94%EB%93%9C-%EC%83%9D%EC%84%B1">web 코드 생성</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%EC%B0%B8%EA%B3%A0">참고</a></p>
+</li>
+</ul></div></div></div></div><div class="wrap margin-top-1 margin-bottom-1 transition duration-500"><div class="wrap"><h1 class="margin-top-1666">리액트 네이티브 모노레포 프로젝트 구축하기</h1><div class="flex align-center"><a href="https://github.com/Yeony99" target="_blank" rel="noreferrer" class="margin-right-05"><img style="height:auto" alt="" width="20" height="20" class="avatar-sm circle margin-bottom-1" src="https://avatars.githubusercontent.com/u/76241233?v=4"/></a><h6>Yeony (Nayeon Kim) · <!-- -->2022-10-10</h6></div><div class="blog-post"><h2 id="들어가며" style="position:relative;">들어가며<a href="#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0" aria-label="들어가며 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>React와 React Native를 공부하며 웹과 앱 간에 소스를 공유할 수 있으면 좋겠다는 생각이 들었습니다.
+flutter web도 고려사항에 있었지만, 고민 끝에 React와 RN으로 노선을 정했습니다.</p>
+<ul>
+<li>언어의 숙련도</li>
+<li>플랫폼에 관계없는 동일한 사용자 경험 제공 (UX/UI 통일)</li>
+<li>소스 중복 최소화</li>
+</ul>
+<p>이 두 가지를 고려했습니다.</p>
+<p>요구사항이 추가될 수 있기 때문에, 언젠가 네이티브 코드 연동이 필요하지 않을까 싶어 expo는 고려하지 않았습니다.</p>
+<h3 id="프로젝트" style="position:relative;">프로젝트<a href="#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" aria-label="프로젝트 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><a href="https://github.com/Yeony99/react-native-monorepo">Yeony99 - react-native-monorepo</a> 프로젝트를 본 글의 예시로 올려놓았습니다.</p>
+<p><code class="language-text">node_modules</code> 설치한 후 루트의 <code class="language-text">package.json</code>의 scripts를 참고해 실행해볼 수 있습니다.</p>
+<br/>
+<hr>
+<h2 id="yarn-workspace-모노레포-설정하기" style="position:relative;">Yarn workspace 모노레포 설정하기<a href="#yarn-workspace-%EB%AA%A8%EB%85%B8%EB%A0%88%ED%8F%AC-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0" aria-label="yarn workspace 모노레포 설정하기 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>모바일과 웹 소스를 각각의 레포지토리로 만드는 멀티 레포도 괜찮을 것 같지만, 장기적으로 생각했을 때 하나의 레포지토리로 여러 패키지를 관리하는 것이 부담이 덜할 것이라 판단했습니다.</p>
+<p>웹과 앱에서 동일한 사용자 경험을 주고 싶기도 했구요. <br/></p>
+<h3 id="yarn-workspace" style="position:relative;">yarn workspace<a href="#yarn-workspace" aria-label="yarn workspace permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>yarn에서는 root 경로의 package.json 파일이 하위 폴더의 package.json에 정의된 dependencies를 <code class="language-text">yarn install</code>로 한번에 설치할 수 있게 하는 <a href="https://classic.yarnpkg.com/lang/en/docs/workspaces/">workspace</a> 설정이 가능합니다.</p>
+<p>구성할 프로젝트 구조는 아래와 같습니다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code">&lt;root&gt;/
+└─ packages/
+    ├── app/
+    │   ├── src/
+    │   └── package.json
+    # Android/iOS app configuration files and native code
+    ├── mobile/
+    │   ├── android/
+    │   ├── ios/
+    │   ├── app.json
+    │   ├── babel.config.js
+    │   ├── index.js
+    │   ├── metro.config.js
+    │   └── package.json
+    # Windows app configuration files and native code
+    └── web/
+        ├── public/
+        ├── src/
+        ├── carco.config.js
+        └── package.json
+└─ package.json</code>
+        </deckgo-highlight-code>
+<br/>
+<h3 id="yarn-설치" style="position:relative;">yarn 설치<a href="#yarn-%EC%84%A4%EC%B9%98" aria-label="yarn 설치 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>node가 설치되어 있다면 npm으로 설치합니다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code">$ npm install -g yarn</code>
+        </deckgo-highlight-code>
+<p>node가 설치되어 있지 않다면 node부터 설치합니다.</p>
+<p>그 외에도 homebrew, chocolatey 등을 이용해 설치할 수 있습니다.</p>
+<p>설치 완료 후 확인합니다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code">$ yarn --version</code>
+        </deckgo-highlight-code>
+<br/>
+<h3 id="프로젝트-생성" style="position:relative;">프로젝트 생성<a href="#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1" aria-label="프로젝트 생성 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>원하는 프로젝트명으로 폴더를 하나 생성합니다. 저는 <code class="language-text">react-native-monorepo</code>로 설정하였습니다. 여기가 프로젝트의 루트 디렉토리입니다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code">$ yarn init -y</code>
+        </deckgo-highlight-code>
+<p>위 명령어로 package.json을 생성해줍니다. 생성된 package.json을 수정해봅시다.</p>
+<deckgo-highlight-code language="json" terminal="carbon" theme="blackboard"  >
+          <code slot="code">// 루트 package.json
+{
+  &quot;name&quot;: &quot;react-native-monorepo&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;license&quot;: &quot;MIT&quot;,
+  // 추가
+  &quot;workspaces&quot;: {
+    &quot;packages&quot;: [&quot;packages/*&quot;],
+    &quot;nohoist&quot;: [&quot;**/react&quot;, &quot;**/react-dom&quot;]
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>workspaces 속 packages에는 yarn workspace에서 관리할 패키지 경로를 입력합니다.<br>
+<code class="language-text">nohoist</code>는 루트 프로젝트 디렉토리가 아닌, 각 패키지 디렉토리에 설치되어야 한다고 yarn에 알려줍니다.</p>
+<p>그 후 packages 디렉토리를 생성합니다.</p>
+<p>pacakges 폴더로 <code class="language-text">cd packages</code> 한 뒤 각각의 프로젝트를 생성해봅시다.</p>
+<h3 id="app-패키지-생성" style="position:relative;">app 패키지 생성<a href="#app-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%83%9D%EC%84%B1" aria-label="app 패키지 생성 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>공유될 React Native 코드를 담을 <code class="language-text">app</code> 디렉토리를 생성해봅시다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code">$ mkdir packages/app &amp;&amp; cd packages/app</code>
+        </deckgo-highlight-code>
+<p>app 디렉토리의 루트에서 <strong>package.json</strong>을 추가하고 아래와 같이 작성합니다.</p>
+<deckgo-highlight-code language="json" terminal="carbon" theme="blackboard"  >
+          <code slot="code">// app의 package.json
+{
+  &quot;name&quot;: &quot;@react-native-monorepo/app&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;private&quot;: true,
+  &quot;main&quot;: &quot;src&quot;,
+  &quot;peerDependencies&quot;: {
+    &quot;react&quot;: &quot;*&quot;,
+    &quot;react-native&quot;: &quot;*&quot;
+  }
+}</code>
+        </deckgo-highlight-code>
+<br/>
+<div style="background-color: #eee; border-radius: 1rem; font-size: 0.9rem; padding: 1rem">
+  <h6>❗ peerDependencies 란?</h6>
+  실제로 app 패키지 내부에서 import하지는 않지만, 패키지에 의존하는 각각의 앱들이 라이브러리 버전을 제공합니다.<br/>
+  app 패키지의 `peerDependencies`는 이후 생성할 mobile, web 앱으로부터 각각의 버전을 받게 됩니다.
+</div>
+<p><code class="language-text">src/index.js</code>에 앱을 만들어봅시다.</p>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="blackboard"  >
+          <code slot="code">// react-native-monorepo/packages/app/src/index.js
+
+import React from &quot;react&quot;
+import { Platform, StyleSheet, Text, View } from &quot;react-native&quot;
+
+export function App() {
+  return (
+    &lt;View&gt;
+      &lt;Text style={styles.text}&gt;Hello from React Native! &lt;/Text&gt;
+      &lt;View style={styles.platformRow}&gt;
+        &lt;Text style={styles.text}&gt;Platform: &lt;/Text&gt;
+        &lt;View style={styles.platformBackground}&gt;
+          &lt;Text style={styles.platformValue}&gt;{Platform.OS}&lt;/Text&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  )
+}
+
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 28,
+    fontWeight: &quot;600&quot;,
+  },
+  platformRow: {
+    marginTop: 12,
+    flexDirection: &quot;row&quot;,
+    alignItems: &quot;center&quot;,
+  },
+  platformValue: {
+    fontSize: 28,
+    fontWeight: &quot;500&quot;,
+  },
+  platformBackground: {
+    backgroundColor: &quot;#ececec&quot;,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: &quot;#d4d4d4&quot;,
+    paddingHorizontal: 6,
+    borderRadius: 6,
+    alignItems: &quot;center&quot;,
+  },
+})
+
+export default App</code>
+        </deckgo-highlight-code>
+<p>yarn workspace 덕분에 <code class="language-text">@react-native-monorepo/app</code>을 다른 작업 공간에서도 사용할 수 있습니다.</p>
+<ul>
+<li><code class="language-text">@react-native-monorepo/app</code>으로 dependencies에 표시</li>
+<li><code class="language-text">import App from "@react-native-monorepo/app";</code></li>
+</ul>
+<h3 id="mobile-코드-생성" style="position:relative;">mobile 코드 생성<a href="#mobile-%EC%BD%94%EB%93%9C-%EC%83%9D%EC%84%B1" aria-label="mobile 코드 생성 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>React Native를 사용할 수 있게 되었으니 <code class="language-text">packages/mobile</code>에 Android 와 iOS 네이티브 코드를 작성할 수 있도록 프로젝트를 생성해봅시다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code"># window
+$ cd packages &amp;&amp; npx react-native init MyApp &amp;&amp; move MyApp mobile
+
+# macOS
+$ cd packages &amp;&amp; npx react-native init MyApp &amp;&amp; mv MyApp mobile</code>
+        </deckgo-highlight-code>
+<p>package.json에 패키지 이름을 바꾸고, <code class="language-text">@react-native-monorepo/app</code> 종속성을 추가합니다.</p>
+<deckgo-highlight-code language="json" terminal="carbon" theme="blackboard"  >
+          <code slot="code">// packages/mobile/package.json
+{
+  // 이름 수정
+  &quot;name&quot;: &quot;@react-native-monorepo/mobile&quot;,
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;private&quot;: true,
+  &quot;scripts&quot;: {
+    &quot;android&quot;: &quot;react-native run-android&quot;,
+    &quot;ios&quot;: &quot;react-native run-ios&quot;,
+    &quot;start&quot;: &quot;react-native start&quot;,
+    &quot;test&quot;: &quot;jest&quot;,
+    &quot;lint&quot;: &quot;eslint .&quot;
+  },
+  &quot;dependencies&quot;: {
+    // 종속성 추가
+    &quot;@react-native-monorepo/app&quot;: &quot;*&quot;,
+    &quot;react&quot;: &quot;18.1.0&quot;,
+    &quot;react-native&quot;: &quot;0.70.2&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@babel/core&quot;: &quot;^7.12.9&quot;,
+    &quot;@babel/runtime&quot;: &quot;^7.12.5&quot;,
+    &quot;@react-native-community/eslint-config&quot;: &quot;^2.0.0&quot;,
+    &quot;babel-jest&quot;: &quot;^26.6.3&quot;,
+    &quot;eslint&quot;: &quot;^7.32.0&quot;,
+    &quot;jest&quot;: &quot;^26.6.3&quot;,
+    &quot;metro-react-native-babel-preset&quot;: &quot;0.72.3&quot;,
+    &quot;react-test-renderer&quot;: &quot;18.1.0&quot;
+  },
+  &quot;jest&quot;: {
+    &quot;preset&quot;: &quot;react-native&quot;
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>React Native에서 제공하는 앱 템플릿 대신, <code class="language-text">@react-native-monorepo/app</code>을 사용하도록 <code class="language-text">packages/mobile/index.js</code>을 수정합니다.</p>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="blackboard"  >
+          <code slot="code">import { AppRegistry } from &quot;react-native&quot;
+import App from &quot;@react-native-monorepo/app&quot;
+import { name as appName } from &quot;./app.json&quot;
+
+AppRegistry.registerComponent(appName, () =&gt; App)</code>
+        </deckgo-highlight-code>
+<p>그리고 네이티브 코드를 실행해보기 전 nohoist에 react-native를 명시해야 제대로 실행됩니다.</p>
+<deckgo-highlight-code language="json" terminal="carbon" theme="blackboard"  >
+          <code slot="code">// react-native-monorepo/package.json
+{
+  &quot;name&quot;: &quot;react-native-monorepo&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;private&quot;: &quot;true&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;workspaces&quot;: {
+    &quot;packages&quot;: [&quot;packages/*&quot;],
+    &quot;nohoist&quot;: [
+      &quot;**/react&quot;,
+      &quot;**/react-dom&quot;,
+      &quot;**/react-native&quot;,
+      &quot;**/react-native/**&quot;
+    ]
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>또한 workspace는 <code class="language-text">"private": true</code>일 때만 작동하므로 private 옵션을 추가합니다.</p>
+<p>nohoist는 수정할 때마다 <code class="language-text">yarn reset &amp;&amp; yarn</code>명령어로 프로젝트 루트에서 실행해야 종속성을 다시 설치합니다.</p>
+<p>아직 문제는 있습니다. 다른 디렉토리에 있는 걸 사용하려면 monorepo tool이 필요합니다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code"># react-native-monorepo/packages/mobile
+$ yarn add -D react-native-monorepo-tools</code>
+        </deckgo-highlight-code>
+<p>metro 구성을 업데이트 합니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">// react-native-monorepo/packages/mobile/metro.config.js
+const exclusionList = require(&quot;metro-config/src/defaults/exclusionList&quot;)
+const {
+  getMetroTools,
+  getMetroAndroidAssetsResolutionFix,
+} = require(&quot;react-native-monorepo-tools&quot;)
+
+const monorepoMetroTools = getMetroTools()
+
+const androidAssetsResolutionFix = getMetroAndroidAssetsResolutionFix()
+
+module.exports = {
+  transformer: {
+    publicPath: androidAssetsResolutionFix.publicPath,
+    getTransformOptions: async () =&gt; ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: true,
+      },
+    }),
+  },
+  server: {
+    // ...and to the server middleware.
+    enhanceMiddleware: middleware =&gt; {
+      return androidAssetsResolutionFix.applyMiddleware(middleware)
+    },
+  },
+  // Add additional Yarn workspace package roots to the module map.
+  // This allows importing importing from all the project&#39;s packages.
+  watchFolders: monorepoMetroTools.watchFolders,
+  resolver: {
+    // Ensure we resolve nohoist libraries from this directory.
+    blockList: exclusionList(monorepoMetroTools.blockList),
+    extraNodeModules: monorepoMetroTools.extraNodeModules,
+  },
+}</code>
+        </deckgo-highlight-code>
+<h3 id="루트에-스크립트-추가" style="position:relative;">루트에 스크립트 추가<a href="#%EB%A3%A8%ED%8A%B8%EC%97%90-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%B6%94%EA%B0%80" aria-label="루트에 스크립트 추가 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>루트에서 각각의 프로젝트를 실행할 수 있도록 스크립트를 작성해보겠습니다.</p>
+<deckgo-highlight-code language="json" terminal="carbon" theme="blackboard"  >
+          <code slot="code">// react-native-monorepo/package.json
+&quot;scripts&quot;: {
+  &quot;android:metro&quot;: &quot;yarn workspace @react-native-monorepo/mobile start&quot;,
+  &quot;android:start&quot;: &quot;yarn workspace @react-native-monorepo/mobile android&quot;,
+  &quot;android:studio&quot;: &quot;yarn workspace @react-native-monorepo/mobile studio&quot;,
+  &quot;ios:metro&quot;: &quot;yarn workspace @react-native-monorepo/mobile start&quot;,
+  &quot;ios:start&quot;: &quot;yarn workspace @react-native-monorepo/mobile ios&quot;,
+  &quot;ios:xcode&quot;: &quot;yarn workspace @react-native-monorepo/mobile xcode&quot;
+},</code>
+        </deckgo-highlight-code>
+<h4 id="ios-실행" style="position:relative;">ios 실행<a href="#ios-%EC%8B%A4%ED%96%89" aria-label="ios 실행 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code"># packages/mobile/ios
+$ pod install</code>
+        </deckgo-highlight-code>
+<p>만약 m1 유저라면</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code">$ sudo arch -x86_64 gem install ffi
+$ arch -x86_64 pod install</code>
+        </deckgo-highlight-code>
+<p>위 명령어를 실행해 pod을 설치합니다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code"># 루트
+$ yarn ios:start</code>
+        </deckgo-highlight-code>
+<h4 id="android-실행" style="position:relative;">android 실행<a href="#android-%EC%8B%A4%ED%96%89" aria-label="android 실행 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code"># 루트에서
+$ yarn android:start</code>
+        </deckgo-highlight-code>
+<h3 id="web-코드-생성" style="position:relative;">web 코드 생성<a href="#web-%EC%BD%94%EB%93%9C-%EC%83%9D%EC%84%B1" aria-label="web 코드 생성 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>웹에서 react-native를 사용하기 위해 react-native-web을 적극적으로 사용합니다.</p>
+<p>여기서는 CRA로 리액트 앱을 생성합니다.</p>
+<p>먼저 루트의 package.json에 nohoist를 수정합니다.</p>
+<deckgo-highlight-code language="json" terminal="carbon" theme="blackboard"  >
+          <code slot="code">&quot;nohoist&quot;: [
+  &quot;**/react&quot;,
+  &quot;**/react-dom&quot;,
+  &quot;**/react-native&quot;,
+  &quot;**/react-native/**&quot;,
+  &quot;**/react-native-web&quot;
+]</code>
+        </deckgo-highlight-code>
+<p>그리고 packages 디렉토리에서 CRA로 프로젝트를 생성합니다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code">$ npx create-react-app my-app &amp;&amp; mv my-app web</code>
+        </deckgo-highlight-code>
+<p>패키지 이름을 변경합니다.</p>
+<deckgo-highlight-code language="json" terminal="carbon" theme="blackboard"  >
+          <code slot="code">// react-native-monorepo/packages/web/package.json
+&quot;name&quot;: &quot;@react-native-monorepo/web&quot;,</code>
+        </deckgo-highlight-code>
+<p>react-native-web을 설치합니다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code">$ cd web &amp;&amp; yarn add react-native-web</code>
+        </deckgo-highlight-code>
+<p>웹 프로젝트 내에서 React Native 앱을 사용하기 위해 <code class="language-text">src/index.js</code>를 수정합니다.</p>
+<deckgo-highlight-code language="jsx" terminal="carbon" theme="blackboard"  >
+          <code slot="code">import React from &quot;react&quot;
+import ReactDOM from &quot;react-dom&quot;
+import &quot;./index.css&quot;
+import { App } from &quot;@react-native-monorepo/app&quot; // 수정
+
+ReactDOM.render(
+  &lt;React.StrictMode&gt;
+    &lt;App /&gt;
+  &lt;/React.StrictMode&gt;,
+  document.getElementById(&quot;root&quot;)
+)</code>
+        </deckgo-highlight-code>
+<p>CRA는 yarn workspace를 지원하지 않습니다. 따라서 외부 패키지를 가져올 수 있도록 craco를 설치합니다.</p>
+<deckgo-highlight-code language="bash" terminal="carbon" theme="blackboard"  >
+          <code slot="code">$ yarn add -D @craco/craco react-native-monorepo-tools</code>
+        </deckgo-highlight-code>
+<p>그리고 <code class="language-text">packages/web</code>에 <code class="language-text">craco.config.js</code> 파일을 생성합니다.</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="blackboard"  >
+          <code slot="code">/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require(&quot;path&quot;)
+const { getLoader, loaderByName } = require(&quot;@craco/craco&quot;)
+
+const absolutePath = path.join(__dirname, &quot;../core&quot;)
+
+module.exports = {
+  webpack: {
+    alias: {},
+    plugins: [],
+    configure: webpackConfig =&gt; {
+      const { isFound, match } = getLoader(
+        webpackConfig,
+        loaderByName(&quot;babel-loader&quot;)
+      )
+      if (isFound) {
+        const include = Array.isArray(match.loader.include)
+          ? match.loader.include
+          : [match.loader.include]
+        match.loader.include = include.concat[absolutePath]
+      }
+      return webpackConfig
+    },
+  },
+}</code>
+        </deckgo-highlight-code>
+<p>그리고 <code class="language-text">web/package.json</code>에서 script를 craco로 시작할 수 있도록 변경합니다.</p>
+<deckgo-highlight-code language="json" terminal="carbon" theme="blackboard"  >
+          <code slot="code">{
+  &quot;name&quot;: &quot;@react-native-monorepo/web&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;private&quot;: true,
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;craco start&quot;, // 수정
+    &quot;build&quot;: &quot;craco build&quot;, // 수정
+    &quot;test&quot;: &quot;react-scripts test&quot;,
+    &quot;eject&quot;: &quot;react-scripts eject&quot;
+  },</code>
+        </deckgo-highlight-code>
+<p>마지막으로 프로젝트 루트에 있는 package.json의 scripts를 수정해줍니다.</p>
+<deckgo-highlight-code language="json" terminal="carbon" theme="blackboard"  >
+          <code slot="code"> &quot;scripts&quot;: {
+    &quot;android:metro&quot;: &quot;yarn workspace @react-native-monorepo/mobile start&quot;,
+    &quot;android:start&quot;: &quot;yarn workspace @react-native-monorepo/mobile android&quot;,
+    &quot;android:studio&quot;: &quot;yarn workspace @react-native-monorepo/mobile studio&quot;,
+    &quot;ios:metro&quot;: &quot;yarn workspace @react-native-monorepo/mobile start&quot;,
+    &quot;ios:start&quot;: &quot;yarn workspace @react-native-monorepo/mobile ios&quot;,
+    &quot;ios:xcode&quot;: &quot;yarn workspace @react-native-monorepo/mobile xcode&quot;,
+    &quot;web:start&quot;: &quot;yarn workspace @@react-native-monorepo/web start&quot;, // 추가
+    &quot;web:build&quot;: &quot;yarn workspace @@react-native-monorepo/web build&quot; // 추가
+  }</code>
+        </deckgo-highlight-code>
+<p><code class="language-text">yarn web:start</code>를 통해 실행할 수 있습니다.</p>
+<br/>
+<hr>
+<h2 id="참고" style="position:relative;">참고<a href="#%EC%B0%B8%EA%B3%A0" aria-label="참고 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p><a href="https://github.com/mmazzarolo/react-native-universal-monorepo">mmazzarolo/react-native-universal-monorepo</a><br>
+<a href="https://classic.yarnpkg.com/lang/en/docs/workspaces/">yarn workspaces</a><br>
+<a href="https://necolas.github.io/react-native-web/">react native web</a></p></div><hr class="margin-0"/><div class="flex"><div class="tag__Tag-sc-g53uox-0 hjYOdx tag tag-sm">React/RN</div></div></div><div class="padding-1 margin-top-2"><div class="b-shadow-10-gray"><div class="comments-wrapper"><div>Loading script...</div><div></div></div></div></div></div><footer><div class="margin-top-1 padding-1 w-100 "><div class="wrap flex align-center justify-content-between padding-1"><div style="font-size:0.9rem">© 2022 Nayeon Yeony Kim</div><div class="flex"><div class="margin-right-1"><a href="/rss.xml" target="_blank"><img class="footer-logo" src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UlNTPC90aXRsZT48cGF0aCBkPSJNMTkuMTk5IDI0QzE5LjE5OSAxMy40NjcgMTAuNTMzIDQuOCAwIDQuOFYwYzEzLjE2NSAwIDI0IDEwLjgzNSAyNCAyNGgtNC44MDF6TTMuMjkxIDE3LjQxNWMxLjgxNCAwIDMuMjkzIDEuNDc5IDMuMjkzIDMuMjk1IDAgMS44MTMtMS40ODUgMy4yOS0zLjMwMSAzLjI5QzEuNDcgMjQgMCAyMi41MjYgMCAyMC43MXMxLjQ3NS0zLjI5NCAzLjI5MS0zLjI5NXpNMTUuOTA5IDI0aC00LjY2NWMwLTYuMTY5LTUuMDc1LTExLjI0NS0xMS4yNDQtMTEuMjQ1VjguMDljOC43MjcgMCAxNS45MDkgNy4xODQgMTUuOTA5IDE1LjkxeiIvPjwvc3ZnPg=="/></a></div><div><a href="https://github.com/Yeony99" target="_blank"><img class="footer-logo" src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0SHViPC90aXRsZT48cGF0aCBkPSJNMTIgLjI5N2MtNi42MyAwLTEyIDUuMzczLTEyIDEyIDAgNS4zMDMgMy40MzggOS44IDguMjA1IDExLjM4NS42LjExMy44Mi0uMjU4LjgyLS41NzcgMC0uMjg1LS4wMS0xLjA0LS4wMTUtMi4wNC0zLjMzOC43MjQtNC4wNDItMS42MS00LjA0Mi0xLjYxQzQuNDIyIDE4LjA3IDMuNjMzIDE3LjcgMy42MzMgMTcuN2MtMS4wODctLjc0NC4wODQtLjcyOS4wODQtLjcyOSAxLjIwNS4wODQgMS44MzggMS4yMzYgMS44MzggMS4yMzYgMS4wNyAxLjgzNSAyLjgwOSAxLjMwNSAzLjQ5NS45OTguMTA4LS43NzYuNDE3LTEuMzA1Ljc2LTEuNjA1LTIuNjY1LS4zLTUuNDY2LTEuMzMyLTUuNDY2LTUuOTMgMC0xLjMxLjQ2NS0yLjM4IDEuMjM1LTMuMjItLjEzNS0uMzAzLS41NC0xLjUyMy4xMDUtMy4xNzYgMCAwIDEuMDA1LS4zMjIgMy4zIDEuMjMuOTYtLjI2NyAxLjk4LS4zOTkgMy0uNDA1IDEuMDIuMDA2IDIuMDQuMTM4IDMgLjQwNSAyLjI4LTEuNTUyIDMuMjg1LTEuMjMgMy4yODUtMS4yMy42NDUgMS42NTMuMjQgMi44NzMuMTIgMy4xNzYuNzY1Ljg0IDEuMjMgMS45MSAxLjIzIDMuMjIgMCA0LjYxLTIuODA1IDUuNjI1LTUuNDc1IDUuOTIuNDIuMzYuODEgMS4wOTYuODEgMi4yMiAwIDEuNjA2LS4wMTUgMi44OTYtLjAxNSAzLjI4NiAwIC4zMTUuMjEuNjkuODI1LjU3QzIwLjU2NSAyMi4wOTIgMjQgMTcuNTkyIDI0IDEyLjI5N2MwLTYuNjI3LTUuMzczLTEyLTEyLTEyIi8+PC9zdmc+"/></a></div></div></div></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><div id="portal"></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/tech/react-native-with-monorepo";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-ea100fe6f02bbc648246.js"],"app":["/app-4485dd3a7955390fa6c4.js"],"component---src-pages-404-js":["/component---src-pages-404-js-cfde8b7c13c3345a429e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-49470ccdd56256ec83d1.js"],"component---src-pages-log-index-js":["/component---src-pages-log-index-js-92dccf67c7ce03cf397b.js"],"component---src-pages-retrospective-index-js":["/component---src-pages-retrospective-index-js-3508d56cae196aec86d0.js"],"component---src-pages-tech-index-js":["/component---src-pages-tech-index-js-dbdd7c03318d23440676.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-0a7b2fe336707df4ca1f.js"]};/*]]>*/</script><script src="/polyfill-ea100fe6f02bbc648246.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-0a7b2fe336707df4ca1f.js" async=""></script><script src="/14d71c03043037e9fc0fce6c9585270af8eaca3c-44879e2e3412c1be9cad.js" async=""></script><script src="/app-4485dd3a7955390fa6c4.js" async=""></script><script src="/framework-a41a30b6052f08f79325.js" async=""></script><script src="/webpack-runtime-e647d30ff76147c6a48f.js" async=""></script></body></html>
