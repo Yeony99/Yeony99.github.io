@@ -489,5 +489,6 @@ class _MyHomePageState extends State<MyHomePage> {
 이러한 차이가 있습니다.
 
 
-◾ [[Flutter] 다양한 위젯 사용하기](/tech/flutter-use-several-widgets) 👈 이전 글 보기
+◾ [[Flutter] 다양한 위젯 사용하기](/tech/flutter-use-several-widgets) 👈 이전 글 보기   
+◾ [[Flutter] Form, Alert에 사용할 수 있는 플러터 컴포넌트](/tech/flutter-use-several-components) 👈 다음 글 보기
 
