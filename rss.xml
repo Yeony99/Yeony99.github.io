@@ -1,4 +1,345 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 14 Oct 2022 04:39:38 GMT</lastBuildDate><item><title><![CDATA[[Flutter] Form, Alert에 사용할 수 있는 플러터 컴포넌트]]></title><description><![CDATA[플러터의 위젯들을 많이 살펴봤는데요. 이 글에서는 알람과 다이얼로그, 폼과 같이 입력할 수 있는 컴포넌트 위젯에 대해 알아보고자 합니다. Dialogs, Alerts, Panels 먼저 다이얼로그와 Alert…]]></description><link>https://yeony99.github.io/tech/flutter-use-several-components</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-use-several-components</guid><pubDate>Fri, 14 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;플러터의 위젯들을 많이 살펴봤는데요. 이 글에서는 알람과 다이얼로그, 폼과 같이 입력할 수 있는 컴포넌트 위젯에 대해 알아보고자 합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 19 Oct 2022 02:52:56 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (13) - 자바스크립트의 타입 변환]]></title><description><![CDATA[우리가 자바스크립트에서 사용하는 모든 값은 제각각의 타입을 가지고 있습니다. 이런 타입은 개발자의 의도에 따라 변환되기도 하고, 암묵적으로 평가되기도 합니다. 암묵적 타입 변환(Implicit Coercion…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-type-coercion</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-type-coercion</guid><pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;우리가 자바스크립트에서 사용하는 모든 값은 제각각의 &lt;strong&gt;타입&lt;/strong&gt;을 가지고 있습니다.&lt;/p&gt;
+&lt;p&gt;이런 타입은 개발자의 의도에 따라 변환되기도 하고, 암묵적으로 평가되기도 합니다.&lt;/p&gt;
+&lt;h2 id=&quot;암묵적-타입-변환implicit-coercion&quot; style=&quot;position:relative;&quot;&gt;암묵적 타입 변환(Implicit Coercion)&lt;a href=&quot;#%EC%95%94%EB%AC%B5%EC%A0%81-%ED%83%80%EC%9E%85-%EB%B3%80%ED%99%98implicit-coercion&quot; aria-label=&quot;암묵적 타입 변환implicit coercion permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;자바스크립트 엔진은 표현식을 평가할 때 맥락에 따라 타입을 강제로 변환할 때가 있습니다. 개발자의 의도와 무관하게 작동하는 방식입니다.&lt;/p&gt;
+&lt;p&gt;자바스크립트 엔진이 어떻게 타입을 변환하는지 알게 되면, 타입이 바뀌어 발생할 수 있는 오류에 대응하기 쉽습니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;if(1)&lt;/code&gt; 은 실행되는 블록일까요? &lt;code class=&quot;language-text&quot;&gt;if(!val)&lt;/code&gt; 은 무엇을 의미하는 걸까요? 타입 변환을 통해 알아봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;&amp;#39;10&amp;#39; + &amp;#39;1&amp;#39; // &amp;#39;101&amp;#39;
+&amp;#39;10&amp;#39; + 1 // &amp;#39;101&amp;#39;
+10 + &amp;#39;1&amp;#39; // &amp;#39;101&amp;#39;
+
+
+&amp;#39;10&amp;#39; * &amp;#39;10&amp;#39; // 100
+10 * &amp;#39;10&amp;#39; // 100
+
+if(1) { } // 1은 true로 평가
+
+if(!0) { } // 0은 false로 평가&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;+&lt;/code&gt; 연산자는 문자열을 연결할 수도 있고, 숫자의 덧셈을 할 수도 있는 연산자입니다. 따라서 &lt;strong&gt;숫자 + 문자&lt;/strong&gt;의 결과는 &lt;strong&gt;문자&lt;/strong&gt;로 평가됩니다.&lt;br&gt;
+하지만 &lt;code class=&quot;language-text&quot;&gt;*&lt;/code&gt; 연산자는 숫자의 곱셉을 계산할 수 있는 연산자였죠? 따라서 &lt;strong&gt;문자 * 문자&lt;/strong&gt;일지라도 평가결과는 &lt;strong&gt;숫자&lt;/strong&gt;가 되는 것입니다.&lt;/p&gt;
+&lt;h3 id=&quot;문자열-타입-암묵적-변환&quot; style=&quot;position:relative;&quot;&gt;문자열 타입 암묵적 변환&lt;a href=&quot;#%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%83%80%EC%9E%85-%EC%95%94%EB%AC%B5%EC%A0%81-%EB%B3%80%ED%99%98&quot; aria-label=&quot;문자열 타입 암묵적 변환 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;문자열 타입으로의 변환은 &lt;strong&gt;문자 그대로&lt;/strong&gt; 출력되게끔 합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;0 + &amp;#39;&amp;#39; // &amp;#39;0&amp;#39;
+-0 + &amp;#39;&amp;#39; // &amp;#39;0&amp;#39;
+
+10 + &amp;#39;&amp;#39; // &amp;#39;10&amp;#39;
+-10 + &amp;#39;&amp;#39; // &amp;#39;-10&amp;#39;
+
+NaN + &amp;#39;&amp;#39; // &amp;#39;NaN&amp;#39;
+
+true + &amp;#39;&amp;#39; // &amp;#39;true&amp;#39;
+false + &amp;#39;&amp;#39; // &amp;#39;false&amp;#39;
+
+undefined + &amp;#39;&amp;#39; // &amp;#39;undefined&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;숫자-타입-암묵적-변환&quot; style=&quot;position:relative;&quot;&gt;숫자 타입 암묵적 변환&lt;a href=&quot;#%EC%88%AB%EC%9E%90-%ED%83%80%EC%9E%85-%EC%95%94%EB%AC%B5%EC%A0%81-%EB%B3%80%ED%99%98&quot; aria-label=&quot;숫자 타입 암묵적 변환 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;숫자 타입으로 변환되는 경우는, 숫자 연산에 사용되는 연산자(산술 연산자)일 경우에 작동합니다.&lt;/p&gt;
+&lt;p&gt;산술 연산자는 &lt;strong&gt;숫자 타입으로 연산&lt;/strong&gt;하는 것이 목적이기 때문에, 피연산자들을 숫자 타입으로 암묵적 형변환합니다.&lt;/p&gt;
+&lt;p&gt;단, 숫자로 변환할 수 없는 값(ex. String, {} 등)은 NaN으로 바뀌기 때문에 주의해야합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;1 - &amp;#39;1&amp;#39; // 0
+10 * &amp;#39;10&amp;#39; // 100
+
++&amp;#39;&amp;#39; // 0
+-&amp;#39;&amp;#39; // -0
+
++&amp;#39;any string&amp;#39; // NaN
+
++true // 1
++false // 0
+
++null // 0
++undefined // NaN
+
+10 &amp;gt; &amp;#39;1&amp;#39; // true
+
++[] // 0
++[1, 2] // NaN
++{} // NaN&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;불리언-타입-암묵적-변환&quot; style=&quot;position:relative;&quot;&gt;불리언 타입 암묵적 변환&lt;a href=&quot;#%EB%B6%88%EB%A6%AC%EC%96%B8-%ED%83%80%EC%9E%85-%EC%95%94%EB%AC%B5%EC%A0%81-%EB%B3%80%ED%99%98&quot; aria-label=&quot;불리언 타입 암묵적 변환 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;불리언 타입(true/false)로의 형변환은 주로 if, for 같은 제어문이나 삼항연산자 등에서 사용합니다.&lt;/p&gt;
+&lt;p&gt;논리적으로 참/거짓이 판별될 때 사용하는데요. 논리 결과가 필요한 곳에서 자바스크립트 엔진은 값을 불리언 타입으로 형변환 합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;if(&amp;#39;&amp;#39;) { console.log(&amp;#39;실행 1&amp;#39;) }
+if(0) { console.log(&amp;#39;실행 2&amp;#39;) }
+if(&amp;#39;any string&amp;#39;) { console.log(&amp;#39;실행 3&amp;#39;) }
+if(null) { console.log(&amp;#39;실행 4&amp;#39;) }
+if(undefined) { console.log(&amp;#39;실행 5&amp;#39;) }
+if(1) { console.log(&amp;#39;실행 6&amp;#39;) }
+if(10000) { console.log(&amp;#39;실행 7&amp;#39;) }
+
+// 실행 3
+// 실행 6
+// 실행 7&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;자바스크립트 엔진은 불리언 타입이 아닌 값을 &lt;code class=&quot;language-text&quot;&gt;Truthy&lt;/code&gt; 혹은 &lt;code class=&quot;language-text&quot;&gt;Falsy&lt;/code&gt;로 평가합니다. 이 말은 &lt;strong&gt;참(혹은 거짓)으로 평가되는 값&lt;/strong&gt;을 의미합니다.&lt;/p&gt;
+&lt;p&gt;다시 말해 제어문 같이 불리언 값이 필요한 곳에서 형변환되는 것이죠.&lt;/p&gt;
+&lt;h2 id=&quot;명시적-타입-변환explicit-coercion&quot; style=&quot;position:relative;&quot;&gt;명시적 타입 변환(Explicit Coercion)&lt;a href=&quot;#%EB%AA%85%EC%8B%9C%EC%A0%81-%ED%83%80%EC%9E%85-%EB%B3%80%ED%99%98explicit-coercion&quot; aria-label=&quot;명시적 타입 변환explicit coercion permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;다음은 명시적 타입 변환입니다. 개발자가 뚜렷한 의도를 가지고 타입을 변환하는 방법은 여러가지가 있습니다.&lt;br&gt;
+빌트인 함수를 사용하거나, 내장 메소드, 함수 등을 사용하는 방법이 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;문자열-타입-명시적-변환&quot; style=&quot;position:relative;&quot;&gt;문자열 타입 명시적 변환&lt;a href=&quot;#%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%83%80%EC%9E%85-%EB%AA%85%EC%8B%9C%EC%A0%81-%EB%B3%80%ED%99%98&quot; aria-label=&quot;문자열 타입 명시적 변환 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// String 생성자 함수 사용
+String(10) // &amp;#39;10&amp;#39;
+String(NaN) // &amp;#39;NaN&amp;#39;
+String(Infinity) // &amp;#39;Infinity&amp;#39;
+String(true) // &amp;#39;true&amp;#39;
+
+// Object.prototype.toString 메소드 사용
+
+(10).toString() // &amp;#39;10&amp;#39;
+(NaN).toString() // &amp;#39;NaN&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;숫자-타입-명시적-변환&quot; style=&quot;position:relative;&quot;&gt;숫자 타입 명시적 변환&lt;a href=&quot;#%EC%88%AB%EC%9E%90-%ED%83%80%EC%9E%85-%EB%AA%85%EC%8B%9C%EC%A0%81-%EB%B3%80%ED%99%98&quot; aria-label=&quot;숫자 타입 명시적 변환 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// Number 생성자 함수 사용
+Number(&amp;#39;10&amp;#39;) // 10
+Number(true) // 1
+Number(false) // 0
+
+// parseInt, parseFloat 함수 사용
+parseInt(&amp;#39;10&amp;#39;) // 10
+parseInt(&amp;#39;10.345&amp;#39;) // 10
+parseFloat(&amp;#39;10.345&amp;#39;) // 10.345&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;불리언-타입-명시적-변환&quot; style=&quot;position:relative;&quot;&gt;불리언 타입 명시적 변환&lt;a href=&quot;#%EB%B6%88%EB%A6%AC%EC%96%B8-%ED%83%80%EC%9E%85-%EB%AA%85%EC%8B%9C%EC%A0%81-%EB%B3%80%ED%99%98&quot; aria-label=&quot;불리언 타입 명시적 변환 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// Boolean 생성자 함수 사용
+Boolean(&amp;#39;abc&amp;#39;) // true
+Boolean(&amp;#39;&amp;#39;) // false
+Boolean(&amp;#39;false&amp;#39;) // true --&amp;gt; 문자열이 있기 때문에 true
+Boolean(0) // false
+Boolean(1) // true
+Boolean(null) // false
+Boolean(undefined) // false
+Boolean(NaN) // false
+Boolean([]) // true
+Boolean({}) // true&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;다음 글에서는 &lt;strong&gt;객체&lt;/strong&gt; 란 무엇인지 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-control-flow-statement-loop&quot;&gt;자바스크립트 제어문(2) - 반복문&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[UX - 사용자 모델링: 페르소나와 목표]]></title><description><![CDATA[사용자 모델링 모델(model…]]></description><link>https://yeony99.github.io/tech/ux-goal-directed-design-persona</link><guid isPermaLink="false">https://yeony99.github.io/tech/ux-goal-directed-design-persona</guid><pubDate>Sat, 15 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;사용자-모델링&quot; style=&quot;position:relative;&quot;&gt;사용자 모델링&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%AA%A8%EB%8D%B8%EB%A7%81&quot; aria-label=&quot;사용자 모델링 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;모델(model)은 복잡하고 다양한 현상을 일반화하는 기법이다. 인터랙션 디자인에서는 사용자를 이해할 때 디자인 모델을 사용할 수 있다.&lt;/p&gt;
+&lt;p&gt;리서치 자료를 바탕으로 주요 사용자를 설명하는 자세한 모델을 설정하는데, 이것을 **페르소나(persona)**라고 일컫는다.&lt;/p&gt;
+&lt;h3 id=&quot;페르소나&quot; style=&quot;position:relative;&quot;&gt;페르소나&lt;a href=&quot;#%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98&quot; aria-label=&quot;페르소나 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;페르소나는 사용자 전형을 대표하는 가상의 인물이다.&lt;/p&gt;
+&lt;p&gt;페르소나를 만들 때 주의해야하는 점은 이러하다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;누구나 만족하는 제품을 디자인할 수 없다.&lt;/li&gt;
+&lt;li&gt;분명한 니즈를 가진 특정 사용자 그룹을 중심으로 디자인한다.&lt;/li&gt;
+&lt;li&gt;한 명의 페르소나는 사용자 전형의 혼합물이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;사용자-전형과-전형적인-사용자&quot; style=&quot;position:relative;&quot;&gt;사용자 전형과 전형적인 사용자&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%A0%84%ED%98%95%EA%B3%BC-%EC%A0%84%ED%98%95%EC%A0%81%EC%9D%B8-%EC%82%AC%EC%9A%A9%EC%9E%90&quot; aria-label=&quot;사용자 전형과 전형적인 사용자 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;사용자 전형 !== 전형적인 사용자&lt;/strong&gt; 이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;전형적인 사용자 : 디자인 팀, 리서치 팀 등의 편견과 추측을 바탕으로 제작한 사용자 모델&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;페르소나의-강점&quot; style=&quot;position:relative;&quot;&gt;페르소나의 강점&lt;a href=&quot;#%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98%EC%9D%98-%EA%B0%95%EC%A0%90&quot; aria-label=&quot;페르소나의 강점 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;어떤 제품을 디자인해야 하는지, 어떤 기능을 갖춰야 하는지 쉽게 결정할 수 있다.&lt;/li&gt;
+&lt;li&gt;임원진은 물론 개발자, 디자이너와의 의사소통이 수월해진다.&lt;/li&gt;
+&lt;li&gt;팀의 의견을 하나로 모으기 쉬워진다.&lt;/li&gt;
+&lt;li&gt;디자인이 적절한지 판단할 수 있는 기준을 제공한다.
+&lt;ul&gt;
+&lt;li&gt;실제 사용성 테스트를 완전 대체할 순 없지만, 적절한 디자인을 찾는 데 유용하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;영업, 마케팅에 도움이 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;페르소나로-피할-수-있는-디자인-문제&quot; style=&quot;position:relative;&quot;&gt;페르소나로 피할 수 있는 디자인 문제&lt;a href=&quot;#%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98%EB%A1%9C-%ED%94%BC%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;페르소나로 피할 수 있는 디자인 문제 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;유연한 사용자
+&lt;ul&gt;
+&lt;li&gt;누가 &lt;strong&gt;사용자&lt;/strong&gt;인지 명확하지 않을 때 사용자를 유연하게 사용하는 문제가 발생한다. (의견 주장 시 편리하도록 아무 때나 사용자라는 말을 남발하게 된다.)&lt;/li&gt;
+&lt;li&gt;페르소나는 실제 사용자를 대표하기 때문에 유연해지지 않는다. 구체적인 니즈, 요구사항을 가지고 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;본인 중심 디자인
+&lt;ul&gt;
+&lt;li&gt;일반적인 제품을 디자인할 때는 개발자 혹은 디자이너의 멘탈 모델을 기준으로 만들어서는 안된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;극단적 사용자
+&lt;ul&gt;
+&lt;li&gt;극단적 사용자에 집착해서는 안된다.&lt;/li&gt;
+&lt;li&gt;간혹 일어날 수 있는 경우에 매몰될 필요는 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;비사용자-페르소나&quot; style=&quot;position:relative;&quot;&gt;비사용자 페르소나&lt;a href=&quot;#%EB%B9%84%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98&quot; aria-label=&quot;비사용자 페르소나 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;구매자와 사용자가 일치하지 않는 경우에는 &lt;strong&gt;구매자 페르소나&lt;/strong&gt;를 따로 만드는 것이 좋다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h2 id=&quot;페르소나의-목표&quot; style=&quot;position:relative;&quot;&gt;페르소나의 목표&lt;a href=&quot;#%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98%EC%9D%98-%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;페르소나의 목표 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;페르소나는 사용자 행동과 주변 정황을 상세하게 전달해준다. &lt;strong&gt;목표&lt;/strong&gt;는 사용자가 왜 그런 행동양상을 보였는지 그 뒤의 동기를 담고 있다.&lt;/p&gt;
+&lt;h3 id=&quot;사용자-사고-프로세스&quot; style=&quot;position:relative;&quot;&gt;사용자 사고 프로세스&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%82%AC%EA%B3%A0-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4&quot; aria-label=&quot;사용자 사고 프로세스 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;제품 디자인 시 고려해야 하는 세 가지 사용자 사고 프로세스가 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;본능적 반사 : 제품을 접하자마자 순간적으로 일어나는 사고 과정. 제품을 사용해보기 전에 끝난다. (제품이 좋은지 나쁜지, 안전한지 위험한지 빠르게 판단)&lt;/li&gt;
+&lt;li&gt;행동 반사 : 중간 수준의 사고 과정. 단순한 일상 행동을 하는 데 필요한 과정.&lt;/li&gt;
+&lt;li&gt;심사숙고 반사 : 일정 시간 동안 깊은 생각에 잠긴 뒤 일어난다. 머리로 기억한 내용을 바탕으로만 일어난다. 과거의 경험을 바탕으로 한 사고 과정.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;본능적-반사에-맞는-디자인&quot; style=&quot;position:relative;&quot;&gt;본능적 반사에 맞는 디자인&lt;a href=&quot;#%EB%B3%B8%EB%8A%A5%EC%A0%81-%EB%B0%98%EC%82%AC%EC%97%90-%EB%A7%9E%EB%8A%94-%EB%94%94%EC%9E%90%EC%9D%B8&quot; aria-label=&quot;본능적 반사에 맞는 디자인 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;제품을 접하자마자 사용자가 보고 느끼는 내용을 이해해야 한다.&lt;/li&gt;
+&lt;li&gt;외적인 아름다움이 아니라 제품을 사용할 때 받아들이는 실미적이고 감정적인 느낌을 파악해야 한다.&lt;/li&gt;
+&lt;li&gt;제품의 외관으로 사용하기 쉽다는 느낌을 충분히 전달하는 것이 중요하다.
+&lt;ul&gt;
+&lt;li&gt;그리고 실제로도 사용성이 높은 인터랙션을 제공해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;행동-반사에-맞는-디자인&quot; style=&quot;position:relative;&quot;&gt;행동 반사에 맞는 디자인&lt;a href=&quot;#%ED%96%89%EB%8F%99-%EB%B0%98%EC%82%AC%EC%97%90-%EB%A7%9E%EB%8A%94-%EB%94%94%EC%9E%90%EC%9D%B8&quot; aria-label=&quot;행동 반사에 맞는 디자인 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;제품의 행동이 사용자의 행동을 뒷받침해야 한다.&lt;/li&gt;
+&lt;li&gt;행동 반사는 본능적 반사와 심사숙고 반사와 직접 연결되어 있기 때문에, 행동반사를 훌륭하게 만족시키는 디자인은 훌륭한 사용자 경험을 제공할 수 있다.&lt;/li&gt;
+&lt;li&gt;사용자의 일상을 대변하는 디자인이 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;심사숙고-반사에-맞는-디자인&quot; style=&quot;position:relative;&quot;&gt;심사숙고 반사에 맞는 디자인&lt;a href=&quot;#%EC%8B%AC%EC%82%AC%EC%88%99%EA%B3%A0-%EB%B0%98%EC%82%AC%EC%97%90-%EB%A7%9E%EB%8A%94-%EB%94%94%EC%9E%90%EC%9D%B8&quot; aria-label=&quot;심사숙고 반사에 맞는 디자인 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;제품과 사용자의 장기적인 관계를 넓게 바라보고 진행해야 한다.&lt;/li&gt;
+&lt;li&gt;기본적인 기능만 제공하기보다는 사용자가 중요하게 생각하는 가치와 문화적 요소를 고려해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;3단계-사용자-목표&quot; style=&quot;position:relative;&quot;&gt;3단계 사용자 목표&lt;a href=&quot;#3%EB%8B%A8%EA%B3%84-%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;3단계 사용자 목표 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&quot;경험적-목표&quot; style=&quot;position:relative;&quot;&gt;경험적 목표&lt;a href=&quot;#%EA%B2%BD%ED%97%98%EC%A0%81-%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;경험적 목표 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;본능적 단계에 해당하며, 사용자가 느끼고자 하는 방식이다. 단순하고 일반적이다.&lt;/p&gt;
+&lt;p&gt;페르소나의 경험적 목표는 다음과 같은 것들이 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;제품을 다루는 동안 스스로 현명하다고 느끼고 싶다.&lt;/li&gt;
+&lt;li&gt;즐겁게 사용하고 싶다.&lt;/li&gt;
+&lt;li&gt;보안과 민감한 정보에 대해 안심한다.&lt;/li&gt;
+&lt;li&gt;편안한 마음으로 멋진 제품을 즐기고 싶다.&lt;/li&gt;
+&lt;li&gt;제품의 조작에 집중하고 싶다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;궁극적-목표&quot; style=&quot;position:relative;&quot;&gt;궁극적 목표&lt;a href=&quot;#%EA%B6%81%EA%B7%B9%EC%A0%81-%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;궁극적 목표 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;행동적 단계에 해당하며, 사용자가 하고 싶은 일이다.&lt;/p&gt;
+&lt;p&gt;사용자가 왜 특정 제품을 사용하는지를 설명해준다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;심각한 문제가 발생하기 전에 미리 알고 싶다.&lt;/li&gt;
+&lt;li&gt;싼 값에 좋은 제품을 구입하고 싶다.&lt;/li&gt;
+&lt;li&gt;마음에 드는 음악을 찾고 싶다.&lt;/li&gt;
+&lt;li&gt;누군가와 지속적으로 연락하고 싶다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;궁극적 목표는 제품 행동과 과업, 시각적 요소의 바탕이 된다.&lt;/p&gt;
+&lt;h4 id=&quot;인생의-목표&quot; style=&quot;position:relative;&quot;&gt;인생의 목표&lt;a href=&quot;#%EC%9D%B8%EC%83%9D%EC%9D%98-%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;인생의 목표 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;심사숙고 단계에 해당하며, 사용자가 되고 싶은 지향점이다.&lt;/p&gt;
+&lt;p&gt;제품을 사용하는 순간을 넘어 개인적으로 성취하고자 하는 열망을 말한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;즐거운 삶을 살고 싶다.&lt;/li&gt;
+&lt;li&gt;내 꿈을 달성하고 싶다.&lt;/li&gt;
+&lt;li&gt;이 분야의 전문가가 되고 싶다.&lt;/li&gt;
+&lt;li&gt;매력적이고 인기 있어지고 싶다.&lt;/li&gt;
+&lt;li&gt;동료들에게 인정받고 싶다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;목표로-표현되는-사용자-동기&quot; style=&quot;position:relative;&quot;&gt;목표로 표현되는 사용자 동기&lt;a href=&quot;#%EB%AA%A9%ED%91%9C%EB%A1%9C-%ED%91%9C%ED%98%84%EB%90%98%EB%8A%94-%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%8F%99%EA%B8%B0&quot; aria-label=&quot;목표로 표현되는 사용자 동기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;본능적 사고 바탕 경험 목표 : 사용자가 어떻게 느끼고 싶어하는가?&lt;/li&gt;
+&lt;li&gt;행동 사고 바탕 경험 목표 : 사용자가 무엇을 하고 싶어하는가?&lt;/li&gt;
+&lt;li&gt;심사숙고를 거친 인생의 목표 : 사용자가 되고 싶어하는 꿈이 무엇인가?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h2 id=&quot;페르소나-제작&quot; style=&quot;position:relative;&quot;&gt;페르소나 제작&lt;a href=&quot;#%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98-%EC%A0%9C%EC%9E%91&quot; aria-label=&quot;페르소나 제작 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;역할별로-인터뷰-대상-그룹화&quot; style=&quot;position:relative;&quot;&gt;역할별로 인터뷰 대상 그룹화&lt;a href=&quot;#%EC%97%AD%ED%95%A0%EB%B3%84%EB%A1%9C-%EC%9D%B8%ED%84%B0%EB%B7%B0-%EB%8C%80%EC%83%81-%EA%B7%B8%EB%A3%B9%ED%99%94&quot; aria-label=&quot;역할별로 인터뷰 대상 그룹화 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;리서치 마친 후 데이터를 대강 구성한다. 인터뷰 대상자를 역할에 따라 그룹화 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;가족 내 역할&lt;/li&gt;
+&lt;li&gt;관련 활동에 대한 태도나 접근법&lt;/li&gt;
+&lt;li&gt;관심사&lt;/li&gt;
+&lt;li&gt;적성&lt;/li&gt;
+&lt;li&gt;직책&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;행동-변수-파악&quot; style=&quot;position:relative;&quot;&gt;행동 변수 파악&lt;a href=&quot;#%ED%96%89%EB%8F%99-%EB%B3%80%EC%88%98-%ED%8C%8C%EC%95%85&quot; aria-label=&quot;행동 변수 파악 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;인터뷰까지 마친 뒤에는 수집한 자료를 빨리 정리한다. 사용자가 행동하는 방식을 관찰한 내용을 &lt;strong&gt;행동변수&lt;/strong&gt;로 구성한다.&lt;/p&gt;
+&lt;p&gt;중요한 행동 변수 예시는 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;활동 내역: 사용자가 어떤 행동을 하는가? 얼마나 자주? 얼마나 폭넓게?&lt;/li&gt;
+&lt;li&gt;태도 : 사용자가 제품의 기술과 전문 영역에 대해 어떻게 생각하는가?&lt;/li&gt;
+&lt;li&gt;적성 : 사용자가 어떤 교육을 받았는가? 제품을 이해하는 능력은 얼마나 되는가?&lt;/li&gt;
+&lt;li&gt;동기 : 제품의 전문 영역에 발을 들인 이유가 무엇인가?&lt;/li&gt;
+&lt;li&gt;기술 : 제품의 기술과 전문 영역과 관련된 사용자의 능력과 기술이 무엇인가?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;인터뷰-참여자와-행동변수-관계도&quot; style=&quot;position:relative;&quot;&gt;인터뷰 참여자와 행동변수 관계도&lt;a href=&quot;#%EC%9D%B8%ED%84%B0%EB%B7%B0-%EC%B0%B8%EC%97%AC%EC%9E%90%EC%99%80-%ED%96%89%EB%8F%99%EB%B3%80%EC%88%98-%EA%B4%80%EA%B3%84%EB%8F%84&quot; aria-label=&quot;인터뷰 참여자와 행동변수 관계도 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;사용자 간의 상대적인 척도를 비교한다. 관찰 내용에 따라 서로 다른 사용자를 비교한 뒤 배치하면 유사한 행동양상을 띄는 사용자끼리 그룹으로 묶을 수 있다.&lt;/p&gt;
+&lt;h3 id=&quot;중요한-행동-패턴-검토&quot; style=&quot;position:relative;&quot;&gt;중요한 행동 패턴 검토&lt;a href=&quot;#%EC%A4%91%EC%9A%94%ED%95%9C-%ED%96%89%EB%8F%99-%ED%8C%A8%ED%84%B4-%EA%B2%80%ED%86%A0&quot; aria-label=&quot;중요한 행동 패턴 검토 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;관계도를 작성한 후, 각 행동 변수마다 사용자 그룹을 확인한다. 6~8개 행동 변수에서 항상 같은 그룹에 속한 사용자들을 찾는다. 이들은 중요한 행동패턴으로 간주할 수 있다.&lt;/p&gt;
+&lt;p&gt;이렇게 도출된 행동패턴을 기반으로 페르소나의 기본을 설정한다.&lt;/p&gt;
+&lt;p&gt;단, 이런 도출과정이 합리적인지를 판단해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CD 자주 구매하는 소비자 - MP3도 많이 구매 -&gt; 의미있는 행동 패턴&lt;/li&gt;
+&lt;li&gt;CD 자주 구매하는 소비자 - 채식주의자 -&gt; 우연의 일치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;특성과-목표를-설정&quot; style=&quot;position:relative;&quot;&gt;특성과 목표를 설정&lt;a href=&quot;#%ED%8A%B9%EC%84%B1%EA%B3%BC-%EB%AA%A9%ED%91%9C%EB%A5%BC-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;특성과 목표를 설정 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;찾아낸 행동 패턴마다 세부적인 내용을 결정한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자가 제품을 활용하는 주변 정황&lt;/li&gt;
+&lt;li&gt;일반적인 하루 묘사&lt;/li&gt;
+&lt;li&gt;기존 제품의 특성과 문제점&lt;/li&gt;
+&lt;li&gt;주변 사람들과 어떤 관계를 맺는지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;세부적으로 최소한 포함해야 할 사항은 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;행동 자체(활동과 그 뒤에 숨은 동기)&lt;/li&gt;
+&lt;li&gt;사용 환경&lt;/li&gt;
+&lt;li&gt;현재 해결책을 사용하는 행동에 관한 좌절과 난점&lt;/li&gt;
+&lt;li&gt;행동과 관련된 인구 통계&lt;/li&gt;
+&lt;li&gt;행동에 관한 스킬, 경험, 역량&lt;/li&gt;
+&lt;li&gt;행동에 관련된 태도와 감정&lt;/li&gt;
+&lt;li&gt;다른 사람, 제품, 서비스와의 관련 상호작용&lt;/li&gt;
+&lt;li&gt;같은 일을 하는 대안적이거나 경쟁하는 방법, 특히 유사한 기법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이렇게 페르소나를 제작한 후, 일반적인 &lt;strong&gt;이름&lt;/strong&gt;을 붙인다. 여기서부터는 지정한 이름으로 페르소나를 불러야 한다.&lt;/p&gt;
+&lt;h3 id=&quot;중복된-내용이나-누락된-부분을-확인&quot; style=&quot;position:relative;&quot;&gt;중복된 내용이나 누락된 부분을 확인&lt;a href=&quot;#%EC%A4%91%EB%B3%B5%EB%90%9C-%EB%82%B4%EC%9A%A9%EC%9D%B4%EB%82%98-%EB%88%84%EB%9D%BD%EB%90%9C-%EB%B6%80%EB%B6%84%EC%9D%84-%ED%99%95%EC%9D%B8&quot; aria-label=&quot;중복된 내용이나 누락된 부분을 확인 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;여기까지 완료하면 페르소나는 생동감이 넘치게 된다.&lt;/p&gt;
+&lt;p&gt;중복된 페르소나가 없는지, 추가 리서치가 필요한지를 검토한다.&lt;/p&gt;
+&lt;h3 id=&quot;페르소나의-종류-결정&quot; style=&quot;position:relative;&quot;&gt;페르소나의 종류 결정&lt;a href=&quot;#%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98%EC%9D%98-%EC%A2%85%EB%A5%98-%EA%B2%B0%EC%A0%95&quot; aria-label=&quot;페르소나의 종류 결정 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;제작한 페르소나 중에서 가장 중요한 1순위 대상이 누구인지 결정한다.&lt;/p&gt;
+&lt;p&gt;페르소나의 종류는 6종류가 있다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;1순위 페르소나&lt;/li&gt;
+&lt;li&gt;2순위 페르소나&lt;/li&gt;
+&lt;li&gt;추가 페르소나&lt;/li&gt;
+&lt;li&gt;구매자 페르소나&lt;/li&gt;
+&lt;li&gt;접대받는 페르소나&lt;/li&gt;
+&lt;li&gt;부정적 페르소나&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;1순위-페르소나&quot; style=&quot;position:relative;&quot;&gt;1순위 페르소나&lt;a href=&quot;#1%EC%88%9C%EC%9C%84-%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98&quot; aria-label=&quot;1순위 페르소나 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;디자인의 대상이 되는 페르소나.&lt;/p&gt;
+&lt;p&gt;1순위 페르소나 선정은 적절하지 않은 후보를 제거하는 작업이다. 각각의 페르소나의 목표를 비교하며 모든 후보 대상을 점검해야 한다.&lt;/p&gt;
+&lt;p&gt;1순위 페르소나가 명확하지 않다면, 1. 여러 개의 인터페이스가 필요하거나 2. 제품이 과도한 목표를 달성하려고 하는 경우다. 가장 까다로운(제약이 많은) 사용자를 만족시키다 보면 다수의 고객을 만족시킬 수 있다.&lt;/p&gt;
+&lt;h4 id=&quot;2순위-페르소나&quot; style=&quot;position:relative;&quot;&gt;2순위 페르소나&lt;a href=&quot;#2%EC%88%9C%EC%9C%84-%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98&quot; aria-label=&quot;2순위 페르소나 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;1순위 페르소나가 만족하면 2순위 페르소나의 니즈도 대부분 충족된다. 2순위 페르소나는 추가적으로 특정 니즈를 가지고 있기 때문에, 1순위의 니즈를 침해하지 않으면서 만족시킬 방법을 찾아야 한다.&lt;/p&gt;
+&lt;p&gt;만약 2순위 페르소나가 3~4개를 넘어간다면 제품이 달성하려는 바가 너무 크다는 신호다.&lt;/p&gt;
+&lt;h4 id=&quot;추가-페르소나&quot; style=&quot;position:relative;&quot;&gt;추가 페르소나&lt;a href=&quot;#%EC%B6%94%EA%B0%80-%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98&quot; aria-label=&quot;추가 페르소나 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;1순위, 2순위 페르소나가 아닌 나머지 사용자 모델은 추가 페르소나가 된다. 1순위, 2순위를 만족시키며 이들의 니즈는 모두 만족된다.&lt;/p&gt;
+&lt;h4 id=&quot;구매자-페르소나&quot; style=&quot;position:relative;&quot;&gt;구매자 페르소나&lt;a href=&quot;#%EA%B5%AC%EB%A7%A4%EC%9E%90-%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98&quot; aria-label=&quot;구매자 페르소나 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;사용자가 아닌 구매자의 니즈를 대변한다.&lt;/p&gt;
+&lt;p&gt;구매자 페르소나는 2순위 페르소나와 비슷한 수준으로 다루되, 몇몇 기업용 제품의 경우엔 구매자의 관리용 인터페이스를 따로 만들고 구매자를 1순위 페르소나로 지정해야 한다.&lt;/p&gt;
+&lt;h4 id=&quot;접대받는-페르소나&quot; style=&quot;position:relative;&quot;&gt;접대받는 페르소나&lt;a href=&quot;#%EC%A0%91%EB%8C%80%EB%B0%9B%EB%8A%94-%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98&quot; aria-label=&quot;접대받는 페르소나 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;이 페르소나는 제품을 전혀 사용하지 않는다. 다만 제품을 사용하는 사람으로부터 직접적인 영향을 받는다. (ex. 병원 기기로 치료받는 환자)&lt;/p&gt;
+&lt;p&gt;제품이 사회적, 물리적으로 끼치는 영향을 파악할 수 있다. 이 페르소나는 2순위 페르소나와 비슷한 수준으로 다뤄야 한다.&lt;/p&gt;
+&lt;h4 id=&quot;부정적-페르소나&quot; style=&quot;position:relative;&quot;&gt;부정적 페르소나&lt;a href=&quot;#%EB%B6%80%EC%A0%95%EC%A0%81-%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98&quot; aria-label=&quot;부정적 페르소나 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;제품을 디자인할 때 피해야 하는 사용자이다. 디자인의 주요 대상이 아닌 사용자를 명시할 수 있다. 디자인 할 때 절대 고려해서는 안되는 부분을 명확히 한다.&lt;/p&gt;
+&lt;h3 id=&quot;상세-설명-작성&quot; style=&quot;position:relative;&quot;&gt;상세 설명 작성&lt;a href=&quot;#%EC%83%81%EC%84%B8-%EC%84%A4%EB%AA%85-%EC%9E%91%EC%84%B1&quot; aria-label=&quot;상세 설명 작성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;두 장 이내로 간결하게 작성한다. 몇몇 상황 정보는 창의적으로 꾸며내야 한다. 다만 페르소나는 소설 주인공이 아니다. 그저 사용자의 직업과 생활양식, 일상적인 하루 등 제품과 관련된 사용자의 특성을 묘사해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 주요 행동 패턴의 설명을 요약하지 마라&lt;/li&gt;
+&lt;li&gt;과도한 가공의 설명을 포함하지 마라.&lt;/li&gt;
+&lt;li&gt;관찰하지 않은 행동 설명에 세부단계를 추가하지 마라&lt;/li&gt;
+&lt;li&gt;페르소나 상세설명에서 솔루션을 소개하지 마라&lt;/li&gt;
+&lt;li&gt;범위나 평균을 열거하지 마라. 페르소나는 &lt;strong&gt;개인&lt;/strong&gt;이며, 1.5명의 자녀가 있거나 하지 않는다.
+&lt;ul&gt;
+&lt;li&gt;상세 설명이 중요하다면 구체적인 수치를 제시해라.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;Reference&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;About Face 4&lt;br&gt;
+Emotional Design&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Flutter] Form, Alert에 사용할 수 있는 플러터 컴포넌트]]></title><description><![CDATA[플러터의 위젯들을 많이 살펴봤는데요. 이 글에서는 알람과 다이얼로그, 폼과 같이 입력할 수 있는 컴포넌트 위젯에 대해 알아보고자 합니다. Dialogs, Alerts, Panels 먼저 다이얼로그와 Alert…]]></description><link>https://yeony99.github.io/tech/flutter-use-several-components</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-use-several-components</guid><pubDate>Fri, 14 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;플러터의 위젯들을 많이 살펴봤는데요. 이 글에서는 알람과 다이얼로그, 폼과 같이 입력할 수 있는 컴포넌트 위젯에 대해 알아보고자 합니다.&lt;/p&gt;
 &lt;h2 id=&quot;dialogs-alerts-panels&quot; style=&quot;position:relative;&quot;&gt;Dialogs, Alerts, Panels&lt;a href=&quot;#dialogs-alerts-panels&quot; aria-label=&quot;dialogs alerts panels permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;먼저 다이얼로그와 Alert부터 살펴보겠습니다.&lt;/p&gt;
 &lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
