@@ -1,4 +1,221 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 19 Oct 2022 02:52:56 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (13) - 자바스크립트의 타입 변환]]></title><description><![CDATA[우리가 자바스크립트에서 사용하는 모든 값은 제각각의 타입을 가지고 있습니다. 이런 타입은 개발자의 의도에 따라 변환되기도 하고, 암묵적으로 평가되기도 합니다. 암묵적 타입 변환(Implicit Coercion…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-type-coercion</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-type-coercion</guid><pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;우리가 자바스크립트에서 사용하는 모든 값은 제각각의 &lt;strong&gt;타입&lt;/strong&gt;을 가지고 있습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 19 Oct 2022 03:09:27 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (14) - 객체란 무엇일까?]]></title><description><![CDATA[자바스크립트는 객체 없이 존재하지 않는다! 라는 말이 있을 정도로 자바스크립트를 구성하는 대부분이 객체(object…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-object</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-object</guid><pubDate>Wed, 26 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;자바스크립트는 객체 없이 존재하지 않는다! 라는 말이 있을 정도로 자바스크립트를 구성하는 대부분이 객체(object)입니다.&lt;/p&gt;
+&lt;p&gt;자바스크립트는 원시 타입의 값을 제외한 모든 것이 객체입니다.&lt;/p&gt;
+&lt;p&gt;원시 타입이 기억나지 않는다면 &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-data-type&quot;&gt;자바스크립트 자료형&lt;/a&gt; 글을 다시 읽어봐주세요.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;객체-구성&quot; style=&quot;position:relative;&quot;&gt;객체 구성&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%EA%B5%AC%EC%84%B1&quot; aria-label=&quot;객체 구성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;객체는 프로퍼티의 집합이며, 프로퍼티는 &lt;strong&gt;key - value&lt;/strong&gt; 쌍으로 이루어져 있습니다.&lt;/p&gt;
+&lt;p&gt;프로퍼티에는 &lt;strong&gt;무엇이든&lt;/strong&gt; 할당 가능합니다. 자바스크립트에서 사용할 수 있는 값이라면요. 문장, 숫자, 함수까지 프로퍼티에 작성할 수 있습니다. 다만 함수를 객체의 프로퍼티로 넣는 경우는 &lt;strong&gt;메소드&lt;/strong&gt;라고 부릅니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프로퍼티 : 객체 상태의 값&lt;/li&gt;
+&lt;li&gt;메소드 : 프로퍼티를 참조하고 컨트롤할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;객체-생성-방법&quot; style=&quot;position:relative;&quot;&gt;객체 생성 방법&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;객체 생성 방법 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;객체 생성 방법에는 여러가지가 있습니다.&lt;/p&gt;
+&lt;p&gt;가장 간단한 방법인 객체 리터럴부터 알아보겠습니다.&lt;/p&gt;
+&lt;h3 id=&quot;객체-리터럴&quot; style=&quot;position:relative;&quot;&gt;객체 리터럴&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%EB%A6%AC%ED%84%B0%EB%9F%B4&quot; aria-label=&quot;객체 리터럴 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;객체 리터럴은 중괄호({}) 안에 프로퍼티를 정의하는 방식입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let obj = {
+  name: &amp;#39;Yeony&amp;#39;,
+  age: 24,
+  sayHi: function() {
+    console.log(`Hi, I am ${this.name}!`);
+  }
+};&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;코드블록을 설명할 때 코드블록은 &lt;code class=&quot;language-text&quot;&gt;{}&lt;/code&gt; 로 감싸져 있는 &lt;strong&gt;하나의 실행 단위&lt;/strong&gt;를 의미한다고 했는데요. 객체 리터럴을 정의할 때 사용하는 중괄호는 코드 블록이 아닙니다.&lt;/p&gt;
+&lt;h3 id=&quot;생성자-함수constructor-이용&quot; style=&quot;position:relative;&quot;&gt;생성자 함수(Constructor) 이용&lt;a href=&quot;#%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98constructor-%EC%9D%B4%EC%9A%A9&quot; aria-label=&quot;생성자 함수constructor 이용 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;함수는 뒤에서 좀더 알아볼 예정이지만, 여기서 간단하게 언급하고 가겠습니다.&lt;/p&gt;
+&lt;p&gt;생성자 함수는 인스턴스를 만들고 초기화하는 특수한 함수입니다.&lt;/p&gt;
+&lt;p&gt;생성자 함수가 호출되면&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;새로운 빈 객체가 생성됩니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt; 키워드는 새로 생성된 객체를 참조하기 시작하고, (this가) 현재 인스턴스가 됩니다.&lt;/li&gt;
+&lt;li&gt;새 객체가 생성자의 반환 값으로 반환됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 생성자
+function User() {
+    this.name = &amp;#39;Yeony&amp;#39;;
+}
+
+var user = new User();&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;object-객체-생성자-함수-사용하기&quot; style=&quot;position:relative;&quot;&gt;Object() 객체 생성자 함수 사용하기&lt;a href=&quot;#object-%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;object 객체 생성자 함수 사용하기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;자바스크립트의 내장 함수인 &lt;code class=&quot;language-text&quot;&gt;Object()&lt;/code&gt; 생성자 함수입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let scores = new Object();
+
+scores.korean = 100;
+scores.math = 70;
+scores.english = 88;
+scores.getAverage = function() {
+  console.log(`${(this.korean + this.math + this.english)/3}`)
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이런 형태로 만들고 호출할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;생성자 함수들은 이후 함수와 함께 알아보도록 합시다. 여기서는 &lt;strong&gt;객체 리터럴 형태&lt;/strong&gt;로만 작성해봅니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;객체-살펴보기&quot; style=&quot;position:relative;&quot;&gt;객체 살펴보기&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0&quot; aria-label=&quot;객체 살펴보기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;객체는 프로퍼티의 집합입니다. 프로퍼티란 뭘까요?&lt;/p&gt;
+&lt;h3 id=&quot;프로퍼티&quot; style=&quot;position:relative;&quot;&gt;프로퍼티&lt;a href=&quot;#%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0&quot; aria-label=&quot;프로퍼티 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;프로퍼티(property)란, 속성이라는 뜻입니다. 객체 내부의 속성이라는 것이죠.&lt;/p&gt;
+&lt;p&gt;이런 프로퍼티를 객체 안에 나열할 때에는 쉼표(,)로 구분합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let obj = {
+  name: &amp;#39;Yeony&amp;#39;,
+  age: 24
+};&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;obj&lt;/code&gt; 객체에서 key는 &lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;age&lt;/code&gt;입니다. 그리고 이 key로 &lt;strong&gt;접근할 수 있는 것&lt;/strong&gt;이 &lt;code class=&quot;language-text&quot;&gt;&apos;Yeony&apos;&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;24&lt;/code&gt;입니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프로퍼티 key : string(문자열) 혹은 Symbol 값&lt;/li&gt;
+&lt;li&gt;프로퍼티 value : JS에서 사용할 수 있는 모든 값&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;key에는 &lt;strong&gt;빈 문자열&lt;/strong&gt;도 사용 가능합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let obj = {
+  &amp;quot;&amp;quot;: &amp;#39;Hi&amp;#39;
+}
+
+console.log(obj) // {&amp;quot;&amp;quot;: &amp;#39;hi&amp;#39;}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;a href=&quot;/tech/let-me-know-js-a-bit-js-variable-naming&quot;&gt;변수 명명 규칙&lt;/a&gt; 에서 살펴봤듯, 자바스크립트에서는 식별자 네이밍 규칙이 있습니다.&lt;/p&gt;
+&lt;p&gt;객체의 프로퍼티 key도 이를 지키지 않으면 작성할 수 없습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let obj = {
+  unvalid-key : &amp;#39;err&amp;#39; 
+}
+
+// Uncaught SyntaxError: Unexpected token &amp;#39;-&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;하지만, 자바스크립트의 프로퍼티 key는 문자열이 사용 가능합니다.&lt;br&gt;
+따라서 아래와 같이 작성할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let obj = {
+  &amp;#39;valid-key&amp;#39; : &amp;#39;success&amp;#39; 
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;h4 id=&quot;프로퍼티-접근&quot; style=&quot;position:relative;&quot;&gt;프로퍼티 접근&lt;a href=&quot;#%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EC%A0%91%EA%B7%BC&quot; aria-label=&quot;프로퍼티 접근 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;프로퍼티에 접근할 수 있는 방식은 2가지가 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;마침표로 접근&lt;/li&gt;
+&lt;li&gt;대괄호로 접근&lt;/li&gt;
+&lt;/ul&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let obj = {
+  name: &amp;#39;Yeony&amp;#39;,
+  &amp;#39;2022&amp;#39;: &amp;#39;working&amp;#39;,
+  &amp;#39;2021&amp;#39;: &amp;#39;studied&amp;#39;,
+  &amp;#39;last-name&amp;#39;: &amp;#39;Kim&amp;#39;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;위와 같은 객체를 생성한 후 &lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt;에 접근하려면 이렇게 할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;obj.name // &amp;#39;Yeony&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;하지만 다른 프로퍼티들은 마침표로 접근하게 되면 에러가 나죠.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;obj.2022 // Uncaught SyntaxError: Unexpected number&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이런 에러가 나는 이유는, 식별자 네이밍 규칙에 위배되기 때문입니다. 변수를 선언할 때는 숫자로 시작하거나, 숫자만으로 작성할 수 없기 때문이죠.&lt;/p&gt;
+&lt;p&gt;따라서 식별자 명명 규격에서 벗어나는 프로퍼티 키에 접근하기 위해서는 &lt;strong&gt;대괄호를 이용&lt;/strong&gt;해 접근합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;obj[2022] // &amp;#39;working&amp;#39;
+obj[&amp;#39;2022&amp;#39;] // &amp;#39;working&amp;#39;
+obj[&amp;#39;last-name&amp;#39;] // &amp;#39;Kim&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;대괄호로 접근할 때에 대괄호 속에 들어가는 키는 무조건 &lt;strong&gt;문자열&lt;/strong&gt;이어야 합니다. (숫자의 경우는 생략 가능)&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt;을 대괄호로 접근하면 어떻게 될까요?&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;obj[name]; // ReferenceError: name is not defined&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;여기서 &lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt;은 string이 아니라 하나의 변수처럼 받아들여진 겁니다. 따라서 프로퍼티 키인 &lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt;에 접근하려면 아래와 같이 작성합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;obj[&amp;#39;name&amp;#39;]
+
+let name = &amp;#39;name&amp;#39; // 변수 선언 및 할당
+obj[name] &lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;변수를 통해 객체의 프로퍼티 값에 접근하는 방법을 알아두면 유용하게 사용할 수 있습니다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h4 id=&quot;프로퍼티-업데이트&quot; style=&quot;position:relative;&quot;&gt;프로퍼티 업데이트&lt;a href=&quot;#%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8&quot; aria-label=&quot;프로퍼티 업데이트 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;이미 존재하고 있는 프로퍼티에 값을 재할당 할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let obj = {
+  name: &amp;#39;Yeony&amp;#39;,
+  &amp;#39;2022&amp;#39;: &amp;#39;working&amp;#39;,
+  &amp;#39;2021&amp;#39;: &amp;#39;studied&amp;#39;,
+  &amp;#39;last-name&amp;#39;: &amp;#39;Kim&amp;#39;
+}
+
+obj.name = &amp;#39;Nayeon&amp;#39;;
+
+console.log(obj.name); // &amp;#39;Nayeon&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;h4 id=&quot;프로퍼티-생성&quot; style=&quot;position:relative;&quot;&gt;프로퍼티 생성&lt;a href=&quot;#%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;프로퍼티 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;프로퍼티는 꼭 객체 리터럴 생성 시 명시한 것만 읽거나 수정할 수 있는 것은 아닙니다. 프로퍼티를 &lt;strong&gt;동적으로 생성&lt;/strong&gt;하는 것도 가능합니다.&lt;/p&gt;
+&lt;p&gt;존재하지 않는 프로퍼티에 값을 할당하면 됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let obj = {
+  name: &amp;#39;Yeony&amp;#39;,
+  &amp;#39;2022&amp;#39;: &amp;#39;working&amp;#39;,
+  &amp;#39;2021&amp;#39;: &amp;#39;studied&amp;#39;,
+  &amp;#39;last-name&amp;#39;: &amp;#39;Kim&amp;#39;
+}
+
+obj.location = &amp;#39;Seoul&amp;#39;;
+
+console.log(obj) 
+// {2021: &amp;#39;studied&amp;#39;, 2022: &amp;#39;working&amp;#39;, name: &amp;#39;Yeony&amp;#39;, last-name: &amp;#39;Kim&amp;#39;, location: &amp;#39;Seoul&amp;#39;}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;ES6에서 추가된 기능도 사용해 볼까요?&lt;/p&gt;
+&lt;p&gt;스프레드 연산자(...)와 프로퍼티 축약 표현을 통해 아래와 같이 작성할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let obj = {
+  name: &amp;#39;Yeony&amp;#39;,
+  &amp;#39;2022&amp;#39;: &amp;#39;working&amp;#39;,
+  &amp;#39;2021&amp;#39;: &amp;#39;studied&amp;#39;,
+  &amp;#39;last-name&amp;#39;: &amp;#39;Kim&amp;#39;
+}
+
+let a = 10, b = 20;
+
+// 스프레드 연산자로 obj 객체 복사
+// 프로퍼티 축약표현으로 a, b 프로퍼티 추가
+obj = {...obj, a, b}
+
+console.log(obj); // {2021: &amp;#39;studied&amp;#39;, 2022: &amp;#39;working&amp;#39;, name: &amp;#39;Yeony&amp;#39;, last-name: &amp;#39;Kim&amp;#39;, a: 10, b: 20}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;h4 id=&quot;프로퍼티-삭제&quot; style=&quot;position:relative;&quot;&gt;프로퍼티 삭제&lt;a href=&quot;#%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EC%82%AD%EC%A0%9C&quot; aria-label=&quot;프로퍼티 삭제 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;/tech/let-me-know-js-a-bit-js-reserved-words&quot;&gt;자바스크립트 예약어 모음&lt;/a&gt; 에서 &lt;strong&gt;delete&lt;/strong&gt; 연산자를 언급한 적이 있는데요.&lt;/p&gt;
+&lt;p&gt;delete 연산자는 객체의 프로퍼티를 삭제합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;delete obj[&amp;#39;2022&amp;#39;]
+delete obj.location
+
+console.log(obj) // {2021: &amp;#39;studied&amp;#39;, name: &amp;#39;Yeony&amp;#39;, last-name: &amp;#39;Kim&amp;#39;}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;메소드-method&quot; style=&quot;position:relative;&quot;&gt;메소드 (Method)&lt;a href=&quot;#%EB%A9%94%EC%86%8C%EB%93%9C-method&quot; aria-label=&quot;메소드 method permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;함수도 객체의 프로퍼티가 될 수 있습니다. 아직 함수를 알아보진 않았지만 간략히 보고 넘어갑시다.&lt;/p&gt;
+&lt;p&gt;프로퍼티 값이 함수일 경우에 우리는 &lt;strong&gt;메소드&lt;/strong&gt;라고 부릅니다. 일반 함수와 구분하기 위함입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let obj = {
+  name : &amp;#39;Yeony&amp;#39;,
+  sayHi: function () {
+    return `Hi, I am ${this.name}`;
+  }
+}
+
+console.log(obj.sayHi()); // Hi, I am Yeony&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;메소드에서 사용한 &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt; 키워드는 객체 자기 자신(obj)을 가리킵니다. &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt; 키워드는 자바스크립트에서 아주 복잡하게 움직입니다. 이 후 좀더 자세히 살펴보도록 합시다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-type-coercion&quot;&gt;자바스크립트의 타입 변환&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (13) - 자바스크립트의 타입 변환]]></title><description><![CDATA[우리가 자바스크립트에서 사용하는 모든 값은 제각각의 타입을 가지고 있습니다. 이런 타입은 개발자의 의도에 따라 변환되기도 하고, 암묵적으로 평가되기도 합니다. 암묵적 타입 변환(Implicit Coercion…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-type-coercion</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-type-coercion</guid><pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;우리가 자바스크립트에서 사용하는 모든 값은 제각각의 &lt;strong&gt;타입&lt;/strong&gt;을 가지고 있습니다.&lt;/p&gt;
 &lt;p&gt;이런 타입은 개발자의 의도에 따라 변환되기도 하고, 암묵적으로 평가되기도 합니다.&lt;/p&gt;
 &lt;h2 id=&quot;암묵적-타입-변환implicit-coercion&quot; style=&quot;position:relative;&quot;&gt;암묵적 타입 변환(Implicit Coercion)&lt;a href=&quot;#%EC%95%94%EB%AC%B5%EC%A0%81-%ED%83%80%EC%9E%85-%EB%B3%80%ED%99%98implicit-coercion&quot; aria-label=&quot;암묵적 타입 변환implicit coercion permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;자바스크립트 엔진은 표현식을 평가할 때 맥락에 따라 타입을 강제로 변환할 때가 있습니다. 개발자의 의도와 무관하게 작동하는 방식입니다.&lt;/p&gt;
@@ -121,9 +338,11 @@ Boolean([]) // true
 Boolean({}) // true&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;다음 글에서는 &lt;strong&gt;객체&lt;/strong&gt; 란 무엇인지 알아보도록 하겠습니다.&lt;/p&gt;
-&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-control-flow-statement-loop&quot;&gt;자바스크립트 제어문(2) - 반복문&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[UX - 사용자 모델링: 페르소나와 목표]]></title><description><![CDATA[사용자 모델링 모델(model…]]></description><link>https://yeony99.github.io/tech/ux-goal-directed-design-persona</link><guid isPermaLink="false">https://yeony99.github.io/tech/ux-goal-directed-design-persona</guid><pubDate>Sat, 15 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;사용자-모델링&quot; style=&quot;position:relative;&quot;&gt;사용자 모델링&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%AA%A8%EB%8D%B8%EB%A7%81&quot; aria-label=&quot;사용자 모델링 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-control-flow-statement-loop&quot;&gt;자바스크립트 제어문(2) - 반복문&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Commit Convention에 대한 생각]]></title><description><![CDATA[Conventional Commits 을 기본으로 커밋 컨벤션을 사용하려 한다. 커밋 로그를 직관적으로 알아보는 게 생각보다 중요하다고 느꼈다. 그동안 Update, Add, Fix…]]></description><link>https://yeony99.github.io/log/commit-convention</link><guid isPermaLink="false">https://yeony99.github.io/log/commit-convention</guid><pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.conventionalcommits.org/en/v1.0.0/&quot;&gt;Conventional Commits&lt;/a&gt; 을 기본으로 커밋 컨벤션을 사용하려 한다.&lt;/p&gt;
+&lt;p&gt;커밋 로그를 직관적으로 알아보는 게 생각보다 중요하다고 느꼈다. 그동안 Update, Add, Fix - 이런식으로 작성해왔는데, 조금 더 구체적으로 작성할 수 있는 방법이라 좋은 것 같다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[소주콘에 다녀왔다]]></title><description><![CDATA[…]]></description><link>https://yeony99.github.io/log/commit-convention</link><guid isPermaLink="false">https://yeony99.github.io/log/commit-convention</guid><pubDate>Mon, 17 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;두 번째 열린 소주콘에 다녀왔다! 공감할 수 있는 주니어들의 이야기에 고개를 계속 끄덕거리며 있었던 것 같다. 네트워킹 시간에 내가 속한 그룹은 첫 번째 연사분이셨던 디발자 섹션이었는데, 본인 경험도 얘기하고 공감도 되어서 즐겁게 교류했던 것 같다.&lt;/p&gt;
+&lt;p&gt;다들 성장하고 싶다는 욕구가 있어서 더 즐거운 자리이지 않았나 싶다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[UX - 사용자 모델링: 페르소나와 목표]]></title><description><![CDATA[사용자 모델링 모델(model…]]></description><link>https://yeony99.github.io/tech/ux-goal-directed-design-persona</link><guid isPermaLink="false">https://yeony99.github.io/tech/ux-goal-directed-design-persona</guid><pubDate>Sat, 15 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;사용자-모델링&quot; style=&quot;position:relative;&quot;&gt;사용자 모델링&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%AA%A8%EB%8D%B8%EB%A7%81&quot; aria-label=&quot;사용자 모델링 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;모델(model)은 복잡하고 다양한 현상을 일반화하는 기법이다. 인터랙션 디자인에서는 사용자를 이해할 때 디자인 모델을 사용할 수 있다.&lt;/p&gt;
-&lt;p&gt;리서치 자료를 바탕으로 주요 사용자를 설명하는 자세한 모델을 설정하는데, 이것을 **페르소나(persona)**라고 일컫는다.&lt;/p&gt;
+&lt;p&gt;리서치 자료를 바탕으로 주요 사용자를 설명하는 자세한 모델을 설정하는데, 이것을 &lt;strong&gt;페르소나(persona)&lt;/strong&gt; 라고 일컫는다.&lt;/p&gt;
 &lt;h3 id=&quot;페르소나&quot; style=&quot;position:relative;&quot;&gt;페르소나&lt;a href=&quot;#%ED%8E%98%EB%A5%B4%EC%86%8C%EB%82%98&quot; aria-label=&quot;페르소나 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;페르소나는 사용자 전형을 대표하는 가상의 인물이다.&lt;/p&gt;
 &lt;p&gt;페르소나를 만들 때 주의해야하는 점은 이러하다.&lt;/p&gt;
