@@ -1062,5 +1062,6 @@ class _InputSelectionPageState extends State<InputSelectionPage> {
 ```
 
 
-◾ [[Flutter] 다양한 버튼 사용하기](/tech/flutter-use-several-buttons) 👈 이전 글 보기
+◾ [[Flutter] 다양한 버튼 사용하기](/tech/flutter-use-several-buttons) 👈 이전 글 보기   
+◾ [[Flutter] CircularProgressIndicator와 Chip 사용해보기](/tech/flutter-CircularProgressIndicator-and-chip) 👈 다음 글 보기
 
