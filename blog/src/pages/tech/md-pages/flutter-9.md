@@ -8,6 +8,8 @@ tags:
   - "스터디 Flutter"
 ---
 
+## 여러가지 컴포넌트로 데모 만들어보기
+
 스터디 주제를 어떻게 묶어야 할 지 모르겠는 상황에 처해...
 
 Card, CircularProgressIndicator, Chip, Tooltip 사용해 간단한 페이지를 만들어보았습니다.
@@ -155,9 +157,12 @@ class TooltipSample extends StatelessWidget {
 }
 ```
 
+<video width="100%" controls="controls">
+    <source src="https://user-images.githubusercontent.com/76241233/197394954-59dac2ef-78de-43ca-a9c7-9a9c2dbb2fca.mov" type="video/mp4">
+</video>
+
 ## 알게 된 점
 
 `CircularProgressIndicator` 에 당연히 Visible 속성이 있을 줄 알았는데, Visibility를 사용해야 한다는 것을 알게 되었다.
-
 
 ◾ [[Flutter] Form, Alert에 사용할 수 있는 플러터 컴포넌트](/tech/flutter-use-several-components) 👈 이전 글 보기
