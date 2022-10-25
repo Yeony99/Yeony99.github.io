@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 23 Oct 2022 13:31:26 GMT</lastBuildDate><item><title><![CDATA[[Flutter] CircularProgressIndicator와 Chip 사용해보기]]></title><description><![CDATA[여러가지 컴포넌트로 데모 만들어보기 스터디 주제를 어떻게 묶어야 할 지 모르겠는 상황에 처해... Card, CircularProgressIndicator, Chip, Tooltip…]]></description><link>https://yeony99.github.io/tech/flutter-CircularProgressIndicator-and-chip</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-CircularProgressIndicator-and-chip</guid><pubDate>Fri, 21 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;여러가지-컴포넌트로-데모-만들어보기&quot; style=&quot;position:relative;&quot;&gt;여러가지 컴포넌트로 데모 만들어보기&lt;a href=&quot;#%EC%97%AC%EB%9F%AC%EA%B0%80%EC%A7%80-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A1%9C-%EB%8D%B0%EB%AA%A8-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0&quot; aria-label=&quot;여러가지 컴포넌트로 데모 만들어보기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 25 Oct 2022 01:17:49 GMT</lastBuildDate><item><title><![CDATA[쿠키란?]]></title><description><![CDATA[쿠키 쿠키(cookie)는 사용자를 식별하고 세션을 유지하는 방식 중에서 가장 널리 사용하는 방식입니다. 사용자가 특정 웹사이트에 방문할 때, 각 디바이스(local 환경) 에 저장되는 key-value…]]></description><link>https://yeony99.github.io/tech/network-what-is-cookie</link><guid isPermaLink="false">https://yeony99.github.io/tech/network-what-is-cookie</guid><pubDate>Mon, 24 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;쿠키&quot; style=&quot;position:relative;&quot;&gt;쿠키&lt;a href=&quot;#%EC%BF%A0%ED%82%A4&quot; aria-label=&quot;쿠키 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;쿠키(cookie)는 사용자를 식별하고 세션을 유지하는 방식 중에서 가장 널리 사용하는 방식입니다. 사용자가 특정 웹사이트에 방문할 때, 각 &lt;strong&gt;디바이스(local 환경)&lt;/strong&gt; 에 저장되는 &lt;strong&gt;key-value&lt;/strong&gt;쌍의 작은 데이터입니다.&lt;/p&gt;
+&lt;p&gt;쿠키에는 다양한 개인적인 데이터(이름, 위치, 이메일 주소, 선호하는 언어 등)를 저장할 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;쿠키를-사용하게-된-배경&quot; style=&quot;position:relative;&quot;&gt;쿠키를 사용하게 된 배경&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B2%8C-%EB%90%9C-%EB%B0%B0%EA%B2%BD&quot; aria-label=&quot;쿠키를 사용하게 된 배경 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;HTTP 프로토콜의 특징 때문입니다. HTTP 프로토콜은 아래와 같은 특징이 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;비연결지향(Connectionless) : HTTP는 클라이언트가 요청(Request)를 서버에 보내고, 서버가 클라이언트에게 응답(Response)를 준 후 연결(Connection)을 끊습니다.
+&lt;ul&gt;
+&lt;li&gt;HTTP1.1 에서는 &lt;code class=&quot;language-text&quot;&gt;keep-alive&lt;/code&gt; 옵션이 추가되어 Connection을 재활용할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;상태없음(Stateless) : 연결을 끊는 순간 &lt;strong&gt;상태정보는 유지하지 않는&lt;/strong&gt; 특성이 있습니다.
+&lt;ul&gt;
+&lt;li&gt;서버 입장에서 클라이언트의 상태가 없다는 의미로, 동일한 클라이언트의 요청이여도 각각의 요청은 독립적입니다.&lt;/li&gt;
+&lt;li&gt;이미 요청을 했던 클라이언트인지 확인하기 어렵기 때문에 쿠키로 식별하는 것입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HTTP는 이런 두 가지 특성을 보완하기 위해 &lt;strong&gt;쿠키&lt;/strong&gt;와 &lt;strong&gt;세션&lt;/strong&gt;을 사용하게 되었습니다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;쿠키에-저장하는-정보&quot; style=&quot;position:relative;&quot;&gt;쿠키에 저장하는 정보&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EB%8A%94-%EC%A0%95%EB%B3%B4&quot; aria-label=&quot;쿠키에 저장하는 정보 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;쿠키를 활용해 사용자를 구분하는 것은 매우 유용합니다. 다만 클라이언트가 쿠키를 임의로 수정할 수도 있고, 해커가 접근하기 쉬운 보안 취약점이 있습니다. 따라서 아이디나 비밀번호 같은 민감한 정보는 저장하지 않습니다.&lt;/p&gt;
+&lt;p&gt;보통 쿠키를 활용하는 목적은 이렇습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;세션 ID 관리 : 서버에 저장해야할 민감한 정보에 대한 식별자 ID&lt;/li&gt;
+&lt;li&gt;개인화 : 사용자 선호, 테마 등&lt;/li&gt;
+&lt;li&gt;트래킹 : 사용자 행동 기록 및 분석&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;쿠키가-동작하는-방식&quot; style=&quot;position:relative;&quot;&gt;쿠키가 동작하는 방식&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EA%B0%80-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;쿠키가 동작하는 방식 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;쿠키는 일종의 방문자 이름표와 같습니다. 컨퍼런스 참석자에게 이름표 스티커를 붙여주듯이, 서버가 사용자에게 붙이는 것입니다. 웹사이트는 이런 붙여진 것들을 읽을 수 있습니다.&lt;/p&gt;
+&lt;p&gt;쿠키가 붙는 과정은 이렇습니다. 사용자가 처음 웹사이트에 방문하면 서버는 사용자에 대해 아무것도 알지 못합니다. 따라서 그 사용자를 식별하기 위해 &lt;strong&gt;유일한 값&lt;/strong&gt;을 쿠키에 할당합니다. 쿠키는 임의의 &lt;strong&gt;이름 = 값&lt;/strong&gt; 형태의 리스트를 가지고, &lt;code class=&quot;language-text&quot;&gt;Set-Cookie&lt;/code&gt; 같은 HTTP 응답 헤더에 작성되어 사용자에게 전달됩니다.&lt;/p&gt;
+&lt;p&gt;쿠키는 라이프타임에 따라 세션 쿠키(session cookie)와 지속 쿠키(persistent cookie)로 나눌 수 있습니다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;세션-쿠키&quot; style=&quot;position:relative;&quot;&gt;세션 쿠키&lt;a href=&quot;#%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4&quot; aria-label=&quot;세션 쿠키 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;세션 쿠키는 사용자가 사이트 내에 머무르고 있을 때 브라우저 메모리에 저장하는 &lt;strong&gt;임시 쿠키&lt;/strong&gt;입니다. 만료날짜를 지정하지 않은 쿠키이기 때문에, 브라우저를 닫으면 삭제됩니다.&lt;/p&gt;
+&lt;p&gt;세션 쿠키는 쿠키를 생성한 컴퓨터 이외에 다른 컴퓨터에는 전달할 수 없습니다. 서버가 무작위로 생성한 &lt;strong&gt;세션ID&lt;/strong&gt; 를 생성하고, 이 세션 ID는 웹사이트 내에서 사용자의 행동을 추적합니다.&lt;/p&gt;
+&lt;h4 id=&quot;세션-쿠키를-사용하는-이유&quot; style=&quot;position:relative;&quot;&gt;세션 쿠키를 사용하는 이유&lt;a href=&quot;#%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;세션 쿠키를 사용하는 이유 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;세션 쿠키는 사이트 요청 시에 새롭게 생성되므로 웹사이트가 요청될 때마다 &lt;strong&gt;새로운 사용자의 요청&lt;/strong&gt;으로 취급합니다. (페이지가 달라질 때마다 새로운 요청)&lt;/p&gt;
+&lt;p&gt;사이트 내에서 페이지 간 이동을 할 때 사용자를 기억할 수 있게끔 합니다. 예를 들면 쇼핑몰의 장바구니가 있습니다. 로그인 하지 않은 상태에서 장바구니에 물건을 추가하여도 브라우저는 물건들을 기억하고 있습니다.
+만약 세션 쿠키가 없다면 장바구니에 물건이 아무것도 없겠죠?&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;지속-쿠키&quot; style=&quot;position:relative;&quot;&gt;지속 쿠키&lt;a href=&quot;#%EC%A7%80%EC%86%8D-%EC%BF%A0%ED%82%A4&quot; aria-label=&quot;지속 쿠키 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;지속 쿠키는 만료날짜가 지정된 쿠키입니다. 개별적인 파일로 저장되어 브라우저가 종료되더라도 &lt;strong&gt;지속&lt;/strong&gt;되는 쿠키입니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Expires&lt;/code&gt; 속성에 명시된 날짜에 만료되어 삭제되거나, &lt;code class=&quot;language-text&quot;&gt;Max-Age&lt;/code&gt; 속성에 명시된 기간 이후에 삭제됩니다.&lt;/p&gt;
+&lt;p&gt;대표적인 지속 쿠키로는 Google Analytics가 있습니다. (트래킹 목적)&lt;/p&gt;
+&lt;h4 id=&quot;지속-쿠키를-사용하는-이유&quot; style=&quot;position:relative;&quot;&gt;지속 쿠키를 사용하는 이유&lt;a href=&quot;#%EC%A7%80%EC%86%8D-%EC%BF%A0%ED%82%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;지속 쿠키를 사용하는 이유 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;사용자가 이전에 저장한 정보나 설정 등을 가져와 보다 나은 사용자 경험을 제공할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;대개 자동 로그인 등에 사용됩니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h2 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;Reference&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Cookies&quot;&gt;https://developer.mozilla.org/ko/docs/Web/HTTP/Cookies&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://jeong-pro.tistory.com/80&quot;&gt;https://jeong-pro.tistory.com/80&lt;/a&gt;&lt;br&gt;
+도서 &amp;#x3C;HTTP 완벽 가이드&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Flutter] CircularProgressIndicator와 Chip 사용해보기]]></title><description><![CDATA[여러가지 컴포넌트로 데모 만들어보기 스터디 주제를 어떻게 묶어야 할 지 모르겠는 상황에 처해... Card, CircularProgressIndicator, Chip, Tooltip…]]></description><link>https://yeony99.github.io/tech/flutter-CircularProgressIndicator-and-chip</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-CircularProgressIndicator-and-chip</guid><pubDate>Fri, 21 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;여러가지-컴포넌트로-데모-만들어보기&quot; style=&quot;position:relative;&quot;&gt;여러가지 컴포넌트로 데모 만들어보기&lt;a href=&quot;#%EC%97%AC%EB%9F%AC%EA%B0%80%EC%A7%80-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A1%9C-%EB%8D%B0%EB%AA%A8-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0&quot; aria-label=&quot;여러가지 컴포넌트로 데모 만들어보기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;스터디 주제를 어떻게 묶어야 할 지 모르겠는 상황에 처해...&lt;/p&gt;
 &lt;p&gt;Card, CircularProgressIndicator, Chip, Tooltip 사용해 간단한 페이지를 만들어보았습니다.&lt;/p&gt;
 &lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
@@ -148,8 +201,7 @@ class TooltipSample extends StatelessWidget {
 &lt;/video&gt;
 &lt;h2 id=&quot;알게-된-점&quot; style=&quot;position:relative;&quot;&gt;알게 된 점&lt;a href=&quot;#%EC%95%8C%EA%B2%8C-%EB%90%9C-%EC%A0%90&quot; aria-label=&quot;알게 된 점 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;CircularProgressIndicator&lt;/code&gt; 에 당연히 Visible 속성이 있을 줄 알았는데, Visibility를 사용해야 한다는 것을 알게 되었다.&lt;/p&gt;
-&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-use-several-components&quot;&gt;[Flutter] Form, Alert에 사용할 수 있는 플러터 컴포넌트&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Commit Convention에 대한 생각]]></title><description><![CDATA[Conventional Commits 을 기본으로 커밋 컨벤션을 사용하려 한다. 커밋 로그를 직관적으로 알아보는 게 생각보다 중요하다고 느꼈다. 그동안 Update, Add, Fix…]]></description><link>https://yeony99.github.io/log/commit-convention</link><guid isPermaLink="false">https://yeony99.github.io/log/commit-convention</guid><pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.conventionalcommits.org/en/v1.0.0/&quot;&gt;Conventional Commits&lt;/a&gt; 을 기본으로 커밋 컨벤션을 사용하려 한다.&lt;/p&gt;
-&lt;p&gt;커밋 로그를 직관적으로 알아보는 게 생각보다 중요하다고 느꼈다. 그동안 Update, Add, Fix - 이런식으로 작성해왔는데, 조금 더 구체적으로 작성할 수 있는 방법이라 좋은 것 같다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (13) - 자바스크립트의 타입 변환]]></title><description><![CDATA[우리가 자바스크립트에서 사용하는 모든 값은 제각각의 타입을 가지고 있습니다. 이런 타입은 개발자의 의도에 따라 변환되기도 하고, 암묵적으로 평가되기도 합니다. 암묵적 타입 변환(Implicit Coercion…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-type-coercion</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-type-coercion</guid><pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;우리가 자바스크립트에서 사용하는 모든 값은 제각각의 &lt;strong&gt;타입&lt;/strong&gt;을 가지고 있습니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-use-several-components&quot;&gt;[Flutter] Form, Alert에 사용할 수 있는 플러터 컴포넌트&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (13) - 자바스크립트의 타입 변환]]></title><description><![CDATA[우리가 자바스크립트에서 사용하는 모든 값은 제각각의 타입을 가지고 있습니다. 이런 타입은 개발자의 의도에 따라 변환되기도 하고, 암묵적으로 평가되기도 합니다. 암묵적 타입 변환(Implicit Coercion…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-type-coercion</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-type-coercion</guid><pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;우리가 자바스크립트에서 사용하는 모든 값은 제각각의 &lt;strong&gt;타입&lt;/strong&gt;을 가지고 있습니다.&lt;/p&gt;
 &lt;p&gt;이런 타입은 개발자의 의도에 따라 변환되기도 하고, 암묵적으로 평가되기도 합니다.&lt;/p&gt;
 &lt;h2 id=&quot;암묵적-타입-변환implicit-coercion&quot; style=&quot;position:relative;&quot;&gt;암묵적 타입 변환(Implicit Coercion)&lt;a href=&quot;#%EC%95%94%EB%AC%B5%EC%A0%81-%ED%83%80%EC%9E%85-%EB%B3%80%ED%99%98implicit-coercion&quot; aria-label=&quot;암묵적 타입 변환implicit coercion permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;자바스크립트 엔진은 표현식을 평가할 때 맥락에 따라 타입을 강제로 변환할 때가 있습니다. 개발자의 의도와 무관하게 작동하는 방식입니다.&lt;/p&gt;
@@ -272,7 +324,8 @@ Boolean([]) // true
 Boolean({}) // true&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;다음 글에서는 &lt;strong&gt;객체&lt;/strong&gt; 란 무엇인지 알아보도록 하겠습니다.&lt;/p&gt;
-&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-control-flow-statement-loop&quot;&gt;자바스크립트 제어문(2) - 반복문&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[소주콘에 다녀왔다]]></title><description><![CDATA[…]]></description><link>https://yeony99.github.io/log/commit-convention</link><guid isPermaLink="false">https://yeony99.github.io/log/commit-convention</guid><pubDate>Mon, 17 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;두 번째 열린 소주콘에 다녀왔다! 공감할 수 있는 주니어들의 이야기에 고개를 계속 끄덕거리며 있었던 것 같다. 네트워킹 시간에 내가 속한 그룹은 첫 번째 연사분이셨던 디발자 섹션이었는데, 본인 경험도 얘기하고 공감도 되어서 즐겁게 교류했던 것 같다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-control-flow-statement-loop&quot;&gt;자바스크립트 제어문(2) - 반복문&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Commit Convention에 대한 생각]]></title><description><![CDATA[Conventional Commits 을 기본으로 커밋 컨벤션을 사용하려 한다. 커밋 로그를 직관적으로 알아보는 게 생각보다 중요하다고 느꼈다. 그동안 Update, Add, Fix…]]></description><link>https://yeony99.github.io/log/commit-convention</link><guid isPermaLink="false">https://yeony99.github.io/log/commit-convention</guid><pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.conventionalcommits.org/en/v1.0.0/&quot;&gt;Conventional Commits&lt;/a&gt; 을 기본으로 커밋 컨벤션을 사용하려 한다.&lt;/p&gt;
+&lt;p&gt;커밋 로그를 직관적으로 알아보는 게 생각보다 중요하다고 느꼈다. 그동안 Update, Add, Fix - 이런식으로 작성해왔는데, 조금 더 구체적으로 작성할 수 있는 방법이라 좋은 것 같다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[소주콘에 다녀왔다]]></title><description><![CDATA[…]]></description><link>https://yeony99.github.io/log/commit-convention</link><guid isPermaLink="false">https://yeony99.github.io/log/commit-convention</guid><pubDate>Mon, 17 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;두 번째 열린 소주콘에 다녀왔다! 공감할 수 있는 주니어들의 이야기에 고개를 계속 끄덕거리며 있었던 것 같다. 네트워킹 시간에 내가 속한 그룹은 첫 번째 연사분이셨던 디발자 섹션이었는데, 본인 경험도 얘기하고 공감도 되어서 즐겁게 교류했던 것 같다.&lt;/p&gt;
 &lt;p&gt;다들 성장하고 싶다는 욕구가 있어서 더 즐거운 자리이지 않았나 싶다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[UX - 사용자 모델링: 페르소나와 목표]]></title><description><![CDATA[사용자 모델링 모델(model…]]></description><link>https://yeony99.github.io/tech/ux-goal-directed-design-persona</link><guid isPermaLink="false">https://yeony99.github.io/tech/ux-goal-directed-design-persona</guid><pubDate>Sat, 15 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;사용자-모델링&quot; style=&quot;position:relative;&quot;&gt;사용자 모델링&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%AA%A8%EB%8D%B8%EB%A7%81&quot; aria-label=&quot;사용자 모델링 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;모델(model)은 복잡하고 다양한 현상을 일반화하는 기법이다. 인터랙션 디자인에서는 사용자를 이해할 때 디자인 모델을 사용할 수 있다.&lt;/p&gt;
 &lt;p&gt;리서치 자료를 바탕으로 주요 사용자를 설명하는 자세한 모델을 설정하는데, 이것을 &lt;strong&gt;페르소나(persona)&lt;/strong&gt; 라고 일컫는다.&lt;/p&gt;
@@ -1445,7 +1498,254 @@ class _InputSelectionPageState extends State&amp;lt;InputSelectionPage&amp;gt; {
 }&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-use-several-buttons&quot;&gt;[Flutter] 다양한 버튼 사용하기&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
-◾ &lt;a href=&quot;/tech/flutter-CircularProgressIndicator-and-chip&quot;&gt;[Flutter] CircularProgressIndicator와 Chip 사용해보기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[UX - 목표 지향 디자인 리서치]]></title><description><![CDATA[디자인 리서치 디자인을 평가할 땐 회사의 요구사항과 사용자의 니즈를 효과적으로 만족시켰는지를 판단해야 한다. 하지만 디자인에 정량적 자료는 큰 도움이 되지 못한다. 디자인에 필수적인 리서치는 정성적 리서치(Qualitative Research…]]></description><link>https://yeony99.github.io/tech/ux-goal-directed-design-research</link><guid isPermaLink="false">https://yeony99.github.io/tech/ux-goal-directed-design-research</guid><pubDate>Tue, 11 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;디자인-리서치&quot; style=&quot;position:relative;&quot;&gt;디자인 리서치&lt;a href=&quot;#%EB%94%94%EC%9E%90%EC%9D%B8-%EB%A6%AC%EC%84%9C%EC%B9%98&quot; aria-label=&quot;디자인 리서치 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+◾ &lt;a href=&quot;/tech/flutter-CircularProgressIndicator-and-chip&quot;&gt;[Flutter] CircularProgressIndicator와 Chip 사용해보기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (12) - 자바스크립트 제어문(2) - 반복문]]></title><description><![CDATA[반복문은 조건식의 평가결과가 참일 때 코드 블록을 실행합니다. 그리고 조건이 또 참일 때 코드 블록을 다시 실행합니다. 조건식이 가 될 때까지 반복하기 때문에 반복문이라고 칭합니다. 자바스크립트에는 for, while, do...while 이렇게…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-control-flow-statement-loop</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-control-flow-statement-loop</guid><pubDate>Wed, 12 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;반복문은 조건식의 평가결과가 참일 때 코드 블록을 실행합니다. 그리고 조건이 또 참일 때 코드 블록을 다시 실행합니다. 조건식이 &lt;code class=&quot;language-text&quot;&gt;false&lt;/code&gt;가 될 때까지 반복하기 때문에 &lt;strong&gt;반복문&lt;/strong&gt;이라고 칭합니다.&lt;/p&gt;
+&lt;p&gt;자바스크립트에는 for, while, do...while 이렇게 3가지 반복문이 있습니다.&lt;/p&gt;
+&lt;h2 id=&quot;while문&quot; style=&quot;position:relative;&quot;&gt;while문&lt;a href=&quot;#while%EB%AC%B8&quot; aria-label=&quot;while문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;while&lt;/code&gt;문은 주어진 조건식의 평가 결과가 &lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt;이면 코드 블록을 계속해서 반복해서 실행합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let counter = 0;
+
+while(counter &amp;lt; 5) {
+  console.log(counter) // 0 1 2 3 4
+
+  counter = counter + 1;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;위 코드에서는 counter가 5 미만일 때까지 실행됩니다. 따라서 콘솔에 찍히는 값은 차례대로 0, 1, 2, 3, 4가 됩니다.&lt;/p&gt;
+&lt;h3 id=&quot;무한-루프&quot; style=&quot;position:relative;&quot;&gt;무한 루프&lt;a href=&quot;#%EB%AC%B4%ED%95%9C-%EB%A3%A8%ED%94%84&quot; aria-label=&quot;무한 루프 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;반복문을 다룰 때에는 주의해야 하는 게 있습니다. 바로 &lt;strong&gt;무한 루프&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;무한 루프란 이름 그대로 무한하게 반복하는 문을 의미합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;while(true) {
+  console.log(&amp;#39;Looooooop!&amp;#39;)
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;조건식이 언제나 &lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt;인 반복문입니다.&lt;/p&gt;
+&lt;p&gt;위 코드는 실행시키지 않는 것이 좋습니다. 프로그램을 강제 종료하지 않는 이상 영원히 실행되거든요.&lt;/p&gt;
+&lt;p&gt;무한 루프는 프로그램의 원활한 실행을 방해합니다. 따라서 &lt;code class=&quot;language-text&quot;&gt;if&lt;/code&gt;문 등으로 무한 루프를 탈출할 수 있게 해야합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let counter = 0;
+
+while(true) {
+  console.log(counter);
+  counter = counter + 1;
+
+  if(counter === 5) {
+    break;
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;if&lt;/code&gt;문과 &lt;code class=&quot;language-text&quot;&gt;break&lt;/code&gt;의 조합으로 이제 무한 루프를 탈출할 수 있게 되었습니다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;dowhile문&quot; style=&quot;position:relative;&quot;&gt;do...while문&lt;a href=&quot;#dowhile%EB%AC%B8&quot; aria-label=&quot;dowhile문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;do...while&lt;/code&gt; 문은 코드블록을 일단 먼저 실행하고 그 후에 조건식을 평가합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let counter = 0;
+
+do {
+  console.log(counter);
+  counter = counter + 1;
+} while(counter &amp;lt; 5)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;코드 블록이 &lt;code class=&quot;language-text&quot;&gt;while&lt;/code&gt; 다음에 있지 않고 &lt;code class=&quot;language-text&quot;&gt;do&lt;/code&gt; 다음에 위치하죠? do에 있는 블록은 조건문과 상관없이 먼저 실행됩니다.&lt;/p&gt;
+&lt;p&gt;조건식에 부합하지 않더라도 &lt;strong&gt;최소 한번은&lt;/strong&gt; 실행되는 조건문입니다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;for문&quot; style=&quot;position:relative;&quot;&gt;for문&lt;a href=&quot;#for%EB%AC%B8&quot; aria-label=&quot;for문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;for&lt;/code&gt;문은 &lt;code class=&quot;language-text&quot;&gt;while&lt;/code&gt;문의 로직을 좀더 기계적으로 운용합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;for(변수 선언문 혹은 할당문; 조건식; 증감식) {
+  참인경우 실행될 문;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;보통 프로그래머들은 &lt;code class=&quot;language-text&quot;&gt;for&lt;/code&gt; 문 사용 시 내부에서 사용할 변수를 &lt;code class=&quot;language-text&quot;&gt;i&lt;/code&gt;로 선언합니다. i는 반복을 의미하는 iteration입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const arr = [&amp;#39;하나&amp;#39;, &amp;#39;둘&amp;#39;, &amp;#39;셋&amp;#39;];
+
+for(let i = 0; i &amp;lt; arr.length; i++) {
+  console.log(arr[i]);
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;for문을 이해하기가 처음엔 어려울 수 있습니다. 차근차근히 살펴봅시다.&lt;/p&gt;
+&lt;h3 id=&quot;for문의-동작&quot; style=&quot;position:relative;&quot;&gt;for문의 동작&lt;a href=&quot;#for%EB%AC%B8%EC%9D%98-%EB%8F%99%EC%9E%91&quot; aria-label=&quot;for문의 동작 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const arr = [&amp;#39;하나&amp;#39;, &amp;#39;둘&amp;#39;, &amp;#39;셋&amp;#39;];
+
+for(let i = 0; i &amp;lt; arr.length; i++) {
+  console.log(arr[i]);
+}
+
+// 동작
+// step1
+i = 0;
+i &amp;lt; arr.length --&amp;gt; true // 0 &amp;lt; 3
+  console.log(arr[i]) --&amp;gt; arr[0] // 하나
+
+// step2
+i++; // i는 1
+i &amp;lt; arr.length; --&amp;gt; true // 1 &amp;lt; 3
+  console.log(arr[i]) --&amp;gt; arr[1] // 둘
+
+// step3
+i++; // i는 2
+i &amp;lt; arr.length; --&amp;gt; true // 2 &amp;lt; 3
+  console.log(arr[i]) --&amp;gt; arr[2] // 셋
+
+// step4
+i++; // i는 3
+i &amp;lt; arr.length; --&amp;gt; false // 3 &amp;lt; 3
+
+// for문 종료&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;for문의 괄호 속 3번째 식은 &lt;strong&gt;증감식&lt;/strong&gt;이기 때문에 이렇게 감소하는 형태로도 작성할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;for(let i = 2; i &amp;gt;=0; i--) {
+  console.log(i); // 2 1 0
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;for문의-무한루프&quot; style=&quot;position:relative;&quot;&gt;for문의 무한루프&lt;a href=&quot;#for%EB%AC%B8%EC%9D%98-%EB%AC%B4%ED%95%9C%EB%A3%A8%ED%94%84&quot; aria-label=&quot;for문의 무한루프 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;while&lt;/code&gt; 문에서 &lt;code class=&quot;language-text&quot;&gt;while(true)&lt;/code&gt; 로 작성하면 무한루프가 됩니다.&lt;/p&gt;
+&lt;p&gt;for문에서는 이렇게 작성합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;for(;;) {
+  //...
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;for문에서의 변수 선언(할당)문, 조건식, 증감식은 모두 선택적입니다. 따라서 작성하지 않으면 무한루프가 됩니다.&lt;/p&gt;
+&lt;h4 id=&quot;선택적-식-사용&quot; style=&quot;position:relative;&quot;&gt;선택적 식 사용&lt;a href=&quot;#%EC%84%A0%ED%83%9D%EC%A0%81-%EC%8B%9D-%EC%82%AC%EC%9A%A9&quot; aria-label=&quot;선택적 식 사용 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;변수를 밖에 선언(및 할당)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let i = 0;
+
+for(; i &amp;lt; 5; i++) {
+  //
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;조건식을 따로 작성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;for(let i = 0; ; i++) {
+  console.log(i); 
+
+  // 조건식
+  if(i &amp;gt; 3) {
+    break;
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;for문의-중첩&quot; style=&quot;position:relative;&quot;&gt;for문의 중첩&lt;a href=&quot;#for%EB%AC%B8%EC%9D%98-%EC%A4%91%EC%B2%A9&quot; aria-label=&quot;for문의 중첩 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;for문 속에 for문을 한번 더 작성할 수 있습니다. 이를 &lt;strong&gt;중첩 for문&lt;/strong&gt;이라 합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;for(let i = 1; i &amp;lt;=3; i++) {
+  for(let j = 1; j &amp;lt;=3; j++) {
+    if(i + j == 3) {
+      console.log(`${i} + ${j}는 ${i+j}`)
+    }
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;동작은 이렇습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;step1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;i = 1;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;i &amp;lt;= 3&lt;/code&gt; --&gt; true
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j = 1;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j &amp;lt;= 3&lt;/code&gt; --&gt; true
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;i + j&lt;/code&gt; --&gt; 2 // 실행 조건 미충족&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;step 1-2
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j++&lt;/code&gt; // j는 2&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j &amp;lt;= 3&lt;/code&gt; --&gt; true
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;i + j&lt;/code&gt; --&gt; 3&lt;/li&gt;
+&lt;li&gt;출력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;step 1-3
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j++&lt;/code&gt; // j는 3&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j &amp;lt;= 3&lt;/code&gt; --&gt; true
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;i + j&lt;/code&gt; --&gt; 4 // 실행조건 미충족&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;step 1-4
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j++&lt;/code&gt; // j는 4&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j &amp;lt;= 4&lt;/code&gt; --&gt; false // for문 종료&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;중첩된 for문 1번 종료&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;step2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;i++;&lt;/code&gt; // i는 2&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;i &amp;lt;= 3&lt;/code&gt; --&gt; true
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j = 1;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j &amp;lt;= 3&lt;/code&gt; --&gt; true
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;i + j&lt;/code&gt; --&gt; 3&lt;/li&gt;
+&lt;li&gt;출력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;step 2-2
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j++&lt;/code&gt; // j는 2&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j &amp;lt;= 3&lt;/code&gt; --&gt; true
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;i + j&lt;/code&gt; --&gt; 4 // 실행조건 미충족&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;step 2-3
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j++&lt;/code&gt; // j는 3&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j &amp;lt;= 3&lt;/code&gt; --&gt; true
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;i + j&lt;/code&gt; --&gt; 5 // 실행조건 미충족&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;step 2-4
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;j++&lt;/code&gt; // j는 4&lt;/li&gt;
+&lt;li&gt;j &amp;#x3C;= 4 --&gt; false // for문 종료&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이렇게 바깥의 for문의 각각의 루프 한번마다 중첩된 for문이 끝까지 반복됩니다.&lt;/p&gt;
+&lt;p&gt;보통 중첩되는 for문의 변수를 선언할 경우에는 &lt;code class=&quot;language-text&quot;&gt;i j k l m n&lt;/code&gt; 순으로 작성합니다. 일종의 관례입니다.&lt;/p&gt;
+&lt;p&gt;다음 글에서는 지금까지 몇 번 언급했던 암묵적 타입 변환에 대해 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-control-flow-statement-conditional&quot;&gt;자바스크립트 제어문(1) - 조건문&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[UX - 목표 지향 디자인 리서치]]></title><description><![CDATA[디자인 리서치 디자인을 평가할 땐 회사의 요구사항과 사용자의 니즈를 효과적으로 만족시켰는지를 판단해야 한다. 하지만 디자인에 정량적 자료는 큰 도움이 되지 못한다. 디자인에 필수적인 리서치는 정성적 리서치(Qualitative Research…]]></description><link>https://yeony99.github.io/tech/ux-goal-directed-design-research</link><guid isPermaLink="false">https://yeony99.github.io/tech/ux-goal-directed-design-research</guid><pubDate>Tue, 11 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;디자인-리서치&quot; style=&quot;position:relative;&quot;&gt;디자인 리서치&lt;a href=&quot;#%EB%94%94%EC%9E%90%EC%9D%B8-%EB%A6%AC%EC%84%9C%EC%B9%98&quot; aria-label=&quot;디자인 리서치 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;디자인을 평가할 땐 &lt;strong&gt;회사의 요구사항&lt;/strong&gt;과 &lt;strong&gt;사용자의 니즈&lt;/strong&gt;를 효과적으로 만족시켰는지를 판단해야 한다.&lt;/p&gt;
 &lt;p&gt;하지만 디자인에 정량적 자료는 큰 도움이 되지 못한다. 디자인에 필수적인 리서치는 &lt;strong&gt;정성적 리서치(Qualitative Research)&lt;/strong&gt; 이다.&lt;/p&gt;
 &lt;hr&gt;
@@ -3656,50 +3956,7 @@ typeof new Date() // object&lt;/code&gt;
 &lt;li&gt;위치를 지정하는 것은 부모 위젯&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-text-widget&quot;&gt;[Flutter] Text Widget 사용하기&lt;/a&gt; 👈 이전 글 보기
-◾ &lt;a href=&quot;/tech/flutter-use-several-widgets&quot;&gt;[Flutter] 다양한 위젯 사용하기&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Flutter] Text Widget 사용하기]]></title><description><![CDATA[Text Widget Flutter에서 아주 흔하게 사용되는 위젯 중 하나가  위젯입니다. Text 위젯은 이름에서부터 알 수 있듯이 텍스트를 화면에 그리는 위젯입니다. 뿐만 아니라 텍스트에 style을 입힐 수도 있습니다. Text Widget…]]></description><link>https://yeony99.github.io/tech/flutter-text-widget</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-text-widget</guid><pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 📍 텍스트에 대한 다양한 반응의 종류를 알고 이해한다.
-
-📍 constraints의 의미를 알고 적절하게 사용한다.
-
-📍 tutorial app을 만들어보며 배운 내용을 정리한다. --&gt;
-&lt;h2 id=&quot;text-widget&quot; style=&quot;position:relative;&quot;&gt;Text Widget&lt;a href=&quot;#text-widget&quot; aria-label=&quot;text widget permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Flutter에서 아주 흔하게 사용되는 위젯 중 하나가 &lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; 위젯입니다.&lt;/p&gt;
-&lt;p&gt;Text 위젯은 이름에서부터 알 수 있듯이 텍스트를 화면에 그리는 위젯입니다. 뿐만 아니라 텍스트에 style을 입힐 수도 있습니다.&lt;/p&gt;
-&lt;h3 id=&quot;text-widget-작성하기&quot; style=&quot;position:relative;&quot;&gt;Text Widget 작성하기&lt;a href=&quot;#text-widget-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;text widget 작성하기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;기본적인 Text 위젯은 이렇게 작성할 수 있습니다.&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;const Text(&amp;#39;Hello World!&amp;#39;)&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;여기에 style을 입히고 싶다면 &lt;code class=&quot;language-text&quot;&gt;style&lt;/code&gt; 속성을 지정하면 됩니다.&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;Text(
-  &amp;#39;Hello World!&amp;#39;,
-  style: TextStyle(fontSize: 20),
-)&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;h4 id=&quot;textstyle-class&quot; style=&quot;position:relative;&quot;&gt;TextStyle class&lt;a href=&quot;#textstyle-class&quot; aria-label=&quot;textstyle class permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Flutter에는 Text를 스타일링할 수 있는 &lt;code class=&quot;language-text&quot;&gt;TextStyle&lt;/code&gt; class가 존재합니다.&lt;/p&gt;
-&lt;p&gt;TextStyle class는 &lt;code class=&quot;language-text&quot;&gt;immutable&lt;/code&gt;하다고 설명하고 있는데요. 이 말은 사용할 때 명시한 값 외에는 런타임 시 변하게 할 수 없다는 의미입니다.&lt;/p&gt;
-&lt;p&gt;TextStyle 클래스를 통해 지정할 수 있는 속성은 아래 링크에서 확인할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://api.flutter.dev/flutter/painting/TextStyle-class.html&quot;&gt;TextStyle class&lt;/a&gt;&lt;/p&gt;
-&lt;br/&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;richtext-widget&quot; style=&quot;position:relative;&quot;&gt;RichText Widget&lt;a href=&quot;#richtext-widget&quot; aria-label=&quot;richtext widget permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; 위젯은 하나의 문장을 작성할 수 있었는데요. 텍스트를 나누어 스타일링하고 싶거나 여러 개의 텍스트를 합쳐서 보여주고 싶다면 &lt;code class=&quot;language-text&quot;&gt;RichText&lt;/code&gt;를 사용하면 됩니다.&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;RichText(
-  text: TextSpan(
-    text: &amp;#39;Hello &amp;#39;,
-    style: DefaultTextStyle.of(context).style,
-    children: const &amp;lt;TextSpan&amp;gt;[
-      TextSpan(text: &amp;#39;bold&amp;#39;, style: TextStyle(fontWeight: FontWeight.bold)),
-      TextSpan(text: &amp;#39; world!&amp;#39;),
-    ],
-  ),
-)&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;RichText&lt;/code&gt; 안에 들어가는 여러 개의 텍스트들은 &lt;code class=&quot;language-text&quot;&gt;TextSpan&lt;/code&gt;을 사용해 보여집니다.&lt;/p&gt;
-&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-layout-widget&quot;&gt;[Flutter] Layout Widget 정리&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
-◾ &lt;a href=&quot;/tech/flutter-understanding-constraints&quot;&gt;[Flutter] Constraints 이해하기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[프록시 패턴]]></title><description><![CDATA[프록시 패턴 (Proxy Pattern)  단어의 뜻은 대리인입니다. Proxy 단어 뜻 - 네이버 사전 Proxy 패턴은 실제 객체에 직접 접근하는 것이 아닌, 실 객체를 대리하는 객체인 Proxy 객체를 다루는 패턴입니다. Proxy…]]></description><link>https://yeony99.github.io/tech/react-pattern-proxy</link><guid isPermaLink="false">https://yeony99.github.io/tech/react-pattern-proxy</guid><pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프록시-패턴-proxy-pattern&quot; style=&quot;position:relative;&quot;&gt;프록시 패턴 (Proxy Pattern)&lt;a href=&quot;#%ED%94%84%EB%A1%9D%EC%8B%9C-%ED%8C%A8%ED%84%B4-proxy-pattern&quot; aria-label=&quot;프록시 패턴 proxy pattern permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+◾ &lt;a href=&quot;/tech/flutter-use-several-widgets&quot;&gt;[Flutter] 다양한 위젯 사용하기&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[프록시 패턴]]></title><description><![CDATA[프록시 패턴 (Proxy Pattern)  단어의 뜻은 대리인입니다. Proxy 단어 뜻 - 네이버 사전 Proxy 패턴은 실제 객체에 직접 접근하는 것이 아닌, 실 객체를 대리하는 객체인 Proxy 객체를 다루는 패턴입니다. Proxy…]]></description><link>https://yeony99.github.io/tech/react-pattern-proxy</link><guid isPermaLink="false">https://yeony99.github.io/tech/react-pattern-proxy</guid><pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프록시-패턴-proxy-pattern&quot; style=&quot;position:relative;&quot;&gt;프록시 패턴 (Proxy Pattern)&lt;a href=&quot;#%ED%94%84%EB%A1%9D%EC%8B%9C-%ED%8C%A8%ED%84%B4-proxy-pattern&quot; aria-label=&quot;프록시 패턴 proxy pattern permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;proxy&lt;/code&gt; 단어의 뜻은 &lt;strong&gt;대리인&lt;/strong&gt;입니다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/191401927-69d5773e-a6ef-467f-96b8-5aa3ee883097.png&quot; alt=&quot;Proxy 단어 뜻 - 네이버 사전&quot;&gt;&lt;/p&gt;
 &lt;div style=&quot;font-size: 0.7rem; text-align: end&quot;&gt;출처 : 네이버 사전&lt;/div&gt;&lt;br/&gt;
@@ -3810,7 +4067,50 @@ const personProxy = new Proxy(person, {
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;obj[prop] = value&lt;/code&gt; 형태가 아니라, &lt;code class=&quot;language-text&quot;&gt;Reflect.get(obj, prop)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Reflect.set(obj, prop, value)&lt;/code&gt;의 형태로 작성할 수 있습니다.&lt;/p&gt;
 &lt;h2 id=&quot;결론&quot; style=&quot;position:relative;&quot;&gt;결론&lt;a href=&quot;#%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot;결론 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Proxy는 객체의 동작을 커스터마이징할 수 있는 유용한 기능입니다. 유효성 검사, formatting, 알림, 디버깅 등에 유용합니다.&lt;/p&gt;
-&lt;p&gt;핸들러 객체에서 Proxy를 과도하게 사용하면 성능이 저하될 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (9) - 값, 식, 문]]></title><description><![CDATA[값, 식, 문 값을 할당한다 라는 말을 이전 글에서 자주 사용했습니다. 값은 무엇일까요? 자바스크립트 뿐 아니라 값은 프로그래밍 전반에서 사용하는 용어입니다. 값(value)과 식(expression), 문(statement…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</guid><pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;값-식-문&quot; style=&quot;position:relative;&quot;&gt;값, 식, 문&lt;a href=&quot;#%EA%B0%92-%EC%8B%9D-%EB%AC%B8&quot; aria-label=&quot;값 식 문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;핸들러 객체에서 Proxy를 과도하게 사용하면 성능이 저하될 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Flutter] Text Widget 사용하기]]></title><description><![CDATA[Text Widget Flutter에서 아주 흔하게 사용되는 위젯 중 하나가  위젯입니다. Text 위젯은 이름에서부터 알 수 있듯이 텍스트를 화면에 그리는 위젯입니다. 뿐만 아니라 텍스트에 style을 입힐 수도 있습니다. Text Widget…]]></description><link>https://yeony99.github.io/tech/flutter-text-widget</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-text-widget</guid><pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 📍 텍스트에 대한 다양한 반응의 종류를 알고 이해한다.
+
+📍 constraints의 의미를 알고 적절하게 사용한다.
+
+📍 tutorial app을 만들어보며 배운 내용을 정리한다. --&gt;
+&lt;h2 id=&quot;text-widget&quot; style=&quot;position:relative;&quot;&gt;Text Widget&lt;a href=&quot;#text-widget&quot; aria-label=&quot;text widget permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Flutter에서 아주 흔하게 사용되는 위젯 중 하나가 &lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; 위젯입니다.&lt;/p&gt;
+&lt;p&gt;Text 위젯은 이름에서부터 알 수 있듯이 텍스트를 화면에 그리는 위젯입니다. 뿐만 아니라 텍스트에 style을 입힐 수도 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;text-widget-작성하기&quot; style=&quot;position:relative;&quot;&gt;Text Widget 작성하기&lt;a href=&quot;#text-widget-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;text widget 작성하기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;기본적인 Text 위젯은 이렇게 작성할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const Text(&amp;#39;Hello World!&amp;#39;)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;여기에 style을 입히고 싶다면 &lt;code class=&quot;language-text&quot;&gt;style&lt;/code&gt; 속성을 지정하면 됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Text(
+  &amp;#39;Hello World!&amp;#39;,
+  style: TextStyle(fontSize: 20),
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;textstyle-class&quot; style=&quot;position:relative;&quot;&gt;TextStyle class&lt;a href=&quot;#textstyle-class&quot; aria-label=&quot;textstyle class permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Flutter에는 Text를 스타일링할 수 있는 &lt;code class=&quot;language-text&quot;&gt;TextStyle&lt;/code&gt; class가 존재합니다.&lt;/p&gt;
+&lt;p&gt;TextStyle class는 &lt;code class=&quot;language-text&quot;&gt;immutable&lt;/code&gt;하다고 설명하고 있는데요. 이 말은 사용할 때 명시한 값 외에는 런타임 시 변하게 할 수 없다는 의미입니다.&lt;/p&gt;
+&lt;p&gt;TextStyle 클래스를 통해 지정할 수 있는 속성은 아래 링크에서 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://api.flutter.dev/flutter/painting/TextStyle-class.html&quot;&gt;TextStyle class&lt;/a&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;richtext-widget&quot; style=&quot;position:relative;&quot;&gt;RichText Widget&lt;a href=&quot;#richtext-widget&quot; aria-label=&quot;richtext widget permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; 위젯은 하나의 문장을 작성할 수 있었는데요. 텍스트를 나누어 스타일링하고 싶거나 여러 개의 텍스트를 합쳐서 보여주고 싶다면 &lt;code class=&quot;language-text&quot;&gt;RichText&lt;/code&gt;를 사용하면 됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;dart&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;RichText(
+  text: TextSpan(
+    text: &amp;#39;Hello &amp;#39;,
+    style: DefaultTextStyle.of(context).style,
+    children: const &amp;lt;TextSpan&amp;gt;[
+      TextSpan(text: &amp;#39;bold&amp;#39;, style: TextStyle(fontWeight: FontWeight.bold)),
+      TextSpan(text: &amp;#39; world!&amp;#39;),
+    ],
+  ),
+)&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;RichText&lt;/code&gt; 안에 들어가는 여러 개의 텍스트들은 &lt;code class=&quot;language-text&quot;&gt;TextSpan&lt;/code&gt;을 사용해 보여집니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-layout-widget&quot;&gt;[Flutter] Layout Widget 정리&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
+◾ &lt;a href=&quot;/tech/flutter-understanding-constraints&quot;&gt;[Flutter] Constraints 이해하기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (9) - 값, 식, 문]]></title><description><![CDATA[값, 식, 문 값을 할당한다 라는 말을 이전 글에서 자주 사용했습니다. 값은 무엇일까요? 자바스크립트 뿐 아니라 값은 프로그래밍 전반에서 사용하는 용어입니다. 값(value)과 식(expression), 문(statement…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-value-expression-statement</guid><pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;값-식-문&quot; style=&quot;position:relative;&quot;&gt;값, 식, 문&lt;a href=&quot;#%EA%B0%92-%EC%8B%9D-%EB%AC%B8&quot; aria-label=&quot;값 식 문 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;값을 할당한다&lt;/strong&gt; 라는 말을 이전 글에서 자주 사용했습니다.&lt;/p&gt;
 &lt;p&gt;값은 무엇일까요? 자바스크립트 뿐 아니라 값은 프로그래밍 전반에서 사용하는 용어입니다.&lt;/p&gt;
 &lt;p&gt;값(value)과 식(expression), 문(statement)의 차이에 대해서 알아봅시다.&lt;/p&gt;
@@ -5433,6 +5733,7 @@ const y = x + 1n; // 9007199254740993n&lt;/code&gt;
 &lt;p&gt;객체 타입은 여기서 함께 적기에는 굉장히 분량이 길어집니다.&lt;br&gt;
 자바스크립트는 기본적으로 객체 기반의 언어이기 때문에 &lt;strong&gt;자바스크립트의 대부분이 객체&lt;/strong&gt;라 말해도 과언이 아닙니다. 앞서 살펴본 자료형 7가지 타입이 아닌 값은 &lt;strong&gt;모두 객체&lt;/strong&gt;입니다.&lt;br&gt;
 이후 객체를 좀더 자세히 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;객체 타입이 궁금하다면 &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-object&quot;&gt;객체란 무엇일까?&lt;/a&gt; 글을 참고해주세요.&lt;/p&gt;
 &lt;p&gt;다음 글에서는 변수에 대해 알아보겠습니다.&lt;/p&gt;
 &lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-node-and-npm&quot;&gt;Node.js와 npm&lt;/a&gt; 👈 이전 글 보기&lt;br&gt;
 ◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-variable&quot;&gt;변수 사용하기&lt;/a&gt; 👈 다음 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (4) - Node.js와 npm]]></title><description><![CDATA[Node.js 란? 앞서 자바스크립트 개발 환경 에서 언급했다시피, 자바스크립트 실행환경인 Node.js가 있습니다. Node.js와 npm을 통해 React, Vue, Angular, Lodash…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-node-and-npm</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-node-and-npm</guid><pubDate>Wed, 17 Aug 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;nodejs-란&quot; style=&quot;position:relative;&quot;&gt;Node.js 란?&lt;a href=&quot;#nodejs-%EB%9E%80&quot; aria-label=&quot;nodejs 란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
