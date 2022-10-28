@@ -1,8 +1,8 @@
 ---
-title: "[Flutter] Material 컴포넌트가 아닌 Widgets"
-date: "2022-10-21"
+title: "[Flutter] Non-Material Widgets"
+date: "2022-10-28"
 category: "tech"
-slug: "/tech/flutter-CircularProgressIndicator-and-chip"
+slug: "/tech/flutter-non-material"
 # img: "https://user-images.githubusercontent.com/76241233/189472910-3ae9b4a8-6fd6-484c-8e00-d07dab309b45.jpeg"
 tags:
   - "스터디 Flutter"
