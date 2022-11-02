@@ -1,4 +1,456 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 26 Oct 2022 01:09:10 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (14) - 객체란 무엇일까?]]></title><description><![CDATA[자바스크립트는 객체 없이 존재하지 않는다! 라는 말이 있을 정도로 자바스크립트를 구성하는 대부분이 객체(object…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-object</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-object</guid><pubDate>Wed, 26 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;자바스크립트는 객체 없이 존재하지 않는다! 라는 말이 있을 정도로 자바스크립트를 구성하는 대부분이 객체(object)입니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Nov 2022 08:07:19 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (15) - 자바스크립트의 메모리]]></title><description><![CDATA[와 같은 저급 언어는 메모리 관리를 명시적으로 합니다. 반면 자바스크립트에서는 어떤 작업(객체 생성, 문자열 할당 등...)을 할 때 메모리가 할당되고, 사용되지 않을 때에 자동으로 메모리가 반환됩니다. 이를 가비지 컬렉션(garbage…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-memory</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-memory</guid><pubDate>Wed, 02 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;C&lt;/code&gt; 와 같은 저급 언어는 메모리 관리를 명시적으로 합니다. 반면 자바스크립트에서는 어떤 작업(객체 생성, 문자열 할당 등...)을 할 때 메모리가 할당되고, 사용되지 않을 때에 &lt;strong&gt;자동으로&lt;/strong&gt; 메모리가 반환됩니다. 이를 가비지 컬렉션(garbage collection)이라고 합니다.&lt;/p&gt;
+&lt;p&gt;사실 ECMAScript 사양에서는 변수를 통해 메모리를 어떻게 관리해야 하는지 나와있지 않습니다. 또한 자바스크립트가 자동으로 관리해주기도 합니다.&lt;/p&gt;
+&lt;p&gt;그래도 자바스크립트 코드가 메모리에 어떻게 저장되는지, 메모리에 대해 대략적으로 알고 가보도록 합시다.&lt;/p&gt;
+&lt;h2 id=&quot;메모리란&quot; style=&quot;position:relative;&quot;&gt;메모리란?&lt;a href=&quot;#%EB%A9%94%EB%AA%A8%EB%A6%AC%EB%9E%80&quot; aria-label=&quot;메모리란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/tech/let-me-know-js-a-bit-js-variable&quot;&gt;변수 사용하기&lt;/a&gt; 에서 메모리를 언급한 적이 있습니다. 변수를 &lt;strong&gt;하나의 값을 저장할 수 있는 메모리 공간&lt;/strong&gt; 이라고 말했었죠.&lt;/p&gt;
+&lt;p&gt;이렇듯 메모리는 자바스크립트 엔진 내에서 데이터를 저장하고, 외부에서 접근할 수 있는 메모리 주소를 제공합니다.&lt;/p&gt;
+&lt;h3 id=&quot;메모리-lifecycle&quot; style=&quot;position:relative;&quot;&gt;메모리 LifeCycle&lt;a href=&quot;#%EB%A9%94%EB%AA%A8%EB%A6%AC-lifecycle&quot; aria-label=&quot;메모리 lifecycle permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;메모리는 생명주기가 있습니다. 생성되고, 사용된 후, 소멸되는 과정이 생명 주기입니다.&lt;/p&gt;
+&lt;p&gt;메모리의 라이프사이클은 대부분의 언어가 비슷합니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;필요할 때 할당&lt;/li&gt;
+&lt;li&gt;할당된 메모리 사용&lt;/li&gt;
+&lt;li&gt;필요하지 않으면 해제&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이 과정 중 2번은 모든 언어에서 명시적으로 사용되나, 1번과 3번은 고수준언어에서는 암묵적으로 사용됩니다. 자바스크립트는 고급언어이기 때문에 해당 과정이 암묵적으로 진행됩니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h2 id=&quot;스택--힙&quot; style=&quot;position:relative;&quot;&gt;스택 &amp;#x26; 힙&lt;a href=&quot;#%EC%8A%A4%ED%83%9D--%ED%9E%99&quot; aria-label=&quot;스택  힙 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;우리는 이제 자바스크립트 엔진은 필요하면 메모리를 할당하고, 필요하지 않으면 해제한다는 것을 알았습니다. 그럼 어디에 어떻게 저장되는 걸까요?&lt;/p&gt;
+&lt;p&gt;데이터를 저장할 수 있는 위치는 2 가지가 있습니다. 바로 스택(Stack)과 힙(Heap)입니다.
+&lt;br/&gt;&lt;/p&gt;
+&lt;h3 id=&quot;스택-정적-메모리-할당&quot; style=&quot;position:relative;&quot;&gt;스택: 정적 메모리 할당&lt;a href=&quot;#%EC%8A%A4%ED%83%9D-%EC%A0%95%EC%A0%81-%EB%A9%94%EB%AA%A8%EB%A6%AC-%ED%95%A0%EB%8B%B9&quot; aria-label=&quot;스택 정적 메모리 할당 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;자바스크립트는 정적 데이터를 스택(Stack) 형태로 저장합니다. 여기서 정적 데이터란, &lt;code class=&quot;language-text&quot;&gt;const&lt;/code&gt; 처럼 변하지 않는, 즉 자바스크립트 엔진이 컴파일 시에 크기를 알고 있는 데이터를 일컫습니다.&lt;/p&gt;
+&lt;p&gt;엔진은 크기가 변경되지 않는다는 것을 알고 있으므로, 각 값에 대해 &lt;strong&gt;고정된 메모리 크기&lt;/strong&gt;를 할당합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const alwaysTrue = true;
+const pie = 3.14; &lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/197654595-a76c5621-90c9-4efb-98c9-949942ccdc70.png&quot; alt=&quot;Stack&quot;&gt;&lt;/p&gt;
+&lt;p&gt;여기에는 기본 값(string , numbers , booleans , undefined 및 null)과 개체 및 함수를 가리키는 참조(reference)가 포함됩니다.&lt;/p&gt;
+&lt;h3 id=&quot;힙-동적-메모리-할당&quot; style=&quot;position:relative;&quot;&gt;힙: 동적 메모리 할당&lt;a href=&quot;#%ED%9E%99-%EB%8F%99%EC%A0%81-%EB%A9%94%EB%AA%A8%EB%A6%AC-%ED%95%A0%EB%8B%B9&quot; aria-label=&quot;힙 동적 메모리 할당 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;동적 데이터는 런타임 시 데이터 크기를 알게 되는 데이터입니다. 크기를 알지 못하니 &lt;strong&gt;고정된 메모리 크기를 할당하지 못합니다.&lt;/strong&gt; 필요에 따라 더 많은 공간을 할당하게 됩니다.&lt;/p&gt;
+&lt;p&gt;이런 방식을 &lt;strong&gt;동적 메모리 할당&lt;/strong&gt;이라고도 합니다.&lt;/p&gt;
+&lt;p&gt;스택과 힙의 차이는 이렇습니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Stack&lt;/th&gt;
+&lt;th&gt;Heap&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Primitive values and references&lt;/td&gt;
+&lt;td&gt;Objects and functions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;컴파일 시 사이즈를 알고 있음&lt;/td&gt;
+&lt;td&gt;런타임 시 사이즈를 알게 됨&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;고정된 메모리 할당&lt;/td&gt;
+&lt;td&gt;각각에 제한된 메모리 없음&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!-- https://media.geeksforgeeks.org/wp-content/uploads/20220614193345/UntitledDiagramdrawio15.png 참고 --&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h2 id=&quot;자바스크립트의-참조reference&quot; style=&quot;position:relative;&quot;&gt;자바스크립트의 참조(Reference)&lt;a href=&quot;#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EC%B0%B8%EC%A1%B0reference&quot; aria-label=&quot;자바스크립트의 참조reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;자바스크립트에서 모든 변수는 먼저 스택에 저장됩니다.&lt;/p&gt;
+&lt;p&gt;만약 원시 값(primitive)이 아닌 경우, 스택에는 &lt;strong&gt;힙에 저장된 참조&lt;/strong&gt;가 저장됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const user = {
+  id: 1,
+  name: &amp;#39;Yeony&amp;#39;,
+  age: 24
+}
+
+const name = &amp;#39;Nayeon&amp;#39;;
+
+function add(x, y) {
+  return x + y;
+}
+
+const newUser = user;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/76241233/197653935-75012c0a-8ab6-4b0b-8a7a-9c432a017113.png&quot; alt=&quot;Stack and Heap&quot;&gt;&lt;/p&gt;
+&lt;p&gt;위 코드와 그림을 통해 각각의 값들이 어떻게 저장되는지 알 수 있습니다. 여기서 주의해야 할 점은, &lt;code class=&quot;language-text&quot;&gt;user&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;newUser&lt;/code&gt;가 같은 객체를 **참조(Reference)**하고 있다는 것입니다.&lt;/p&gt;
+&lt;p&gt;같은 객체를 참조한다는 의미는 한 객체의 프로퍼티 값이 바뀌면 그 객체를 참조하고 있는 개별적인 변수의 프로퍼티 값이 다 바뀐다는 것입니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const user = {
+  id: 1,
+  name: &amp;#39;Yeony&amp;#39;,
+  age: 24
+}
+
+const newUser = user;
+
+console.log(newUser.name); // &amp;#39;Yeony&amp;#39;
+
+// user 객체의 name 변경
+user.name = &amp;#39;Nayeon&amp;#39;;
+console.log(newUser.name); // &amp;#39;Nayeon&amp;#39;
+
+// newUser 객체의 name 변경
+newUser.name = &amp;#39;Kim&amp;#39;;
+console.log(user.name) // &amp;#39;Kim&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이렇게 두 개의 변수가 하나의 개체를 가리키고 있기 때문에 값이 같이 바뀌게 됩니다.&lt;/p&gt;
+&lt;p&gt;다음 글에서는 참조 값과 관련된 &lt;strong&gt;복사&lt;/strong&gt;에 대해 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h2 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;Reference&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;메모리 관리와 가비지 컬렉션를 좀더 알아보고 싶다면 아래 글을 참고해주세요.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management&quot;&gt;Memory management&lt;/a&gt;
+&lt;a href=&quot;https://felixgerschau.com/javascript-memory-management/&quot;&gt;JavaScript&apos;s Memory Management Explained&lt;/a&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-object&quot;&gt;객체란 무엇일까?&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[오픈소스] MDN 번역 기여하기]]></title><description><![CDATA[프론트엔드 개발자다 보니 거의 매일 보는 건 MDN 문서다. 한국어 번역이 꽤 많이 됐다고 생각했는데, 아직 안된 부분이 상당했다. 이번 기회에 내가 자주 읽는 문서에 기여해보자는 마음으로 번역을 진행하였다.]]></description><link>https://yeony99.github.io/tech/contribute-to-mdn</link><guid isPermaLink="false">https://yeony99.github.io/tech/contribute-to-mdn</guid><pubDate>Mon, 31 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;프론트엔드 개발자다 보니 거의 매일 보는 건 MDN 문서다. 한국어 번역이 꽤 많이 됐다고 생각했는데, 아직 안된 부분이 상당했다.&lt;/p&gt;
+&lt;p&gt;이번 기회에 내가 자주 읽는 문서에 기여해보자는 마음으로 번역을 진행하였다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[타입스크립트의 타입 정리]]></title><description><![CDATA[자바스크립트에서는 여러가지 자료형을 제공합니다. (자바스크립트 자료형) 타입스크립트도 자바스크립트가 제공하는 자료형을 당연히 제공하는데요. 하지만 타입스크립트는 자바스크립트가 제공하는 것보다 더 많은 타입(Tuple, Enum, ... etc…]]></description><link>https://yeony99.github.io/tech/typescript-types</link><guid isPermaLink="false">https://yeony99.github.io/tech/typescript-types</guid><pubDate>Sat, 29 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;자바스크립트에서는 여러가지 자료형을 제공합니다. (&lt;a href=&quot;/tech/let-me-know-js-a-bit-js-data-type&quot;&gt;자바스크립트 자료형&lt;/a&gt;) 타입스크립트도 자바스크립트가 제공하는 자료형을 당연히 제공하는데요.&lt;/p&gt;
+&lt;p&gt;하지만 타입스크립트는 자바스크립트가 제공하는 것보다 더 많은 타입(Tuple, Enum, ... etc.)이 있고, 심지어 개발자가 사용자 정의 타입을 만들 수도 있습니다.&lt;/p&gt;
+&lt;h2 id=&quot;타입스크립트의-타입&quot; style=&quot;position:relative;&quot;&gt;타입스크립트의 타입&lt;a href=&quot;#%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%ED%83%80%EC%9E%85&quot; aria-label=&quot;타입스크립트의 타입 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;먼저 타입스크립트가 제공하는 기본 타입을 알아봅시다.&lt;/p&gt;
+&lt;h3 id=&quot;number&quot; style=&quot;position:relative;&quot;&gt;number&lt;a href=&quot;#number&quot; aria-label=&quot;number permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;자바스크립트의 number와 동일합니다.&lt;/li&gt;
+&lt;li&gt;정수(integer)나 실수(float)의 구별이 없습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let i:number = 10
+let f:number = 1.3
+let n:number = -5&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;string&quot; style=&quot;position:relative;&quot;&gt;string&lt;a href=&quot;#string&quot; aria-label=&quot;string permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;자바스크립트의 string과 동일합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let s:string = &amp;#39;str&amp;#39;
+let t:string = `str`
+let s2:string = &amp;quot;str&amp;quot;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;boolean&quot; style=&quot;position:relative;&quot;&gt;boolean&lt;a href=&quot;#boolean&quot; aria-label=&quot;boolean permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;false&lt;/code&gt;만 가집니다.&lt;/li&gt;
+&lt;li&gt;자바스크립트의 truthy나 falsy 값은 해당하지 않습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;자바스크립트에서는 &lt;code class=&quot;language-text&quot;&gt;0&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;1&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt; 등이 &lt;code class=&quot;language-text&quot;&gt;truthy&lt;/code&gt; 혹은 &lt;code class=&quot;language-text&quot;&gt;falsy&lt;/code&gt;, 즉 참 같은 값, 거짓 같은 값으로 판단되어 if 조건문 속에서 사용되는 경우가 있습니다.&lt;br&gt;
+하지만 타입스크립트에서는 &lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;false&lt;/code&gt; 외에는 boolean 타입으로 인정하지 않습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let t:boolean = true
+let f:boolean = false&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;object&quot; style=&quot;position:relative;&quot;&gt;object&lt;a href=&quot;#object&quot; aria-label=&quot;object permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;자바스크립트의 object는 모두 타입스크립트의 object입니다.&lt;/li&gt;
+&lt;li&gt;타입스크립트에서는 보다 구체적인 객체 형태를 가질 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;타입스크립트에서 객체를 다루는 방식을 살펴보겠습니다.&lt;/p&gt;
+&lt;p&gt;객체를 하나 만들고, 새로운 속성을 지정해보겠습니다.&lt;/p&gt;
+&lt;h4 id=&quot;타입스크립트-객체-생성&quot; style=&quot;position:relative;&quot;&gt;타입스크립트 객체 생성&lt;a href=&quot;#%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;타입스크립트 객체 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const obj = {
+    name: &amp;#39;Yeony&amp;#39;,
+    age: 24,
+}
+console.log(obj.name) // 컴파일 에러 Property &amp;#39;name&amp;#39; does not exist on type &amp;#39;object&amp;#39;.
+obj.hobby = &amp;#39;traveling&amp;#39; // 컴파일 에러: Property &amp;#39;hobby&amp;#39; does not exist on type &amp;#39;object&amp;#39;.&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;hobby&lt;/code&gt; 모두 속성이 해당 객체에 없다고 표시됩니다.&lt;/p&gt;
+&lt;p&gt;타입스크립트에서는 위 객체의 데이터 타입을 아래와 같이 추론합니다.&lt;/p&gt;
+&lt;h4 id=&quot;타입스크립트의-타입-추론&quot; style=&quot;position:relative;&quot;&gt;타입스크립트의 타입 추론&lt;a href=&quot;#%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%ED%83%80%EC%9E%85-%EC%B6%94%EB%A1%A0&quot; aria-label=&quot;타입스크립트의 타입 추론 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const obj: {
+    name: string;
+    age: number;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이 내용이 obj에 저장된 데이터 타입이라고 생각하는 것이죠. 이 추론에 따르면 &lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt; 프로퍼티는 무조건 &lt;code class=&quot;language-text&quot;&gt;string&lt;/code&gt;이여야 하고, &lt;code class=&quot;language-text&quot;&gt;age&lt;/code&gt; 또한 &lt;code class=&quot;language-text&quot;&gt;number&lt;/code&gt; 타입이어야 합니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;obj&lt;/code&gt;가 객체라고 명시해보겠습니다.&lt;/p&gt;
+&lt;h4 id=&quot;객체-타입-명시&quot; style=&quot;position:relative;&quot;&gt;객체 타입 명시&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%ED%83%80%EC%9E%85-%EB%AA%85%EC%8B%9C&quot; aria-label=&quot;객체 타입 명시 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 타입 const obj: object
+const obj: object = {
+    name: &amp;#39;Yeony&amp;#39;,
+    age: 24,
+} 
+
+console.log(obj.name) // 컴파일 에러
+obj.hobby = &amp;#39;traveling&amp;#39; // 컴파일 에러&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;타입스크립트는 이제 &lt;code class=&quot;language-text&quot;&gt;obj&lt;/code&gt;가 객체 타입이라고 인식하지만, 컴파일은 여전히 되지 않습니다.&lt;/p&gt;
+&lt;p&gt;이 상황을 해결하기 위해 우리는 좀더 상세한 타입 지정을 할 수 있습니다.&lt;/p&gt;
+&lt;h4 id=&quot;상세한-타입-지정&quot; style=&quot;position:relative;&quot;&gt;상세한 타입 지정&lt;a href=&quot;#%EC%83%81%EC%84%B8%ED%95%9C-%ED%83%80%EC%9E%85-%EC%A7%80%EC%A0%95&quot; aria-label=&quot;상세한 타입 지정 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const obj: {
+    name: string;
+    age: number;
+} = {
+    name: &amp;#39;Yeony&amp;#39;,
+    age: 24,
+}
+
+console.log(obj.name)
+obj.hobby = &amp;#39;traveling&amp;#39; // 컴파일 에러&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이제 &lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt;은 접근이 가능합니다. 하지만 여전히 동적 할당은 컴파일 단계에서 에러가 발생합니다. &lt;code class=&quot;language-text&quot;&gt;hobby&lt;/code&gt;라는 key가 정의되지 않았기 때문입니다.&lt;/p&gt;
+&lt;p&gt;동적 할당이 가능하게 하려면 프로퍼티 키가 무엇이 들어오더라도 가능하게끔 코드를 수정해야 합니다.&lt;/p&gt;
+&lt;h4 id=&quot;타입스크립트의-동적-할당&quot; style=&quot;position:relative;&quot;&gt;타입스크립트의 동적 할당&lt;a href=&quot;#%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EB%8F%99%EC%A0%81-%ED%95%A0%EB%8B%B9&quot; aria-label=&quot;타입스크립트의 동적 할당 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;자바스크립트의 객체를 상기해봅시다. 객체는 &lt;strong&gt;key-value&lt;/strong&gt; 쌍으로 이루어져 있고, key는 문자열입니다. value는 어떤 자료형이든 가능합니다.&lt;/p&gt;
+&lt;p&gt;따라서 동적 할당이 가능하게 하려면 아래와 같이 작성해야 합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const obj: {
+    name: string;
+    age: number;
+    [key: string]: any;
+} = {
+    name: &amp;#39;Yeony&amp;#39;,
+    age: 24,
+}
+
+console.log(obj.name)
+
+obj.hobby = &amp;#39;traveling&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;array&quot; style=&quot;position:relative;&quot;&gt;Array&lt;a href=&quot;#array&quot; aria-label=&quot;array permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;자바스크립트의 array는 모두 타입스크립트의 array입니다.&lt;/li&gt;
+&lt;li&gt;타입을 유연하게 지정하거나, 제한적으로 지정할 수도 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;특정-타입의-배열&quot; style=&quot;position:relative;&quot;&gt;특정 타입의 배열&lt;a href=&quot;#%ED%8A%B9%EC%A0%95-%ED%83%80%EC%9E%85%EC%9D%98-%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;특정 타입의 배열 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;타입스크립트에서는 특정한 타입으로 이루어진 배열을 선언할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let favoriteFood: string[];
+
+favoriteFood = [&amp;quot;pizza&amp;quot;, &amp;quot;chicken&amp;quot;]
+
+favoriteFood = [&amp;quot;gulasch&amp;quot;, 1] // 컴파일 에러: Type &amp;#39;number&amp;#39; is not assignable to type &amp;#39;string&amp;#39;.&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;string[]&lt;/code&gt; 이나 &lt;code class=&quot;language-text&quot;&gt;number[]&lt;/code&gt; 같이 작성합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// only number
+let nums:number[] = [1, 2, 3]
+let strs:string[] = [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
+let bools:boolean[] = [true, false, true]&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;타입에-관계없는-배열&quot; style=&quot;position:relative;&quot;&gt;타입에 관계없는 배열&lt;a href=&quot;#%ED%83%80%EC%9E%85%EC%97%90-%EA%B4%80%EA%B3%84%EC%97%86%EB%8A%94-%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;타입에 관계없는 배열 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;자바스크립트에서 작동하는 배열처럼 작성할 경우에는 &lt;code class=&quot;language-text&quot;&gt;any[]&lt;/code&gt; 로 지정해줍니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let anys:any[] = [1, &amp;#39;a&amp;#39;, true]&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;여러-타입의-배열&quot; style=&quot;position:relative;&quot;&gt;여러 타입의 배열&lt;a href=&quot;#%EC%97%AC%EB%9F%AC-%ED%83%80%EC%9E%85%EC%9D%98-%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;여러 타입의 배열 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;단일한 타입이나 타입을 무시하는(any) 배열이 아닌, 특정한 여러 타입만 들어오는 배열을 정의하고 싶을 때엔 이렇게 작성합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let selects:(number | string | boolean)[] = [1, &amp;#39;c&amp;#39;, false];&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이러한 형태를 &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types&quot;&gt;union 타입&lt;/a&gt; 이라고 합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;tuple&quot; style=&quot;position:relative;&quot;&gt;Tuple&lt;a href=&quot;#tuple&quot; aria-label=&quot;tuple permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;배열의 형태이지만 &lt;strong&gt;길이와 타입이 고정된&lt;/strong&gt; 배열입니다.&lt;/li&gt;
+&lt;li&gt;타입스크립트에만 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;튜플은 이러한 형태로 작성됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const role = [2, &amp;#39;author&amp;#39;]
+
+// 타입
+// role: (string | number)[]&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;다만 위 코드에서는 &lt;code class=&quot;language-text&quot;&gt;role&lt;/code&gt; 이 일반적인 배열로 인식됩니다. 타입스크립트는 개발자가 2가지 요소만 입력할 것이란 걸 아직 모르기 때문입니다. 그러면 더 이상 튜플이 아닙니다.&lt;/p&gt;
+&lt;p&gt;튜플이라는 것을 명시하려면 이렇게 작성합니다.&lt;/p&gt;
+&lt;h4 id=&quot;튜플-선언&quot; style=&quot;position:relative;&quot;&gt;튜플 선언&lt;a href=&quot;#%ED%8A%9C%ED%94%8C-%EC%84%A0%EC%96%B8&quot; aria-label=&quot;튜플 선언 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const role: [number, string] = [2, &amp;#39;author&amp;#39;]
+
+role[1] = 3 // 컴파일 에러 Type &amp;#39;number&amp;#39; is not assignable to type &amp;#39;string&amp;#39;.
+
+role[3] = 11 // 컴파일 에러 Tuple type &amp;#39;[number, string]&amp;#39; of length &amp;#39;2&amp;#39; has no element at index &amp;#39;3&amp;#39;.&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;튜플은-어디에-사용될까&quot; style=&quot;position:relative;&quot;&gt;튜플은 어디에 사용될까?&lt;a href=&quot;#%ED%8A%9C%ED%94%8C%EC%9D%80-%EC%96%B4%EB%94%94%EC%97%90-%EC%82%AC%EC%9A%A9%EB%90%A0%EA%B9%8C&quot; aria-label=&quot;튜플은 어디에 사용될까 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;특정한 규칙(순서)로 정보를 담을 때 유용합니다.&lt;/p&gt;
+&lt;p&gt;사용자 정보를 (사용자 인덱스 | 이메일 | 비밀번호) 구조로 저장한다고 가정했을 때, 뒤죽박죽되면 당연히 곤란하겠죠.&lt;/p&gt;
+&lt;p&gt;튜플의 길이를 벗어나게 할당하려고 하거나 명시된 순서에 맞지 않는 자료형의 값을 할당하면 에러가 표시되니 관리하기 수월합니다.&lt;/p&gt;
+&lt;h4 id=&quot;튜플의-단점&quot; style=&quot;position:relative;&quot;&gt;튜플의 단점&lt;a href=&quot;#%ED%8A%9C%ED%94%8C%EC%9D%98-%EB%8B%A8%EC%A0%90&quot; aria-label=&quot;튜플의 단점 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;튜플은 길이가 고정되어 있다고 했지만, 명시적인 할당에만 반응합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const role: [number, string] = [2, &amp;#39;author&amp;#39;]
+
+// role[3] = 11 // 컴파일 에러
+
+role.push(&amp;#39;메롱&amp;#39;)
+
+console.log(role) // [2, &amp;quot;author&amp;quot;, &amp;quot;메롱&amp;quot;] &lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;자바스크립트 Array의 내장 메소드인 &lt;code class=&quot;language-text&quot;&gt;push()&lt;/code&gt; 메소드에는 대응할 수 없다는 단점이 있습니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;enum&quot; style=&quot;position:relative;&quot;&gt;Enum&lt;a href=&quot;#enum&quot; aria-label=&quot;enum permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;타입스크립트에만 있습니다.
+&lt;ul&gt;
+&lt;li&gt;다른 언어(Java, C) 등에는 널리 사용됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;사용자 지정 타입입니다.&lt;/li&gt;
+&lt;li&gt;자동으로 열거되는 전역 상수 식별자입니다.&lt;/li&gt;
+&lt;li&gt;라벨들은 0부터 시작하는 숫자로 자동 변환됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;사용자 권한을 작성할 때 0은 ADMIN, 1은 USER, 2는 AUTHOR 라고 정했다고 가정해봅시다.&lt;br&gt;
+이 규칙을 절대 잊어버리지 않는다면 큰 문제가 발생하진 않겠지만, if 검사를 할 때 개발 도중 잊어버릴 가능성도 있습니다.&lt;/p&gt;
+&lt;p&gt;혹은 &apos;ADMIN&apos;, &apos;VALID_USER&apos; 등의 문자열로도 작성할 수 있겠죠. 하지만 &lt;code class=&quot;language-text&quot;&gt;if(role === &apos;VALID_USER&apos;)&lt;/code&gt; 이런 식으로 작성하면 과연 효율이 좋을까요?&lt;/p&gt;
+&lt;p&gt;개발자가 읽기 쉽고(문자열), 백그라손쉽게 코딩하기 위해 Enum을 사용합니다.&lt;/p&gt;
+&lt;h4 id=&quot;enum-생성&quot; style=&quot;position:relative;&quot;&gt;Enum 생성&lt;a href=&quot;#enum-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;enum 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;enum Role {
+    ADMIN, USER, AUTHOR
+};
+
+const user:{
+    name: string;
+    role: Role
+} = {
+    name: &amp;#39;Yeony&amp;#39;,
+    role: Role.USER
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;enum의-동작&quot; style=&quot;position:relative;&quot;&gt;Enum의 동작&lt;a href=&quot;#enum%EC%9D%98-%EB%8F%99%EC%9E%91&quot; aria-label=&quot;enum의 동작 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Enum은 기본적으로 0부터 시작해 할당됩니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;enum Role {
+    ADMIN, USER, AUTHOR
+};
+
+// --------------------
+// enum의 타입
+Role.ADMIN = 0
+Role.USER = 1
+Role.AUTHOR = 2&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;만약 0이 아닌 다른 수로 시작하고 싶다면 아래와 같이 명시합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;enum Role {
+    ADMIN = 3, USER, AUTHOR
+};
+
+// --------------------
+// enum의 타입
+Role.ADMIN = 3
+Role.USER = 4
+Role.AUTHOR = 5&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;enum Role {
+    ADMIN = 3, USER = 100, AUTHOR
+};
+
+// --------------------
+// enum의 타입
+Role.ADMIN = 3
+Role.USER = 100
+Role.AUTHOR = 101&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;숫자가 기본이지만 문자열도 할당할 수 있습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;enum Role {
+    ADMIN = &amp;#39;ADMIN&amp;#39;, USER = 100, AUTHOR
+};
+
+// --------------------
+// enum의 타입
+Role.ADMIN = &amp;#39;ADMIN&amp;#39;
+Role.USER = 100
+Role.AUTHOR = 101&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;하지만 문자열로 할당했을 경우, &lt;code class=&quot;language-text&quot;&gt;USER = 100&lt;/code&gt; 같이 숫자로 초기화를 하지 않으면 에러가 발생합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;enum Role {
+    ADMIN = &amp;#39;ADMIN&amp;#39;, USER, AUTHOR // 컴파일 에러 : Enum member must have initializer
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;any&quot; style=&quot;position:relative;&quot;&gt;Any&lt;a href=&quot;#any&quot; aria-label=&quot;any permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 종류의 값 저장 가능합니다.&lt;/li&gt;
+&lt;li&gt;타입 배정이 필요하지 않습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위에서 객체 타입을 보며 잠깐 보았듯, &lt;code class=&quot;language-text&quot;&gt;any&lt;/code&gt;는 아주 유연합니다. 사실상 타입을 신경쓰지 않겠다는 말이기도 하죠.&lt;/p&gt;
+&lt;p&gt;따라서 가능한 한 새로운 코드를 작성할 때에는 any 타입을 지정하지 않는 것이 좋습니다. 타입스크립트가 제공하는 모든 장점을 any가 상쇄시키기 때문이죠.&lt;/p&gt;
+&lt;p&gt;이미 있는 프로젝트에 타입스크립트를 점진적으로 적용할 때 유용합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;void&quot; style=&quot;position:relative;&quot;&gt;Void&lt;a href=&quot;#void&quot; aria-label=&quot;void permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;타입스크립트에만 있습니다. (다른 언어에는 존재합니다.)&lt;/li&gt;
+&lt;li&gt;변수에 &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt;만 할당할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;함수에는 반환 값을 설정할 수 없는 타입입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;자바스크립트에서 함수는 반환 값이 있을 수도 있고, 없을 수도 있습니다. 함수에 &lt;code class=&quot;language-text&quot;&gt;return 값&lt;/code&gt; 코드가 없는 경우에 자바스크립트는 &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt;를 반환합니다.&lt;/p&gt;
+&lt;p&gt;타입스크립트에서는 &lt;strong&gt;반환 값이 없다&lt;/strong&gt;는 것을 명시적으로 보여주기 위해 &lt;code class=&quot;language-text&quot;&gt;void&lt;/code&gt;를 사용합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let ud: void = undefined
+
+function sayHello(name:string): void {
+    console.log(`Hi, ${name}!`)
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;never&quot; style=&quot;position:relative;&quot;&gt;Never&lt;a href=&quot;#never&quot; aria-label=&quot;never permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;타입스크립트에만 있습니다.&lt;/li&gt;
+&lt;li&gt;절대 발생할 수 없는 타입을 나타냅니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;항상 오류&lt;/strong&gt;를 출력하거나 &lt;strong&gt;리턴 값을 절대 내보내지 않는&lt;/strong&gt; 타입입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// 항상 오류
+function alwaysError(msg:string): never {
+    throw new Error(msg);
+}
+
+// 무한루프
+function infiniteLoop(): never {
+    while(true) {
+        //...
+    }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;변수의 타입을 &lt;code class=&quot;language-text&quot;&gt;never&lt;/code&gt;로 지정한 경우에는 &lt;code class=&quot;language-text&quot;&gt;never&lt;/code&gt;만 할당할 수 있습니다. &lt;code class=&quot;language-text&quot;&gt;any&lt;/code&gt; 타입도 불가능합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;typescript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let neverType:never;
+
+neverType = 100; // 컴파일 에러
+
+// 함수의 반환 타입이 never
+neverType = (function():never { throw new Error(&amp;#39;Error&amp;#39;) })();&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;</content:encoded></item><item><title><![CDATA[[Flutter] Non-Material Widgets]]></title><description><![CDATA[Non-Material Components Widget은 특정하게 어떤 용어로 사용되는 것은 아니고, Material Design…]]></description><link>https://yeony99.github.io/tech/flutter-non-material</link><guid isPermaLink="false">https://yeony99.github.io/tech/flutter-non-material</guid><pubDate>Fri, 28 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Non-Material Components Widget은 특정하게 어떤 용어로 사용되는 것은 아니고, Material Design에 속하지 않은 컴포넌트 정도로 유추하였습니다.&lt;/p&gt;
+&lt;p&gt;공부하며 자세한 코드와 많은 사용법(커스터마이징 등)이 적혀있는 글을 위주로 모아보았습니다.&lt;/p&gt;
+&lt;h2 id=&quot;pageview&quot; style=&quot;position:relative;&quot;&gt;PageView&lt;a href=&quot;#pageview&quot; aria-label=&quot;pageview permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/flutter-community/a-deep-dive-into-pageview-in-flutter-with-custom-transitions-581d9ea6dded&quot;&gt;A Deep Dive Into PageView In Flutter (With Custom Transitions)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;응답관련-class&quot; style=&quot;position:relative;&quot;&gt;응답관련 class&lt;a href=&quot;#%EC%9D%91%EB%8B%B5%EA%B4%80%EB%A0%A8-class&quot; aria-label=&quot;응답관련 class permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;플러터에서는 응답을 가져올 때 사용할 수 있는 class가 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;StreamBuilder : 특정 데이터를 반복해 요청할 때 사용&lt;/li&gt;
+&lt;li&gt;FutureBuilder : 일회성 응답에 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;streambuilder&quot; style=&quot;position:relative;&quot;&gt;StreamBuilder&lt;a href=&quot;#streambuilder&quot; aria-label=&quot;streambuilder permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.flutterdevs.com/exploring-streambuilder-in-flutter-5958381bca67&quot;&gt;Exploring StreamBuilder In Flutter&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;futurebuilder&quot; style=&quot;position:relative;&quot;&gt;FutureBuilder&lt;a href=&quot;#futurebuilder&quot; aria-label=&quot;futurebuilder permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://andrious.medium.com/decode-futurebuilder-bc1a5e6507d4&quot;&gt;Decode FutureBuilder&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;draggable&quot; style=&quot;position:relative;&quot;&gt;Draggable&lt;a href=&quot;#draggable&quot; aria-label=&quot;draggable permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/flutter-community/a-deep-dive-into-draggable-and-dragtarget-in-flutter-487919f6f1e4&quot;&gt;A Deep Dive Into Draggable and DragTarget in Flutter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/flutter-CircularProgressIndicator-and-chip&quot;&gt;[Flutter] CircularProgressIndicator와 Chip 사용해보기&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[쫌만알자! (14) - 객체란 무엇일까?]]></title><description><![CDATA[자바스크립트는 객체 없이 존재하지 않는다! 라는 말이 있을 정도로 자바스크립트를 구성하는 대부분이 객체(object…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-object</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-js-object</guid><pubDate>Wed, 26 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;자바스크립트는 객체 없이 존재하지 않는다! 라는 말이 있을 정도로 자바스크립트를 구성하는 대부분이 객체(object)입니다.&lt;/p&gt;
 &lt;p&gt;자바스크립트는 원시 타입의 값을 제외한 모든 것이 객체입니다.&lt;/p&gt;
 &lt;p&gt;원시 타입이 기억나지 않는다면 &lt;a href=&quot;/tech/let-me-know-js-a-bit-js-data-type&quot;&gt;자바스크립트 자료형&lt;/a&gt; 글을 다시 읽어봐주세요.&lt;/p&gt;
 &lt;hr&gt;

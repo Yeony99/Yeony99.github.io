@@ -48,10 +48,14 @@
 <url> <loc>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-data-type</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/tech/network-what-is-cookie</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-object</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-memory</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/tech/typescript-types</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/tech/contribute-to-mdn</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/tech/flutter-non-material</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/log/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://yeony99.github.io/tech/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/retrospective/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/tech/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//log/flutter-io</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//log/book-developers-writing</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//log/ebook</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -102,4 +106,8 @@
 <url> <loc>https://yeony99.github.io//tech/let-me-know-js-a-bit-js-data-type</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//tech/network-what-is-cookie</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//tech/let-me-know-js-a-bit-js-object</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io//tech/let-me-know-js-a-bit-js-memory</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io//tech/typescript-types</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io//tech/contribute-to-mdn</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io//tech/flutter-non-material</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
