@@ -15,7 +15,7 @@ export default ({ data }) => {
   }
     return (
         <>
-            <Header path="/tech" title="테크" />
+            <Header path="/tech" title="테크" description="기술 사용, 프로그래밍, 기술서에 관한 글" />
             <div className="wrap min-h-76">
                 <PageHeader title="Tech ☘" subtitle="기술 사용, 프로그래밍, 기술서에 관한 글" />
                 <div className="padding-bottom-1 wrap flex overflow-x-scroll ws-nowrap">
