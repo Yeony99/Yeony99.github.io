@@ -15,7 +15,7 @@ export default ({ data }) => {
   }
     return (
         <>
-            <Header path="/retrospective" title="회고" />
+            <Header path="/retrospective" title="회고" description="시간들을 되돌아보며 적는 회고록" />
             <div className="wrap min-h-76">
                 <PageHeader title="Retrospective ☘" subtitle="시간들을 되돌아보며 적는 회고록" />
                 <div className="padding-bottom-1 wrap flex overflow-x-scroll ws-nowrap">

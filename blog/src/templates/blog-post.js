@@ -37,9 +37,11 @@ export default ({ data }) => {
         }
     })
 
+    console.log(meta)
+
     return (
         <>
-            <Header path={meta.frontmatter.slug} title={meta.frontmatter.title} />        
+            <Header path={meta.frontmatter.slug} title={meta.frontmatter.title} description={meta.excerpt} />        
             {
                 meta.frontmatter.img? 
                 <ImgHeader><img className="pg-header-img" src={meta.frontmatter.img}/></ImgHeader>
@@ -98,6 +100,7 @@ query($slug: String!) {
               img
               title
             }
+            excerpt
             html
             internal {
               content
