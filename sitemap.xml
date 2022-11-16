@@ -53,6 +53,8 @@
 <url> <loc>https://yeony99.github.io/tech/let-me-know-js-a-bit-js-memory</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/tech/my-first-contribution-to-mdn</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/tech/let-me-know-js-a-bit-shallow-copy-deep-copy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/tech/let-me-know-js-a-bit-function</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/tech/ux-scenario-design-requirement</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/log/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/retrospective/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -112,4 +114,6 @@
 <url> <loc>https://yeony99.github.io//tech/let-me-know-js-a-bit-js-memory</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//tech/my-first-contribution-to-mdn</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//tech/let-me-know-js-a-bit-shallow-copy-deep-copy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io//tech/let-me-know-js-a-bit-function</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io//tech/ux-scenario-design-requirement</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
