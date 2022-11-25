@@ -6,6 +6,7 @@ slug: "/tech/flutter-use-several-widgets"
 # img: "https://user-images.githubusercontent.com/76241233/189472910-3ae9b4a8-6fd6-484c-8e00-d07dab309b45.jpeg"
 tags:
   - "스터디 Flutter"
+hide: true
 ---
 ## Flutter 위젯 사용하기
 

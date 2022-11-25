@@ -6,6 +6,7 @@ slug: "/tech/flutter-non-material"
 # img: "https://user-images.githubusercontent.com/76241233/189472910-3ae9b4a8-6fd6-484c-8e00-d07dab309b45.jpeg"
 tags:
   - "스터디 Flutter"
+hide: true
 ---
 
 Non-Material Components Widget은 특정하게 어떤 용어로 사용되는 것은 아니고, Material Design에 속하지 않은 컴포넌트 정도로 유추하였습니다.

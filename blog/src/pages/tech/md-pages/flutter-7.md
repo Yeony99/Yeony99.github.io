@@ -6,6 +6,7 @@ slug: "/tech/flutter-use-several-buttons"
 # img: "https://user-images.githubusercontent.com/76241233/189472910-3ae9b4a8-6fd6-484c-8e00-d07dab309b45.jpeg"
 tags:
   - "스터디 Flutter"
+hide: true
 ---
 ## Flutter Buttons 사용하기
 

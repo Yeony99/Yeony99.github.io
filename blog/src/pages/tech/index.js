@@ -46,7 +46,7 @@ export default ({ data }) => {
 
 export const query = graphql`
 query MyQuery3 {
-  allMarkdownRemark(filter: {frontmatter: {category: {eq: "tech"}}} sort: {fields: frontmatter___date, order: DESC}) {
+  allMarkdownRemark(filter: {frontmatter: {category: {eq: "tech"}, hide: {ne: true}}} sort: {fields: frontmatter___date, order: DESC}) {
     edges {
       node {
         frontmatter {

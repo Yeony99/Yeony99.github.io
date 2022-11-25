@@ -6,6 +6,7 @@ slug: "/tech/flutter-use-several-components"
 # img: "https://user-images.githubusercontent.com/76241233/189472910-3ae9b4a8-6fd6-484c-8e00-d07dab309b45.jpeg"
 tags:
   - "스터디 Flutter"
+hide: true
 ---
 
 플러터의 위젯들을 많이 살펴봤는데요. 이 글에서는 알람과 다이얼로그, 폼과 같이 입력할 수 있는 컴포넌트 위젯에 대해 알아보고자 합니다.
