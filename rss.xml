@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 25 Nov 2022 08:22:12 GMT</lastBuildDate><item><title><![CDATA[NHN FORWARD 2022]]></title><description><![CDATA[개발자 인생 처음으로 개발 콘퍼러스를 다녀왔다. 온라인으로 진행하는 건 몇 번 듣긴 했으나, 오프라인은 이번이 처음이다. NHN FORWARD의 섹션 프론트엔드 개발자로서 (당연히?) 프론트엔드 개발 분야에 관심 있었기 때문에 대부분 Track…]]></description><link>https://yeony99.github.io/tech/nhn-forward-2022</link><guid isPermaLink="false">https://yeony99.github.io/tech/nhn-forward-2022</guid><pubDate>Fri, 25 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;개발자 인생 처음으로 개발 콘퍼러스를 다녀왔다. 온라인으로 진행하는 건 몇 번 듣긴 했으나, 오프라인은 이번이 처음이다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 01 Dec 2022 00:01:54 GMT</lastBuildDate><item><title><![CDATA[쫌만알자! (18) - 스코프]]></title><description><![CDATA[앞서 함수를 알아봤습니다. 함수는  이렇게 작성되는 코드블록을 가지고 있습니다. 사실 함수 뿐 아니라 이전에 살펴본 제어문도 코드블록을 가지고 있죠. 코드블록을 언급하는 이유는, 여기서 알아볼 스코프(scope…]]></description><link>https://yeony99.github.io/tech/let-me-know-js-a-bit-scope</link><guid isPermaLink="false">https://yeony99.github.io/tech/let-me-know-js-a-bit-scope</guid><pubDate>Wed, 30 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;앞서 함수를 알아봤습니다. 함수는 &lt;code class=&quot;language-text&quot;&gt;{}&lt;/code&gt; 이렇게 작성되는 코드블록을 가지고 있습니다. 사실 함수 뿐 아니라 이전에 살펴본 제어문도 코드블록을 가지고 있죠.&lt;br&gt;
+코드블록을 언급하는 이유는, 여기서 알아볼 스코프(scope)가 &lt;strong&gt;범위&lt;/strong&gt;를 뜻하기 때문입니다.&lt;/p&gt;
+&lt;h2 id=&quot;스코프란&quot; style=&quot;position:relative;&quot;&gt;스코프란?&lt;a href=&quot;#%EC%8A%A4%EC%BD%94%ED%94%84%EB%9E%80&quot; aria-label=&quot;스코프란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;스코프는 &lt;strong&gt;유효범위&lt;/strong&gt;입니다. 지금껏 봐왔던 제어문과 함수의 코드블록 내에서 선언된 변수나 혹은 매개변수는 해당 제어문/함수의 코드블록 바깥에서는 접근하지 못합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;function add(x, y) {
+  return x + y;
+}
+
+add(1, 2);
+
+console.log(x); // ReferenceError: x is not defined&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;함수에 전달된 매개변수는 함수 body 내부에서만 &lt;strong&gt;유효범위&lt;/strong&gt;를 가지기 때문입니다. 그 안에서만 유효하기 때문에 바깥에서는 아무리 참조하려고 해도 가져올 수 없는 것이죠.&lt;/p&gt;
+&lt;p&gt;간단한 예제를 살펴봅시다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let a = &amp;#39;a in global&amp;#39;;
+
+function foo() {
+  let a = &amp;#39;a in function&amp;#39;;
+  console.log(a); // &amp;#39;a in function&amp;#39;
+}
+
+foo();
+
+console.log(a); // &amp;#39;a in global&amp;#39;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;똑같은 &lt;code class=&quot;language-text&quot;&gt;a&lt;/code&gt;로 변수를 선언했지만 함수 내에서는 함수 내의 &lt;code class=&quot;language-text&quot;&gt;a&lt;/code&gt;가, 외부의 console.log() 에서는 전역변수로 선언된 &lt;code class=&quot;language-text&quot;&gt;a&lt;/code&gt;가 출력됩니다.&lt;/p&gt;
+&lt;p&gt;자바스크립트 엔진은 똑같은 이름의 변수가 2개 이상 있으면, 어떤 변수를 참조해야 할 것인지를 결정합니다. 변수는 &lt;strong&gt;식별자&lt;/strong&gt;이기 때문에, 변수 이름은 중복될 수 없습니다. 따라서 결국 변수는 변수명과 스코프 두 가지 모두를 가지고 서로 다른 변수인지 판별하는 것입니다.&lt;/p&gt;
+&lt;h3 id=&quot;스코프-종류&quot; style=&quot;position:relative;&quot;&gt;스코프 종류&lt;a href=&quot;#%EC%8A%A4%EC%BD%94%ED%94%84-%EC%A2%85%EB%A5%98&quot; aria-label=&quot;스코프 종류 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;스코프는 전역(global)과 지역(local)로 나뉩니다. 전역에서 선언된 변수라면 전역 스코프를 가지고, 지역에서 선언된 변수는 지역 스코프를 갖게 됩니다.&lt;/p&gt;
+&lt;p&gt;간단하게 코드블록 &lt;code class=&quot;language-text&quot;&gt;{}&lt;/code&gt; 만으로 스코프를 나누어보겠습니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let a = &amp;#39;global 1&amp;#39;;
+let b = &amp;#39;global 2&amp;#39;;
+
+// local 1 scope
+{
+  let c = &amp;#39;local 1&amp;#39;;
+
+  console.log(a, b, c); // &amp;#39;global 1&amp;#39;, &amp;#39;global 2&amp;#39;, &amp;#39;local 1&amp;#39;
+
+  // local 2 scope
+  {
+    let b = &amp;#39;local 2&amp;#39;;
+
+    console.log(a, b, c); // // &amp;#39;global 1&amp;#39;, &amp;#39;local 2&amp;#39;, &amp;#39;local 1&amp;#39;
+  }
+}
+
+console.log(a); // &amp;#39;global 1&amp;#39;
+console.log(b); // &amp;#39;global 2&amp;#39;
+console.log(c); // ReferenceError: c is not defined&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;이런 스코프를 지정할 때 ES6 문법인 &lt;code class=&quot;language-text&quot;&gt;let&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;const&lt;/code&gt;를 사용하면 별 문제가 없습니다. 하지만 &lt;code class=&quot;language-text&quot;&gt;var&lt;/code&gt; 키워드를 사용해 변수를 선언하게 되면 함수 레벨 스코프에서만 우리가 원하는대로 작동하는 것을 볼 수 있습니다.&lt;/p&gt;
+&lt;h4 id=&quot;함수-레벨-스코프&quot; style=&quot;position:relative;&quot;&gt;함수 레벨 스코프&lt;a href=&quot;#%ED%95%A8%EC%88%98-%EB%A0%88%EB%B2%A8-%EC%8A%A4%EC%BD%94%ED%94%84&quot; aria-label=&quot;함수 레벨 스코프 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;var a = 1;
+
+{
+  var a = 2;
+}
+console.log(a); // 2
+
+if(true) {
+  var a = 3;
+}
+console.log(a); // 3
+
+for(var i = 0; i &amp;lt; 5; i++) {
+  var a = i;
+}
+console.log(a); // 4
+
+function foo() {
+  var a = 999;
+  console.log(a); // 999
+}
+
+foo();
+
+// 전역 변수가 변하지 않았음을 확인 가능
+console.log(a); // 4 &lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;함수 내에서 선언한 변수만 지역변수로 취급되는 것을 확인할 수 있습니다. 반면 &lt;code class=&quot;language-text&quot;&gt;const&lt;/code&gt;나 &lt;code class=&quot;language-text&quot;&gt;let&lt;/code&gt; 키워드는 &lt;strong&gt;블록 레벨 스코프&lt;/strong&gt;를 지원합니다.&lt;/p&gt;
+&lt;h4 id=&quot;블록-레벨-스코프&quot; style=&quot;position:relative;&quot;&gt;블록 레벨 스코프&lt;a href=&quot;#%EB%B8%94%EB%A1%9D-%EB%A0%88%EB%B2%A8-%EC%8A%A4%EC%BD%94%ED%94%84&quot; aria-label=&quot;블록 레벨 스코프 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const a = 1;
+
+{
+  const a = 2;
+  console.log(a) // 2
+}
+console.log(a); // 1
+
+if(true) {
+  const a = 3;
+  console.log(a); // 3
+}
+console.log(a); // 1
+
+for(let i = 0; i &amp;lt; 5; i++) {
+  const a = i;
+}
+console.log(a); // 1
+
+function foo() {
+  const a = 999;
+  console.log(a); // 999
+}
+
+foo();
+// 처음 선언한 변수 변하지 않음
+console.log(a); // 1 &lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;const&lt;/code&gt;로만 선언했기 때문에 만약 전역으로 선언한 &lt;code class=&quot;language-text&quot;&gt;a&lt;/code&gt;가 값이 바뀌었다면 아마 상수를 바꿀 수 없다는 에러가 발생했을 것입니다. 하지만 에러가 발생하지 않고,
+&lt;code class=&quot;language-text&quot;&gt;{}&lt;/code&gt; 코드 블록 내에서 선언된 모든 &lt;code class=&quot;language-text&quot;&gt;a&lt;/code&gt;가 해당 블록 내의 값으로 할당되는 것을 확인할 수 있습니다.&lt;/p&gt;
+&lt;h4 id=&quot;렉시컬-스코프&quot; style=&quot;position:relative;&quot;&gt;렉시컬 스코프&lt;a href=&quot;#%EB%A0%89%EC%8B%9C%EC%BB%AC-%EC%8A%A4%EC%BD%94%ED%94%84&quot; aria-label=&quot;렉시컬 스코프 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;렉시컬 스코프는 함수를 정의한 곳에 따라 상위 스코프를 결정합니다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;let a = 1;
+
+// 전역함수
+function foo() {
+  let a = 999;
+  bar();
+}
+
+// 전역함수
+function bar() {
+  console.log(a); // 전역 변수 참조
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;위 예시는 함수를 모두 &lt;strong&gt;전역&lt;/strong&gt;에 정의했습니다. 함수는 자신이 정의된 장소(전역/지역)를 기억해 상위 스코프의 변수를 참조합니다.&lt;br&gt;
+따라서 &lt;code class=&quot;language-text&quot;&gt;bar&lt;/code&gt; 함수가 어디서 호출되든 상관없이, &lt;code class=&quot;language-text&quot;&gt;bar&lt;/code&gt; 는 &lt;code class=&quot;language-text&quot;&gt;전역변수 a&lt;/code&gt;를 참조하게 됩니다.&lt;/p&gt;
+&lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-function&quot;&gt;함수&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[NHN FORWARD 2022]]></title><description><![CDATA[개발자 인생 처음으로 개발 콘퍼러스를 다녀왔다. 온라인으로 진행하는 건 몇 번 듣긴 했으나, 오프라인은 이번이 처음이다. NHN FORWARD의 섹션 프론트엔드 개발자로서 (당연히?) 프론트엔드 개발 분야에 관심 있었기 때문에 대부분 Track…]]></description><link>https://yeony99.github.io/tech/nhn-forward-2022</link><guid isPermaLink="false">https://yeony99.github.io/tech/nhn-forward-2022</guid><pubDate>Fri, 25 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;개발자 인생 처음으로 개발 콘퍼러스를 다녀왔다. 온라인으로 진행하는 건 몇 번 듣긴 했으나, 오프라인은 이번이 처음이다.&lt;/p&gt;
 &lt;h2 id=&quot;nhn-forward의-섹션&quot; style=&quot;position:relative;&quot;&gt;NHN FORWARD의 섹션&lt;a href=&quot;#nhn-forward%EC%9D%98-%EC%84%B9%EC%85%98&quot; aria-label=&quot;nhn forward의 섹션 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;프론트엔드 개발자로서 (당연히?) 프론트엔드 개발 분야에 관심 있었기 때문에 대부분 Track1 부분에서 머물렀다.&lt;br&gt;
 인상 깊었던 여러 내용들을 적어보고자 한다.&lt;/p&gt;
@@ -428,7 +563,7 @@ console.dir(add) // length: 2, name: &amp;quot;add&amp;quot;&lt;/code&gt;
 &lt;p&gt;다른 함수 정의 방법과 다른 점은 &lt;code class=&quot;language-text&quot;&gt;console.dir&lt;/code&gt;로 확인했을 때 prototype과 arguments 가 없는 것을 확인할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;화살표 함수는 추후에 어떤 방식으로 작동하는지 보다 자세히 알아보겠습니다.&lt;/p&gt;
 &lt;br/&gt;
-&lt;p&gt;다음 글에서는 함수를 사용하는 다양한 방법을 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;다음 글에서는 스코프에 대해 알아보겠습니다.&lt;/p&gt;
 &lt;p&gt;◾ &lt;a href=&quot;/tech/let-me-know-js-a-bit-shallow-copy-deep-copy&quot;&gt;얕은 복사와 깊은 복사&lt;/a&gt; 👈 이전 글 보기&lt;/p&gt;</content:encoded></item><item><title><![CDATA[UX - 시나리오와 디자인 요구사항]]></title><description><![CDATA[사용자를 만족시키는 디자인을 고안해내는 일이야말로 모든 방법론의 핵심이다. 사용자와 사업의 목표 모두를 만족시키는 절충이 필요하다. 페르소나를 기본으로 제품의 디자인을 이끌어내는 기법은 크게…]]></description><link>https://yeony99.github.io/tech/ux-scenario-design-requirement</link><guid isPermaLink="false">https://yeony99.github.io/tech/ux-scenario-design-requirement</guid><pubDate>Tue, 15 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;사용자를 만족시키는 디자인을 고안해내는 일이야말로 모든 방법론의 핵심이다. 사용자와 사업의 목표 모두를 만족시키는 절충이 필요하다.&lt;/p&gt;
 &lt;p&gt;페르소나를 기본으로 제품의 디자인을 이끌어내는 기법은 크게 4단계로 분류된다.&lt;/p&gt;
 &lt;ul&gt;
