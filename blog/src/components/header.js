@@ -23,7 +23,6 @@ const LogoImg = styled.img`
 
 const Header = (props) => {
   const {path, title} = props;
-  console.log(props)
   return (
     <header>
       <Seo title={props.title? props.title : null} description={props.description ? props.description : null}/>

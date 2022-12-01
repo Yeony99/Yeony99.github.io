@@ -10,7 +10,6 @@ export default ({ data }) => {
 
 
   const test = (tag) => {
-    console.log('test!!!!', tag)
     setAll(tag)
   }
     return (

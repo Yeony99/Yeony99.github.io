@@ -15,16 +15,13 @@ export default ({ data }) => {
 
   const changeHandler = (key, isOpen) => {
     setOpen(isOpen? false: true)
-    console.log(isOpen, open)
     setState({...obj, key: key, isOpen: open})
-    console.log(key, obj)
   }
 
   const [all, setAll] = useState('')
 
 
   const test = (tag) => {
-    console.log('test!!!!', tag)
     setAll(tag)
   }
 

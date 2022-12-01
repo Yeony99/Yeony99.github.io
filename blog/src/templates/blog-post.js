@@ -37,8 +37,6 @@ export default ({ data }) => {
         }
     })
 
-    console.log(meta)
-
     return (
         <>
             <Header path={meta.frontmatter.slug} title={meta.frontmatter.title} description={meta.excerpt} />        
