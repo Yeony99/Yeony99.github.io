@@ -57,9 +57,10 @@
 <url> <loc>https://yeony99.github.io/tech/nhn-forward-2022</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/tech/let-me-know-js-a-bit-function</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/tech/let-me-know-js-a-bit-scope</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/tech/javascript-eval-is-evil</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://yeony99.github.io/retrospective/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/log/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/retrospective/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/tech/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//log/flutter-io</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//log/book-developers-writing</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -120,4 +121,5 @@
 <url> <loc>https://yeony99.github.io//tech/nhn-forward-2022</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//tech/let-me-know-js-a-bit-function</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//tech/let-me-know-js-a-bit-scope</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io//tech/javascript-eval-is-evil</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
