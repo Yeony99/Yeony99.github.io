@@ -150,9 +150,12 @@ host를 주지 않으면 localhost로 떠버리니 주의할 것.
 
 ```powershell
 nohup yarn dev &
+disown
 ```
 
 `nohup` 은 **no hang up** 의 약자로 종료하지 말라는 의미다. 터미널 세션 연결을 종료해도 실행시킨 프로그램이 계속 유지된다.
+
++) disown까지 입력해야 완전히 터미널 세션에서 분리가 되어 실행된다.
 
 
 ## Reference
