@@ -202,9 +202,11 @@ server: {
 <p><code class="language-text">yarn dev</code>나 <code class="language-text">yarn start</code>로 서버를 띄웠는데 엥... 터미널 종료하니 서버에서도 종료되는거다.<br>
 그래서 동료분께 여쭤봤더니, 리눅스의 <code class="language-text">nohup</code> 명령어가 있다고 하셨다.</p>
 <deckgo-highlight-code language="powershell" terminal="carbon" theme="blackboard"  >
-          <code slot="code">nohup yarn dev &amp;</code>
+          <code slot="code">nohup yarn dev &amp;
+disown</code>
         </deckgo-highlight-code>
 <p><code class="language-text">nohup</code> 은 <strong>no hang up</strong> 의 약자로 종료하지 말라는 의미다. 터미널 세션 연결을 종료해도 실행시킨 프로그램이 계속 유지된다.</p>
+<p>+) disown까지 입력해야 완전히 터미널 세션에서 분리가 되어 실행된다.</p>
 <h2 id="reference" style="position:relative;">Reference<a href="#reference" aria-label="reference permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <p><a href="https://cloudinfrastructureservices.co.uk/sftp-vs-scp-whats-the-difference-for-secure-file-sharing/">SFTP vs SCP – What’s the Difference for Secure File Sharing?</a><br>
 <a href="https://www.msp360.com/resources/blog/sftp-vs-ftps/">SFTP vs. FTPS Comparison: Which One Is Better?</a><br>
