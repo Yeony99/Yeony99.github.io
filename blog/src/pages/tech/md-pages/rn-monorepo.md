@@ -1,11 +1,11 @@
 ---
-title: "리액트 네이티브 모노레포 프로젝트 구축하기"
+title: "[React/RN] 리액트 네이티브 모노레포 프로젝트 구축하기"
 date: "2022-10-10"
 category: "tech"
 slug: "/tech/react-native-with-monorepo"
 # img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
 tags:
-  - "React/RN"
+  - "JS"
 ---
 
 ## 들어가며

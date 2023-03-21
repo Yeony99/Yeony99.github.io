@@ -1,11 +1,11 @@
 ---
-title: "쿠키란?"
+title: "[Network] 쿠키란?"
 date: "2022-10-24"
 category: "tech"
 slug: "/tech/network-what-is-cookie"
 img: "https://user-images.githubusercontent.com/76241233/197658569-210b30ce-58b5-4562-b3cf-87508743e9c6.png"
 tags:
-  - "Network"
+  - "etc"
 ---
 
 ## 쿠키

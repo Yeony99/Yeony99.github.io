@@ -6,6 +6,7 @@ slug: "/tech/let-me-know-js-a-bit-about-what-js-can-do/"
 img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
 tags: 
  - "쫌만알자"
+hide: true
 ---
 **쫌**쫌따리 **만**만하게 **알**아보는 **자바스크립트** 시리즈
 

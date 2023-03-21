@@ -6,6 +6,7 @@ slug: "/tech/let-me-know-js-a-bit-setting-devtool/"
 img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
 tags: 
  - "쫌만알자"
+hide: true
 ---
 
 ## 자바스크립트 개발 환경

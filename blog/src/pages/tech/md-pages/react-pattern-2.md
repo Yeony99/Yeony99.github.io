@@ -1,11 +1,11 @@
 ---
-title: "프록시 패턴"
+title: "[React Patterns] 프록시 패턴"
 date: "2022-09-22"
 category: "tech"
 slug: "/tech/react-pattern-proxy"
 # img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
 tags:
-  - "Patterns"
+  - "Book"
 ---
 
 ## 프록시 패턴 (Proxy Pattern)
