@@ -1,6 +1,6 @@
 ---
 title: "Nextjs window is not defined"
-date: "2023-06-19"
+date: "2023-06-29"
 category: "tech"
 slug: "/tech/nextjs-1"
 # img: "https://user-images.githubusercontent.com/76241233/177932893-5a504b26-12e4-4ade-b1ce-1951d072ba82.jpg"
