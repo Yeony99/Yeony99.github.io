@@ -80,5 +80,5 @@ const onlyBrowser = dynamic(
 
 
 ## Reference
-[Nextjs: Lazy Loading](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading)
+[Nextjs: Lazy Loading](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading)   
 도서 &lt;실전에서 바로 쓰는 Next.js&gt;
