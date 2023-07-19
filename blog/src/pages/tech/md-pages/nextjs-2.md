@@ -13,7 +13,7 @@ Next.js에서는 메타데이터를 다룰 수 있게 내장 `head` 컴포넌트
 
 ## next/head
 
-```jsx
+```tsx
 import Head from 'next/head'
  
 function IndexPage() {
