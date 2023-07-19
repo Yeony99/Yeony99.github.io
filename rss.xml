@@ -1,4 +1,167 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 29 Jun 2023 07:48:45 GMT</lastBuildDate><item><title><![CDATA[Nextjs window is not defined]]></title><description><![CDATA[발생 원인 Nextjs는 기본적으로 SSR이라, Node.js에서 사용할 수 없는 ,  등의 객체에 접근할 수 없다. 페이지를 처음 렌더링 하는 과정에서 해당 객체들이 전역 객체로 존재하지 않기 때문이다. 따라서 not defined…]]></description><link>https://yeony99.github.io/tech/nextjs-1</link><guid isPermaLink="false">https://yeony99.github.io/tech/nextjs-1</guid><pubDate>Thu, 29 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;발생-원인&quot; style=&quot;position:relative;&quot;&gt;발생 원인&lt;a href=&quot;#%EB%B0%9C%EC%83%9D-%EC%9B%90%EC%9D%B8&quot; aria-label=&quot;발생 원인 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 19 Jul 2023 01:48:57 GMT</lastBuildDate><item><title><![CDATA[AWS PostgreSQL RDS 생성하기]]></title><description><![CDATA[Nextjs 프로젝트를 처음부터 끝까지 메인으로 작업하게 되었다. DB나 배포 과정도 알아야 할 것 같아, 팀에서 이미 사용 중인 AWS와 S3를 배우기 시작했다. 내가 하던 프론트 공부랑은 좀 다른 영역이라 이 부분들은 다 BackEnd…]]></description><link>https://yeony99.github.io/tech/aws-postgresql-database</link><guid isPermaLink="false">https://yeony99.github.io/tech/aws-postgresql-database</guid><pubDate>Wed, 19 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nextjs 프로젝트를 처음부터 끝까지 메인으로 작업하게 되었다. DB나 배포 과정도 알아야 할 것 같아, 팀에서 이미 사용 중인 AWS와 S3를 배우기 시작했다.&lt;br&gt;
+내가 하던 프론트 공부랑은 좀 다른 영역이라 이 부분들은 다 BackEnd 태그로 분류했다.&lt;/p&gt;
+&lt;h2 id=&quot;rds란&quot; style=&quot;position:relative;&quot;&gt;RDS란&lt;a href=&quot;#rds%EB%9E%80&quot; aria-label=&quot;rds란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS에서 제공하는 클라우드 기반 관계형 데이터베이스 서비스&lt;/li&gt;
+&lt;li&gt;클라우드 기반이라 서버 설치 없이 DB를 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;AWS는 &lt;a href=&quot;https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html&quot;&gt;한글 가이드&lt;/a&gt;가 굉장히 친절하게 나와있다.&lt;/p&gt;
+&lt;p&gt;가이드에서는 EC2 부터 생성 후 RDS를 만들라 하는데, 이 과정은 건너뛰고 RDS부터 생성하였다.&lt;/p&gt;
+&lt;h3 id=&quot;create-database&quot; style=&quot;position:relative;&quot;&gt;Create DataBase&lt;a href=&quot;#create-database&quot; aria-label=&quot;create database permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/eb012dbc-ea5b-41ee-a960-d516a7664b97&quot; alt=&quot;DataBase 만들기&quot;&gt;&lt;/p&gt;
+&lt;p&gt;PostgreSQL을 팀에서 사용하고 있기 때문에 PostgreSQL을 선택했으나, 각자 사용하는 것을 선택하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/00f512f3-b778-4234-8fa7-750297376db3&quot; alt=&quot;Create DB 모드 선택&quot;&gt;&lt;/p&gt;
+&lt;p&gt;DB 생성 시에는 Standard와 Easy 중에 고를 수 있다. Easy는 흔히 사용되는 기본 세팅들을 제공해준다. 나는 Easy 로 생성하였다.&lt;br&gt;
+Easy 로 생성 시 어떤 설정이 되는지 하단에서 확인할 수 있다.&lt;br&gt;
+&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/88977ed6-e2d7-4fd6-80f8-a1886cef102c&quot; alt=&quot;Easy 설정&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/d5c10ec9-0a55-4108-82c2-2b1278f3c8c8&quot; alt=&quot;DB 인스턴스 설정&quot;&gt;&lt;/p&gt;
+&lt;p&gt;인스턴스 사이즈, DataBase 이름과 username, password를 설정한다.&lt;br&gt;
+무료로 시도할 거라면 Free Tier를 선택하자.&lt;/p&gt;
+&lt;h3 id=&quot;rds-생성-후&quot; style=&quot;position:relative;&quot;&gt;RDS 생성 후&lt;a href=&quot;#rds-%EC%83%9D%EC%84%B1-%ED%9B%84&quot; aria-label=&quot;rds 생성 후 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/7de9cc7d-7767-4a36-8a25-861d557e8b38&quot; alt=&quot;Status Creating&quot;&gt;&lt;/p&gt;
+&lt;p&gt;데이터베이스의 Status가 &lt;strong&gt;Available&lt;/strong&gt;이 될 때까지 기다려야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/a75a77e4-2e88-4496-952f-7488fc6ba47c&quot; alt=&quot;DataBase 정보&quot;&gt;&lt;/p&gt;
+&lt;p&gt;생성이 완료되면 &lt;strong&gt;연결 &amp;#x26; 보안&lt;/strong&gt; 탭을 확인한다.&lt;br&gt;
+Port는 자동으로 생성되어 PostgreSQL의 5432 포트로 설정된 것을 확인할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Endpoint: AWS 웹 서비스를 위한 진입점의 URL (&lt;a href=&quot;https://docs.aws.amazon.com/ko_kr/general/latest/gr/rande.html&quot;&gt;AWS의 정의&lt;/a&gt;)
+&lt;ul&gt;
+&lt;li&gt;나는 리소스에 접근할 수 있는 통로 정도로 이해했다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;여기서 VPC 보안 그룹 (VPC security groups)를 확인하고 인바운드를 수정해야 한다.&lt;/p&gt;
+&lt;h3 id=&quot;vpc&quot; style=&quot;position:relative;&quot;&gt;VPC&lt;a href=&quot;#vpc&quot; aria-label=&quot;vpc permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;아마존에서 제공하는 서비스로 Virual Private Cloud다. 퍼블릭 클라우드 내에서 호스팅되는 격리된 네트워크 공간을 제공한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/4964c179-1825-42a8-9891-592788ae6ade&quot; alt=&quot;VPC 인바운드&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;인바운드: 데이터베이스 서버 안으로 들어오는 것&lt;/li&gt;
+&lt;li&gt;아웃바운드: 데이터베이스 서버가 밖으로 응답하는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;외부에서 RDS에 접근하기 위해서는 VPC (보안그룹)의 인바운드를 수정해야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/377e7af1-8925-41d7-861b-a62769f2ac10&quot; alt=&quot;인바운드 수정&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My IP&lt;/strong&gt; 로 설정하면 이제 내 IP에서만 접근할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;Reference&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html&quot;&gt;PostgreSQL DB 인스턴스 생성 및 해당 인스턴스에 연결&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Nextjs SEO 설정하기]]></title><description><![CDATA[검색 엔진 최적화(SEO)를 Next.js에서 설정하는 방법을 정리한다. Next.js에서는 메타데이터를 다룰 수 있게 내장  컴포넌트를 제공하고 있다. next/head…]]></description><link>https://yeony99.github.io/tech/nextjs-2</link><guid isPermaLink="false">https://yeony99.github.io/tech/nextjs-2</guid><pubDate>Fri, 07 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;검색 엔진 최적화(SEO)를 Next.js에서 설정하는 방법을 정리한다.&lt;/p&gt;
+&lt;p&gt;Next.js에서는 메타데이터를 다룰 수 있게 내장 &lt;code class=&quot;language-text&quot;&gt;head&lt;/code&gt; 컴포넌트를 제공하고 있다.&lt;/p&gt;
+&lt;h2 id=&quot;nexthead&quot; style=&quot;position:relative;&quot;&gt;next/head&lt;a href=&quot;#nexthead&quot; aria-label=&quot;nexthead permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;deckgo-highlight-code language=&quot;jsx&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;import Head from &amp;#39;next/head&amp;#39;
+ 
+function IndexPage() {
+  return (
+    &amp;lt;div&amp;gt;
+      &amp;lt;Head&amp;gt;
+        &amp;lt;title&amp;gt;My page title&amp;lt;/title&amp;gt;
+        &amp;lt;meta property=&amp;quot;og:title&amp;quot; content=&amp;quot;My page title&amp;quot; key=&amp;quot;title&amp;quot; /&amp;gt;
+      &amp;lt;/Head&amp;gt;
+      &amp;lt;Head&amp;gt;
+        &amp;lt;meta property=&amp;quot;og:title&amp;quot; content=&amp;quot;My new title&amp;quot; key=&amp;quot;title&amp;quot; /&amp;gt;
+      &amp;lt;/Head&amp;gt;
+      &amp;lt;p&amp;gt;Hello world!&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+  )
+}
+ 
+export default IndexPage&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;주의해야 할 점이 있다. &lt;code class=&quot;language-text&quot;&gt;title&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;meta&lt;/code&gt; 등 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;Head&gt;&amp;lt;/Head&gt;&lt;/code&gt; 안에 들어가게 할 태그들은 &lt;code class=&quot;language-text&quot;&gt;Head&lt;/code&gt; 바로 아래 children 요소로 넣거나, &lt;code class=&quot;language-text&quot;&gt;&amp;lt;&gt;&amp;lt;/&gt;&lt;/code&gt; Fragment 속에 넣어야 한다. 다른 태그 아래 넣게 되면 제대로 동작하지 않는다.&lt;/p&gt;
+&lt;h3 id=&quot;_app과-_document&quot; style=&quot;position:relative;&quot;&gt;_app과 _document&lt;a href=&quot;#_app%EA%B3%BC-_document&quot; aria-label=&quot;_app과 _document permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Next.js에는 페이지에 공통으로 적용할 내용을 작성할 수 있게 &lt;code class=&quot;language-text&quot;&gt;_app&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;_document&lt;/code&gt; 를 제공한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;_app&lt;/code&gt;은 서버 요청이 들어왔을 때 &lt;strong&gt;가장 먼저 실행되는&lt;/strong&gt; 컴포넌트로, &lt;strong&gt;공통 레이아웃&lt;/strong&gt;을 제작할 때 사용한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;_document&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;_app&lt;/code&gt; 다음으로 실행되고, 메타 태그나 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;body&gt;&lt;/code&gt; 태그 안에 들어갈 내용을 커스터마이징 할 때 사용한다.&lt;/p&gt;
+&lt;h4 id=&quot;_document-작성-시-주의&quot; style=&quot;position:relative;&quot;&gt;_document 작성 시 주의&lt;a href=&quot;#_document-%EC%9E%91%EC%84%B1-%EC%8B%9C-%EC%A3%BC%EC%9D%98&quot; aria-label=&quot;_document 작성 시 주의 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Nextjs에서는 &lt;code class=&quot;language-text&quot;&gt;Head&lt;/code&gt; 컴포넌트가 2개 있다. import 되는 경로의 차이가 있는데, 아래와 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;next/head&lt;/code&gt;의 Head : 오픈 그래프(OG), 메타 데이터를 정의할 때 사용&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;next/document&lt;/code&gt;의 Head : 모든 페이지에 공통으로 사용되는 코드가 있을 때 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;_document&lt;/code&gt;에 메타 태그를 작성할 경우, &lt;code class=&quot;language-text&quot;&gt;next/document&lt;/code&gt; 는 &lt;strong&gt;서버 컴포넌트&lt;/strong&gt; 이기 때문에, 클라이언트 사이드와 관계 없는 태그만 넣어야 한다.&lt;/p&gt;
+&lt;p&gt;예를 들어, 화면마다 다른 &lt;code class=&quot;language-text&quot;&gt;title&lt;/code&gt; 을 넣게 되면&lt;br&gt;
+&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/7bcbfcdc-52e3-47d0-90e5-2789a3c85a2f&quot; alt=&quot;no document title&quot;&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 title 태그는 _document.js에 넣을 수 없다고 에러를 띄운다.&lt;/p&gt;
+&lt;h2 id=&quot;react-환경에서의-seo&quot; style=&quot;position:relative;&quot;&gt;React 환경에서의 SEO&lt;a href=&quot;#react-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-seo&quot; aria-label=&quot;react 환경에서의 seo permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;위에 설명한 title, meta 태그들은 정적 페이지인 경우 문제가 생기지 않지만, 동적 페이지의 경우에는 SEO 처리가 어렵다. React가 기본적으로 CSR(Client Side Rendering)을 하기 때문이다.&lt;/p&gt;
+&lt;p&gt;CSR의 과정은 1. 브라우저가 서버가 전달하는 html 문서 수신 2. API 요청 3. 응답받은 데이터를 화면에 프린트 순으로 이뤄진다.&lt;br&gt;
+title에 동적 페이지의 제목을 달고 싶은데, 이미 html은 그려져 있는 상태가 된다.&lt;/p&gt;
+&lt;h3 id=&quot;ssr-처리하기&quot; style=&quot;position:relative;&quot;&gt;SSR 처리하기&lt;a href=&quot;#ssr-%EC%B2%98%EB%A6%AC%ED%95%98%EA%B8%B0&quot; aria-label=&quot;ssr 처리하기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Next.js에서는 이 부분을 간편하게 처리할 수 있다. SSR(Server Side Rendering) 기능을 기본 제공한다.&lt;/p&gt;
+&lt;p&gt;SSR을 사용하기 위해서는 렌더링될 페이지에 &lt;code class=&quot;language-text&quot;&gt;getServerSideProps&lt;/code&gt; 함수를 사용하면 된다.&lt;/p&gt;
+&lt;p&gt;이 함수가 활용되는 방식은 이러하다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;페이지 렌더링 전 getServerSideProps 내에서 API 호출&lt;/li&gt;
+&lt;li&gt;API Response 받기&lt;/li&gt;
+&lt;li&gt;Response를 Page에 props로 리턴&lt;/li&gt;
+&lt;li&gt;페이지 렌더링&lt;/li&gt;
+&lt;/ol&gt;
+&lt;deckgo-highlight-code language=&quot;tsx&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;export default function Page({data}) {
+  return (
+    // view
+    // Head에 data 넘겨주기
+  )
+}
+
+export async function getServerSideProps(context: GetServerSideProps) {
+  try {
+    // API 호출
+    const data = await axios.get(`/api/page`);
+
+    return {
+      props: {
+        data
+      }
+    }
+  } catch(error) {
+    console.log(error)
+  }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;페이지-별로-다른-메타-태그-적용하기&quot; style=&quot;position:relative;&quot;&gt;페이지 별로 다른 메타 태그 적용하기&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B3%84%EB%A1%9C-%EB%8B%A4%EB%A5%B8-%EB%A9%94%ED%83%80-%ED%83%9C%EA%B7%B8-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;페이지 별로 다른 메타 태그 적용하기 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;각각의 페이지 별로 title이나 description을 다르게 해야한다. 이런 경우 컴포넌트를 생성해 처리하는 것이 편리하다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;tsx&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;import Head from &amp;quot;next/head&amp;quot;;
+
+interface HeadMetaProps {
+  title?: string;
+  description?: string;
+  url?: string;
+  author?: string;
+  image: string;
+}
+
+const HeadMeta: React.FC&amp;lt;HeadMetaProps&amp;gt; = ({
+  title,
+  description,
+  url,
+  author,
+  image,
+}) =&amp;gt; {
+  return (
+    &amp;lt;Head&amp;gt;
+      &amp;lt;title&amp;gt;{title || &amp;quot;웹사이트의 기본 노출될 타이틀&amp;quot;}&amp;lt;/title&amp;gt;
+      &amp;lt;meta
+        name=&amp;quot;description&amp;quot;
+        content={
+          description ||
+          &amp;quot;웹사이트의 기본 설명&amp;quot;
+        }
+      /&amp;gt;
+      &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;initial-scale=1.0, width=device-width&amp;quot; /&amp;gt;
+      &amp;lt;meta property=&amp;quot;og:title&amp;quot; content={title || &amp;quot;기본 타이틀&amp;quot;} /&amp;gt;
+      &amp;lt;meta property=&amp;quot;og:type&amp;quot; content=&amp;quot;website&amp;quot; /&amp;gt;
+      &amp;lt;meta property=&amp;quot;og:url&amp;quot; content={url || &amp;quot;https://사이트 메인 주소&amp;quot;} /&amp;gt;
+      &amp;lt;meta property=&amp;quot;og:image&amp;quot; content={image} /&amp;gt;
+      &amp;lt;meta property=&amp;quot;og:article:author&amp;quot; content={author || &amp;quot;기본 적용 작성자&amp;quot;} /&amp;gt;
+    &amp;lt;/Head&amp;gt;
+  );
+};
+
+export default HeadMeta;
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h2 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;Reference&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;도서 &amp;#x3C;실전에서 바로 쓰는 Next.js&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Nextjs window is not defined]]></title><description><![CDATA[발생 원인 Nextjs는 기본적으로 SSR이라, Node.js에서 사용할 수 없는 ,  등의 객체에 접근할 수 없다. 페이지를 처음 렌더링 하는 과정에서 해당 객체들이 전역 객체로 존재하지 않기 때문이다. 따라서 not defined…]]></description><link>https://yeony99.github.io/tech/nextjs-1</link><guid isPermaLink="false">https://yeony99.github.io/tech/nextjs-1</guid><pubDate>Thu, 29 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;발생-원인&quot; style=&quot;position:relative;&quot;&gt;발생 원인&lt;a href=&quot;#%EB%B0%9C%EC%83%9D-%EC%9B%90%EC%9D%B8&quot; aria-label=&quot;발생 원인 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Nextjs는 기본적으로 SSR이라, Node.js에서 사용할 수 없는 &lt;code class=&quot;language-text&quot;&gt;window&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;document&lt;/code&gt; 등의 객체에 접근할 수 없다.&lt;/p&gt;
 &lt;p&gt;페이지를 처음 렌더링 하는 과정에서 해당 객체들이 전역 객체로 존재하지 않기 때문이다. 따라서 not defined 오류가 발생한다.&lt;/p&gt;
 &lt;h2 id=&quot;reference-error-해결&quot; style=&quot;position:relative;&quot;&gt;reference error 해결&lt;a href=&quot;#reference-error-%ED%95%B4%EA%B2%B0&quot; aria-label=&quot;reference error 해결 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -50,7 +213,7 @@ const onlyBrowser = dynamic(
 &lt;p&gt;위 코드는 컴포넌트를 &lt;strong&gt;동적 임포트&lt;/strong&gt; 한다. &lt;code class=&quot;language-text&quot;&gt;ssr: false&lt;/code&gt; 옵션을 명시함으로써 클라이언트단에서만 코드를 실행하는 것이다.
 리액트 하이드레이션이 끝난 후에 해당 컴포넌트를 사용할 수 있다.&lt;/p&gt;
 &lt;h2 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;Reference&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading&quot;&gt;Nextjs: Lazy Loading&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading&quot;&gt;Nextjs: Lazy Loading&lt;/a&gt;&lt;br&gt;
 도서 &amp;#x3C;실전에서 바로 쓰는 Next.js&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[책 리뷰] UX 라이팅 시작하기]]></title><description><![CDATA[UX라이팅은 토스의 8가지 라이팅 원칙들을 보고 관심이 생긴 분야다. 솔루션 제작에 참여 중이라 좀더 관심이 갔다. 관련 책이 있어 읽고 정리하는 글. 바로 알다 기업에서 UX…]]></description><link>https://yeony99.github.io/tech/ux-scenario-design-requirement</link><guid isPermaLink="false">https://yeony99.github.io/tech/ux-scenario-design-requirement</guid><pubDate>Fri, 24 Mar 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;UX라이팅은 &lt;a href=&quot;https://toss.tech/article/8-writing-principles-of-toss&quot;&gt;토스의 8가지 라이팅 원칙들&lt;/a&gt;을 보고 관심이 생긴 분야다.&lt;br&gt;
 솔루션 제작에 참여 중이라 좀더 관심이 갔다.&lt;/p&gt;
 &lt;p&gt;관련 책이 있어 읽고 정리하는 글.&lt;/p&gt;
