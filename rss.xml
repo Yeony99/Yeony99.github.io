@@ -1,4 +1,274 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 19 Jul 2023 01:57:30 GMT</lastBuildDate><item><title><![CDATA[AWS PostgreSQL RDS 생성하기]]></title><description><![CDATA[Nextjs 프로젝트를 처음부터 끝까지 메인으로 작업하게 되었다. DB나 배포 과정도 알아야 할 것 같아, 팀에서 이미 사용 중인 AWS와 S3를 배우기 시작했다. 내가 하던 프론트 공부랑은 좀 다른 영역이라 이 부분들은 다 BackEnd…]]></description><link>https://yeony99.github.io/tech/aws-postgresql-database</link><guid isPermaLink="false">https://yeony99.github.io/tech/aws-postgresql-database</guid><pubDate>Wed, 19 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nextjs 프로젝트를 처음부터 끝까지 메인으로 작업하게 되었다. DB나 배포 과정도 알아야 할 것 같아, 팀에서 이미 사용 중인 AWS와 S3를 배우기 시작했다.&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 21 Jul 2023 06:44:57 GMT</lastBuildDate><item><title><![CDATA[Nextjs에서 AWS S3로 파일 이미지 업로드하기]]></title><description><![CDATA[S3에 이미지 업로드 하는 과정에서 발생한 여러 삽질과 해결방법 등을 미래의 나를 위한 가이드로 남긴다. 깃허브 예제 코드 확인하기 AWS S3 Bucket 생성 Bucket 생성 시 S3 접근을 하기 위해 Block Public Access…]]></description><link>https://yeony99.github.io/tech/how-to-upload-files-to-aws-s3-from-nextjs</link><guid isPermaLink="false">https://yeony99.github.io/tech/how-to-upload-files-to-aws-s3-from-nextjs</guid><pubDate>Fri, 21 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;S3에 이미지 업로드 하는 과정에서 발생한 여러 삽질과 해결방법 등을 미래의 나를 위한 가이드로 남긴다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Yeony99/aws-s3-file-upload&quot; target=&quot;_blank&quot;&gt;깃허브 예제 코드 확인하기&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;aws&quot; style=&quot;position:relative;&quot;&gt;AWS&lt;a href=&quot;#aws&quot; aria-label=&quot;aws permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;s3-bucket-생성&quot; style=&quot;position:relative;&quot;&gt;S3 Bucket 생성&lt;a href=&quot;#s3-bucket-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;s3 bucket 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Bucket 생성 시 S3 접근을 하기 위해 Block Public Access를 해제한다.&lt;br&gt;
+사이트의 유저들도 파일 업로드를 해야 하기 때문이다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/d2aa44cd-0b3c-46a5-a2ac-e6c8a3b8566c&quot; alt=&quot;Public Access&quot;&gt;&lt;/p&gt;
+&lt;p&gt;생성 된 후 &lt;strong&gt;Permissions&lt;/strong&gt; 탭에서 Bucket Policy를 수정한다.&lt;br&gt;
+별도의 인증 없이 리소스에 접근할 수 있게 할 것이기 때문에 기본적인 policy만 아래와 같이 작성한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;YOUR_BUCKET_NAME&lt;/code&gt; 부분을 수정해 사용하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/ed4aaa9e-2489-4dfb-a14b-1aaf8764c80a&quot; alt=&quot;Policy 작성&quot;&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;{
+    &amp;quot;Version&amp;quot;: &amp;quot;2012-10-17&amp;quot;,
+    &amp;quot;Statement&amp;quot;: [
+        {
+            &amp;quot;Sid&amp;quot;: &amp;quot;PublicListGet&amp;quot;,
+            &amp;quot;Effect&amp;quot;: &amp;quot;Allow&amp;quot;,
+            &amp;quot;Principal&amp;quot;: &amp;quot;*&amp;quot;,
+            &amp;quot;Action&amp;quot;: [
+                &amp;quot;s3:List*&amp;quot;,
+                &amp;quot;s3:Get*&amp;quot;
+            ],
+            &amp;quot;Resource&amp;quot;: [
+                &amp;quot;arn:aws:s3:::YOUR_BUCKET_NAME&amp;quot;,
+                &amp;quot;arn:aws:s3:::YOUR_BUCKET_NAME/*&amp;quot;
+            ]
+        }
+    ]
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;CORS 를 위해 Cross-orign resource sharing 부분의 프로퍼티를 수정한다.&lt;br&gt;
+아래 설정은 모든 접근을 허용하도록 간단히 작성했다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/5a4926db-35aa-493d-b451-68d0349fc436&quot; alt=&quot;CORS 설정 작성&quot;&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;[
+    {
+        &amp;quot;AllowedHeaders&amp;quot;: [
+            &amp;quot;*&amp;quot;
+        ],
+        &amp;quot;AllowedMethods&amp;quot;: [
+            &amp;quot;PUT&amp;quot;,
+            &amp;quot;POST&amp;quot;,
+            &amp;quot;GET&amp;quot;
+        ],
+        &amp;quot;AllowedOrigins&amp;quot;: [
+            &amp;quot;*&amp;quot;
+        ],
+        &amp;quot;ExposeHeaders&amp;quot;: [
+            &amp;quot;ETag&amp;quot;
+        ]
+    }
+]&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;Bucket이 퍼블릭으로 바뀐 것을 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/ce5d3df2-22fb-46ba-8c53-ab3ac814e23d&quot; alt=&quot;퍼블릭 접근 확인&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;iam-설정&quot; style=&quot;position:relative;&quot;&gt;IAM 설정&lt;a href=&quot;#iam-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;iam 설정 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;del&gt;Life is 아름다운 갤럭시&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;AWS에 연결하기 위해 권한을 만들어줘야 한다. IAM 메뉴를 검색해서 group을 만든다.&lt;br&gt;
+이미 S3에 Access 권한이 있는 경우에는 생성하지 않아도 된다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/0690d987-c410-467d-8aff-b2b4a0a322c4&quot; alt=&quot;IAM&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Group 생성에서 S3 권한을 주도록 하자.&lt;br&gt;
+S3의 모든 권한을 가질 수 있도록 &lt;code class=&quot;language-text&quot;&gt;AmazonS3FullAccess&lt;/code&gt; policy를 선택 후 그룹을 생성한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/6badeaf0-d1c5-4d88-ab38-3446527dc75f&quot; alt=&quot;User Group 생성&quot;&gt;&lt;/p&gt;
+&lt;p&gt;만든 그룹을 선택 후 User를 생성한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/059c3080-6369-42a4-9906-20679b625c3d&quot; alt=&quot;User 생성&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;access-key-생성&quot; style=&quot;position:relative;&quot;&gt;Access Key 생성&lt;a href=&quot;#access-key-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;access key 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;User가 성공적으로 생성되었으면 Access Key를 생성한다.&lt;/p&gt;
+&lt;p&gt;Users &gt; 생성한 유저로 이동해 Security credentials 탭에서 &lt;strong&gt;Access Key&lt;/strong&gt; 를 확인한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/58791f89-aee9-4119-b51c-4f7a6cd4a427&quot; alt=&quot;Create Access Key&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/e1bf01f7-6a04-4e2d-9abe-2285b02fd5ce&quot; alt=&quot;Access Key 설정&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Access Key ID와 secret access key를 확인한다.&lt;br&gt;
+다시 확인할 수 없으니 꼭 csv 파일로 다운받거나 로컬에 복사해놓는다.&lt;br&gt;
+&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/8eb233e4-20f5-462e-bf2c-2276cd53d3b8&quot; alt=&quot;Key 확인&quot;&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;h2 id=&quot;nextjs-프로젝트-세팅&quot; style=&quot;position:relative;&quot;&gt;Next.js 프로젝트 세팅&lt;a href=&quot;#nextjs-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%B8%ED%8C%85&quot; aria-label=&quot;nextjs 프로젝트 세팅 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;프로젝트-생성&quot; style=&quot;position:relative;&quot;&gt;프로젝트 생성&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;프로젝트 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;deckgo-highlight-code language=&quot;cmd&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;npx create-next-app@latest&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;나는 &lt;code class=&quot;language-text&quot;&gt;axios&lt;/code&gt;를 주로 사용하기 때문에 axios도 추가로 설치했다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;cmd&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;yarn add axios&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;혹은&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;cmd&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;npm install axios&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;AWS를 사용하기 위해 sdk도 추가한다.&lt;br&gt;
+Typescript를 사용하는 경우 &lt;code class=&quot;language-text&quot;&gt;@types/aws-sdk&lt;/code&gt; 도 설치한다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;cmd&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;yarn add aws-sdk
+yarn add @types/aws-sdk&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;env-추가&quot; style=&quot;position:relative;&quot;&gt;.env 추가&lt;a href=&quot;#env-%EC%B6%94%EA%B0%80&quot; aria-label=&quot;env 추가 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;AWS 정보는 유출되면 끔찍한 일이 벌어질 수 있다... AWS Key 확인에서도 주의사항이 적혀있듯이 plain text로 작성하면 안된다.&lt;br&gt;
+따라서 프로젝트 루트에 &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt; 파일을 추가해 민감한 정보들을 숨겨주도록 한다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;cmd&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;yarn add dotenv&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;env&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=
+BUCKET_NAME=&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;참고로 깃허브 예제에 올려놓은 &lt;code class=&quot;language-text&quot;&gt;.env.example&lt;/code&gt; 은 동작하지 않는다. 수정 후 &lt;code class=&quot;language-text&quot;&gt;.env.local&lt;/code&gt; 이나 &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt; 등으로 수정해 사용해야 한다.&lt;/p&gt;
+&lt;h3 id=&quot;api-작성&quot; style=&quot;position:relative;&quot;&gt;API 작성&lt;a href=&quot;#api-%EC%9E%91%EC%84%B1&quot; aria-label=&quot;api 작성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;예제에서는 Next13을 사용한다 (app directory).&lt;/p&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;src
+-- app
+---- page.tsx
+---- api
+------ route.ts&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;src/app/api/route.ts&lt;/code&gt; 부터 작성했다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;ts&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// src/app/api/route.ts
+
+import S3 from &amp;quot;aws-sdk/clients/s3&amp;quot;;
+import { NextRequest, NextResponse } from &amp;quot;next/server&amp;quot;;
+
+const s3 = new S3({
+  apiVersion: &amp;quot;2006-03-01&amp;quot;,
+  region: process.env.AWS_REGION,
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+  },
+  signatureVersion: &amp;quot;v4&amp;quot;,
+});
+
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
+export async function GET(req: NextRequest) {
+
+  const post = await s3.createPresignedPost({
+      Bucket: process.env.BUCKET_NAME,
+      Fields: {
+          key: &amp;#39;files/&amp;#39; + req.nextUrl.searchParams.get(&amp;quot;file&amp;quot;),
+          &amp;#39;Content-Type&amp;#39;: req.nextUrl.searchParams.get(&amp;quot;fileType&amp;quot;),
+      },
+      Expires: 60,
+      Conditions: [
+          [&amp;#39;content-length-range&amp;#39;, 0, 1048576], // up to 1 MB
+      ],
+  })
+
+  return NextResponse.json(post)
+};&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;userId나 datetime 등으로 S3의 Bucket 내 계층을 동적으로 추가하고 싶다면, &lt;code class=&quot;language-text&quot;&gt;Fields&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;key&lt;/code&gt; 부분에 자유롭게 입력하면 된다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;tsx&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Fields: {
+    // files/ 계층 생성 -&amp;gt; 하위로 파일 저장
+    key: &amp;#39;files/&amp;#39; + req.nextUrl.searchParams.get(&amp;quot;file&amp;quot;),
+    &amp;#39;Content-Type&amp;#39;: req.nextUrl.searchParams.get(&amp;quot;fileType&amp;quot;),
+},&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;또한 Conditions 를 설정해 업로드 가능한 최대 파일 크기를 명시할 수도 있다.&lt;/p&gt;
+&lt;h3 id=&quot;front-작성&quot; style=&quot;position:relative;&quot;&gt;Front 작성&lt;a href=&quot;#front-%EC%9E%91%EC%84%B1&quot; aria-label=&quot;front 작성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;src/app/pages.tsx&lt;/code&gt; 를 작성한다.&lt;/p&gt;
+&lt;p&gt;먼저 파일을 담을 수 있도록 input을 작성한다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;tsx&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// src/app/pages.tsx
+&amp;quot;use client&amp;quot;;
+
+export default function Home() {
+    const [file, setFile] = useState&amp;lt;File | null&amp;gt;(null);
+
+    const onChangeFile = (e: React.ChangeEvent&amp;lt;HTMLInputElement&amp;gt;) =&amp;gt; {
+        setFile(e.target.files?.[0] ?? null);
+    };
+
+    return (
+        &amp;lt;main&amp;gt;
+            &amp;lt;h1&amp;gt;AWS S3 파일 업로드&amp;lt;/h1&amp;gt;
+            &amp;lt;div&amp;gt;
+                &amp;lt;input onChange={onChangeFile} type=&amp;quot;file&amp;quot;&amp;gt;
+                &amp;lt;button&amp;gt;저장!&amp;lt;/button&amp;gt;
+            &amp;lt;/div&amp;gt;
+        &amp;lt;/main&amp;gt;       
+    );
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;저장 버튼에 onClick 이벤트로 걸 uploadFile 함수를 작성한다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;tsx&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// ...
+
+const uploadFile = async (file: File | null) =&amp;gt; {
+    try {
+        // 파일이 없으면 return
+        if (!file) {
+            console.log(&amp;#39;No file!&amp;#39;)
+            return;
+        }
+
+        // UTF-8 로 인코딩
+        const filename = encodeURIComponent(file.name);
+        const fileType = encodeURIComponent(file.type);
+
+        // s3 API 호출
+        const res = await axios.get(`/api`, {
+            params: {
+                file: filename,
+                fileType,
+            },
+        });
+
+        // response로 url 과 fields 받음
+        const { url, fields } = await res.data;
+
+        // form data 객체 생성
+        const formData = new FormData();
+
+        // form data에 데이터 append
+
+        // FormData에 들어가는 데이터
+        /**
+         * key (파일명)
+         * Content-Type
+         * bucket
+         * X-Amz-Algorithm (해시 처리 알고리즘)
+         * X-Amz-Credential (공개키 + 날짜 + Region 등)
+         * X-Amz-Date
+         * Policy (token)
+         * X-Amz-Signature
+         * file
+        **/
+        Object.entries({ ...fields, file }).forEach(([key, value]) =&amp;gt; {
+            formData.append(key, value as string);
+        });
+
+
+        // Bucket의 url에 FormData 정보 담아 POST
+        const upload = await axios
+        .post(url, formData)
+        .then((res) =&amp;gt; res)
+        .catch((err) =&amp;gt; err);
+
+        if (upload.status === 204) {
+            console.log(&amp;quot;Uploaded successfully!&amp;quot;);
+        } else {
+            alert(&amp;quot;파일 용량 초과&amp;quot;);
+            console.error(&amp;quot;Upload failed.&amp;quot;);
+        }
+    } catch (error) {}
+};
+
+return (
+// ...
+    &amp;lt;button onClick={() =&amp;gt; uploadFile(file)}&amp;gt;저장!&amp;lt;/button&amp;gt;
+// ...
+)
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;헷갈리면 안되는 부분!&lt;/p&gt;
+&lt;p&gt;작성한 API 코드는 순전히 s3로 넘길 데이터를 만들어서 return 받는 것 뿐이지 s3로 업로드 된 것이 아니다.&lt;br&gt;
+따라서 GET API 호출 후 전달 받은 url (s3 버킷 주소)와 fields(s3업로드 용으로 가공된 파일 데이터)로 POST API를 한번 더 호출해야 한다.&lt;/p&gt;
+&lt;p&gt;S3에 들어가보면 작성한대로 &lt;code class=&quot;language-text&quot;&gt;files/&lt;/code&gt; 계층 아래 &lt;code class=&quot;language-text&quot;&gt;test.txt&lt;/code&gt; 파일이 저장된 것을 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/b1eb8b86-884b-4df4-a457-22f888c887b5&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;파일 다운로드는 보통 DB에 file 명을 저장해놓고 처리하기 때문에 깃허브 소스에만 올려두었다.&lt;br&gt;
+소스 확인은 &lt;a href=&quot;https://github.com/Yeony99/aws-s3-file-upload&quot;&gt;여기&lt;/a&gt;로&lt;/p&gt;
+&lt;h2 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;Reference&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/vercel/examples/tree/main/solutions/aws-s3-image-upload&quot;&gt;vercel github examples&lt;/a&gt;
+&lt;a href=&quot;https://betterprogramming.pub/how-to-upload-files-to-amazon-s3-from-nextjs-app-b7ef1909976b&quot;&gt;How to Upload Files to AWS S3 From NextJS App&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AWS PostgreSQL RDS 생성하기]]></title><description><![CDATA[Nextjs 프로젝트를 처음부터 끝까지 메인으로 작업하게 되었다. DB나 배포 과정도 알아야 할 것 같아, 팀에서 이미 사용 중인 AWS와 S3를 배우기 시작했다. 내가 하던 프론트 공부랑은 좀 다른 영역이라 이 부분들은 다 BackEnd…]]></description><link>https://yeony99.github.io/tech/aws-postgresql-database</link><guid isPermaLink="false">https://yeony99.github.io/tech/aws-postgresql-database</guid><pubDate>Wed, 19 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nextjs 프로젝트를 처음부터 끝까지 메인으로 작업하게 되었다. DB나 배포 과정도 알아야 할 것 같아, 팀에서 이미 사용 중인 AWS와 S3를 배우기 시작했다.&lt;br&gt;
 내가 하던 프론트 공부랑은 좀 다른 영역이라 이 부분들은 다 BackEnd 태그로 분류했다.&lt;/p&gt;
 &lt;h2 id=&quot;rds란&quot; style=&quot;position:relative;&quot;&gt;RDS란&lt;a href=&quot;#rds%EB%9E%80&quot; aria-label=&quot;rds란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -214,23 +484,7 @@ const onlyBrowser = dynamic(
 리액트 하이드레이션이 끝난 후에 해당 컴포넌트를 사용할 수 있다.&lt;/p&gt;
 &lt;h2 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;Reference&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading&quot;&gt;Nextjs: Lazy Loading&lt;/a&gt;&lt;br&gt;
-도서 &amp;#x3C;실전에서 바로 쓰는 Next.js&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[책 리뷰] UX 라이팅 시작하기]]></title><description><![CDATA[UX라이팅은 토스의 8가지 라이팅 원칙들을 보고 관심이 생긴 분야다. 솔루션 제작에 참여 중이라 좀더 관심이 갔다. 관련 책이 있어 읽고 정리하는 글. 바로 알다 기업에서 UX…]]></description><link>https://yeony99.github.io/tech/ux-scenario-design-requirement</link><guid isPermaLink="false">https://yeony99.github.io/tech/ux-scenario-design-requirement</guid><pubDate>Fri, 24 Mar 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;UX라이팅은 &lt;a href=&quot;https://toss.tech/article/8-writing-principles-of-toss&quot;&gt;토스의 8가지 라이팅 원칙들&lt;/a&gt;을 보고 관심이 생긴 분야다.&lt;br&gt;
-솔루션 제작에 참여 중이라 좀더 관심이 갔다.&lt;/p&gt;
-&lt;p&gt;관련 책이 있어 읽고 정리하는 글.&lt;/p&gt;
-&lt;h2 id=&quot;바로-알다&quot; style=&quot;position:relative;&quot;&gt;바로 알다&lt;a href=&quot;#%EB%B0%94%EB%A1%9C-%EC%95%8C%EB%8B%A4&quot; aria-label=&quot;바로 알다 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;기업에서 UX 라이팅이 중요한 이유 중 하나는, 고객은 메시지를 작성한 사람은 모르지만 기업과 브랜드는 잘 알고 있다는 점이다.&lt;/p&gt;
-&lt;p&gt;호세 오르테가 이 가세트에 따르면, &quot;모든 말은 결핍이다. 자신이 표현하고자 하는 바를 다 담지 못한다. 모든 말은 과잉이다. 내가 전하지 않았으면 했던 것들도 전하게 된다.&quot;&lt;/p&gt;
-&lt;p&gt;결핍과 과잉을 줄이기 위해 우선 &lt;strong&gt;바로 아는 것&lt;/strong&gt;이 중요하다.&lt;/p&gt;
-&lt;h3 id=&quot;여러-종류의-사전&quot; style=&quot;position:relative;&quot;&gt;여러 종류의 사전&lt;a href=&quot;#%EC%97%AC%EB%9F%AC-%EC%A2%85%EB%A5%98%EC%9D%98-%EC%82%AC%EC%A0%84&quot; aria-label=&quot;여러 종류의 사전 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;단어를 왜 선택했는지 그 이유가 명확해야 한다. 그러기 위해선 사전을 친밀히 해야 한다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;표준국어대사전: 국립국어원에서 발행. 표준어 규정, 한글 맞춤법 등의 어문 규정을 준수&lt;/li&gt;
-&lt;li&gt;한국어기초사전: 쉬운 뜻풀이와 다양한 예문&lt;/li&gt;
-&lt;li&gt;우리말샘: 사용자 참여형 국어사전&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;공적인 메시지는 되도록 표준국어대사전을 따르는 것이 불필요한 논란을 피하는 길이다.&lt;/p&gt;
-&lt;h3 id=&quot;&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#&quot; aria-label=&quot; permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;h2 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;Reference&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Linux 서버에 frontend 파일 올리기]]></title><description><![CDATA[리눅스를 건들일 일이 거의 없었는데, 이번에 프론트엔드 파일을 올려보게 되었다. 정리 겸 작성하는 글이 될 듯 하다. 이미 리눅스 서버와 계정이 있다는 전제다. ssh와 scp(sftp)를 사용한다. ssh란? Secure shell…]]></description><link>https://yeony99.github.io/tech/upload-frontend-to-linux-server</link><guid isPermaLink="false">https://yeony99.github.io/tech/upload-frontend-to-linux-server</guid><pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;리눅스를 건들일 일이 거의 없었는데, 이번에 프론트엔드 파일을 올려보게 되었다.&lt;/p&gt;
+도서 &amp;#x3C;실전에서 바로 쓰는 Next.js&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Linux 서버에 frontend 파일 올리기]]></title><description><![CDATA[리눅스를 건들일 일이 거의 없었는데, 이번에 프론트엔드 파일을 올려보게 되었다. 정리 겸 작성하는 글이 될 듯 하다. 이미 리눅스 서버와 계정이 있다는 전제다. ssh와 scp(sftp)를 사용한다. ssh란? Secure shell…]]></description><link>https://yeony99.github.io/tech/upload-frontend-to-linux-server</link><guid isPermaLink="false">https://yeony99.github.io/tech/upload-frontend-to-linux-server</guid><pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;리눅스를 건들일 일이 거의 없었는데, 이번에 프론트엔드 파일을 올려보게 되었다.&lt;/p&gt;
 &lt;p&gt;정리 겸 작성하는 글이 될 듯 하다.&lt;br&gt;
 이미 리눅스 서버와 계정이 있다는 전제다. ssh와 scp(sftp)를 사용한다.&lt;/p&gt;
 &lt;h2 id=&quot;ssh란&quot; style=&quot;position:relative;&quot;&gt;ssh란?&lt;a href=&quot;#ssh%EB%9E%80&quot; aria-label=&quot;ssh란 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
