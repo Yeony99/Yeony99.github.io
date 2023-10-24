@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 21 Jul 2023 06:44:57 GMT</lastBuildDate><item><title><![CDATA[Nextjs에서 AWS S3로 파일 이미지 업로드하기]]></title><description><![CDATA[S3에 이미지 업로드 하는 과정에서 발생한 여러 삽질과 해결방법 등을 미래의 나를 위한 가이드로 남긴다. 깃허브 예제 코드 확인하기 AWS S3 Bucket 생성 Bucket 생성 시 S3 접근을 하기 위해 Block Public Access…]]></description><link>https://yeony99.github.io/tech/how-to-upload-files-to-aws-s3-from-nextjs</link><guid isPermaLink="false">https://yeony99.github.io/tech/how-to-upload-files-to-aws-s3-from-nextjs</guid><pubDate>Fri, 21 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;S3에 이미지 업로드 하는 과정에서 발생한 여러 삽질과 해결방법 등을 미래의 나를 위한 가이드로 남긴다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 24 Oct 2023 08:13:56 GMT</lastBuildDate><item><title><![CDATA[[JS 자료구조 & 알고리즘 (1)] 빅오 표기법]]></title><description><![CDATA[도서 자바스크립트로 하는 자료 구조와 알고리즘을 읽으며 정리하는 글 시리즈. 빅오 표기법 빅오 표기법은 알고리즘 실행에 있어 가장 최악의 경우인 복잡도를 측정한다.  에서 "n"은 입력의 개수를 나타낸다. Big O Complexity Chart…]]></description><link>https://yeony99.github.io/tech/js-algorithm</link><guid isPermaLink="false">https://yeony99.github.io/tech/js-algorithm</guid><pubDate>Tue, 24 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;도서 &lt;strong&gt;자바스크립트로 하는 자료 구조와 알고리즘&lt;/strong&gt;을 읽으며 정리하는 글 시리즈.&lt;/p&gt;
+&lt;h2 id=&quot;빅오-표기법&quot; style=&quot;position:relative;&quot;&gt;빅오 표기법&lt;a href=&quot;#%EB%B9%85%EC%98%A4-%ED%91%9C%EA%B8%B0%EB%B2%95&quot; aria-label=&quot;빅오 표기법 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;빅오 표기법은 알고리즘 실행에 있어 가장 &lt;strong&gt;최악의 경우&lt;/strong&gt;인 복잡도를 측정한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;O(n)&lt;/code&gt; 에서 &quot;n&quot;은 입력의 개수를 나타낸다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99/assets/76241233/095b8af4-9e6d-46f6-bf66-cffe375f9087&quot; alt=&quot;Big O Complexity Chart&quot;&gt;
+&lt;span style=&quot;font-size: 13px&quot;&gt;이미지 출처: &lt;a href=&quot;https://www.freecodecamp.org/news/all-you-need-to-know-about-big-o-notation-to-crack-your-next-coding-interview-9d575e7eec4/&quot;&gt;https://www.freecodecamp.org/news/all-you-need-to-know-about-big-o-notation-to-crack-your-next-coding-interview-9d575e7eec4/&lt;/a&gt; &lt;span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;o1&quot; style=&quot;position:relative;&quot;&gt;O(1)&lt;a href=&quot;#o1&quot; aria-label=&quot;o1 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;O(1)은 입력의 개수와 무관하다. 따라서 &lt;strong&gt;상수 시간&lt;/strong&gt;이라고 부른다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;const arr = [&amp;#39;apple&amp;#39;, &amp;#39;banana&amp;#39;];
+
+console.log(arr[0]); &lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;배열의 인덱스, 객체의 key 등으로 접근하는 경우가 O(1) 알고리즘의 예시가 될 수 있다.&lt;/p&gt;
+&lt;h3 id=&quot;on-on-on&quot; style=&quot;position:relative;&quot;&gt;O(n), O(n²), O(n³)&lt;a href=&quot;#on-on-on&quot; aria-label=&quot;on on on permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;O(n)은 일차시간이다. 입력 개수와 동일하게 실행된다.&lt;/p&gt;
+&lt;p&gt;O(n²)은 이차시간이다. 입력의 개수의 제곱으로 실행된다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;function foo(n) {
+    for(let i = 0; i &amp;lt; n; i++) {
+        for(let j = 0; j &amp;lt; n; j++) {
+            console.log(i, j);
+        }
+    }
+}
+
+// n이 3일 때, n의 제곱만큼 반복. (3 * 3)
+// 0 0
+// 0 1
+// 0 2
+// 1 0
+// 1 1
+// 1 2
+// 2 0
+// 2 1
+// 2 2&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;마찬가지로 O(n³)은 삼차시간이다. 입력 개수의 세제곱으로 실행된다.&lt;/p&gt;
+&lt;h3 id=&quot;ologn&quot; style=&quot;position:relative;&quot;&gt;O(log₂n)&lt;a href=&quot;#ologn&quot; aria-label=&quot;ologn permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;로그 시간 복잡도를 나타낸다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;function foo(n) {
+    for(let i = 1; i &amp;lt; n; i = i*2) {
+        console.log(i)
+    }
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;예시는 2의 제곱부터 n제곱 까지의 항목을 출력한다.&lt;/p&gt;
+&lt;p&gt;위 경우에는 2의 제곱 값들을 입력하면 2의 n제곱 만큼 출력된다. (2의 제곱 사이에 있는 값을 입력하면 당연하게도 float 값 결과가 나온다.)&lt;/p&gt;
+&lt;p&gt;로그 시간 복잡도는 입력 값이 커질 수록 효율이 증가한다.
+&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;빅오-표기법-규칙&quot; style=&quot;position:relative;&quot;&gt;빅오 표기법 규칙&lt;a href=&quot;#%EB%B9%85%EC%98%A4-%ED%91%9C%EA%B8%B0%EB%B2%95-%EA%B7%9C%EC%B9%99&quot; aria-label=&quot;빅오 표기법 규칙 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;알고리즘 분석의 목표는 복잡도를 계산해 효율성을 이해하는 것이다. 이를 계산할 때의 유용한 규칙이 있다.&lt;/p&gt;
+&lt;h3 id=&quot;계수-법칙&quot; style=&quot;position:relative;&quot;&gt;계수 법칙&lt;a href=&quot;#%EA%B3%84%EC%88%98-%EB%B2%95%EC%B9%99&quot; aria-label=&quot;계수 법칙 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;상수를 제거한다. 입력 크기와 연관되지 않는 상수를 무시한다.&lt;/p&gt;
+&lt;p&gt;O(n)과 O(2n)은 n이 무한대로 향해 갈수록 별 차이가 없다. 임의의 상수 k가 붙는 경우도 마찬가지다. O(n)과 O(n + k)는 차이가 없는 것으로 본다.&lt;/p&gt;
+&lt;p&gt;따라서 모두 O(n)으로 표기할 수 있다.&lt;/p&gt;
+&lt;h3 id=&quot;합의-법칙&quot; style=&quot;position:relative;&quot;&gt;합의 법칙&lt;a href=&quot;#%ED%95%A9%EC%9D%98-%EB%B2%95%EC%B9%99&quot; aria-label=&quot;합의 법칙 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;O(n)과 O(n)을 더하면 O(2n)이 된다. 하지만 이는 계수법칙에 의해 O(n)으로 귀결된다.&lt;/p&gt;
+&lt;h3 id=&quot;곱의-법칙&quot; style=&quot;position:relative;&quot;&gt;곱의 법칙&lt;a href=&quot;#%EA%B3%B1%EC%9D%98-%EB%B2%95%EC%B9%99&quot; aria-label=&quot;곱의 법칙 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;O(n)과 O(n)을 곱해보자. &lt;code class=&quot;language-text&quot;&gt;n * n&lt;/code&gt;은 n의 제곱이 된다. 따라서 O(n²)이다.&lt;br&gt;
+O(2n)과 O(n)인 경우도, O(2n²)이지만 계수법칙에 의해 O(n²)으로 나타낸다.&lt;/p&gt;
+&lt;h3 id=&quot;다항-법칙-빅오의-k제곱&quot; style=&quot;position:relative;&quot;&gt;다항 법칙 (빅오의 k제곱)&lt;a href=&quot;#%EB%8B%A4%ED%95%AD-%EB%B2%95%EC%B9%99-%EB%B9%85%EC%98%A4%EC%9D%98-k%EC%A0%9C%EA%B3%B1&quot; aria-label=&quot;다항 법칙 빅오의 k제곱 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;다항 법칙은 다항 시간 복잡도가 동일한 다항 차수를 지닌 빅오 표기법을 지님을 나타낸다.&lt;br&gt;
+이게 무슨 의미냐면, k차 반복되면 O(n^k) 가 된다는 것이다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;function foo(k) {
+    let count = 0;
+    for(let i = 0; i &amp;lt; k * k; i++) {
+        count += 1;
+    }
+    return count;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;위의 예는 k차번 반복된다. k * k 이기 때문에 입력 값의 제곱수를 반환한다. 따라서 O(n²)이다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;javascript&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;function foo(k) {
+    let count = 0;
+    for(let i = 0; i &amp;lt; k * k * k; i++) {
+        count += 1;
+    }
+    return count;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;위의 예는 k * k * k 로 세제곱이다. O(n³)으로 나타낸다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Nextjs에서 AWS S3로 파일 이미지 업로드하기]]></title><description><![CDATA[S3에 이미지 업로드 하는 과정에서 발생한 여러 삽질과 해결방법 등을 미래의 나를 위한 가이드로 남긴다. 깃허브 예제 코드 확인하기 AWS S3 Bucket 생성 Bucket 생성 시 S3 접근을 하기 위해 Block Public Access…]]></description><link>https://yeony99.github.io/tech/how-to-upload-files-to-aws-s3-from-nextjs</link><guid isPermaLink="false">https://yeony99.github.io/tech/how-to-upload-files-to-aws-s3-from-nextjs</guid><pubDate>Fri, 21 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;S3에 이미지 업로드 하는 과정에서 발생한 여러 삽질과 해결방법 등을 미래의 나를 위한 가이드로 남긴다.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Yeony99/aws-s3-file-upload&quot; target=&quot;_blank&quot;&gt;깃허브 예제 코드 확인하기&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;aws&quot; style=&quot;position:relative;&quot;&gt;AWS&lt;a href=&quot;#aws&quot; aria-label=&quot;aws permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;s3-bucket-생성&quot; style=&quot;position:relative;&quot;&gt;S3 Bucket 생성&lt;a href=&quot;#s3-bucket-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;s3 bucket 생성 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
