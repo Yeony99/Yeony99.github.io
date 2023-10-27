@@ -66,7 +66,9 @@
 <url> <loc>https://yeony99.github.io/tech/react-pattern-provider</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/tech/react-pattern-proxy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/tech/react-pattern-singleton</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/tech/js-algorithm-2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/tech/js-algorithm</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io/tech/how-to-adjust-geojson-with-leaflet</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/log/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io/retrospective/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -139,5 +141,7 @@
 <url> <loc>https://yeony99.github.io//tech/react-pattern-provider</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//tech/react-pattern-proxy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//tech/react-pattern-singleton</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io//tech/js-algorithm-2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://yeony99.github.io//tech/js-algorithm</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://yeony99.github.io//tech/how-to-adjust-geojson-with-leaflet</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
