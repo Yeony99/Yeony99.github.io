@@ -1,4 +1,165 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 27 Oct 2023 07:03:20 GMT</lastBuildDate><item><title><![CDATA[[JS 자료구조 & 알고리즘 (2)] 자바스크립트 숫자]]></title><description><![CDATA[도서 자바스크립트로 하는 자료 구조와 알고리즘을 읽으며 정리하는 글 시리즈. 2장은 var, let 등 변수 선언의 호이스팅과 TDZ와 관련된 내용이라…]]></description><link>https://yeony99.github.io/tech/js-algorithm-2</link><guid isPermaLink="false">https://yeony99.github.io/tech/js-algorithm-2</guid><pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;도서 &lt;strong&gt;자바스크립트로 하는 자료 구조와 알고리즘&lt;/strong&gt;을 읽으며 정리하는 글 시리즈.&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Your Site's RSS Feed]]></title><description><![CDATA[This is Yeony's portfolio]]></description><link>https://yeony99.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 31 Oct 2023 00:46:38 GMT</lastBuildDate><item><title><![CDATA[Leaflet에 GeoJson 불러오기 in React]]></title><description><![CDATA[요구사항 전국 지도를 띄우고 광역시/도별 행정구역으로 border 처리 각 구역을 clickable…]]></description><link>https://yeony99.github.io/tech/how-to-adjust-geojson-with-leaflet</link><guid isPermaLink="false">https://yeony99.github.io/tech/how-to-adjust-geojson-with-leaflet</guid><pubDate>Tue, 31 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;!-- geojson 만드는 방법, 변환 링크 등... --&gt;
+&lt;h2 id=&quot;요구사항&quot; style=&quot;position:relative;&quot;&gt;요구사항&lt;a href=&quot;#%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD&quot; aria-label=&quot;요구사항 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;전국 지도를 띄우고&lt;/li&gt;
+&lt;li&gt;광역시/도별 행정구역으로 border 처리&lt;/li&gt;
+&lt;li&gt;각 구역을 clickable하게&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;만들어야 했다.&lt;/p&gt;
+&lt;p&gt;먼저 각 행정구역별로 지도를 그릴 수 있게 좌표 정보를 받아야 했다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;행정구역-데이터-다운로드&quot; style=&quot;position:relative;&quot;&gt;행정구역 데이터 다운로드&lt;a href=&quot;#%ED%96%89%EC%A0%95%EA%B5%AC%EC%97%AD-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C&quot; aria-label=&quot;행정구역 데이터 다운로드 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.gisdeveloper.co.kr/?p=2332&amp;ref=park9eon.com&quot; target=&quot;_blank&quot;&gt;공간정보시스템 - 딥러닝 기반 기술 연구소&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;여기서 좌표계 prj 파일(GRS80 UTM-K / EPSG:5179)과 최신 행정구역(SHP) 정보를 다운로드하였다.&lt;/p&gt;
+&lt;p&gt;간단하게 이 정보들이 무얼 의미하는지 살펴보자.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;shapefile&quot; style=&quot;position:relative;&quot;&gt;Shapefile&lt;a href=&quot;#shapefile&quot; aria-label=&quot;shapefile permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Shapefile&lt;/strong&gt;은 지리/공간 백터 데이터를 저장하는 파일 형식이다.&lt;/p&gt;
+&lt;p&gt;벡터이미지는 svg 이미지를 다뤄봤다면 알고 있을텐데, 점과 점을 연결해 그림을 그리는 방식이다. path를 기억하기 때문에 이미지의 크기를 줄이고 늘리는 것에 구애받지 않는 것이 특징이다.&lt;/p&gt;
+&lt;p&gt;이런 정보들을 지형 정보로 담는 것이다. &lt;code class=&quot;language-text&quot;&gt;.shp&lt;/code&gt; 확장자를 가진 SHP파일은 벡터 지리공간 정보를 담고 있다. 하지만 공간정보시스템에서 다운로드 받은 파일은 총 4가지가 될텐데, 각각은 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;.shp: 지리지형공간 데이터. 기하학적 정보를 저장&lt;/li&gt;
+&lt;li&gt;.dbf: dBASE 파일로 .shp 파일과 관련된 속성 정보를 저장하는 파일&lt;/li&gt;
+&lt;li&gt;.shx: shape index 파일로 .shp과 함께 사용되는 선택적 인덱스 파일. 특정 모양을 빠르게 찾을 수 있도록 돕는 것&lt;/li&gt;
+&lt;li&gt;.prj: projection 파일로 좌표 시스템 및 공간에 관련된 참조 정보를 포함. (좌표 단위, 투영 방법 등 세부 정보)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;결국 Shapefile은 하나의 파일 포맷이 아니라 3개의 확장 포맷(dbf, shp, shx)을 통틀어 Shapefile이라 한다.&lt;/p&gt;
+&lt;h3 id=&quot;geojson&quot; style=&quot;position:relative;&quot;&gt;GeoJSON&lt;a href=&quot;#geojson&quot; aria-label=&quot;geojson permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;하지만 저런 파일은 기본적으로 컴퓨터에서 열 수 있게 제공되는 파일 형식도 아니고, 웹(Javascript)도 읽지 못한다.
+따라서 자바스크립트가 읽을 수 있게끔 Geometry + JSON 형식으로 변환하여 주는 과정이 필요하다.&lt;/p&gt;
+&lt;p&gt;변환은 간편하게 웹에서 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mapshaper.org/?ref=park9eon.com&quot; target=&quot;_blank&quot;&gt;mapshaper&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;위 사이트에 접속해서 공간정보시스템에서 다운로드 받은 4개 파일을 업로드하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99.github.io/assets/76241233/78a3c44e-82ce-440a-b9ca-cef30d828f07&quot; alt=&quot;mapshaper에 파일 업로드&quot;&gt;&lt;/p&gt;
+&lt;p&gt;파일명을 모두 동일하게 맞춰주는 것이 좋은데, 하지 않아도 작동되는 것으로 확인되었다.&lt;/p&gt;
+&lt;p&gt;여기서 제대로 행정구역 정보를 사용하고 싶다면! Options에 &lt;code class=&quot;language-text&quot;&gt;encoding=&quot;euc-kr&quot;&lt;/code&gt; 인코딩을 꼭 입력해주자.
+&lt;img src=&quot;https://github.com/Yeony99/Yeony99.github.io/assets/76241233/e941592b-8751-4536-afe9-578fa4b6be63&quot; alt=&quot;mapshaper 인코딩 옵션&quot;&gt;&lt;/p&gt;
+&lt;p&gt;옵션을 입력하지 않은 경우 기껏 변환한 json 파일을 열었을 때 한글이 깨져 있는 것을 볼 수 있을 것이다. &lt;del&gt;(자전적 발언)&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;import 버튼을 누르면 예쁘게 잘 그려져 있는 지도를 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;이제 GeoJSON으로 내보내기 하면 된다. 우측 상단에 Export 버튼을 클릭 후 File Format으로는 GeoJson을 선택해주자.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99.github.io/assets/76241233/a324e7ac-f8a5-468b-aca2-67affaf13702&quot; alt=&quot;mapshaper export&quot;&gt;
+&lt;img src=&quot;https://github.com/Yeony99/Yeony99.github.io/assets/76241233/cc10f716-0ec9-49bf-946d-b7bef0d421b1&quot; alt=&quot;mapshaper export file format&quot;&gt;&lt;/p&gt;
+&lt;p&gt;json파일을 열어보면 다음과 같은 형식으로 구성되어 있다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;{
+  &amp;quot;type&amp;quot;: &amp;quot;FeatureCollection&amp;quot;,
+  &amp;quot;features&amp;quot;: [
+    {
+      &amp;quot;type&amp;quot;: &amp;quot;Feature&amp;quot;,
+      &amp;quot;geometry&amp;quot;: {
+        &amp;quot;type&amp;quot;: &amp;quot;Polygon&amp;quot;,
+        &amp;quot;coordinates&amp;quot;: [
+          [...],
+          [...],
+          ...
+        ],
+        &amp;quot;properties&amp;quot;: {
+          &amp;quot;CTPRVN_CD&amp;quot;: &amp;quot;11&amp;quot;,
+          &amp;quot;CTP_ENG_NM&amp;quot;: &amp;quot;Seoul&amp;quot;,
+          &amp;quot;CTP_KOR_NM&amp;quot;: &amp;quot;서울특별시&amp;quot;
+        }
+      },
+    },
+    {
+        &amp;quot;type&amp;quot;: &amp;quot;Feature&amp;quot;,
+        &amp;quot;geometry&amp;quot;: {
+          &amp;quot;type&amp;quot;: &amp;quot;Polygon&amp;quot;,
+          &amp;quot;coordinates&amp;quot;: [
+            [...],
+            [...],
+            ...
+          ],
+          &amp;quot;properties&amp;quot;: {
+            &amp;quot;CTPRVN_CD&amp;quot;: &amp;quot;28&amp;quot;,
+            &amp;quot;CTP_ENG_NM&amp;quot;: &amp;quot;Incheon&amp;quot;,
+            &amp;quot;CTP_KOR_NM&amp;quot;: &amp;quot;인천광역시&amp;quot;
+          }
+        },
+    },
+    {
+        ...
+    },
+  ]
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;features&lt;/code&gt; 배열에 각 행정구역별로 &lt;code class=&quot;language-text&quot;&gt;properties&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;geometry&lt;/code&gt; 정보가 들어가 있어 이걸 기준으로 관리하기로 했다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;react-leaflet&quot; style=&quot;position:relative;&quot;&gt;React Leaflet&lt;a href=&quot;#react-leaflet&quot; aria-label=&quot;react leaflet permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Leaflet에도, React Leaflet에도 GeoJSON 기능을 제공한다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://leafletjs.com/examples/geojson/&quot;&gt;leafletjs&lt;/a&gt;
+&lt;a href=&quot;https://react-leaflet.js.org/docs/api-components/#geojson&quot;&gt;react-leaflet GeoJSON&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;간편하게 사용하기 위해 React Leaflet을 설치하였다.&lt;br&gt;
+앞서 GeoJSON으로 변환해 다운로드한 파일을 프로젝트 내부에 넣어준 후 import한다.&lt;br&gt;
+나는 Nextjs를 사용 중이라 public 폴더에 GeoJSON파일을 넣었다.&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;tsx&quot; terminal=&quot;carbon&quot; theme=&quot;blackboard&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;// components/MapComponent.tsx
+
+import { MapContainer, GeoJSON } from &amp;quot;react-leaflet&amp;quot;;
+import &amp;quot;leaflet/dist/leaflet.css&amp;quot;;
+
+// public 폴더에 위치한 GeoJSON 파일 사용
+const geoJsonData = require(&amp;quot;public/ctprvn.json&amp;quot;);
+
+const MapComponent = () =&amp;gt; {
+
+    // 선택한 지형을
+    const [selectedFeature, setSelectedFeature] = useState(
+        geoJsonData.features[0] // 기본으로 서울특별시 선택
+    );
+
+    const onEachFeature = (
+        feature, // 지도에서 선택된 feature
+        layer
+    ) =&amp;gt; {
+        layer.on({
+            click: (e) =&amp;gt; {
+                setSelectedFeature(feature);
+            },
+        });
+    };
+
+    const style = (feature: any) =&amp;gt; {
+        // 파라미터로 받은 feature가 이미 선택된 feature인지 확인
+        const isSelected = feature === selectedFeature;
+
+        // 결과에 따라 return할 스타일 정의
+        return {
+            color: isSelected ? &amp;quot;blue&amp;quot; : &amp;quot;pink&amp;quot;,
+            weight: isSelected ? 4 : 2,
+            opacity: isSelected ? 1 : 0.7,
+        };
+    };
+
+    return (
+        &amp;lt;&amp;gt;
+            &amp;lt;MapContainer&amp;gt;
+                zoomControl={false}
+                center={[36.638392, 127.696118]}
+                minZoom={6}
+                zoom={6}
+                style={{ height: &amp;quot;100%&amp;quot;, width: &amp;quot;100%&amp;quot;, background: &amp;quot;#fff&amp;quot; }} 
+            &amp;gt;
+
+                &amp;lt;GeoJSON 
+                    data={geoJSONData}
+                    style={style}
+                    onEachFeature={onEachFeature}
+                /&amp;gt;
+            &amp;lt;/MapContainer&amp;gt;
+        &amp;lt;/&amp;gt;
+    )
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;결과&quot; style=&quot;position:relative;&quot;&gt;결과&lt;a href=&quot;#%EA%B2%B0%EA%B3%BC&quot; aria-label=&quot;결과 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/Yeony99/Yeony99.github.io/assets/76241233/95412b9c-9c12-40ca-991b-4505f8e0c99d&quot; alt=&quot;leaflet-geojson&quot;&gt;&lt;/p&gt;
+&lt;p&gt;최종 결과는 위와 같다.&lt;/p&gt;
+&lt;br/&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;출처&quot; style=&quot;position:relative;&quot;&gt;출처&lt;a href=&quot;#%EC%B6%9C%EC%B2%98&quot; aria-label=&quot;출처 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://park9eon.com/how-to-convert-to-korea-shp-geojson/&quot;&gt;대한민국 행정구역(SHP) GeoJSON으로 변환하는 법&lt;/a&gt;
+&lt;a href=&quot;https://react-leaflet.js.org/docs/api-components/#geojson&quot;&gt;react leaflet&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[JS 자료구조 & 알고리즘 (2)] 자바스크립트 숫자]]></title><description><![CDATA[도서 자바스크립트로 하는 자료 구조와 알고리즘을 읽으며 정리하는 글 시리즈. 2장은 var, let 등 변수 선언의 호이스팅과 TDZ와 관련된 내용이라…]]></description><link>https://yeony99.github.io/tech/js-algorithm-2</link><guid isPermaLink="false">https://yeony99.github.io/tech/js-algorithm-2</guid><pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;도서 &lt;strong&gt;자바스크립트로 하는 자료 구조와 알고리즘&lt;/strong&gt;을 읽으며 정리하는 글 시리즈.&lt;br&gt;
 2장은 var, let 등 변수 선언의 호이스팅과 TDZ와 관련된 내용이라 3장을 이어서 정리한다.&lt;/p&gt;
 &lt;h2 id=&quot;자바스크립트의-숫자-체계&quot; style=&quot;position:relative;&quot;&gt;자바스크립트의 숫자 체계&lt;a href=&quot;#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EC%88%AB%EC%9E%90-%EC%B2%B4%EA%B3%84&quot; aria-label=&quot;자바스크립트의 숫자 체계 permalink&quot; class=&quot;custom-class after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;자바스크립트로 고도의 수학적 연산이 필요한 작업을 한 적이 별로 없는 듯 하다. 적당히 &lt;code class=&quot;language-text&quot;&gt;Math.round()&lt;/code&gt; 나 &lt;code class=&quot;language-text&quot;&gt;toFixed()&lt;/code&gt; 처리 정도? 자바스크립트가 어떠한 숫자 체계를 가지고 있는지 이 파트를 통해 알 수 있었다.&lt;/p&gt;
